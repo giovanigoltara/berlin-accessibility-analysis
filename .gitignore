@@ -1,0 +1,52 @@
+# Große Datendateien
+*.pbf
+*.gpkg
+*.pkl
+*.osm
+
+# GTFS-Daten
+data/gtfs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Umgebungsvariablen
+.env
+.env.local
+*.env
+
+# API Keys
+config.py
+secrets.py
+
+# Temporäre Dateien
+*.tmp
+*.temp
+*.log
+
+# Build
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,49 @@
+district,landmark,car_min,walk_min,pt_min
+Charlottenburg-Wilmersdorf,Alexanderplatz,30.7,153.6,31.5
+Charlottenburg-Wilmersdorf,Berlin Brandenburg Airport (BER),27.9,420.6,80.3
+Charlottenburg-Wilmersdorf,Berlin Hauptbahnhof,22.7,117.6,21.6
+Charlottenburg-Wilmersdorf,Charité Hospital,30.6,132.3,38.1
+Friedrichshain-Kreuzberg,Alexanderplatz,12.2,37.6,21.6
+Friedrichshain-Kreuzberg,Berlin Brandenburg Airport (BER),26.3,286.2,43.2
+Friedrichshain-Kreuzberg,Berlin Hauptbahnhof,22.1,79.0,22.2
+Friedrichshain-Kreuzberg,Charité Hospital,19.5,73.3,35.5
+Lichtenberg,Alexanderplatz,19.9,97.9,41.0
+Lichtenberg,Berlin Brandenburg Airport (BER),39.8,329.3,82.4
+Lichtenberg,Berlin Hauptbahnhof,30.6,142.1,42.3
+Lichtenberg,Charité Hospital,26.2,131.7,58.3
+Marzahn-Hellersdorf,Alexanderplatz,30.8,181.8,40.9
+Marzahn-Hellersdorf,Berlin Brandenburg Airport (BER),41.2,313.4,83.5
+Marzahn-Hellersdorf,Berlin Hauptbahnhof,43.1,226.0,43.4
+Marzahn-Hellersdorf,Charité Hospital,40.2,215.6,57.4
+Mitte,Alexanderplatz,16.6,55.9,28.2
+Mitte,Berlin Brandenburg Airport (BER),39.0,361.7,57.5
+Mitte,Berlin Hauptbahnhof,6.6,13.7,7.0
+Mitte,Charité Hospital,7.4,20.0,12.0
+Neukölln,Alexanderplatz,32.0,145.8,44.1
+Neukölln,Berlin Brandenburg Airport (BER),16.9,183.1,45.8
+Neukölln,Berlin Hauptbahnhof,29.4,170.5,47.8
+Neukölln,Charité Hospital,37.2,172.3,54.4
+Pankow,Alexanderplatz,22.4,128.1,46.7
+Pankow,Berlin Brandenburg Airport (BER),54.9,449.9,75.1
+Pankow,Berlin Hauptbahnhof,32.5,150.6,45.6
+Pankow,Charité Hospital,26.6,138.4,41.5
+Reinickendorf,Alexanderplatz,35.3,180.0,51.6
+Reinickendorf,Berlin Brandenburg Airport (BER),38.1,491.7,86.4
+Reinickendorf,Berlin Hauptbahnhof,25.1,151.6,46.3
+Reinickendorf,Charité Hospital,25.6,148.1,49.7
+Spandau,Alexanderplatz,40.1,238.1,47.4
+Spandau,Berlin Brandenburg Airport (BER),39.2,511.2,79.4
+Spandau,Berlin Hauptbahnhof,32.2,197.5,31.3
+Spandau,Charité Hospital,36.6,210.1,42.7
+Steglitz-Zehlendorf,Alexanderplatz,40.3,235.5,53.6
+Steglitz-Zehlendorf,Berlin Brandenburg Airport (BER),33.1,391.7,89.4
+Steglitz-Zehlendorf,Berlin Hauptbahnhof,32.7,209.4,40.5
+Steglitz-Zehlendorf,Charité Hospital,40.5,224.5,54.0
+Tempelhof-Schöneberg,Alexanderplatz,33.9,146.0,43.5
+Tempelhof-Schöneberg,Berlin Brandenburg Airport (BER),25.4,257.5,55.7
+Tempelhof-Schöneberg,Berlin Hauptbahnhof,28.6,144.7,38.1
+Tempelhof-Schöneberg,Charité Hospital,36.4,146.5,36.3
+Treptow-Köpenick,Alexanderplatz,39.0,250.5,69.6
+Treptow-Köpenick,Berlin Brandenburg Airport (BER),24.8,178.7,73.8
+Treptow-Köpenick,Berlin Hauptbahnhof,45.8,294.2,73.0
+Treptow-Köpenick,Charité Hospital,48.4,287.3,86.2
