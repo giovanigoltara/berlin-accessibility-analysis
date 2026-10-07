@@ -157,6 +157,34 @@ def build(cfg) -> str:
             + md_table(pd.DataFrame(rows))
         )
 
+    for ms in sorted(out.glob("segments_*_main_streets.csv")):
+        name = ms.name[len("segments_"):-len("_main_streets.csv")]
+        m = pd.read_csv(ms)
+        tbl = pd.DataFrame({
+            "Street": m["street"].str.title(),
+            "Segments": m["segments"],
+            "Choice 800 m": m["choice_800_pct"].map(lambda x: fmt(100 * x)),
+            "NACH 800 m": m["nach_800_pct"].map(lambda x: fmt(100 * x)),
+            "Choice 2000 m": m["choice_2000_pct"].map(lambda x: fmt(100 * x)),
+            "NACH 2000 m": m["nach_2000_pct"].map(lambda x: fmt(100 * x)),
+            "NAIN 2000 m": m["nain_2000_pct"].map(lambda x: fmt(100 * x)),
+        })
+        part = (f"#### Phase 1 pilot ({name}): where known main streets rank\n\n"
+                "Median percentile of each street's segments among all segments in the district "
+                "(100 = most central).\n\n" + md_table(tbl))
+        top = out / f"segments_{name}_top10.csv"
+        if top.exists():
+            t = pd.read_csv(top)
+            cols = {}
+            for r, meas in ((800, "angular choice"), (2000, "angular choice"), (800, "NAIN"), (2000, "NAIN"), (2000, "NACH")):
+                x = t[(t["radius_m"] == r) & (t["measure"] == meas)].sort_values("rank")
+                cols[f"{meas} {r} m"] = x["street"].str.title().tolist()
+            n = max(len(v) for v in cols.values())
+            tt = pd.DataFrame({k: v + [""] * (n - len(v)) for k, v in cols.items()})
+            tt.insert(0, "Rank", range(1, n + 1))
+            part += "\n\nTop 10 named streets per measure (a street's value is its highest segment):\n\n" + md_table(tt)
+        parts.append(part)
+
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():
         st = pd.read_csv(stops_csv).set_index("mode").reindex(cfg["modes"]).reset_index()

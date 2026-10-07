@@ -263,6 +263,40 @@ Distribution over the 537 Planungsräume with at least 100 residents (5 excluded
 | S- or U-Bahn | 537 | 5.6 | 11.2 | 30.6 | 158.8 |
 | Any mode | 537 | 2.6 | 3.5 | 5.0 | 8.0 |
 
+#### Phase 1 pilot (friedrichshain-kreuzberg): where known main streets rank
+
+Median percentile of each street's segments among all segments in the district (100 = most central).
+
+| Street | Segments | Choice 800 m | NACH 800 m | Choice 2000 m | NACH 2000 m | NAIN 2000 m |
+|---|---|---|---|---|---|---|
+| Frankfurter Allee | 24 | 79.0 | 80.0 | 88.0 | 90.0 | 97.0 |
+| Karl-Marx-Allee | 30 | 89.0 | 86.0 | 95.0 | 97.0 | 95.0 |
+| Warschauer Straße | 18 | 53.0 | 58.0 | 79.0 | 81.0 | 74.0 |
+| Skalitzer Straße | 26 | 66.0 | 61.0 | 67.0 | 69.0 | 55.0 |
+| Kottbusser Damm | 13 | 66.0 | 72.0 | 83.0 | 81.0 | 52.0 |
+| Oranienstraße | 33 | 92.0 | 83.0 | 93.0 | 94.0 | 88.0 |
+| Gneisenaustraße | 18 | 63.0 | 68.0 | 80.0 | 82.0 | 78.0 |
+| Yorckstraße | 22 | 80.0 | 78.0 | 72.0 | 72.0 | 68.0 |
+| Mehringdamm | 17 | 72.0 | 77.0 | 79.0 | 81.0 | 64.0 |
+| Petersburger Straße | 20 | 64.0 | 64.0 | 79.0 | 76.0 | 88.0 |
+| Boxhagener Straße | 15 | 65.0 | 81.0 | 81.0 | 87.0 | 94.0 |
+| Revaler Straße | 17 | 61.0 | 83.0 | 76.0 | 85.0 | 83.0 |
+
+Top 10 named streets per measure (a street's value is its highest segment):
+
+| Rank | angular choice 800 m | angular choice 2000 m | NAIN 800 m | NAIN 2000 m | NACH 2000 m |
+|---|---|---|---|---|---|
+| 1 | Friedrichstraße | Oranienstraße | Holteistraße | Rudi-Dutschke-Straße | Tunnelstraße |
+| 2 | Oranienstraße | Alexandrinenstraße | Eldenaer Straße | Wilhelmstraße | Alt-Stralau |
+| 3 | Singerstraße | Prinzenstraße | Wiener Straße | Oranienstraße | Oranienstraße |
+| 4 | Alexandrinenstraße | Alte Jakobstraße | Boxhagener Straße | Kochstraße | Rudi-Dutschke-Straße |
+| 5 | Palisadenstraße | Rudi-Dutschke-Straße | Wühlischstraße | Frankfurter Allee | Wilhelmstraße |
+| 6 | Ritterstraße | Andreasstraße | Oranienstraße | Friedrichstraße | Alexandrinenstraße |
+| 7 | Lichtenberger Straße; Singerstraße | Danziger Straße; Landsberger Allee | Reichenberger Straße | Karl-Marx-Allee | Prinzenstraße |
+| 8 | Prinzenstraße | Lebuser Straße | Gryphiusstraße | Landsberger Allee | Lebuser Straße |
+| 9 | Platz Der Vereinten Nationen | Wilhelmstraße | Rudi-Dutschke-Straße | Karl-Marx-Allee; Petersburger Straße; Warschauer Straße | Dudenstraße; Kolonnenbrücke; Kolonnenstraße |
+| 10 | Koppenstraße | Landsberger Allee | Charlottenstraße | Charlottenstraße | Andreasstraße |
+
 #### GTFS stops per mode
 
 | mode | stops_inside_berlin | stops_outside_within_sensitivity_buffer | stops_dropped_snap | stops_used | snap_m_median |
@@ -333,6 +367,32 @@ Frequent stops only: [Any mode](output/maps/plr_frequent_10min_median_walk_Any-m
 [Tram](output/maps/plr_frequent_10min_median_walk_Tram.png) ·
 [S- or U-Bahn](output/maps/plr_frequent_10min_median_walk_S-or-U-Bahn.png)
 
+## Phase 1 pilot: angular segment analysis (Friedrichshain-Kreuzberg)
+
+Space Syntax measures for every street segment of the district, computed with
+[cityseer](https://cityseer.benchmarkurbanism.com/) on a segment map cleaned from the
+same OSM data (parallel carriageways merged, sidewalks and dangling slivers removed),
+with a 2 km network buffer against edge effects. Angular (simplest-path) integration
+and choice at 400, 800, 1200 and 2000 m, metric (shortest-path) measures for contrast,
+and NAIN / NACH after Hillier, Yang and Turner (2012). Method and all choices:
+[`docs/methods.md`](docs/methods.md#phase-1-angular-segment-analysis-space-syntax).
+The ranking tables are in the Results section above.
+
+![NACH at 2000 m, Friedrichshain-Kreuzberg](output/maps/segments_friedrichshain-kreuzberg_nach_2000.png)
+
+NACH at 800 m: [map](output/maps/segments_friedrichshain-kreuzberg_nach_800.png).
+All measures per segment: run `python scripts/run_segments.py` to write
+`output/segments_friedrichshain-kreuzberg.gpkg` (not committed, about 12 MB).
+
+**Sanity check.** The known main streets rank high but are not all at the top: at
+2000 m their median NACH percentile ranges from 69 (Skalitzer Straße) to 97
+(Karl-Marx-Allee). Angular choice at 2000 m is led by the Oranienstraße /
+Prinzenstraße / Alexandrinenstraße corridor. NACH has one clear artifact: the top
+values at 2000 m are on the Stralau peninsula (Tunnelstraße, Alt-Stralau), a minor
+street network with only one way in. NACH divides choice by total depth, so a street
+that every route into a small dead-end area must use scores high. Read NACH there
+with that in mind.
+
 ## Changes from the first version (v0)
 
 The original notebook (`notebooks/fussweg_oepnv.ipynb`, kept unchanged for
@@ -363,8 +423,8 @@ earlier README did not come from the code at all and has been removed.
 
 ## Next steps
 
-- **Phase 1:** angular segment analysis (cityseer) at 400 / 800 / 1200 / 2000 m,
-  pilot in Friedrichshain-Kreuzberg; NAIN / NACH.
+- **Phase 1:** done as a pilot for Friedrichshain-Kreuzberg; next, scale to all 12
+  districts.
 - **Phase 2:** Place Syntax Tool inputs (QGIS GeoPackage) and a Python cross-check of
   attraction reach.
 - **Phase 3:** per-building comparison of metric walk time and configurational

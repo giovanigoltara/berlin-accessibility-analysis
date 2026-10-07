@@ -1,0 +1,23 @@
+{
+  "district": "Friedrichshain-Kreuzberg",
+  "buffer_m": 2000,
+  "distances": [
+    400,
+    800,
+    1200,
+    2000
+  ],
+  "network": {
+    "osm_segments": 253181,
+    "dropped_sidewalk": 46934,
+    "dropped_excluded_highway": 1728,
+    "dropped_foot_no": 1315,
+    "dropped_area": 0,
+    "dropped_indoor": 2660,
+    "dropped_deep_level": 209,
+    "primal_edges_before_cleaning": 200335,
+    "primal_edges_after_cleaning": 21342
+  },
+  "segments_in_district": 4900,
+  "segments_in_buffer": 16442
+}

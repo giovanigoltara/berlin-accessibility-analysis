@@ -256,3 +256,113 @@ to be too long and partly missing for this reason alone.
 - Whether to analyse platform-level GTFS stops (current) or station
   entrances from OSM. Platform coordinates of deep U-Bahn stations can be
   far from street-level entrances, so U-Bahn walk times are approximate.
+
+# Phase 1: angular segment analysis (Space Syntax)
+
+Script: `scripts/run_segments.py`, module `src/berlin_access/segments.py`.
+Pilot: Friedrichshain-Kreuzberg. cityseer 5.8.0 (pinned; the cleaning recipe
+used is a private function and may change between versions).
+
+## Segment map
+
+1. **Ways.** All public OSM ways (pyrosm `all_public`) for the district plus
+   a 2 km buffer, then removed: separately mapped sidewalks
+   (`footway=sidewalk`, they duplicate the street centre line), motorways and
+   the non-walkable types cityseer's default query excludes, ways with
+   `foot=no/private`, areas, indoor ways, levels -2 to -5. Counts per reason
+   in `output/segments_<district>_metadata.json`.
+   *Why not pyrosm's walking network:* it leaves out every street whose
+   sidewalks are mapped separately (`sidewalk=separate`), so that the
+   sidewalk stands in for the street. Removing sidewalks from that network
+   deletes those streets altogether. In the first pilot run this cut the
+   Friedrichshain-Kreuzberg network to a fraction of its streets, which is
+   how the problem was found. The Phase 0 walk times are unaffected: they
+   route along the sidewalks, which is right for walking distance.
+2. **Primal graph.** One edge per OSM segment, with the attributes cityseer's
+   OSM loader writes (names, ref, highway class, tunnel/bridge), so the
+   class-aware cleaning steps work.
+3. **Cleaning.** cityseer's own OSM recipe (`io._auto_clean_network`, used by
+   `io.osm_graph_from_poly`), unchanged, with its default final clean
+   distances (4, 8 m). In order:
+   - deduplicate overlapping edges (20 m, 20°);
+   - remove footways inside parks, cemeteries and forests, and service roads
+     in parks and parking areas (these areas come from the local PBF instead
+     of the Overpass API; everything else is cityseer's code);
+   - remove components with fewer than 100 nodes;
+   - **merge parallel carriageways** into one centre line, by road class:
+     trunk 40 m, primary 32 m, secondary 28 m, tertiary 24 m;
+   - consolidate complex intersections into one node, by road class (32, 28,
+     24, 20 m);
+   - snap gapped path endings (20 m) and link dead ends to nearby roads;
+   - **remove dangling slivers** (despine 40 m, then 25 m);
+   - small-scale cleaning of paths and minor streets (4 m, 8 m), merge
+     parallel edges by midline, straighten kinks, drop short self-loops.
+   The result approximates a segment (road-centre-line) map, which is what
+   angular segment analysis assumes.
+4. **Dual graph.** `graphs.nx_to_dual`: each street segment becomes a node,
+   adjacency between segments becomes an edge, the turn angle between them is
+   the angular cost.
+
+## Edge effects
+
+The network includes everything within 2 km of the district (the largest
+radius). Segments are `live` only if one of their end nodes lies inside the
+district; non-live segments carry paths but get no results and are drawn
+gray on the maps. Results are reported only for live segments.
+
+## Measures (radii 400, 800, 1200, 2000 m, metric radius along the path)
+
+- **Angular (simplest path)**, `centrality_simplest`: the cost `c` is the
+  angular change in degrees; angular depth = `c / 90`, i.e. a 90° turn = 1,
+  the Depthmap / Hillier convention (verified on a synthetic L-shaped graph:
+  one 90° turn gives depth 1).
+  - integration: harmonic closeness `1 / (1 + c/90)` (`cc_harmonic_<r>_ang`),
+    farness `1 + c/90`, and total angular depth TD = sum of `c/90`
+    (`cc_td_<r>_ang`);
+  - choice: angular betweenness (`cc_betweenness_<r>_ang`); each unordered
+    pair of segments counted once, origin and destination excluded
+    (verified on a 3-segment chain).
+- **Metric (shortest path)**, `centrality_shortest`, for contrast: harmonic
+  closeness `1/c` with c in metres, farness, betweenness (`cc_*_<r>`, no
+  `_ang` suffix).
+- **NAIN and NACH** (Hillier, Yang and Turner 2012):
+  NAIN = NC^1.2 / (TD + 2), NACH = log(CH + 1) / log(TD + 3), with NC = node
+  count (cityseer's density, which excludes the origin, + 1 to include it as
+  Depthmap does), TD = total angular depth, CH = angular choice. Differences
+  from Depthmap: choice counts each pair once; cityseer's segment graph
+  comes from its cleaning, not from a hand-drawn axial or segment map.
+
+## Outputs
+
+- `output/segments_<district>.gpkg`: every segment, all measures, `live` flag,
+  street name (git-ignored because of size; regenerate with the script).
+- `output/segments_<district>_summary.csv`: distribution of each measure over
+  live segments.
+- `output/segments_<district>_top10.csv`: top 10 segments by NACH, choice and
+  NAIN per radius, for the sanity check against known main streets.
+- `output/maps/segments_<district>_nach_{800,2000}.png`: NACH in quintile
+  classes (darker and thicker = higher). Quintiles, not fixed breaks,
+  because NACH is a relative measure; same validated blue ramp as the
+  Phase 0 maps.
+
+## Pilot results and sanity check (Friedrichshain-Kreuzberg)
+
+From `output/segments_friedrichshain-kreuzberg_metadata.json`: 253,181 OSM
+segments read for the district plus 2 km; after removals and cleaning the
+segment map has 21,342 segments, 4,900 of them in the district (live).
+
+`output/segments_friedrichshain-kreuzberg_main_streets.csv` gives the median
+percentile of known main streets among all district segments. The list:
+Frankfurter Allee, Kottbusser Damm and Oranienstraße from the project brief;
+Karl-Marx-Allee, Warschauer, Skalitzer, Gneisenau-, Yorckstraße and
+Mehringdamm named before the first run; Petersburger, Boxhagener and Revaler
+Straße added after it (so they are weaker evidence). At 2000 m their median
+NACH percentile is between 69 (Skalitzer Straße) and 97 (Karl-Marx-Allee).
+At 800 m the ranks are lower, as expected for a local radius.
+
+**NACH artifact.** At 2000 m the highest NACH values are on the Stralau
+peninsula (Tunnelstraße: 52nd percentile on choice but 99th on NACH). NACH =
+log(CH+1) / log(TD+3) rises when total depth TD is small, so a street that
+every route into a small, enclosed network must use scores high. Hillier et
+al. introduced NACH to compare whole cities; within one district, angular
+choice and NAIN are the more robust readings. Kept as computed, flagged here.
