@@ -38,8 +38,8 @@ Thumbs.db
 *.env
 
 # API Keys
-config.py
-secrets.py
+/config.py
+/secrets.py
 
 # Temporäre Dateien
 *.tmp
@@ -50,3 +50,9 @@ secrets.py
 dist/
 build/
 *.egg-info/
+
+# Pipeline data (downloaded or derived, never committed)
+data/raw/
+data/derived/
+*.parquet
+*.zip
