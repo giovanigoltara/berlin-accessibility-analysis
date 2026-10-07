@@ -34,3 +34,6 @@ min_residential_footprint_m2: 40  # smaller buildings get no residents (sheds, g
 min_unit_residents: 100      # units with fewer residents are flagged low_population
 
 modes: [S-Bahn, U-Bahn, Tram, Bus, Regionalbahn]
+# Nearest stop of any member mode (shortest of their distances), reported like a mode.
+combined_modes:
+  S- or U-Bahn: [S-Bahn, U-Bahn]

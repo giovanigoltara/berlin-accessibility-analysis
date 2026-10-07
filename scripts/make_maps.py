@@ -23,7 +23,7 @@ from matplotlib.patches import Patch  # noqa: E402
 import _bootstrap  # noqa: F401, E402
 
 from berlin_access.config import load_config  # noqa: E402
-from berlin_access.pipeline import load_lor  # noqa: E402
+from berlin_access.pipeline import load_lor, mode_slug, report_modes  # noqa: E402
 
 SURFACE = "#fcfcfb"
 TEXT = "#0b0b0b"
@@ -71,7 +71,7 @@ def main(cfg) -> None:
     maps_dir = out / "maps"
     maps_dir.mkdir(exist_ok=True)
     v = cfg["walk_speed_main_mps"]
-    modes = cfg["modes"]
+    modes = report_modes(cfg)
     limit = "stops inside Berlin only" if cfg["stop_buffer_m"] == 0 else f"stops up to {cfg['stop_buffer_m']} m outside Berlin"
 
     lor = load_lor(cfg.path("lor"), cfg["crs"])
@@ -98,20 +98,22 @@ def main(cfg) -> None:
                   alignment="left")
         fig.text(0.02, 0.015, source, fontsize=6.5, color=TEXT_2, wrap=True)
         fig.tight_layout(rect=(0, 0.03, 1, 1))
-        fig.savefig(maps_dir / f"plr_median_walk_{m}.png", facecolor=SURFACE)
+        fig.savefig(maps_dir / f"plr_median_walk_{mode_slug(m)}.png", facecolor=SURFACE)
         plt.close(fig)
 
-    fig, axes = plt.subplots(2, 3, figsize=(13, 8.5), dpi=150, facecolor=SURFACE)
+    ncols = 3
+    nrows = -(-len(modes) // ncols)
+    fig, axes = plt.subplots(nrows, ncols, figsize=(13, 4.3 * nrows + 0.9), dpi=150, facecolor=SURFACE)
+    for ax in axes.flat:
+        ax.set_axis_off()
     for ax, m in zip(axes.flat, modes):
         draw(ax, plr, districts, f"cls_{m}")
         ax.set_title(m, loc="left", fontsize=11, color=TEXT)
-    legend_ax = axes.flat[len(modes)]
-    legend_ax.set_axis_off()
-    legend_ax.legend(handles=legend_handles(n_low), loc="center left", frameon=False, fontsize=9,
-                     title="Median walk per resident", title_fontsize=9, labelcolor=TEXT_2, alignment="left")
+    fig.legend(handles=legend_handles(n_low), loc="lower center", bbox_to_anchor=(0.5, 0.03), ncol=6,
+               frameon=False, fontsize=9, labelcolor=TEXT_2, title="Median walk per resident", title_fontsize=9)
     fig.suptitle("Walk to the nearest stop by mode, per Planungsraum", x=0.01, ha="left", fontsize=14, color=TEXT)
-    fig.text(0.01, 0.01, source, fontsize=7, color=TEXT_2)
-    fig.tight_layout(rect=(0, 0.02, 1, 0.97))
+    fig.text(0.01, 0.008, source, fontsize=7, color=TEXT_2)
+    fig.tight_layout(rect=(0, 0.09, 1, 0.97))
     fig.savefig(maps_dir / "plr_median_walk_all_modes.png", facecolor=SURFACE)
     plt.close(fig)
     print(f"maps written to {maps_dir}")

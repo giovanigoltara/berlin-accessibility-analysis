@@ -14,6 +14,9 @@ Berlin,Berlin,residents,Bus,1.4,331872,3913644.0,0,3.3422,2.1986,4.8228,3.7975,0
 Berlin,Berlin,residents,Regionalbahn,1.0,331872,3913644.0,0,49.9606,32.7593,73.6194,59.4383,0.9521,0.7857,False
 Berlin,Berlin,residents,Regionalbahn,1.3,331872,3913644.0,0,38.4312,25.1994,56.6303,45.7218,0.9121,0.6644,False
 Berlin,Berlin,residents,Regionalbahn,1.4,331872,3913644.0,0,35.6861,23.3995,52.5853,42.4559,0.8971,0.6215,False
+Berlin,Berlin,residents,S- or U-Bahn,1.0,331872,3913644.0,0,13.7043,8.5171,24.0213,19.356,0.4525,0.1774,False
+Berlin,Berlin,residents,S- or U-Bahn,1.3,331872,3913644.0,0,10.5418,6.5516,18.4779,14.8893,0.3314,0.1015,False
+Berlin,Berlin,residents,S- or U-Bahn,1.4,331872,3913644.0,0,9.7888,6.0837,17.158,13.8257,0.3007,0.084,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,S-Bahn,1.0,17250,343625.0,0,17.7857,12.3995,23.7199,18.3442,0.6242,0.0744,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,S-Bahn,1.3,17250,343625.0,0,13.6813,9.5381,18.2461,14.111,0.4234,0.0087,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,S-Bahn,1.4,17250,343625.0,0,12.7041,8.8568,16.9428,13.103,0.3634,0.0047,False
@@ -29,6 +32,9 @@ Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,Bus,1.4,17250,34
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,Regionalbahn,1.0,17250,343625.0,0,34.8635,22.9074,51.0211,37.7302,0.8935,0.5881,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,Regionalbahn,1.3,17250,343625.0,0,26.8181,17.6211,39.247,29.0232,0.8159,0.4376,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,Regionalbahn,1.4,17250,343625.0,0,24.9025,16.3625,36.4437,26.9501,0.7887,0.399,False
+Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,S- or U-Bahn,1.0,17250,343625.0,0,9.1557,6.4153,13.07,10.5371,0.1727,0.0122,False
+Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,S- or U-Bahn,1.3,17250,343625.0,0,7.0428,4.9348,10.0539,8.1054,0.0896,0.0003,False
+Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,residents,S- or U-Bahn,1.4,17250,343625.0,0,6.5398,4.5823,9.3357,7.5265,0.0754,0.0003,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,S-Bahn,1.0,9564,292789.0,0,20.2703,14.2625,29.8313,22.7107,0.7162,0.2467,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,S-Bahn,1.3,9564,292789.0,0,15.5926,10.9712,22.9472,17.4698,0.5266,0.0957,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,S-Bahn,1.4,9564,292789.0,0,14.4788,10.1875,21.3081,16.2219,0.4756,0.0648,False
@@ -44,6 +50,9 @@ Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,Bus,1.4,9564,292789.
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,Regionalbahn,1.0,9564,292789.0,0,31.3073,22.5064,39.7755,31.2096,0.9075,0.541,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,Regionalbahn,1.3,9564,292789.0,0,24.0826,17.3126,30.5965,24.0074,0.8264,0.2673,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,Regionalbahn,1.4,9564,292789.0,0,22.3624,16.076,28.411,22.2926,0.7878,0.1906,False
+Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,S- or U-Bahn,1.0,9564,292789.0,0,9.2547,6.6045,11.9272,9.4444,0.0846,0.0001,False
+Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,S- or U-Bahn,1.3,9564,292789.0,0,7.119,5.0804,9.1747,7.2649,0.012,0.0,False
+Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,residents,S- or U-Bahn,1.4,9564,292789.0,0,6.6105,4.7175,8.5194,6.746,0.0059,0.0,False
 Lichtenberg,Lichtenberg,residents,S-Bahn,1.0,13921,318261.0,0,18.2557,13.2056,28.2024,22.1739,0.6633,0.2208,False
 Lichtenberg,Lichtenberg,residents,S-Bahn,1.3,13921,318261.0,0,14.0428,10.1581,21.6942,17.0569,0.4575,0.1325,False
 Lichtenberg,Lichtenberg,residents,S-Bahn,1.4,13921,318261.0,0,13.0398,9.4325,20.1446,15.8385,0.4054,0.1095,False
@@ -59,6 +68,9 @@ Lichtenberg,Lichtenberg,residents,Bus,1.4,13921,318261.0,0,3.665,2.4532,5.1943,4
 Lichtenberg,Lichtenberg,residents,Regionalbahn,1.0,13921,318261.0,0,32.6221,19.6813,55.5474,36.7729,0.8666,0.5268,False
 Lichtenberg,Lichtenberg,residents,Regionalbahn,1.3,13921,318261.0,0,25.0939,15.1395,42.7288,28.2868,0.7517,0.4436,False
 Lichtenberg,Lichtenberg,residents,Regionalbahn,1.4,13921,318261.0,0,23.3015,14.0581,39.6767,26.2663,0.7221,0.4176,False
+Lichtenberg,Lichtenberg,residents,S- or U-Bahn,1.0,13921,318261.0,0,15.8495,10.852,24.8358,20.0089,0.5374,0.188,False
+Lichtenberg,Lichtenberg,residents,S- or U-Bahn,1.3,13921,318261.0,0,12.1919,8.3477,19.1045,15.3915,0.3587,0.1254,False
+Lichtenberg,Lichtenberg,residents,S- or U-Bahn,1.4,13921,318261.0,0,11.3211,7.7515,17.7399,14.2921,0.3206,0.1056,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,S-Bahn,1.0,32525,296687.0,0,28.5697,16.7365,45.8641,31.9188,0.7957,0.4803,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,S-Bahn,1.3,32525,296687.0,0,21.9767,12.8742,35.2801,24.5529,0.6832,0.3372,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,S-Bahn,1.4,32525,296687.0,0,20.4069,11.9547,32.7601,22.7991,0.6417,0.2979,False
@@ -74,6 +86,9 @@ Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,Bus,1.4,32525,296687.0,0,4.034
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,Regionalbahn,1.0,32525,296687.0,0,55.097,40.4601,69.8787,53.8194,0.9508,0.8477,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,Regionalbahn,1.3,32525,296687.0,0,42.3823,31.1231,53.7529,41.3995,0.9224,0.7699,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,Regionalbahn,1.4,32525,296687.0,0,39.355,28.9,49.9134,38.4424,0.9072,0.7272,False
+Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,S- or U-Bahn,1.0,32525,296687.0,0,17.0326,11.3104,26.4921,20.0563,0.5774,0.1946,False
+Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,S- or U-Bahn,1.3,32525,296687.0,0,13.102,8.7003,20.3786,15.428,0.4331,0.068,False
+Marzahn-Hellersdorf,Marzahn-Hellersdorf,residents,S- or U-Bahn,1.4,32525,296687.0,0,12.1661,8.0789,18.9229,14.326,0.3829,0.0509,False
 Mitte,Mitte,residents,S-Bahn,1.0,14136,397879.0,0,16.5864,11.6177,21.8965,17.9333,0.582,0.09,False
 Mitte,Mitte,residents,S-Bahn,1.3,14136,397879.0,0,12.7588,8.9367,16.8435,13.7949,0.3486,0.0449,False
 Mitte,Mitte,residents,S-Bahn,1.4,14136,397879.0,0,11.8475,8.2983,15.6404,12.8095,0.2842,0.0281,False
@@ -89,6 +104,9 @@ Mitte,Mitte,residents,Bus,1.4,14136,397879.0,0,2.9767,2.0293,4.1342,3.2208,0.000
 Mitte,Mitte,residents,Regionalbahn,1.0,14136,397879.0,0,33.6674,24.8095,42.9579,34.8712,0.9331,0.6118,False
 Mitte,Mitte,residents,Regionalbahn,1.3,14136,397879.0,0,25.898,19.0843,33.0446,26.824,0.8599,0.3541,False
 Mitte,Mitte,residents,Regionalbahn,1.4,14136,397879.0,0,24.0481,17.7211,30.6842,24.908,0.8335,0.2741,False
+Mitte,Mitte,residents,S- or U-Bahn,1.0,14136,397879.0,0,8.5876,5.9128,11.6679,9.189,0.1025,0.004,False
+Mitte,Mitte,residents,S- or U-Bahn,1.3,14136,397879.0,0,6.6059,4.5483,8.9753,7.0685,0.022,0.0019,False
+Mitte,Mitte,residents,S- or U-Bahn,1.4,14136,397879.0,0,6.134,4.2234,8.3342,6.5636,0.0141,0.0003,False
 Neukölln,Neukölln,residents,S-Bahn,1.0,27274,331623.0,0,37.6644,20.1204,66.4329,43.1418,0.8309,0.583,False
 Neukölln,Neukölln,residents,S-Bahn,1.3,27274,331623.0,0,28.9726,15.4772,51.1022,33.186,0.7598,0.4893,False
 Neukölln,Neukölln,residents,S-Bahn,1.4,27274,331623.0,0,26.9031,14.3717,47.452,30.8156,0.7303,0.463,False
@@ -104,6 +122,9 @@ Neukölln,Neukölln,residents,Bus,1.4,27274,331623.0,0,3.126,2.0549,4.4736,3.437
 Neukölln,Neukölln,residents,Regionalbahn,1.0,27274,331623.0,0,80.5603,66.0843,95.5737,82.1896,1.0,1.0,False
 Neukölln,Neukölln,residents,Regionalbahn,1.3,27274,331623.0,0,61.9695,50.8341,73.5182,63.2228,1.0,0.9994,False
 Neukölln,Neukölln,residents,Regionalbahn,1.4,27274,331623.0,0,57.5431,47.203,68.2669,58.7069,1.0,0.9965,False
+Neukölln,Neukölln,residents,S- or U-Bahn,1.0,27274,331623.0,0,11.238,7.0516,20.347,14.8687,0.3726,0.1097,False
+Neukölln,Neukölln,residents,S- or U-Bahn,1.3,27274,331623.0,0,8.6446,5.4243,15.6516,11.4374,0.2661,0.0405,False
+Neukölln,Neukölln,residents,S- or U-Bahn,1.4,27274,331623.0,0,8.0271,5.0369,14.5336,10.6205,0.2375,0.026,False
 Pankow,Pankow,residents,S-Bahn,1.0,39131,428900.0,0,21.7548,14.2449,32.3762,25.0564,0.7269,0.2857,False
 Pankow,Pankow,residents,S-Bahn,1.3,39131,428900.0,0,16.7345,10.9576,24.9048,19.2742,0.5768,0.1754,False
 Pankow,Pankow,residents,S-Bahn,1.4,39131,428900.0,0,15.5392,10.1749,23.1259,17.8975,0.5223,0.1413,False
@@ -119,6 +140,9 @@ Pankow,Pankow,residents,Bus,1.4,39131,428900.0,0,4.0639,2.5869,6.2322,4.6795,0.0
 Pankow,Pankow,residents,Regionalbahn,1.0,39131,428900.0,0,56.0181,44.3121,72.2118,58.2809,0.9947,0.9286,False
 Pankow,Pankow,residents,Regionalbahn,1.3,39131,428900.0,0,43.0909,34.0862,55.5475,44.8314,0.9846,0.8423,False
 Pankow,Pankow,residents,Regionalbahn,1.4,39131,428900.0,0,40.013,31.6515,51.5799,41.6292,0.9794,0.7971,False
+Pankow,Pankow,residents,S- or U-Bahn,1.0,39131,428900.0,0,18.525,11.322,32.09,23.0284,0.6005,0.2779,False
+Pankow,Pankow,residents,S- or U-Bahn,1.3,39131,428900.0,0,14.25,8.7092,24.6846,17.7141,0.4706,0.173,False
+Pankow,Pankow,residents,S- or U-Bahn,1.4,39131,428900.0,0,13.2322,8.0871,22.9214,16.4488,0.4325,0.1403,False
 Reinickendorf,Reinickendorf,residents,S-Bahn,1.0,35808,271755.0,0,21.8719,15.6351,30.3659,24.6312,0.773,0.2587,False
 Reinickendorf,Reinickendorf,residents,S-Bahn,1.3,35808,271755.0,0,16.8245,12.027,23.3584,18.9471,0.5987,0.1038,False
 Reinickendorf,Reinickendorf,residents,S-Bahn,1.4,35808,271755.0,0,15.6228,11.1679,21.69,17.5937,0.5409,0.0823,False
@@ -134,6 +158,9 @@ Reinickendorf,Reinickendorf,residents,Bus,1.4,35808,271755.0,0,3.1885,2.0914,4.9
 Reinickendorf,Reinickendorf,residents,Regionalbahn,1.0,35808,271755.0,0,127.9022,99.7883,159.0209,133.2277,1.0,1.0,False
 Reinickendorf,Reinickendorf,residents,Regionalbahn,1.3,35808,271755.0,0,98.3863,76.7602,122.3237,102.4829,1.0,0.9903,False
 Reinickendorf,Reinickendorf,residents,Regionalbahn,1.4,35808,271755.0,0,91.3587,71.2773,113.5863,95.1627,1.0,0.9809,False
+Reinickendorf,Reinickendorf,residents,S- or U-Bahn,1.0,35808,271755.0,0,17.6189,11.6186,27.0676,21.3217,0.6087,0.2088,False
+Reinickendorf,Reinickendorf,residents,S- or U-Bahn,1.3,35808,271755.0,0,13.553,8.9374,20.8212,16.4013,0.432,0.0946,False
+Reinickendorf,Reinickendorf,residents,S- or U-Bahn,1.4,35808,271755.0,0,12.585,8.299,19.334,15.2298,0.3882,0.0769,False
 Spandau,Spandau,residents,S-Bahn,1.0,30242,261266.0,0,52.5052,34.3837,66.1831,58.3431,0.9576,0.822,False
 Spandau,Spandau,residents,S-Bahn,1.3,30242,261266.0,0,40.3886,26.449,50.9101,44.8793,0.9306,0.6843,False
 Spandau,Spandau,residents,S-Bahn,1.4,30242,261266.0,0,37.5037,24.5598,47.2737,41.6736,0.9187,0.645,False
@@ -149,6 +176,9 @@ Spandau,Spandau,residents,Bus,1.4,30242,261266.0,0,3.2863,2.1668,4.9446,3.8888,0
 Spandau,Spandau,residents,Regionalbahn,1.0,30242,261266.0,0,47.9628,32.9465,61.7522,54.8792,0.9546,0.8058,False
 Spandau,Spandau,residents,Regionalbahn,1.3,30242,261266.0,0,36.8945,25.3435,47.5017,42.2147,0.9235,0.6393,False
 Spandau,Spandau,residents,Regionalbahn,1.4,30242,261266.0,0,34.2591,23.5332,44.1087,39.1994,0.9104,0.5983,False
+Spandau,Spandau,residents,S- or U-Bahn,1.0,30242,261266.0,0,41.5276,23.5463,60.3824,50.3229,0.8761,0.6552,False
+Spandau,Spandau,residents,S- or U-Bahn,1.3,30242,261266.0,0,31.9443,18.1126,46.448,38.7099,0.8127,0.5331,False
+Spandau,Spandau,residents,S- or U-Bahn,1.4,30242,261266.0,0,29.6626,16.8188,43.1303,35.9449,0.7878,0.4949,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,S-Bahn,1.0,42696,309338.0,0,18.915,12.8662,27.6354,21.3795,0.6593,0.2055,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,S-Bahn,1.3,42696,309338.0,0,14.55,9.8971,21.258,16.4458,0.4767,0.0847,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,S-Bahn,1.4,42696,309338.0,0,13.5107,9.1901,19.7396,15.2711,0.421,0.061,False
@@ -164,6 +194,9 @@ Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,Bus,1.4,42696,309338.0,0,3.192
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,Regionalbahn,1.0,42696,309338.0,0,54.0751,41.2797,73.213,56.9368,0.9719,0.8702,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,Regionalbahn,1.3,42696,309338.0,0,41.5962,31.7536,56.3177,43.7976,0.9479,0.7785,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,Regionalbahn,1.4,42696,309338.0,0,38.625,29.4855,52.295,40.6692,0.9386,0.7391,False
+Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,S- or U-Bahn,1.0,42696,309338.0,0,16.3823,11.0939,24.1736,18.9371,0.5623,0.1468,False
+Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,S- or U-Bahn,1.3,42696,309338.0,0,12.6017,8.5337,18.595,14.567,0.3801,0.0595,False
+Steglitz-Zehlendorf,Steglitz-Zehlendorf,residents,S- or U-Bahn,1.4,42696,309338.0,0,11.7016,7.9242,17.2668,13.5265,0.3272,0.0436,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,S-Bahn,1.0,29948,358835.0,0,21.5443,12.5926,30.6103,22.8741,0.6798,0.2645,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,S-Bahn,1.3,29948,358835.0,0,16.5726,9.6866,23.5464,17.5955,0.5504,0.1154,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,S-Bahn,1.4,29948,358835.0,0,15.3888,8.9947,21.8645,16.3387,0.5134,0.0809,False
@@ -179,6 +212,9 @@ Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,Bus,1.4,29948,358835.0,0,3
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,Regionalbahn,1.0,29948,358835.0,0,48.8108,36.0182,75.5806,61.0701,0.975,0.8513,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,Regionalbahn,1.3,29948,358835.0,0,37.5467,27.7063,58.1389,46.977,0.9583,0.6992,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,Regionalbahn,1.4,29948,358835.0,0,34.8648,25.7273,53.9862,43.6215,0.9487,0.6381,False
+Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,S- or U-Bahn,1.0,29948,358835.0,0,10.991,7.012,19.6633,14.9677,0.3581,0.1248,False
+Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,S- or U-Bahn,1.3,29948,358835.0,0,8.4546,5.3938,15.1256,11.5136,0.2534,0.0536,False
+Tempelhof-Schöneberg,Tempelhof-Schöneberg,residents,S- or U-Bahn,1.4,29948,358835.0,0,7.8507,5.0086,14.0452,10.6912,0.2292,0.0297,False
 Treptow-Köpenick,Treptow-Köpenick,residents,S-Bahn,1.0,39377,302686.0,0,23.1197,14.9191,33.4246,27.9125,0.7465,0.325,False
 Treptow-Köpenick,Treptow-Köpenick,residents,S-Bahn,1.3,39377,302686.0,0,17.7844,11.4762,25.7113,21.4711,0.6044,0.1558,False
 Treptow-Köpenick,Treptow-Köpenick,residents,S-Bahn,1.4,39377,302686.0,0,16.5141,10.6565,23.8747,19.9375,0.5593,0.1247,False
@@ -194,6 +230,9 @@ Treptow-Köpenick,Treptow-Köpenick,residents,Bus,1.4,39377,302686.0,0,3.5004,2.
 Treptow-Köpenick,Treptow-Köpenick,residents,Regionalbahn,1.0,39377,302686.0,0,87.6589,42.5887,117.1249,88.0424,0.9718,0.8761,False
 Treptow-Köpenick,Treptow-Köpenick,residents,Regionalbahn,1.3,39377,302686.0,0,67.4299,32.7606,90.0961,67.725,0.9526,0.795,False
 Treptow-Köpenick,Treptow-Köpenick,residents,Regionalbahn,1.4,39377,302686.0,0,62.6135,30.4205,83.6606,62.8875,0.9462,0.7561,False
+Treptow-Köpenick,Treptow-Köpenick,residents,S- or U-Bahn,1.0,39377,302686.0,0,22.9371,14.9191,33.3615,27.7962,0.7465,0.3209,False
+Treptow-Köpenick,Treptow-Köpenick,residents,S- or U-Bahn,1.3,39377,302686.0,0,17.6439,11.4762,25.6627,21.3817,0.6041,0.1515,False
+Treptow-Köpenick,Treptow-Köpenick,residents,S- or U-Bahn,1.4,39377,302686.0,0,16.3836,10.6565,23.8296,19.8544,0.5583,0.1217,False
 Berlin,Berlin,buildings,S-Bahn,1.0,503625,,0,28.7137,17.8626,45.2469,36.6218,0.8201,0.4742,False
 Berlin,Berlin,buildings,S-Bahn,1.3,503625,,0,22.0875,13.7404,34.8053,28.1706,0.7083,0.3243,False
 Berlin,Berlin,buildings,S-Bahn,1.4,503625,,0,20.5098,12.759,32.3192,26.1584,0.6713,0.2874,False
@@ -209,6 +248,9 @@ Berlin,Berlin,buildings,Bus,1.4,503625,,0,4.0447,2.5997,6.0388,4.7275,0.0103,0.0
 Berlin,Berlin,buildings,Regionalbahn,1.0,503625,,0,69.182,43.012,103.9887,82.2474,0.9688,0.8705,False
 Berlin,Berlin,buildings,Regionalbahn,1.3,503625,,0,53.2169,33.0862,79.9913,63.2672,0.9465,0.7892,False
 Berlin,Berlin,buildings,Regionalbahn,1.4,503625,,0,49.4157,30.7229,74.2776,58.7481,0.9375,0.7607,False
+Berlin,Berlin,buildings,S- or U-Bahn,1.0,503625,,0,22.8753,12.9193,37.154,30.4507,0.6932,0.3621,False
+Berlin,Berlin,buildings,S- or U-Bahn,1.3,503625,,0,17.5964,9.938,28.58,23.4236,0.5788,0.2256,False
+Berlin,Berlin,buildings,S- or U-Bahn,1.4,503625,,0,16.3395,9.2281,26.5386,21.7505,0.5422,0.1932,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,S-Bahn,1.0,25345,,0,19.3403,13.2487,26.0792,20.2902,0.6742,0.1468,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,S-Bahn,1.3,25345,,0,14.8772,10.1913,20.0609,15.6078,0.4937,0.0381,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,S-Bahn,1.4,25345,,0,13.8145,9.4634,18.628,14.493,0.4334,0.0221,False
@@ -224,6 +266,9 @@ Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,Bus,1.4,25345,,0
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,Regionalbahn,1.0,25345,,0,44.0392,28.6956,61.2721,45.0302,0.9416,0.7263,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,Regionalbahn,1.3,25345,,0,33.8763,22.0736,47.1324,34.6386,0.8903,0.5809,False
 Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,Regionalbahn,1.4,25345,,0,31.4566,20.4969,43.7658,32.1644,0.8718,0.5348,False
+Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,S- or U-Bahn,1.0,25345,,0,11.8276,7.6286,19.5511,13.9995,0.3714,0.0452,False
+Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,S- or U-Bahn,1.3,25345,,0,9.0981,5.8682,15.0393,10.7688,0.2514,0.0024,False
+Charlottenburg-Wilmersdorf,Charlottenburg-Wilmersdorf,buildings,S- or U-Bahn,1.4,25345,,0,8.4483,5.449,13.9651,9.9996,0.212,0.0023,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,S-Bahn,1.0,12636,,0,23.7199,15.663,32.3989,24.6968,0.7742,0.3151,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,S-Bahn,1.3,12636,,0,18.2461,12.0485,24.9222,18.9976,0.6095,0.1235,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,S-Bahn,1.4,12636,,0,16.9428,11.1879,23.142,17.6406,0.5651,0.0901,False
@@ -239,6 +284,9 @@ Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,Bus,1.4,12636,,0,3.0
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,Regionalbahn,1.0,12636,,0,33.8685,25.3306,41.766,33.4252,0.9371,0.6132,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,Regionalbahn,1.3,12636,,0,26.0527,19.4851,32.1277,25.7117,0.8807,0.3328,False
 Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,Regionalbahn,1.4,12636,,0,24.1918,18.0933,29.8329,23.8751,0.853,0.2434,False
+Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,S- or U-Bahn,1.0,12636,,0,9.1931,6.5939,11.8647,9.4815,0.0882,0.0001,False
+Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,S- or U-Bahn,1.3,12636,,0,7.0716,5.0723,9.1267,7.2935,0.0226,0.0,False
+Friedrichshain-Kreuzberg,Friedrichshain-Kreuzberg,buildings,S- or U-Bahn,1.4,12636,,0,6.5665,4.71,8.4748,6.7725,0.0123,0.0,False
 Lichtenberg,Lichtenberg,buildings,S-Bahn,1.0,26319,,0,25.3914,17.0479,34.1254,26.6544,0.8075,0.3599,False
 Lichtenberg,Lichtenberg,buildings,S-Bahn,1.3,26319,,0,19.5318,13.1137,26.2503,20.5034,0.6819,0.1744,False
 Lichtenberg,Lichtenberg,buildings,S-Bahn,1.4,26319,,0,18.1367,12.177,24.3753,19.0388,0.6359,0.133,False
@@ -254,6 +302,9 @@ Lichtenberg,Lichtenberg,buildings,Bus,1.4,26319,,0,4.4971,2.8509,6.9222,5.3497,0
 Lichtenberg,Lichtenberg,buildings,Regionalbahn,1.0,26319,,0,38.488,25.2924,58.7851,42.6653,0.9406,0.6511,False
 Lichtenberg,Lichtenberg,buildings,Regionalbahn,1.3,26319,,0,29.6061,19.4557,45.2193,32.8195,0.8818,0.4939,False
 Lichtenberg,Lichtenberg,buildings,Regionalbahn,1.4,26319,,0,27.4914,18.066,41.9893,30.4752,0.8523,0.4645,False
+Lichtenberg,Lichtenberg,buildings,S- or U-Bahn,1.0,26319,,0,22.4517,15.0079,31.6204,24.575,0.7503,0.2897,False
+Lichtenberg,Lichtenberg,buildings,S- or U-Bahn,1.3,26319,,0,17.2705,11.5445,24.3234,18.9038,0.6048,0.1458,False
+Lichtenberg,Lichtenberg,buildings,S- or U-Bahn,1.4,26319,,0,16.0369,10.7199,22.586,17.5535,0.5502,0.1177,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,S-Bahn,1.0,44435,,0,32.7311,21.1067,44.8552,33.3716,0.8768,0.5522,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,S-Bahn,1.3,44435,,0,25.1778,16.236,34.504,25.6705,0.7845,0.372,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,S-Bahn,1.4,44435,,0,23.3793,15.0762,32.0394,23.8369,0.7522,0.3093,False
@@ -269,6 +320,9 @@ Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,Bus,1.4,44435,,0,4.2493,2.8045
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,Regionalbahn,1.0,44435,,0,61.188,38.2388,76.0615,57.5531,0.9657,0.8417,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,Regionalbahn,1.3,44435,,0,47.0677,29.4145,58.5088,44.2716,0.9366,0.7406,False
 Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,Regionalbahn,1.4,44435,,0,43.7057,27.3134,54.3296,41.1093,0.926,0.7069,False
+Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,S- or U-Bahn,1.0,44435,,0,26.1294,17.0825,37.9376,28.2783,0.8065,0.4088,False
+Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,S- or U-Bahn,1.3,44435,,0,20.0995,13.1403,29.1828,21.7525,0.6849,0.2328,False
+Marzahn-Hellersdorf,Marzahn-Hellersdorf,buildings,S- or U-Bahn,1.4,44435,,0,18.6639,12.2018,27.0983,20.1988,0.6441,0.1902,False
 Mitte,Mitte,buildings,S-Bahn,1.0,24857,,0,15.4709,9.8677,22.3308,18.2566,0.5212,0.1381,False
 Mitte,Mitte,buildings,S-Bahn,1.3,24857,,0,11.9007,7.5905,17.1775,14.0435,0.3345,0.092,False
 Mitte,Mitte,buildings,S-Bahn,1.4,24857,,0,11.0507,7.0484,15.9506,13.0404,0.2867,0.0675,False
@@ -284,6 +338,9 @@ Mitte,Mitte,buildings,Bus,1.4,24857,,0,3.4844,2.311,4.5756,3.878,0.0047,0.0,Fals
 Mitte,Mitte,buildings,Regionalbahn,1.0,24857,,0,32.7058,20.5073,43.6287,34.5461,0.8331,0.5636,False
 Mitte,Mitte,buildings,Regionalbahn,1.3,24857,,0,25.1583,15.7748,33.5605,26.5739,0.7657,0.3521,False
 Mitte,Mitte,buildings,Regionalbahn,1.4,24857,,0,23.3613,14.6481,31.1634,24.6758,0.7428,0.286,False
+Mitte,Mitte,buildings,S- or U-Bahn,1.0,24857,,0,8.6138,6.3941,11.9922,9.865,0.1337,0.0196,False
+Mitte,Mitte,buildings,S- or U-Bahn,1.3,24857,,0,6.626,4.9185,9.2248,7.5884,0.0458,0.007,False
+Mitte,Mitte,buildings,S- or U-Bahn,1.4,24857,,0,6.1527,4.5672,8.5658,7.0464,0.0327,0.0017,False
 Neukölln,Neukölln,buildings,S-Bahn,1.0,40601,,0,60.6331,41.6615,72.2928,55.8823,0.9243,0.8276,False
 Neukölln,Neukölln,buildings,S-Bahn,1.3,40601,,0,46.6409,32.0473,55.6098,42.9864,0.8927,0.769,False
 Neukölln,Neukölln,buildings,S-Bahn,1.4,40601,,0,43.3094,29.7582,51.6377,39.9159,0.8821,0.7476,False
@@ -299,6 +356,9 @@ Neukölln,Neukölln,buildings,Bus,1.4,40601,,0,3.6544,2.3782,5.2943,4.0805,0.000
 Neukölln,Neukölln,buildings,Regionalbahn,1.0,40601,,0,91.2829,72.8412,109.6017,91.1418,1.0,1.0,False
 Neukölln,Neukölln,buildings,Regionalbahn,1.3,40601,,0,70.2176,56.0317,84.309,70.1091,1.0,0.9997,False
 Neukölln,Neukölln,buildings,Regionalbahn,1.4,40601,,0,65.2021,52.0294,78.2869,65.1013,1.0,0.9987,False
+Neukölln,Neukölln,buildings,S- or U-Bahn,1.0,40601,,0,20.4205,11.1462,31.0045,21.8448,0.6359,0.2709,False
+Neukölln,Neukölln,buildings,S- or U-Bahn,1.3,40601,,0,15.7081,8.574,23.8496,16.8037,0.5271,0.1136,False
+Neukölln,Neukölln,buildings,S- or U-Bahn,1.4,40601,,0,14.5861,7.9616,22.146,15.6034,0.4846,0.0722,False
 Pankow,Pankow,buildings,S-Bahn,1.0,66793,,0,32.5146,21.188,47.3806,36.1079,0.8704,0.551,False
 Pankow,Pankow,buildings,S-Bahn,1.3,66793,,0,25.0112,16.2984,36.4466,27.7753,0.787,0.3844,False
 Pankow,Pankow,buildings,S-Bahn,1.4,66793,,0,23.2247,15.1343,33.8433,25.7914,0.7542,0.339,False
@@ -314,6 +374,9 @@ Pankow,Pankow,buildings,Bus,1.4,66793,,0,4.9466,3.0803,7.6206,5.7526,0.0208,0.00
 Pankow,Pankow,buildings,Regionalbahn,1.0,66793,,0,70.8998,51.7891,85.4523,69.1108,0.9781,0.918,False
 Pankow,Pankow,buildings,Regionalbahn,1.3,66793,,0,54.5383,39.8377,65.7325,53.1621,0.9598,0.8693,False
 Pankow,Pankow,buildings,Regionalbahn,1.4,66793,,0,50.6427,36.9922,61.0374,49.3648,0.9547,0.8448,False
+Pankow,Pankow,buildings,S- or U-Bahn,1.0,66793,,0,32.0993,19.7959,47.2128,35.343,0.8335,0.542,False
+Pankow,Pankow,buildings,S- or U-Bahn,1.3,66793,,0,24.6918,15.2276,36.3175,27.1869,0.7556,0.3822,False
+Pankow,Pankow,buildings,S- or U-Bahn,1.4,66793,,0,22.9281,14.1399,33.7234,25.245,0.7261,0.3374,False
 Reinickendorf,Reinickendorf,buildings,S-Bahn,1.0,56910,,0,23.6247,16.5289,33.7678,29.2127,0.8005,0.3271,False
 Reinickendorf,Reinickendorf,buildings,S-Bahn,1.3,56910,,0,18.1729,12.7146,25.9752,22.4713,0.6452,0.1989,False
 Reinickendorf,Reinickendorf,buildings,S-Bahn,1.4,56910,,0,16.8748,11.8064,24.1199,20.8662,0.5922,0.1813,False
@@ -329,6 +392,9 @@ Reinickendorf,Reinickendorf,buildings,Bus,1.4,56910,,0,4.2829,2.7015,6.5568,4.87
 Reinickendorf,Reinickendorf,buildings,Regionalbahn,1.0,56910,,0,161.8188,125.527,220.4476,165.1853,1.0,1.0,False
 Reinickendorf,Reinickendorf,buildings,Regionalbahn,1.3,56910,,0,124.476,96.5592,169.5751,127.0656,1.0,0.9965,False
 Reinickendorf,Reinickendorf,buildings,Regionalbahn,1.4,56910,,0,115.5849,89.6621,157.4626,117.9895,1.0,0.9934,False
+Reinickendorf,Reinickendorf,buildings,S- or U-Bahn,1.0,56910,,0,21.5834,14.3046,32.4203,26.0971,0.7257,0.2982,False
+Reinickendorf,Reinickendorf,buildings,S- or U-Bahn,1.3,56910,,0,16.6026,11.0036,24.9387,20.0747,0.5703,0.1732,False
+Reinickendorf,Reinickendorf,buildings,S- or U-Bahn,1.4,56910,,0,15.4167,10.2176,23.1573,18.6408,0.5207,0.1494,False
 Spandau,Spandau,buildings,S-Bahn,1.0,46119,,0,63.9948,43.6054,90.6994,82.5331,0.9752,0.8977,False
 Spandau,Spandau,buildings,S-Bahn,1.3,46119,,0,49.2267,33.5426,69.7688,63.487,0.9588,0.8066,False
 Spandau,Spandau,buildings,S-Bahn,1.4,46119,,0,45.7105,31.1467,64.7853,58.9522,0.9519,0.7682,False
@@ -344,6 +410,9 @@ Spandau,Spandau,buildings,Bus,1.4,46119,,0,3.9855,2.5863,5.8695,4.5936,0.0064,0.
 Spandau,Spandau,buildings,Regionalbahn,1.0,46119,,0,57.0413,39.1584,83.9892,77.7704,0.9659,0.8638,False
 Spandau,Spandau,buildings,Regionalbahn,1.3,46119,,0,43.8779,30.1218,64.6071,59.8234,0.943,0.7521,False
 Spandau,Spandau,buildings,Regionalbahn,1.4,46119,,0,40.7438,27.9703,59.9923,55.5503,0.9332,0.7106,False
+Spandau,Spandau,buildings,S- or U-Bahn,1.0,46119,,0,58.5776,37.8347,89.4656,77.6115,0.9391,0.8252,False
+Spandau,Spandau,buildings,S- or U-Bahn,1.3,46119,,0,45.0597,29.1036,68.8197,59.7012,0.9097,0.7347,False
+Spandau,Spandau,buildings,S- or U-Bahn,1.4,46119,,0,41.8411,27.0248,63.904,55.4368,0.8978,0.6913,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,S-Bahn,1.0,58088,,0,22.884,15.7112,33.0452,25.0464,0.7757,0.3236,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,S-Bahn,1.3,58088,,0,17.6031,12.0856,25.4194,19.2665,0.6072,0.1199,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,S-Bahn,1.4,58088,,0,16.3457,11.2223,23.6037,17.8903,0.5558,0.083,False
@@ -359,6 +428,9 @@ Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,Bus,1.4,58088,,0,3.7246,2.423,
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,Regionalbahn,1.0,58088,,0,56.8595,40.8323,79.0504,59.4568,0.9718,0.8752,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,Regionalbahn,1.3,58088,,0,43.7381,31.4095,60.808,45.736,0.9477,0.7733,False
 Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,Regionalbahn,1.4,58088,,0,40.614,29.166,56.4646,42.4692,0.9379,0.7349,False
+Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,S- or U-Bahn,1.0,58088,,0,18.9253,13.0403,29.5084,22.0322,0.6641,0.2416,False
+Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,S- or U-Bahn,1.3,58088,,0,14.558,10.031,22.6988,16.9479,0.4787,0.0836,False
+Steglitz-Zehlendorf,Steglitz-Zehlendorf,buildings,S- or U-Bahn,1.4,58088,,0,13.5181,9.3145,21.0774,15.7373,0.4296,0.0594,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,S-Bahn,1.0,45485,,0,24.281,15.1377,34.0727,25.7323,0.7539,0.3434,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,S-Bahn,1.3,45485,,0,18.6777,11.6444,26.2098,19.7941,0.6263,0.1672,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,S-Bahn,1.4,45485,,0,17.3436,10.8127,24.3377,18.3802,0.5842,0.1273,False
@@ -374,6 +446,9 @@ Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,Bus,1.4,45485,,0,3.6142,2.
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,Regionalbahn,1.0,45485,,0,83.1915,50.0903,117.3256,84.7668,0.9838,0.9005,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,Regionalbahn,1.3,45485,,0,63.9935,38.531,90.2505,65.2052,0.9684,0.8405,False
 Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,Regionalbahn,1.4,45485,,0,59.4225,35.7788,83.804,60.5477,0.9599,0.8168,False
+Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,S- or U-Bahn,1.0,45485,,0,18.5699,10.633,28.7135,20.3302,0.6062,0.2192,False
+Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,S- or U-Bahn,1.3,45485,,0,14.2845,8.1792,22.0873,15.6386,0.4701,0.077,False
+Tempelhof-Schöneberg,Tempelhof-Schöneberg,buildings,S- or U-Bahn,1.4,45485,,0,13.2642,7.595,20.5096,14.5216,0.4276,0.0463,False
 Treptow-Köpenick,Treptow-Köpenick,buildings,S-Bahn,1.0,56037,,0,30.641,19.3702,42.9647,39.337,0.8467,0.515,False
 Treptow-Köpenick,Treptow-Köpenick,buildings,S-Bahn,1.3,56037,,0,23.57,14.9002,33.0498,30.2592,0.7471,0.3104,False
 Treptow-Köpenick,Treptow-Köpenick,buildings,S-Bahn,1.4,56037,,0,21.8864,13.8359,30.6891,28.0979,0.7138,0.2636,False
@@ -389,3 +464,6 @@ Treptow-Köpenick,Treptow-Köpenick,buildings,Bus,1.4,56037,,0,4.7639,2.9474,7.3
 Treptow-Köpenick,Treptow-Köpenick,buildings,Regionalbahn,1.0,56037,,0,111.4825,69.4499,156.3119,119.669,0.9863,0.9505,False
 Treptow-Köpenick,Treptow-Köpenick,buildings,Regionalbahn,1.3,56037,,0,85.7558,53.423,120.2399,92.053,0.9798,0.9047,False
 Treptow-Köpenick,Treptow-Köpenick,buildings,Regionalbahn,1.4,56037,,0,79.6304,49.6071,111.6514,85.4778,0.9777,0.8853,False
+Treptow-Köpenick,Treptow-Köpenick,buildings,S- or U-Bahn,1.0,56037,,0,30.5239,19.3629,42.3124,39.187,0.8467,0.5124,False
+Treptow-Köpenick,Treptow-Köpenick,buildings,S- or U-Bahn,1.3,56037,,0,23.48,14.8945,32.548,30.1438,0.7471,0.3026,False
+Treptow-Köpenick,Treptow-Köpenick,buildings,S- or U-Bahn,1.4,56037,,0,21.8028,13.8306,30.2232,27.9907,0.7135,0.2543,False

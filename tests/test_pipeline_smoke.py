@@ -79,6 +79,8 @@ def test_pipeline_runs_on_sample(tmp_path):
     assert berlin.loc["Bus", "n_unreachable"] == 0
     # U-Bahn has only a replacement bus in this feed, so no stops
     assert berlin.loc["U-Bahn", "n_unreachable"] == berlin.loc["U-Bahn", "n_buildings"]
+    # combined mode = nearest of its members; U-Bahn has no stops here, so it equals S-Bahn
+    assert berlin.loc["S- or U-Bahn", "median_min"] == berlin.loc["S-Bahn", "median_min"]
     # slower walking -> longer times, same ordering
     b = s[(s["unit_id"] == "Berlin") & (s["mode"] == "Bus")].set_index("speed_mps")["median_min"]
     assert b[1.0] > b[1.3] > b[1.4]
@@ -94,6 +96,7 @@ def test_pipeline_runs_on_sample(tmp_path):
     make_maps.main(cfg)
     assert (out / "maps" / "plr_median_walk_all_modes.png").exists()
     assert (out / "maps" / "plr_median_walk_S-Bahn.png").exists()
+    assert (out / "maps" / "plr_median_walk_S-or-U-Bahn.png").exists()
 
     (tmp_path / "README.md").write_text(f"x\n{build_readme_tables.BEGIN}\nold\n{build_readme_tables.END}\n")
     text = build_readme_tables.build(cfg)

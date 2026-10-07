@@ -79,77 +79,77 @@ All tables: walking speed 1.3 m/s, only stops inside Berlin, residents allocated
 
 #### Median walk time to the nearest stop, per resident (minutes)
 
-| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn |
-|---|---|---|---|---|---|
-| Berlin | 16.7 | 15.9 | 33.1 | 3.6 | 38.4 |
-| Charlottenburg-Wilmersdorf | 13.7 | 7.8 | 59.5 | 3.3 | 26.8 |
-| Friedrichshain-Kreuzberg | 15.6 | 7.4 | 17.6 | 3.5 | 24.1 |
-| Lichtenberg | 14.0 | 26.3 | 6.5 | 3.9 | 25.1 |
-| Marzahn-Hellersdorf | 22.0 | 31.7 | 8.7 | 4.3 | 42.4 |
-| Mitte | 12.8 | 7.2 | 9.7 | 3.2 | 25.9 |
-| Neukölln | 29.0 | 9.4 | 53.6 | 3.4 | 62.0 |
-| Pankow | 16.7 | 24.9 | 5.7 | 4.4 | 43.1 |
-| Reinickendorf | 16.8 | 25.0 | 48.3 | 3.4 | 98.4 |
-| Spandau | 40.4 | 32.6 | 148.3 | 3.5 | 36.9 |
-| Steglitz-Zehlendorf | 14.6 | 30.3 | 148.6 | 3.4 | 41.6 |
-| Tempelhof-Schöneberg | 16.6 | 10.9 | 91.0 | 3.3 | 37.5 |
-| Treptow-Köpenick | 17.8 | 66.3 | 9.6 | 3.8 | 67.4 |
+| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn | S- or U-Bahn |
+|---|---|---|---|---|---|---|
+| Berlin | 16.7 | 15.9 | 33.1 | 3.6 | 38.4 | 10.5 |
+| Charlottenburg-Wilmersdorf | 13.7 | 7.8 | 59.5 | 3.3 | 26.8 | 7.0 |
+| Friedrichshain-Kreuzberg | 15.6 | 7.4 | 17.6 | 3.5 | 24.1 | 7.1 |
+| Lichtenberg | 14.0 | 26.3 | 6.5 | 3.9 | 25.1 | 12.2 |
+| Marzahn-Hellersdorf | 22.0 | 31.7 | 8.7 | 4.3 | 42.4 | 13.1 |
+| Mitte | 12.8 | 7.2 | 9.7 | 3.2 | 25.9 | 6.6 |
+| Neukölln | 29.0 | 9.4 | 53.6 | 3.4 | 62.0 | 8.6 |
+| Pankow | 16.7 | 24.9 | 5.7 | 4.4 | 43.1 | 14.2 |
+| Reinickendorf | 16.8 | 25.0 | 48.3 | 3.4 | 98.4 | 13.6 |
+| Spandau | 40.4 | 32.6 | 148.3 | 3.5 | 36.9 | 31.9 |
+| Steglitz-Zehlendorf | 14.6 | 30.3 | 148.6 | 3.4 | 41.6 | 12.6 |
+| Tempelhof-Schöneberg | 16.6 | 10.9 | 91.0 | 3.3 | 37.5 | 8.5 |
+| Treptow-Köpenick | 17.8 | 66.3 | 9.6 | 3.8 | 67.4 | 17.6 |
 
 #### Share of residents more than 15 min from the nearest stop
 
-| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn |
-|---|---|---|---|---|---|
-| Berlin | 56.7% | 51.7% | 62.3% | 0.4% | 91.2% |
-| Charlottenburg-Wilmersdorf | 42.3% | 19.8% | 100.0% | 0.2% | 81.6% |
-| Friedrichshain-Kreuzberg | 52.7% | 6.3% | 54.5% | 0.0% | 82.6% |
-| Lichtenberg | 45.8% | 72.3% | 12.6% | 0.3% | 75.2% |
-| Marzahn-Hellersdorf | 68.3% | 70.9% | 30.1% | 0.1% | 92.2% |
-| Mitte | 34.9% | 6.0% | 26.2% | 0.1% | 86.0% |
-| Neukölln | 76.0% | 30.7% | 100.0% | 0.0% | 100.0% |
-| Pankow | 57.7% | 67.1% | 15.8% | 0.5% | 98.5% |
-| Reinickendorf | 59.9% | 69.5% | 91.9% | 0.6% | 100.0% |
-| Spandau | 93.1% | 82.5% | 100.0% | 0.7% | 92.3% |
-| Steglitz-Zehlendorf | 47.7% | 76.2% | 100.0% | 0.4% | 94.8% |
-| Tempelhof-Schöneberg | 55.0% | 39.6% | 100.0% | 0.1% | 95.8% |
-| Treptow-Köpenick | 60.4% | 100.0% | 40.0% | 1.6% | 95.3% |
+| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn | S- or U-Bahn |
+|---|---|---|---|---|---|---|
+| Berlin | 56.7% | 51.7% | 62.3% | 0.4% | 91.2% | 33.1% |
+| Charlottenburg-Wilmersdorf | 42.3% | 19.8% | 100.0% | 0.2% | 81.6% | 9.0% |
+| Friedrichshain-Kreuzberg | 52.7% | 6.3% | 54.5% | 0.0% | 82.6% | 1.2% |
+| Lichtenberg | 45.8% | 72.3% | 12.6% | 0.3% | 75.2% | 35.9% |
+| Marzahn-Hellersdorf | 68.3% | 70.9% | 30.1% | 0.1% | 92.2% | 43.3% |
+| Mitte | 34.9% | 6.0% | 26.2% | 0.1% | 86.0% | 2.2% |
+| Neukölln | 76.0% | 30.7% | 100.0% | 0.0% | 100.0% | 26.6% |
+| Pankow | 57.7% | 67.1% | 15.8% | 0.5% | 98.5% | 47.1% |
+| Reinickendorf | 59.9% | 69.5% | 91.9% | 0.6% | 100.0% | 43.2% |
+| Spandau | 93.1% | 82.5% | 100.0% | 0.7% | 92.3% | 81.3% |
+| Steglitz-Zehlendorf | 47.7% | 76.2% | 100.0% | 0.4% | 94.8% | 38.0% |
+| Tempelhof-Schöneberg | 55.0% | 39.6% | 100.0% | 0.1% | 95.8% | 25.3% |
+| Treptow-Köpenick | 60.4% | 100.0% | 40.0% | 1.6% | 95.3% | 60.4% |
 
 #### Share of residents more than 30 min from the nearest stop
 
-| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn |
-|---|---|---|---|---|---|
-| Berlin | 19.2% | 33.2% | 51.7% | 0.0% | 66.4% |
-| Charlottenburg-Wilmersdorf | 0.9% | 4.7% | 96.2% | 0.0% | 43.8% |
-| Friedrichshain-Kreuzberg | 9.6% | 0.5% | 32.4% | 0.0% | 26.7% |
-| Lichtenberg | 13.2% | 45.0% | 0.1% | 0.0% | 44.4% |
-| Marzahn-Hellersdorf | 33.7% | 51.9% | 9.6% | 0.0% | 77.0% |
-| Mitte | 4.5% | 0.2% | 4.5% | 0.0% | 35.4% |
-| Neukölln | 48.9% | 6.2% | 97.1% | 0.0% | 99.9% |
-| Pankow | 17.5% | 42.8% | 9.9% | 0.0% | 84.2% |
-| Reinickendorf | 10.4% | 40.1% | 70.8% | 0.0% | 99.0% |
-| Spandau | 68.4% | 54.1% | 100.0% | 0.0% | 63.9% |
-| Steglitz-Zehlendorf | 8.5% | 50.6% | 100.0% | 0.0% | 77.8% |
-| Tempelhof-Schöneberg | 11.5% | 24.6% | 100.0% | 0.0% | 69.9% |
-| Treptow-Köpenick | 15.6% | 94.3% | 21.8% | 0.1% | 79.5% |
+| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn | S- or U-Bahn |
+|---|---|---|---|---|---|---|
+| Berlin | 19.2% | 33.2% | 51.7% | 0.0% | 66.4% | 10.2% |
+| Charlottenburg-Wilmersdorf | 0.9% | 4.7% | 96.2% | 0.0% | 43.8% | 0.0% |
+| Friedrichshain-Kreuzberg | 9.6% | 0.5% | 32.4% | 0.0% | 26.7% | 0.0% |
+| Lichtenberg | 13.2% | 45.0% | 0.1% | 0.0% | 44.4% | 12.5% |
+| Marzahn-Hellersdorf | 33.7% | 51.9% | 9.6% | 0.0% | 77.0% | 6.8% |
+| Mitte | 4.5% | 0.2% | 4.5% | 0.0% | 35.4% | 0.2% |
+| Neukölln | 48.9% | 6.2% | 97.1% | 0.0% | 99.9% | 4.0% |
+| Pankow | 17.5% | 42.8% | 9.9% | 0.0% | 84.2% | 17.3% |
+| Reinickendorf | 10.4% | 40.1% | 70.8% | 0.0% | 99.0% | 9.5% |
+| Spandau | 68.4% | 54.1% | 100.0% | 0.0% | 63.9% | 53.3% |
+| Steglitz-Zehlendorf | 8.5% | 50.6% | 100.0% | 0.0% | 77.8% | 5.9% |
+| Tempelhof-Schöneberg | 11.5% | 24.6% | 100.0% | 0.0% | 69.9% | 5.4% |
+| Treptow-Köpenick | 15.6% | 94.3% | 21.8% | 0.1% | 79.5% | 15.2% |
 
 #### Effect of resident weighting (building-count median minus resident median, minutes)
 
 Positive values: counting every building once (sheds, garages, allotment huts included) makes walks look longer than residents experience them.
 
-| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn |
-|---|---|---|---|---|---|
-| Berlin | +5.4 | +20.3 | +15.0 | +0.8 | +14.8 |
-| Charlottenburg-Wilmersdorf | +1.2 | +4.4 | +9.2 | +0.6 | +7.1 |
-| Friedrichshain-Kreuzberg | +2.7 | -0.1 | +7.9 | -0.2 | +2.0 |
-| Lichtenberg | +5.5 | +13.2 | +1.9 | +0.9 | +4.5 |
-| Marzahn-Hellersdorf | +3.2 | +0.2 | +8.8 | +0.2 | +4.7 |
-| Mitte | -0.9 | +0.1 | +1.7 | +0.5 | -0.7 |
-| Neukölln | +17.7 | +7.0 | +2.6 | +0.6 | +8.2 |
-| Pankow | +8.3 | +27.0 | +6.6 | +1.0 | +11.4 |
-| Reinickendorf | +1.3 | +16.6 | +28.0 | +1.2 | +26.1 |
-| Spandau | +8.8 | +13.9 | +16.5 | +0.8 | +7.0 |
-| Steglitz-Zehlendorf | +3.1 | +7.0 | +13.7 | +0.6 | +2.1 |
-| Tempelhof-Schöneberg | +2.1 | +19.6 | +25.1 | +0.6 | +26.4 |
-| Treptow-Köpenick | +5.8 | +17.3 | +7.6 | +1.4 | +18.3 |
+| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn | S- or U-Bahn |
+|---|---|---|---|---|---|---|
+| Berlin | +5.4 | +20.3 | +15.0 | +0.8 | +14.8 | +7.1 |
+| Charlottenburg-Wilmersdorf | +1.2 | +4.4 | +9.2 | +0.6 | +7.1 | +2.1 |
+| Friedrichshain-Kreuzberg | +2.7 | -0.1 | +7.9 | -0.2 | +2.0 | 0.0 |
+| Lichtenberg | +5.5 | +13.2 | +1.9 | +0.9 | +4.5 | +5.1 |
+| Marzahn-Hellersdorf | +3.2 | +0.2 | +8.8 | +0.2 | +4.7 | +7.0 |
+| Mitte | -0.9 | +0.1 | +1.7 | +0.5 | -0.7 | 0.0 |
+| Neukölln | +17.7 | +7.0 | +2.6 | +0.6 | +8.2 | +7.1 |
+| Pankow | +8.3 | +27.0 | +6.6 | +1.0 | +11.4 | +10.4 |
+| Reinickendorf | +1.3 | +16.6 | +28.0 | +1.2 | +26.1 | +3.0 |
+| Spandau | +8.8 | +13.9 | +16.5 | +0.8 | +7.0 | +13.1 |
+| Steglitz-Zehlendorf | +3.1 | +7.0 | +13.7 | +0.6 | +2.1 | +2.0 |
+| Tempelhof-Schöneberg | +2.1 | +19.6 | +25.1 | +0.6 | +26.4 | +5.8 |
+| Treptow-Köpenick | +5.8 | +17.3 | +7.6 | +1.4 | +18.3 | +5.8 |
 
 #### Sensitivity to walking speed (Berlin, median per resident, minutes)
 
@@ -160,24 +160,25 @@ Positive values: counting every building once (sheds, garages, allotment huts in
 | Tram | 43.0 | 33.1 | 30.7 |
 | Bus | 4.7 | 3.6 | 3.3 |
 | Regionalbahn | 50.0 | 38.4 | 35.7 |
+| S- or U-Bahn | 13.7 | 10.5 | 9.8 |
 
 #### Sensitivity to the city limit: stops up to 1000 m outside Berlin also counted (change in median per resident, minutes)
 
-| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn |
-|---|---|---|---|---|---|
-| Berlin | 0.0 | 0.0 | 0.0 | 0.0 | -0.1 |
-| Charlottenburg-Wilmersdorf | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Friedrichshain-Kreuzberg | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Lichtenberg | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Marzahn-Hellersdorf | -0.5 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Mitte | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Neukölln | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Pankow | -0.1 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Reinickendorf | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Spandau | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Steglitz-Zehlendorf | 0.0 | 0.0 | -8.7 | 0.0 | -0.2 |
-| Tempelhof-Schöneberg | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| Treptow-Köpenick | -0.1 | 0.0 | 0.0 | 0.0 | -5.0 |
+| District | S-Bahn | U-Bahn | Tram | Bus | Regionalbahn | S- or U-Bahn |
+|---|---|---|---|---|---|---|
+| Berlin | 0.0 | 0.0 | 0.0 | 0.0 | -0.1 | 0.0 |
+| Charlottenburg-Wilmersdorf | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Friedrichshain-Kreuzberg | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Lichtenberg | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Marzahn-Hellersdorf | -0.5 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Mitte | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Neukölln | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Pankow | -0.1 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Reinickendorf | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Spandau | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Steglitz-Zehlendorf | 0.0 | 0.0 | -8.7 | 0.0 | -0.2 | 0.0 |
+| Tempelhof-Schöneberg | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Treptow-Köpenick | -0.1 | 0.0 | 0.0 | 0.0 | -5.0 | -0.1 |
 
 #### Spread across LOR Planungsräume (median walk per resident, minutes)
 
@@ -190,6 +191,7 @@ Distribution over the 537 Planungsräume with at least 100 residents (5 excluded
 | Tram | 537 | 4.7 | 36.5 | 146.9 | 268.8 |
 | Bus | 537 | 2.7 | 3.7 | 5.5 | 12.0 |
 | Regionalbahn | 537 | 16.9 | 39.7 | 86.1 | 192.9 |
+| S- or U-Bahn | 537 | 5.6 | 11.2 | 30.6 | 158.8 |
 
 #### GTFS stops per mode
 
@@ -210,7 +212,7 @@ Distribution over the 537 Planungsräume with at least 100 residents (5 excluded
 - population: downloaded 2026-10-07T12:01:08Z from https://download.statistik-berlin-brandenburg.de/1df9da7ea6dbfa3a/f6ac408f14cd/SB_A01-16-00_2025h02_BE.xlsx
 - Buildings: 503625 (excluded for snap distance > 250 m: 413)
 - Residents: 3913644 in the register, 3913644.0 allocated to 331880 residential candidate buildings; storeys mapped for 41.8% of them
-- Pipeline run: 2026-10-07T12:14:56Z
+- Pipeline run: 2026-10-07T12:26:03Z
 
 <!-- END GENERATED: results -->
 
@@ -224,7 +226,14 @@ nearest stop elsewhere, so read those areas as "no service", not as a long walk.
 
 ![Median walk per resident to the nearest stop, by mode and Planungsraum](output/maps/plr_median_walk_all_modes.png)
 
+The "S- or U-Bahn" map is the walk to whichever rapid-transit stop is nearer. It is the
+best single picture of rail access in a Kiez: a Planungsraum with a U-Bahn stop at
+4 min and an S-Bahn stop at 25 min is well served, which neither single-mode map shows.
+
+![Median walk per resident to the nearest S- or U-Bahn stop](output/maps/plr_median_walk_S-or-U-Bahn.png)
+
 One map per mode, with district names:
+[S- or U-Bahn](output/maps/plr_median_walk_S-or-U-Bahn.png) ·
 [S-Bahn](output/maps/plr_median_walk_S-Bahn.png) ·
 [U-Bahn](output/maps/plr_median_walk_U-Bahn.png) ·
 [Tram](output/maps/plr_median_walk_Tram.png) ·

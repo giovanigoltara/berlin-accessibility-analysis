@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 import json
 import time
 from pathlib import Path
@@ -23,6 +24,16 @@ UNIT_LEVELS = {
     "bzr_id": ("bezirksregion", "bzr_name"),
     "plr_id": ("planungsraum", "plr_name"),
 }
+
+
+def report_modes(cfg: Config) -> list[str]:
+    """Transit modes plus combined modes (e.g. nearest S- or U-Bahn), in report order."""
+    return list(cfg["modes"]) + list(cfg.raw.get("combined_modes", {}))
+
+
+def mode_slug(mode: str) -> str:
+    """File-name friendly mode name: 'S- or U-Bahn' -> 'S-or-U-Bahn'."""
+    return re.sub(r"[^A-Za-z0-9]+", "-", mode).strip("-")
 
 
 def log(msg: str) -> None:
@@ -283,6 +294,10 @@ def run(cfg: Config) -> None:
             log(f"dijkstra {mode}, stop buffer {buf} m: {len(s)} stops")
             d_node = multi_source_distance(net, s["node"].to_numpy(), s["snap_m"].to_numpy())
             dist[f"dist_m_{mode}{suffix}"] = d_node[bld["node"].to_numpy()] + bld["snap_m"].to_numpy()
+        # Nearest stop of any of several modes = the shortest of their distances.
+        for name, members in cfg.raw.get("combined_modes", {}).items():
+            dist[f"dist_m_{name}{suffix}"] = dist[[f"dist_m_{m}{suffix}" for m in members]].min(axis=1)
+    modes = report_modes(cfg)
 
     gpd.GeoDataFrame(dist, geometry=bld.geometry, crs=crs).to_parquet(der_dir / "building_walk_dist.parquet")
 

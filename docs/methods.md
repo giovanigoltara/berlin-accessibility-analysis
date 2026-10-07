@@ -124,6 +124,13 @@ metadata.
    statistics rest on very few people and are excluded from the README
    summary of Planungsräume.
    A city-wide "Berlin" row is included at every level.
+8a. **Combined modes.** `combined_modes` in `config.yaml` defines modes
+   reported like the others, e.g. "S- or U-Bahn" = the walk to whichever of
+   the two is nearer. The nearest stop of a union of stop sets is exactly the
+   shorter of the per-mode distances, so it is computed per building as the
+   minimum of the member distances (no extra routing), then aggregated like
+   any mode. Regionalbahn is left out on purpose: its frequency is far lower
+   and it would make the measure less comparable across the city.
 9. **Comparing levels.** District, Bezirksregion and Planungsraum results come
    from the same per-building data, so differences between levels are purely
    due to aggregation. Part of any difference is the modifiable areal unit

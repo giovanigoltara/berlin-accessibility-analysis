@@ -12,6 +12,7 @@ import pandas as pd
 import _bootstrap  # noqa: F401
 
 from berlin_access.config import load_config
+from berlin_access.pipeline import report_modes
 
 BEGIN = "<!-- BEGIN GENERATED: results (scripts/build_readme_tables.py) -->"
 END = "<!-- END GENERATED: results -->"
@@ -43,7 +44,7 @@ def build(cfg) -> str:
             "`python scripts/build_readme_tables.py`._"
         )
     s = pd.read_csv(csv)
-    modes = cfg["modes"]
+    modes = report_modes(cfg)
     v = cfg["walk_speed_main_mps"]
     buf = cfg["stop_buffer_m"]
     meta = json.loads((out / "run_metadata.json").read_text()) if (out / "run_metadata.json").exists() else {}
@@ -116,7 +117,7 @@ def build(cfg) -> str:
 
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():
-        st = pd.read_csv(stops_csv).set_index("mode").reindex(modes).reset_index()
+        st = pd.read_csv(stops_csv).set_index("mode").reindex(cfg["modes"]).reset_index()
         parts.append("#### GTFS stops per mode\n\n" + md_table(st))
 
     prov = []
