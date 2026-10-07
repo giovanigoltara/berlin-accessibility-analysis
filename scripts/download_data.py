@@ -1,4 +1,4 @@
-"""Download the OSM Berlin extract and the VBB GTFS feed into data/raw/.
+"""Download the inputs listed under `downloads` in config.yaml into data/raw/.
 
 Writes data/raw/download_log.json (URL, time, size, sha256) so the run
 metadata can record which data versions produced the results.
@@ -44,15 +44,15 @@ if __name__ == "__main__":
     log_path = cfg.path("pbf").parent / "download_log.json"
     log = json.loads(log_path.read_text()) if log_path.exists() else {}
     failed = []
-    for key, url_key in (("pbf", "pbf_url"), ("gtfs", "gtfs_url")):
+    for key, url in cfg["downloads"].items():
         dest = cfg.path(key)
         dest.parent.mkdir(parents=True, exist_ok=True)
         if dest.exists() and not args.force:
             print(f"exists, skipping: {dest}")
             continue
-        print(f"downloading {cfg['downloads'][url_key]} -> {dest}")
+        print(f"downloading {url} -> {dest}")
         try:
-            log[key] = fetch(cfg["downloads"][url_key], dest)
+            log[key] = fetch(url, dest)
         except OSError as e:
             failed.append(key)
             print(f"FAILED {key}: {e}")

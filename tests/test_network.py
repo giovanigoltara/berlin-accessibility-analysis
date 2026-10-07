@@ -44,7 +44,7 @@ def test_snap_offset_and_nearest_source():
 
 def test_aggregate_keeps_long_walks():
     dist = pd.DataFrame({"district": ["A"] * 4, "dist_m_Bus": [60.0, 120.0, 1800.0, np.inf]})
-    s = aggregate(dist, ["Bus"], [1.0], [15, 30]).set_index("district")
+    s = aggregate(dist, "district", ["Bus"], [1.0], [15, 30]).set_index("unit_id")
     a = s.loc["A"]
     assert a["n_buildings"] == 4 and a["n_unreachable"] == 1
     assert np.isclose(a["median_min"], 2.0)

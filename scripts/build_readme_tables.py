@@ -17,88 +17,126 @@ BEGIN = "<!-- BEGIN GENERATED: results (scripts/build_readme_tables.py) -->"
 END = "<!-- END GENERATED: results -->"
 
 
-def fmt(x, pct=False):
+def fmt(x, pct=False, signed=False):
     if pd.isna(x):
         return "n/a"
-    return f"{100 * x:.1f}%" if pct else f"{x:.1f}"
+    if pct:
+        return f"{100 * x:.1f}%"
+    if signed:
+        return "0.0" if abs(x) < 0.05 else f"{x:+.1f}"
+    return f"{x:.1f}"
 
 
 def md_table(df: pd.DataFrame) -> str:
     cols = list(df.columns)
-    lines = ["| " + " | ".join(cols) + " |", "|" + "|".join("---" for _ in cols) + "|"]
+    lines = ["| " + " | ".join(str(c) for c in cols) + " |", "|" + "|".join("---" for _ in cols) + "|"]
     lines += ["| " + " | ".join(str(v) for v in row) + " |" for row in df.itertuples(index=False)]
     return "\n".join(lines)
 
 
 def build(cfg) -> str:
     out = cfg.path("output")
-    summary_csv = out / "walk_time_by_district.csv"
-    if not summary_csv.exists():
+    csv = out / "walk_time_by_district.csv"
+    if not csv.exists():
         return (
             "_Results have not been generated yet. Run `python scripts/run_accessibility.py` and then "
-            "`python scripts/build_readme_tables.py`. The table in earlier versions of this README did not "
-            "come from the code and has been removed; the buggy v0 output is kept in `output/legacy/` "
-            "for reference only._"
+            "`python scripts/build_readme_tables.py`._"
         )
-    s = pd.read_csv(summary_csv)
+    s = pd.read_csv(csv)
     modes = cfg["modes"]
-    v_main = cfg["walk_speed_main_mps"]
+    v = cfg["walk_speed_main_mps"]
+    buf = cfg["stop_buffer_m"]
     meta = json.loads((out / "run_metadata.json").read_text()) if (out / "run_metadata.json").exists() else {}
-    parts = []
+    order = ["Berlin"] + sorted(d for d in s["unit_id"].unique() if d != "Berlin")
+    limit = "only stops inside Berlin" if buf == 0 else f"stops up to {buf} m outside Berlin"
+    key = ["unit_id", "mode", "speed_mps"]
 
-    main = s[s["speed_mps"] == v_main]
-    order = ["Berlin"] + sorted(d for d in main["district"].unique() if d != "Berlin")
+    def wide(df, col, **kw):
+        w = df[df["speed_mps"] == v].pivot(index="unit_id", columns="mode", values=col)
+        w = w.reindex(index=order, columns=modes).apply(lambda c: c.map(lambda x: fmt(x, **kw)))
+        return w.reset_index().rename(columns={"unit_id": "District"})
 
-    def wide(col, pct=False):
-        w = main.pivot(index="district", columns="mode", values=col).reindex(index=order, columns=modes)
-        w = w.apply(lambda c: c.map(lambda x: fmt(x, pct)))
-        return w.reset_index().rename(columns={"district": "District"})
-
-    parts.append(f"#### Median walk time to the nearest stop (minutes, {v_main} m/s)\n\n" + md_table(wide("median_min")))
+    res = s[s["weighting"] == "residents"]
+    bld = s[s["weighting"] == "buildings"]
+    parts = [
+        f"All tables: walking speed {v} m/s, {limit}, residents allocated to buildings "
+        "(see `docs/methods.md`) unless stated otherwise."
+    ]
+    parts.append("#### Median walk time to the nearest stop, per resident (minutes)\n\n" + md_table(wide(res, "median_min")))
     for th in cfg["share_thresholds_min"]:
-        col = f"share_over_{th}min"
-        parts.append(f"#### Share of buildings more than {th} min from the nearest stop ({v_main} m/s)\n\n" + md_table(wide(col, pct=True)))
-
-    sens = s[s["district"] == "Berlin"].pivot(index="mode", columns="speed_mps", values="median_min").reindex(modes)
-    sens.columns = [f"{c} m/s" for c in sens.columns]
-    sens = sens.apply(lambda c: c.map(fmt)).reset_index().rename(columns={"mode": "Mode"})
-    parts.append("#### Sensitivity to walking speed (Berlin-wide median, minutes)\n\n" + md_table(sens))
-
-    buf = cfg.raw.get("stop_buffer_sensitivity_m")
-    sens_csv = out / f"walk_time_by_district_stopbuffer_{buf}m.csv"
-    if buf is not None and sens_csv.exists():
-        b = pd.read_csv(sens_csv)
-        b = b[b["speed_mps"] == v_main].set_index(["district", "mode"])["median_min"]
-        a = main.set_index(["district", "mode"])["median_min"]
-        diff = (b - a).unstack("mode").reindex(index=order, columns=modes)
-        diff = diff.apply(lambda c: c.map(lambda x: "n/a" if pd.isna(x) else f"{x:+.1f}"))
         parts.append(
-            f"#### Sensitivity to the city limit: stops up to {buf} m outside Berlin instead of "
-            f"{cfg['stop_buffer_m']} m (change in median, minutes, {v_main} m/s)\n\n"
-            f"Main results above count stops up to {cfg['stop_buffer_m']} m outside Berlin. "
-            f"Values show how the median changes when the limit is {buf} m instead "
-            "(0 m = only stops inside Berlin).\n\n"
-            + md_table(diff.reset_index().rename(columns={"district": "District"}))
+            f"#### Share of residents more than {th} min from the nearest stop\n\n"
+            + md_table(wide(res, f"share_over_{th}min", pct=True))
+        )
+
+    diff = (bld.set_index(key)["median_min"] - res.set_index(key)["median_min"]).rename("d").reset_index()
+    parts.append(
+        "#### Effect of resident weighting (building-count median minus resident median, minutes)\n\n"
+        "Positive values: counting every building once (sheds, garages, allotment huts included) "
+        "makes walks look longer than residents experience them.\n\n"
+        + md_table(wide(diff, "d", signed=True))
+    )
+
+    berlin = res[res["unit_id"] == "Berlin"].pivot(index="mode", columns="speed_mps", values="median_min").reindex(modes)
+    berlin.columns = [f"{c} m/s" for c in berlin.columns]
+    berlin = berlin.apply(lambda c: c.map(fmt)).reset_index().rename(columns={"mode": "Mode"})
+    parts.append("#### Sensitivity to walking speed (Berlin, median per resident, minutes)\n\n" + md_table(berlin))
+
+    sbuf = cfg.raw.get("stop_buffer_sensitivity_m")
+    sens_csv = out / f"walk_time_by_district_stopbuffer_{sbuf}m.csv"
+    if sbuf is not None and sens_csv.exists():
+        b = pd.read_csv(sens_csv)
+        b = b[b["weighting"] == "residents"].set_index(key)["median_min"]
+        d = (b - res.set_index(key)["median_min"]).rename("d").reset_index()
+        parts.append(
+            f"#### Sensitivity to the city limit: stops up to {sbuf} m outside Berlin also counted "
+            "(change in median per resident, minutes)\n\n"
+            + md_table(wide(d, "d", signed=True))
+        )
+
+    plr_csv = out / "walk_time_by_planungsraum.csv"
+    if plr_csv.exists():
+        p = pd.read_csv(plr_csv)
+        p = p[(p["weighting"] == "residents") & (p["speed_mps"] == v) & (p["unit_id"] != "Berlin")]
+        n_low = int(p.drop_duplicates("unit_id")["low_population"].sum())
+        p = p[~p["low_population"]]
+        rows = []
+        for m in modes:
+            x = p.loc[p["mode"] == m, "median_min"]
+            q = x.quantile([0.1, 0.5, 0.9])
+            rows.append({"Mode": m, "Planungsräume": len(x), "p10": fmt(q[0.1]), "median": fmt(q[0.5]),
+                         "p90": fmt(q[0.9]), "max": fmt(x.max())})
+        parts.append(
+            "#### Spread across LOR Planungsräume (median walk per resident, minutes)\n\n"
+            f"Distribution over the {p['unit_id'].nunique()} Planungsräume with at least "
+            f"{cfg['min_unit_residents']} residents ({n_low} excluded as low population). Per-unit values are in "
+            "`output/walk_time_by_planungsraum.csv` and `output/walk_time_by_bezirksregion.csv`.\n\n"
+            + md_table(pd.DataFrame(rows))
         )
 
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():
         st = pd.read_csv(stops_csv).set_index("mode").reindex(modes).reset_index()
-        parts.append("#### GTFS stops used per mode\n\n" + md_table(st))
+        parts.append("#### GTFS stops per mode\n\n" + md_table(st))
 
     prov = []
     if meta.get("gtfs_feed"):
-        prov.append("GTFS feed: " + ", ".join(f"{k}={v}" for k, v in meta["gtfs_feed"].items()))
+        prov.append("GTFS feed: " + ", ".join(f"{k}={val}" for k, val in meta["gtfs_feed"].items()))
     for k, d in meta.get("downloads", {}).items():
         prov.append(f"{k}: downloaded {d.get('downloaded_utc')} from {d.get('url')}")
     if meta.get("buildings"):
         b = meta["buildings"]
-        prov.append(f"Buildings used: {b.get('buildings_used')} (excluded for snap distance > "
+        prov.append(f"Buildings: {b.get('buildings_used')} (excluded for snap distance > "
                     f"{cfg['max_building_snap_m']} m: {b.get('buildings_snap_over_max')})")
+    if meta.get("residents"):
+        r = meta["residents"]
+        prov.append(f"Residents: {r.get('register_total')} in the register, {r.get('allocated_total')} allocated to "
+                    f"{r.get('candidate_buildings')} residential candidate buildings; storeys mapped for "
+                    f"{fmt(r.get('levels_known_share_of_candidates'), pct=True)} of them")
     if meta.get("generated_utc"):
         prov.append(f"Pipeline run: {meta['generated_utc']}")
     if prov:
-        parts.append("#### Provenance\n\n" + "\n".join(f"- {p}" for p in prov))
+        parts.append("#### Provenance\n\n" + "\n".join(f"- {x}" for x in prov))
 
     return "\n\n".join(parts)
 

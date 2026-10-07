@@ -18,6 +18,7 @@ cityseer==5.8.0        # Phase 1 (Space Syntax), not used by the Phase 0 pipelin
 pandas==3.0.6
 numpy==2.4.6
 pyyaml==6.0.3
+openpyxl==3.1.5
 
 # Visualisation
 matplotlib==3.11.2

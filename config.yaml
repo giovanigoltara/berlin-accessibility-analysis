@@ -4,27 +4,33 @@
 paths:
   pbf: data/raw/Berlin.bbbike.osm.pbf
   gtfs: data/raw/GTFS.zip
-  districts: data/bezirksgrenzen.geojson
-  derived: data/derived      # large intermediate files, git-ignored
+  lor: data/raw/lor_plr_2021.json                 # LOR 2021 Planungsräume (with Bezirksregion and district)
+  population: data/raw/SB_A01-16-00_2025h02_BE.xlsx  # Einwohnerregisterstatistik 31.12.2025, table T2
+  derived: data/derived      # large intermediate files and caches, git-ignored
   output: output             # small CSV/JSON results, committed
 
+# Keys match `paths`. scripts/download_data.py fetches each into its path.
 downloads:
-  # BBBike's Berlin extract covers 12.76-13.98 E, 52.23-52.82 N, i.e. well beyond the
-  # city boundary, which the stop-buffer sensitivity run and edge routing need. Geofabrik's extract stops at the boundary.
-  pbf_url: https://download.bbbike.org/osm/bbbike/Berlin/Berlin.osm.pbf
-  gtfs_url: https://www.vbb.de/vbbgtfs
+  # BBBike's Berlin extract covers 12.76-13.98 E, 52.23-52.82 N, i.e. beyond the
+  # city boundary, which the stop-buffer sensitivity run and edge routing need.
+  pbf: https://download.bbbike.org/osm/bbbike/Berlin/Berlin.osm.pbf
+  gtfs: https://www.vbb.de/vbbgtfs
+  lor: https://gdi.berlin.de/services/wfs/lor_2021?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=lor_2021:a_lor_plr_2021&OUTPUTFORMAT=application/json&SRSNAME=EPSG:25833
+  population: https://download.statistik-berlin-brandenburg.de/1df9da7ea6dbfa3a/f6ac408f14cd/SB_A01-16-00_2025h02_BE.xlsx
 
-district_name_column: spatial_alias
 crs: EPSG:32633              # UTM 33N, metres
 
 walk_speed_main_mps: 1.3
 walk_speeds_mps: [1.0, 1.3, 1.4]
 share_thresholds_min: [15, 30]
 
-stop_buffer_m: 1000          # main run: stops up to 1 km outside Berlin count
-stop_buffer_sensitivity_m: 0  # sensitivity run: only stops inside Berlin (strict city limit)
+stop_buffer_m: 0             # main run: only stops inside Berlin (strict city limit)
+stop_buffer_sensitivity_m: 1000  # sensitivity run: stops up to 1 km outside Berlin also count
 network_buffer_m: 3000       # OSM data is read for the city plus this buffer
 max_stop_snap_m: 250         # stops further than this from the walk network are dropped
-max_building_snap_m: 250     # buildings further than this from the walk network are flagged and excluded
+max_building_snap_m: 250     # buildings further than this from the walk network are excluded
+
+min_residential_footprint_m2: 40  # smaller buildings get no residents (sheds, garages tagged building=yes)
+min_unit_residents: 100      # units with fewer residents are flagged low_population
 
 modes: [S-Bahn, U-Bahn, Tram, Bus, Regionalbahn]
