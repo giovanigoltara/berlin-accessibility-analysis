@@ -16,7 +16,8 @@ from berlin_access.config import load_config
 
 def fetch(url, dest):
     tmp = dest.with_suffix(dest.suffix + ".part")
-    with urllib.request.urlopen(url) as r, open(tmp, "wb") as f:
+    req = urllib.request.Request(url, headers={"User-Agent": "berlin-accessibility-analysis/0.1 (research)"})
+    with urllib.request.urlopen(req) as r, open(tmp, "wb") as f:
         final_url = r.geturl()
         while chunk := r.read(1 << 20):
             f.write(chunk)
@@ -42,6 +43,7 @@ if __name__ == "__main__":
     cfg = load_config(args.config)
     log_path = cfg.path("pbf").parent / "download_log.json"
     log = json.loads(log_path.read_text()) if log_path.exists() else {}
+    failed = []
     for key, url_key in (("pbf", "pbf_url"), ("gtfs", "gtfs_url")):
         dest = cfg.path(key)
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -49,5 +51,11 @@ if __name__ == "__main__":
             print(f"exists, skipping: {dest}")
             continue
         print(f"downloading {cfg['downloads'][url_key]} -> {dest}")
-        log[key] = fetch(cfg["downloads"][url_key], dest)
+        try:
+            log[key] = fetch(cfg["downloads"][url_key], dest)
+        except OSError as e:
+            failed.append(key)
+            print(f"FAILED {key}: {e}")
     log_path.write_text(json.dumps(log, indent=2))
+    if failed:
+        raise SystemExit(f"download failed for: {', '.join(failed)}")
