@@ -1,29 +1,31 @@
+# Pinned to the versions the test suite passed with (Python 3.11, 2026-10-07).
+# The full Berlin run has not yet been executed with these pins; re-check after it.
+
 # Geospatial
-geopandas>=0.14.0
-shapely>=2.0.0
-pyproj>=3.6.0
+geopandas==1.2.0
+shapely==2.2.0
+pyproj==3.7.2
+pyarrow==25.0.1
 
-# Network Analysis
-networkx>=3.0
-osmnx>=1.6.0
-pyrosm>=0.6.1
+# Network analysis
+networkx==3.6.1
+osmnx==2.1.1
+pyrosm==0.15.0
+scipy==1.17.1
+cityseer==5.8.0        # Phase 1 (Space Syntax), not used by the Phase 0 pipeline
 
-# Data Processing
-pandas>=2.0.0
-numpy>=1.24.0
-scipy>=1.11.0
+# Data processing
+pandas==3.0.6
+numpy==2.4.6
+pyyaml==6.0.3
 
-# Google Maps API
+# Visualisation
+matplotlib==3.11.2
+
+# Tests
+pytest==9.1.1
+
+# Only for notebooks/reisezeiten_landmarks.ipynb (Google Maps, paid API)
 googlemaps>=4.10.0
-
-# Visualization
-matplotlib>=3.7.0
-folium>=0.14.0
-
-# Utilities
-tqdm>=4.65.0
 python-dotenv>=1.0.0
-
-# Jupyter
 jupyter>=1.0.0
-ipykernel>=6.25.0

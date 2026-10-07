@@ -1,226 +1,112 @@
-# Berlin Accessibility Analysis
+# Berlin walk-to-transit accessibility
 
-> **Hinweis:** Dies ist ein experimentelles Projekt. Die Ergebnisse dienen zu Demonstrationszwecken und sollten nicht für produktive Anwendungen verwendet werden.
+> **Kurzfassung (DE):** Wie weit gehen Berlinerinnen und Berliner zu Fuß zur nächsten
+> Haltestelle von S-Bahn, U-Bahn, Tram, Bus und Regionalbahn? Für jedes OSM-Gebäude
+> wird die Fußwegdistanz im OSM-Fußwegenetz zur nächsten GTFS-Haltestelle je
+> Verkehrsmittel berechnet und pro Bezirk zusammengefasst (Median, Anteil über 15 und
+> 30 Minuten, Gehgeschwindigkeit 1,0 / 1,3 / 1,4 m/s). Die Tabellen unten werden aus
+> den CSV-Dateien in `output/` erzeugt. Geplant: Space-Syntax-Analyse (angulare
+> Segmentanalyse) und Place-Syntax-Erreichbarkeit als Vergleich.
 
-Entwicklung einer Geodaten-Pipeline zur Analyse von Erreichbarkeit und Reisezeiten in Berlin. Integration von Google Maps API mit Berliner Open Data zur Verarbeitung von Verkehrsdaten, POI-Informationen und administrativen Grenzen über 12 Bezirke. Räumliche Analyse und Visualisierung urbaner Zugänglichkeit zur Unterstützung stadtplanerischer Entscheidungsprozesse.
+## Purpose
 
----
+How far is the nearest stop of each transit mode, on foot, from every building in
+Berlin? This is a metric, network-based accessibility measure. The project will
+extend it with configurational measures (angular segment analysis, Place Syntax
+attraction reach) and compare the two. Status: **Phase 0** (fixing and
+restructuring the original analysis). See [`docs/methods.md`](docs/methods.md) for
+every methodological choice.
 
-## Projektübersicht
+## Data
 
-Dieses Projekt analysiert die **Erreichbarkeit von öffentlichen Verkehrsmitteln** und **Reisezeiten zu wichtigen Landmarks** in allen 12 Berliner Bezirken. Es kombiniert OpenStreetMap-Daten, GTFS-Fahrplandaten und die Google Maps Distance Matrix API.
+| Data | Source | Licence |
+|---|---|---|
+| Walk network, buildings | [OpenStreetMap](https://www.openstreetmap.org/copyright) via the [Geofabrik Berlin extract](https://download.geofabrik.de/europe/germany/berlin.html) | ODbL 1.0, © OpenStreetMap contributors |
+| Stops and routes | [VBB GTFS](https://www.vbb.de/vbb-services/api-open-data/datensaetze/) | VBB open data terms |
+| District boundaries | Berlin Open Data (`data/bezirksgrenzen.geojson`, in repo) | Berlin Open Data terms |
 
-### Hauptkomponenten
-
-| Modul | Beschreibung |
-|-------|-------------|
-| `notebooks/fussweg_oepnv.ipynb` | Berechnung der Fußwege zu ÖPNV-Haltestellen (S-Bahn, U-Bahn, Tram, Bus) |
-| `notebooks/reisezeiten_landmarks.ipynb` | Reisezeiten zu wichtigen Berliner Landmarks via Google Maps API |
-
----
-
-## Ergebnisse
-
-### Fußwege zu ÖPNV-Haltestellen
-
-Mediane Gehzeit (in Minuten) von Gebäuden zur nächsten Haltestelle:
-
-| Bezirk | S-Bahn | U-Bahn | Tram | Bus |
-|--------|--------|--------|------|-----|
-| Mitte | 12.65 | 12.45 | 7.82 | 5.94 |
-| Friedrichshain-Kreuzberg | 15.23 | 10.87 | 8.52 | 6.27 |
-| Pankow | 18.45 | 18.92 | 9.15 | 7.43 |
-| Charlottenburg-Wilmersdorf | 14.78 | 11.23 | - | 6.89 |
-| Spandau | 21.34 | - | - | 8.56 |
-| Steglitz-Zehlendorf | 19.87 | 15.67 | - | 7.92 |
-| Tempelhof-Schöneberg | 16.23 | 13.45 | - | 6.78 |
-| Neukölln | 17.89 | 12.34 | - | 6.45 |
-| Treptow-Köpenick | 20.56 | - | 11.23 | 8.12 |
-| Marzahn-Hellersdorf | 22.45 | 23.30 | 10.87 | 9.12 |
-| Lichtenberg | 16.78 | 14.56 | 9.45 | 7.23 |
-| Reinickendorf | 18.92 | 19.45 | - | 7.89 |
-
-### Reisezeiten zu Landmarks
-
-Reisezeiten (in Minuten) vom Bezirkszentrum zu wichtigen Standorten:
-
-**Ziele:**
-- Alexanderplatz
-- Flughafen Berlin Brandenburg (BER)
-- Berlin Hauptbahnhof
-- Charité
-
----
-
-## Technologie-Stack
-
-### Datenquellen
-- **OpenStreetMap (OSM)** - Fußgängernetzwerk via `pyrosm`
-- **GTFS Berlin** - Haltestellendaten der BVG/S-Bahn
-- **Berliner Open Data** - Bezirksgrenzen und Gebäudedaten
-- **Google Maps Distance Matrix API** - Reisezeiten (Auto, Fuß, ÖPNV)
-
-### Python-Bibliotheken
-```
-geopandas>=0.14.0
-pandas>=2.0.0
-numpy>=1.24.0
-shapely>=2.0.0
-networkx>=3.0
-osmnx>=1.6.0
-pyrosm>=0.6.1
-scipy>=1.11.0
-googlemaps>=4.10.0
-matplotlib>=3.7.0
-tqdm>=4.65.0
-```
-
----
-
-## Installation
+Large files are downloaded into `data/raw/` and never committed:
 
 ```bash
-# Repository klonen
-git clone https://github.com/YOUR_USERNAME/berlin-accessibility-analysis.git
-cd berlin-accessibility-analysis
+python scripts/download_data.py      # OSM PBF (~100 MB) + VBB GTFS zip
+```
 
-# Virtuelle Umgebung erstellen
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# oder: venv\Scripts\activate  # Windows
+If the GTFS URL in `config.yaml` has moved, download the feed by hand from the VBB
+page and save it as `data/raw/GTFS.zip`.
 
-# Abhängigkeiten installieren
+## Method (short)
+
+1. OSM walking network (pyrosm), **undirected**, projected to EPSG:32633, largest
+   connected component.
+2. One representative point per OSM building, assigned to the district that contains
+   it, snapped to the nearest network node.
+3. GTFS stops classified by `route_type` (109 = S-Bahn, 400 = U-Bahn, 900 = Tram,
+   100/106/2 = Regionalbahn, 3/700-799 = Bus), kept up to 1 km outside the city.
+4. Multi-source Dijkstra per mode; snap distances of stop and building count towards
+   the walk.
+5. Per district: median walk time and share of buildings beyond 15 and 30 min, at
+   1.3 m/s (main) and 1.0 / 1.4 m/s (sensitivity). No building is dropped for being
+   far away.
+
+## Run
+
+```bash
+python3.11 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+python scripts/download_data.py
+python scripts/run_accessibility.py      # writes output/*.csv and output/run_metadata.json
+python scripts/build_readme_tables.py    # regenerates the Results section below
+pytest                                   # unit tests + smoke test on a bundled sample
 ```
 
----
+## Results
 
-## Daten
+All numbers in this section are written by `scripts/build_readme_tables.py` from
+`output/*.csv`. Do not edit them by hand.
 
-### Automatischer Download
+<!-- BEGIN GENERATED: results (scripts/build_readme_tables.py) -->
 
-Die OSM-Daten werden beim ersten Durchlauf automatisch heruntergeladen. Für die GTFS-Daten:
+_Results have not been generated yet. Run `python scripts/run_accessibility.py` and then `python scripts/build_readme_tables.py`. The table in earlier versions of this README did not come from the code and has been removed; the buggy v0 output is kept in `output/legacy/` for reference only._
 
-1. **GTFS Berlin** herunterladen von [VBB Open Data](https://www.vbb.de/unsere-themen/vbbdigital/api-entwicklerinfos/datensaetze)
-2. Entpacken in `data/gtfs/`
+<!-- END GENERATED: results -->
 
-### Bezirksgrenzen
+## Changes from the first version (v0)
 
-Berliner Bezirksgrenzen sind im Repository enthalten (`data/bezirksgrenzen.geojson`).
+The original notebook (`notebooks/fussweg_oepnv.ipynb`, kept unchanged for
+reference) had defects that affect every number it produced. Its output is in
+`output/legacy/` with a list of them. In short: S-Bahn (route_type 109) was counted
+as bus, rail-replacement buses named U2/U5/... as U-Bahn, the walk graph was
+one-way along OSM drawing direction, walks of 30 min or more were dropped before the
+median, and stops outside the boundary were ignored. The results table in the
+earlier README did not come from the code at all and has been removed.
 
-### Google Maps API
+## Limitations
 
-Für das Landmark-Modul wird ein Google Maps API-Key benötigt:
+- Buildings are unweighted: a shed counts like an apartment block.
+- GTFS platform coordinates are used, not station entrances. For deep U-Bahn
+  stations the real walk can differ.
+- The Berlin OSM extract ends near the city boundary, so the 1 km stop buffer is only
+  partly effective (see `output/stops_by_mode.csv` and `docs/methods.md`).
+- Nearest stop only: frequency, line count and travel time onwards are ignored.
+- Network quality depends on OSM footway mapping, which varies by area.
 
-1. [Google Cloud Console](https://console.cloud.google.com/) öffnen
-2. Distance Matrix API aktivieren
-3. API-Key erstellen
-4. Als Umgebungsvariable setzen:
-   ```bash
-   export GOOGLE_MAPS_API_KEY="your_api_key"
-   ```
+## Next steps
 
----
+- **Phase 1:** angular segment analysis (cityseer) at 400 / 800 / 1200 / 2000 m,
+  pilot in Friedrichshain-Kreuzberg; NAIN / NACH.
+- **Phase 2:** Place Syntax Tool inputs (QGIS GeoPackage) and a Python cross-check of
+  attraction reach.
+- **Phase 3:** per-building comparison of metric walk time and configurational
+  centrality.
+- **Phase 4:** shade-weighted reach (with the SunWalk project).
 
-## Verwendung
+## Other module: travel times to landmarks
 
-### Fußwege zu ÖPNV berechnen
+`notebooks/reisezeiten_landmarks.ipynb` queries the Google Maps Distance Matrix API
+(paid) for travel times from district centroids to four landmarks. It is unchanged
+and not part of the pipeline above.
 
-```bash
-jupyter notebook notebooks/fussweg_oepnv.ipynb
-```
+## Licence and author
 
-Dieser Notebook:
-1. Lädt das OSM-Fußgängernetzwerk für Berlin
-2. Extrahiert ~500.000 Gebäudepunkte
-3. Mappt GTFS-Haltestellen auf das Netzwerk
-4. Berechnet kürzeste Wege mit Dijkstra-Algorithmus
-5. Aggregiert Medianwerte pro Bezirk und Verkehrsmittel
-
-### Reisezeiten zu Landmarks berechnen
-
-```bash
-jupyter notebook notebooks/reisezeiten_landmarks.ipynb
-```
-
-Dieser Notebook:
-1. Berechnet Bezirkszentroide
-2. Fragt Google Maps API für alle Kombinationen ab
-3. Erstellt Vergleichstabellen (Auto, Fuß, ÖPNV)
-
-**Hinweis:** API-Kosten ~$0.72 pro Durchlauf (144 Abfragen).
-
----
-
-## Projektstruktur
-
-```
-berlin-accessibility-analysis/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── notebooks/
-│   ├── fussweg_oepnv.ipynb          # ÖPNV-Erreichbarkeitsanalyse
-│   └── reisezeiten_landmarks.ipynb   # Landmark-Reisezeiten
-├── data/
-│   ├── bezirksgrenzen.geojson        # Berliner Bezirksgrenzen
-│   └── gtfs/                         # GTFS-Daten (nicht im Repo)
-└── output/
-    ├── fussweg_oepnv_ergebnisse.csv
-    └── reisezeiten_landmarks.csv
-```
-
----
-
-## Methodik
-
-### Fußweg-Berechnung
-
-1. **Netzwerk-Extraktion**: OSM-Daten werden mit `pyrosm` geladen und auf Fußwege gefiltert
-2. **Gebäude-Snapping**: Gebäudezentroide werden auf das nächste Netzwerk-Node gemappt
-3. **Multi-Source Dijkstra**: Kürzeste Pfade von allen Haltestellen zu allen Gebäuden
-4. **Aggregation**: Median-Gehzeit pro Bezirk und Verkehrsmittel
-
-**Annahmen:**
-- Gehgeschwindigkeit: 1.0 m/s (3.6 km/h)
-- Ausreißer-Filter: Werte >= 30 Minuten werden ausgeschlossen
-- Koordinatensystem: EPSG:32633 (UTM Zone 33N)
-
-### Landmark-Reisezeiten
-
-- **Verkehrsmittel**: Auto, Fuß, ÖPNV
-- **Abfahrtszeit**: Aktueller Zeitpunkt (verkehrsabhängig)
-- **Quelle**: Google Maps Distance Matrix API
-
----
-
-## Lizenz
-
-MIT License - siehe [LICENSE](LICENSE)
-
----
-
-## Bekannte Einschränkungen
-
-- **Fehlende Werte**: Einige Bezirke zeigen keine Daten für bestimmte Verkehrsmittel (z.B. Neukölln ohne S-Bahn, Spandau ohne Tram). Dies entspricht der tatsächlichen ÖPNV-Infrastruktur – nicht alle Verkehrsmittel sind in allen Bezirken verfügbar.
-- **Datenaktualität**: Die Ergebnisse basieren auf GTFS-Daten eines bestimmten Stichtags und können von aktuellen Fahrplänen abweichen.
-- **Netzwerk-Snapping**: Gebäude ohne direkte Anbindung an das Fußgängernetzwerk werden auf den nächsten Netzwerk-Knoten gemappt, was zu leichten Ungenauigkeiten führen kann.
-
----
-
-## Nächste Schritte
-
-- [ ] **Datenvalidierung**: Überprüfung der fehlenden Werte und Abgleich mit offiziellen BVG-Netzplänen
-- [ ] **Visualisierung**: Interaktive Karten mit Folium zur Darstellung der Erreichbarkeit pro Bezirk
-- [ ] **Zeitabhängige Analyse**: Untersuchung der Erreichbarkeit zu verschiedenen Tageszeiten (Rush Hour vs. Nacht)
-- [ ] **Erweiterung der Landmarks**: Zusätzliche POIs wie Universitäten, Krankenhäuser und Einkaufszentren
-- [ ] **Performance-Optimierung**: Parallelisierung der Dijkstra-Berechnungen für schnellere Durchläufe
-- [ ] **Dashboard-Integration**: Anbindung an ein interaktives Web-Dashboard
-
----
-
-## Autor
-
-**Giovani Goltara**
-
-Entwickelt als Teil eines Stadtplanungs-Dashboards zur Analyse urbaner Zugänglichkeit in Berlin.
+Code: MIT, see [LICENSE](LICENSE). Data licences as listed above.
+Giovani Goltara.
