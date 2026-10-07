@@ -1,0 +1,9 @@
+route_type,mode,n_routes,share_names_matching_mode,sample_short_names
+3,Bus,34,,"338, 604, 651, 652, 654, 657, 670, 671"
+100,Regionalbahn,50,1.0,"FEX, RB10, RB12, RB14, RB20, RB21, RB22, RB23"
+106,Regionalbahn,15,1.0,"RB12, RB13, RB15, RB25, RB26, RB27, RB35, RB36"
+109,S-Bahn,46,1.0,"S1, S2, S3, S4, S5, S7, S8, S9"
+400,U-Bahn,9,1.0,"U1, U2, U3, U4, U5, U6, U7, U8"
+700,Bus,1041,,"2, 2N, 3N, 4N, 9, 10, 11, 12"
+900,Tram,48,,"1, 2, 3, 4, 5, 6, 12, 16"
+1000,,6,,"F10, F11, F12, F21, F23, F39"

@@ -8,14 +8,16 @@ them. Numbers quoted here come from files in `output/`.
 
 | Input | Source | Licence | Version |
 |---|---|---|---|
-| Walk network, buildings | OpenStreetMap, Geofabrik Berlin extract | ODbL 1.0 | recorded in `output/run_metadata.json` (`downloads.pbf`) |
+| Walk network, buildings | OpenStreetMap, BBBike Berlin extract (bbox 12.76-13.98 E, 52.23-52.82 N) | ODbL 1.0 | recorded in `output/run_metadata.json` (`downloads.pbf`) |
 | Stops, routes | VBB GTFS feed | see VBB open data terms (CC BY 4.0 at the time of writing; verify on download) | `output/run_metadata.json` (`gtfs_feed`: feed_info / calendar validity) |
 | District boundaries | Berlin Open Data, `data/bezirksgrenzen.geojson` | dl-de/by-2-0 (verify) | in repo |
 
-**Feed date: not yet recorded.** The full Berlin run has not been executed in
-the environment where this pipeline was written (the data hosts were not
-reachable). The first run writes the GTFS validity window to
-`output/run_metadata.json`; copy it here.
+**Data versions of the current results** (from `output/run_metadata.json`):
+GTFS feed downloaded 2026-10-07 from `https://www.vbb.de/vbbgtfs`, service
+calendar 2026-10-06 to 2026-12-12 (the feed has no `feed_info.txt`, so the
+calendar window is the only version marker). OSM: BBBike Berlin extract,
+server timestamp 2026-10-03, downloaded 2026-10-07. Both files' sha256 are in
+the metadata.
 
 ## Pipeline
 
@@ -57,15 +59,17 @@ reachable). The first run writes the GTFS validity window to
    U5 etc. stay buses. The check per route type (route counts, sample names,
    share of names matching the mode) is written to
    `output/gtfs_route_type_check.csv` on every run.
-5. **Stop buffer.** Stops up to `stop_buffer_m` (1 km) outside the city
-   boundary are kept, so buildings near the edge can use a stop just across
-   it. **Caveat:** the Geofabrik Berlin extract ends roughly at the city
-   boundary, so the walk network outside Berlin is truncated. Stops beyond
-   the network are snapped to its edge; any stop more than
-   `max_stop_snap_m` (250 m) from a network node is dropped. The counts per
-   mode (inside Berlin, buffer zone, dropped) are in `output/stops_by_mode.csv`.
-   A complete edge treatment needs the Brandenburg extract clipped to a
-   buffer; not done yet.
+5. **Stop buffer and edge effects.** Stops up to `stop_buffer_m` (1 km)
+   outside the city boundary are kept, so buildings near the edge can use a
+   stop just across it. OSM data is read for the city plus
+   `network_buffer_m` (3 km), so walks to those stops can also route outside
+   Berlin. This is why the OSM source is the BBBike Berlin extract rather than
+   Geofabrik's: Geofabrik's Berlin extract is cut at the city boundary, while
+   BBBike's covers a rectangle reaching well into Brandenburg. (Geofabrik was
+   also unreachable from the environment the pipeline was first run in.)
+   Stops more than `max_stop_snap_m` (250 m) from a network node are dropped.
+   Counts per mode (inside Berlin, buffer zone, dropped) are in
+   `output/stops_by_mode.csv`.
 6. **Distances.** For each mode, one multi-source Dijkstra
    (`scipy.sparse.csgraph.dijkstra`) from a virtual source linked to every
    stop node of that mode. The link weight is the stop's snap distance, and
@@ -116,6 +120,25 @@ to be too long and partly missing for this reason alone.
   building, assigned by location.
 - Stops were clipped at the boundary in v0; now a 1 km buffer (see caveat).
 - Stop and building snap distances now count towards the walk.
+
+## Reading the results
+
+- **Unweighted buildings dominate district medians.** A district median is
+  over OSM building polygons, so areas of many small buildings (detached
+  houses, garages, allotment sheds) outweigh dense perimeter blocks.
+  `scripts/check_detour.py` writes `output/detour_check.csv`, which compares
+  network distance with straight-line distance to the nearest stop. Across
+  Berlin the median network/straight-line ratio per mode is between 1.23 and
+  1.54, typical urban detour factors, so the graph is not the cause of long
+  medians. In Neukölln the median building is 2642 m in a straight line from
+  the nearest S-Bahn stop but 976 m from the nearest U-Bahn stop: the
+  Ring S-Bahn serves the dense north, while the U7 runs through the
+  low-density south, where most of the district's buildings are. The S-Bahn
+  median there reflects building mix, not a routing error. Weighting by
+  residents or floor area is the most important open fix.
+- **Modes absent from a district.** Where a district has no stop of a mode
+  (e.g. trams in the western districts), the value is the walk to the
+  nearest stop elsewhere. It is a distance, not a meaningful service level.
 
 ## Open questions
 

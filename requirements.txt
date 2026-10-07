@@ -1,5 +1,5 @@
-# Pinned to the versions the test suite passed with (Python 3.11, 2026-10-07).
-# The full Berlin run has not yet been executed with these pins; re-check after it.
+# Pinned to the versions of the first full Berlin run and the test suite
+# (Python 3.11, 2026-10-07).
 
 # Geospatial
 geopandas==1.2.0
