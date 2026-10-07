@@ -132,7 +132,9 @@ def run(cfg: Config) -> None:
     log(f"districts: {len(districts)}")
 
     log("reading walk network")
-    osm = OSM(str(pbf))
+    read_area = districts.union_all().buffer(cfg["network_buffer_m"])
+    read_area = gpd.GeoSeries([read_area], crs=crs).to_crs(4326).iloc[0]
+    osm = OSM(str(pbf), bounding_box=read_area, keep_metadata=False)
     nodes, edges = load_walk_edges(osm, crs)
     net, nstats = build_network(nodes, edges, crs)
     del nodes, edges
