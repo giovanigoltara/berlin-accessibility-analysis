@@ -1,0 +1,6 @@
+mode,stops_used,stops_frequent,median_peak_departures
+Bus,6237,3422,12.0
+Regionalbahn,63,4,6.0
+S-Bahn,298,278,24.0
+Tram,804,631,18.0
+U-Bahn,384,372,24.0

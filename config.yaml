@@ -37,3 +37,11 @@ modes: [S-Bahn, U-Bahn, Tram, Bus, Regionalbahn]
 # Nearest stop of any member mode (shortest of their distances), reported like a mode.
 combined_modes:
   S- or U-Bahn: [S-Bahn, U-Bahn]
+  Any mode: [S-Bahn, U-Bahn, Tram, Bus, Regionalbahn]
+
+# Frequent-stops scenario: a stop counts only if it has at least one departure
+# every max_headway_min on average in the window of a normal school-term Tuesday.
+frequency:
+  date: "20261110"
+  window: ["07:00", "09:00"]
+  max_headway_min: 10

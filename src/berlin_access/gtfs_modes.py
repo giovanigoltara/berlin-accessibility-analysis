@@ -123,14 +123,13 @@ def read_gtfs_tables(gtfs_zip: Path) -> dict[str, pd.DataFrame]:
 
         tables = {
             "routes": read("routes.txt", ["route_id", "route_type", "route_short_name"]),
-            "trips": read("trips.txt", ["trip_id", "route_id"]),
+            "trips": read("trips.txt", lambda c: c in {"trip_id", "route_id", "service_id"}),
             "stops": read("stops.txt", ["stop_id", "stop_name", "stop_lat", "stop_lon"]),
-            "stop_times": read("stop_times.txt", ["trip_id", "stop_id"]),
+            "stop_times": read("stop_times.txt", lambda c: c in {"trip_id", "stop_id", "departure_time"}),
         }
         tables["feed_info"] = read("feed_info.txt") if "feed_info.txt" in names else pd.DataFrame()
-        tables["calendar"] = (
-            read("calendar.txt", ["start_date", "end_date"]) if "calendar.txt" in names else pd.DataFrame()
-        )
+        tables["calendar"] = read("calendar.txt") if "calendar.txt" in names else pd.DataFrame()
+        tables["calendar_dates"] = read("calendar_dates.txt") if "calendar_dates.txt" in names else pd.DataFrame()
     tables["routes"]["route_type"] = pd.to_numeric(tables["routes"]["route_type"])
     for c in ("stop_lat", "stop_lon"):
         tables["stops"][c] = pd.to_numeric(tables["stops"][c], errors="coerce")
@@ -160,3 +159,46 @@ def stop_modes(tables: dict[str, pd.DataFrame], routes: pd.DataFrame) -> pd.Data
     st = st.assign(mode=st["trip_id"].map(trip_mode)).dropna(subset=["mode"])
     pairs = st.groupby(["stop_id", "mode"], as_index=False).size().rename(columns={"size": "n_stop_events"})
     return pairs.merge(tables["stops"], on="stop_id", how="inner")
+
+
+def active_services(tables: dict[str, pd.DataFrame], date: str) -> set[str]:
+    """service_ids running on `date` (YYYYMMDD): calendar.txt weekday pattern
+    within its validity window, plus additions and minus removals from
+    calendar_dates.txt."""
+    day = pd.Timestamp(date).day_name().lower()
+    cal, cd = tables["calendar"], tables["calendar_dates"]
+    active = set()
+    if len(cal):
+        active = set(cal.loc[(cal[day] == "1") & (cal["start_date"] <= date) & (cal["end_date"] >= date), "service_id"])
+    if len(cd):
+        on_day = cd[cd["date"] == date]
+        active |= set(on_day.loc[on_day["exception_type"] == "1", "service_id"])
+        active -= set(on_day.loc[on_day["exception_type"] == "2", "service_id"])
+    return active
+
+
+def _seconds(hhmmss: pd.Series) -> pd.Series:
+    """GTFS times (may exceed 24:00:00) to seconds after midnight."""
+    parts = hhmmss.str.split(":", expand=True).astype(float)
+    return parts[0] * 3600 + parts[1] * 60 + parts[2]
+
+
+def stop_departures(
+    tables: dict[str, pd.DataFrame], routes: pd.DataFrame, date: str, start: str, end: str
+) -> pd.DataFrame:
+    """Departures per (stop_id, mode) on `date` between `start` and `end` (HH:MM).
+
+    Counted per GTFS stop point. VBB stop points are platforms or kerbside
+    poles, usually one per direction, so the count is roughly one direction's
+    departures.
+    """
+    services = active_services(tables, date)
+    trips = tables["trips"][tables["trips"]["service_id"].isin(services)]
+    trips = trips.merge(routes[["route_id", "mode"]], on="route_id").dropna(subset=["mode"])
+    st = tables["stop_times"]
+    st = st[st["trip_id"].isin(trips["trip_id"]) & st["departure_time"].notna()]
+    t = _seconds(st["departure_time"])
+    t0, t1 = (_seconds(pd.Series([x + ":00"])).iloc[0] for x in (start, end))
+    st = st[(t >= t0) & (t < t1)]
+    st = st.assign(mode=st["trip_id"].map(trips.set_index("trip_id")["mode"]))
+    return st.groupby(["stop_id", "mode"], as_index=False).size().rename(columns={"size": "departures"})

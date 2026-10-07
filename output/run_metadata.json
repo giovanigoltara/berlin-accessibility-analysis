@@ -43,7 +43,22 @@
       "S- or U-Bahn": [
         "S-Bahn",
         "U-Bahn"
+      ],
+      "Any mode": [
+        "S-Bahn",
+        "U-Bahn",
+        "Tram",
+        "Bus",
+        "Regionalbahn"
       ]
+    },
+    "frequency": {
+      "date": "20261110",
+      "window": [
+        "07:00",
+        "09:00"
+      ],
+      "max_headway_min": 10
     }
   },
   "inputs": {
@@ -121,6 +136,7 @@
       "03400831"
     ],
     "allocated_total": 3913644.0,
+    "register_65plus_total": 747667,
     "planungsraeume_with_unallocated_residents": 0,
     "unallocated_total": 0.0
   },
@@ -132,5 +148,14 @@
     "route_type": 1243,
     "excluded": 6
   },
-  "generated_utc": "2026-10-07T12:26:03Z"
+  "frequency": {
+    "date": "20261110",
+    "window": [
+      "07:00",
+      "09:00"
+    ],
+    "max_headway_min": 10,
+    "min_departures_in_window": 12.0
+  },
+  "generated_utc": "2026-10-07T12:34:53Z"
 }

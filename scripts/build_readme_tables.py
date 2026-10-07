@@ -95,9 +95,51 @@ def build(cfg) -> str:
             + md_table(wide(d, "d", signed=True))
         )
 
+    older = s[(s["weighting"] == "residents_65plus") & (s["speed_mps"] == 1.0)]
+    if len(older):
+        rows = []
+        for u in order:
+            g = older[older["unit_id"] == u].set_index("mode")
+            if g.empty:
+                continue
+            row = {"District": u, "Residents 65+": f"{g['residents'].iloc[0]:,.0f}"}
+            for m in ("S- or U-Bahn", "Any mode"):
+                if m in g.index:
+                    row[f"{m}: median"] = fmt(g.loc[m, "median_min"])
+                    row[f"{m}: over 15 min"] = fmt(g.loc[m, "share_over_15min"], pct=True)
+            rows.append(row)
+        parts.append(
+            "#### Older residents (65+) at 1.0 m/s\n\n"
+            "Walk per resident aged 65 or over, at a slower pace of 1.0 m/s. Older residents are known per "
+            "Planungsraum only, so within a Planungsraum they are spread like all residents; differences from "
+            "the all-resident tables at district level come from where older people live and from the slower pace.\n\n"
+            + md_table(pd.DataFrame(rows))
+        )
+
+    fq = cfg.raw.get("frequency")
+    freq_csv = out / f"walk_time_by_district_frequent_{fq['max_headway_min']}min.csv" if fq else None
+    if freq_csv is not None and freq_csv.exists():
+        f = pd.read_csv(freq_csv)
+        f = f[f["weighting"] == "residents"]
+        win = f"{fq['window'][0]}-{fq['window'][1]}"
+        day = pd.Timestamp(str(fq["date"])).strftime("%A %d %B %Y")
+        parts.append(
+            f"#### Frequent stops only: median walk per resident (minutes)\n\n"
+            f"Only stops with at least one departure every {fq['max_headway_min']} min on average, {win} on "
+            f"{day} (counted per stop point and mode).\n\n" + md_table(wide(f, "median_min"))
+        )
+        parts.append(
+            f"#### Frequent stops only: share of residents more than 15 min away\n\n"
+            + md_table(wide(f, "share_over_15min", pct=True))
+        )
+        fs = out / "stops_frequency_by_mode.csv"
+        if fs.exists():
+            parts.append("#### Frequent stops per mode (inside Berlin)\n\n"
+                         + md_table(pd.read_csv(fs).set_index("mode").reindex(cfg["modes"]).reset_index()))
+
     plr_csv = out / "walk_time_by_planungsraum.csv"
     if plr_csv.exists():
-        p = pd.read_csv(plr_csv)
+        p = pd.read_csv(plr_csv, dtype={"unit_id": str})
         p = p[(p["weighting"] == "residents") & (p["speed_mps"] == v) & (p["unit_id"] != "Berlin")]
         n_low = int(p.drop_duplicates("unit_id")["low_population"].sum())
         p = p[~p["low_population"]]

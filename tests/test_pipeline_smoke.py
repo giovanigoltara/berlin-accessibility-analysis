@@ -14,10 +14,18 @@ pyrosm = pytest.importorskip("pyrosm")
 
 
 def make_gtfs(path, stops):
+    """S-Bahn stop s0 served every 10 min 07:00-09:00 (frequent); buses once (not frequent)."""
     routes = pd.DataFrame({"route_id": ["r_s", "r_bus", "r_sev"], "route_type": [109, 700, 700], "route_short_name": ["S1", "100", "U2"]})
-    trips = pd.DataFrame({"trip_id": ["t_s", "t_bus", "t_sev"], "route_id": ["r_s", "r_bus", "r_sev"]})
-    st = pd.DataFrame({"trip_id": ["t_s", "t_bus", "t_bus", "t_sev"], "stop_id": ["s0", "s1", "s2", "s2"]})
-    cal = pd.DataFrame({"service_id": ["x"], "start_date": ["20260101"], "end_date": ["20261231"]})
+    s_trips = [f"t_s{k}" for k in range(12)]
+    trips = pd.DataFrame({"trip_id": s_trips + ["t_bus", "t_sev"], "route_id": ["r_s"] * 12 + ["r_bus", "r_sev"], "service_id": "x"})
+    st = pd.DataFrame({
+        "trip_id": s_trips + ["t_bus", "t_bus", "t_sev"],
+        "stop_id": ["s0"] * 12 + ["s1", "s2", "s2"],
+        "departure_time": [f"07:{10 * k:02d}:00" if k < 6 else f"08:{10 * (k - 6):02d}:00" for k in range(12)]
+        + ["07:30:00", "07:35:00", "07:40:00"],
+    })
+    cal = pd.DataFrame({"service_id": ["x"], "monday": [1], "tuesday": [1], "wednesday": [1], "thursday": [1], "friday": [1],
+                        "saturday": [0], "sunday": [0], "start_date": ["20260101"], "end_date": ["20261231"]})
     with zipfile.ZipFile(path, "w") as z:
         for name, df in {"routes": routes, "trips": trips, "stop_times": st, "stops": stops, "calendar": cal}.items():
             z.writestr(f"{name}.txt", df.to_csv(index=False))
@@ -68,7 +76,7 @@ def test_pipeline_runs_on_sample(tmp_path):
     s = pd.read_csv(out / "walk_time_by_district.csv")
     assert set(s["unit_id"]) == {"Berlin", "East", "West"}
     assert set(s["speed_mps"]) == {1.0, 1.3, 1.4}
-    assert set(s["weighting"]) == {"residents", "buildings"}
+    assert set(s["weighting"]) == {"residents", "residents_65plus", "buildings"}
     p = pd.read_csv(out / "walk_time_by_planungsraum.csv", dtype={"unit_id": str})
     assert p.loc[p["unit_id"] == "02200202", "low_population"].all()
     assert (out / "walk_time_by_bezirksregion.csv").exists()
@@ -86,6 +94,11 @@ def test_pipeline_runs_on_sample(tmp_path):
     assert b[1.0] > b[1.3] > b[1.4]
     assert (out / "median_walk_min_1.3mps.csv").exists()
     assert (out / f"walk_time_by_district_stopbuffer_{cfg_dict['stop_buffer_sensitivity_m']}m.csv").exists()
+    f = pd.read_csv(out / "walk_time_by_district_frequent_10min.csv")
+    f = f[(f["unit_id"] == "Berlin") & (f["speed_mps"] == 1.3) & (f["weighting"] == "buildings")].set_index("mode")
+    assert f.loc["S-Bahn", "median_min"] == berlin.loc["S-Bahn", "median_min"]  # s0 is frequent
+    assert f.loc["Bus", "n_unreachable"] == f.loc["Bus", "n_buildings"]  # no bus stop is frequent
+    assert f.loc["Any mode", "median_min"] == f.loc["S-Bahn", "median_min"]
     meta = json.loads((out / "run_metadata.json").read_text())
     assert meta["buildings"]["buildings_used"] > 0
     assert meta["residents"]["register_total"] == 2480
@@ -97,6 +110,8 @@ def test_pipeline_runs_on_sample(tmp_path):
     assert (out / "maps" / "plr_median_walk_all_modes.png").exists()
     assert (out / "maps" / "plr_median_walk_S-Bahn.png").exists()
     assert (out / "maps" / "plr_median_walk_S-or-U-Bahn.png").exists()
+    assert (out / "maps" / "plr_older_residents_S-or-U-Bahn.png").exists()
+    assert (out / "maps" / "plr_frequent_10min_median_walk_Any-mode.png").exists()
 
     (tmp_path / "README.md").write_text(f"x\n{build_readme_tables.BEGIN}\nold\n{build_readme_tables.END}\n")
     text = build_readme_tables.build(cfg)

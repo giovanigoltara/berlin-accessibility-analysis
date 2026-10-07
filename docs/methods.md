@@ -129,8 +129,32 @@ metadata.
    the two is nearer. The nearest stop of a union of stop sets is exactly the
    shorter of the per-mode distances, so it is computed per building as the
    minimum of the member distances (no extra routing), then aggregated like
-   any mode. Regionalbahn is left out on purpose: its frequency is far lower
-   and it would make the measure less comparable across the city.
+   any mode. "S- or U-Bahn" leaves out the Regionalbahn on purpose: its
+   frequency is far lower. "Any mode" includes all five; it is meaningful
+   mainly in the frequent-stops scenario, because some bus stop is close to
+   almost everyone.
+8b. **Older residents.** Table T2 gives residents aged 65+ per
+   Planungsraum. Their location within a Planungsraum is unknown, so each
+   building gets the Planungsraum's 65+ share of its residents. Results are
+   reported with `weighting = residents_65plus`; the README and map use
+   1.0 m/s, a common value for older adults' comfortable walking pace. A
+   consequence: per Planungsraum, the 65+ median at 1.0 m/s equals the
+   all-resident median at 1.0 m/s. Differences appear only when aggregating
+   to Bezirksregion, district or Berlin, where they reflect where older people
+   live. The map therefore pairs the median with the *number* of older
+   residents beyond 15 min, drawn as proportional circles.
+8c. **Frequent stops (frequency cap).** A stop of a mode counts in this
+   scenario if it has at least `window / max_headway_min` departures of that
+   mode in the window (12 departures in 07:00-09:00 for a 10-min headway).
+   Departures come from `stop_times.txt` for trips whose service runs on the
+   reference date (calendar.txt weekday pattern plus calendar_dates.txt
+   exceptions). Reference date: Tuesday 10 November 2026, a school-term
+   weekday; the October Tuesdays in the school holidays had about 6% fewer
+   trips. Departures are counted per GTFS stop point, usually one direction
+   of one platform or kerbside pole, summed over all lines of the mode. This
+   is a service-level filter, not a timetable-based travel time.
+   Counts per mode are in `output/stops_frequency_by_mode.csv`; results in
+   `output/walk_time_by_*_frequent_10min.csv`.
 9. **Comparing levels.** District, Bezirksregion and Planungsraum results come
    from the same per-building data, so differences between levels are purely
    due to aggregation. Part of any difference is the modifiable areal unit

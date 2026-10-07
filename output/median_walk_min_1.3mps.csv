@@ -1,14 +1,14 @@
-district,S-Bahn,U-Bahn,Tram,Bus,Regionalbahn,S- or U-Bahn
-Berlin,16.67,15.94,33.06,3.6,38.43,10.54
-Charlottenburg-Wilmersdorf,13.68,7.82,59.47,3.33,26.82,7.04
-Friedrichshain-Kreuzberg,15.59,7.41,17.59,3.51,24.08,7.12
-Lichtenberg,14.04,26.26,6.49,3.95,25.09,12.19
-Marzahn-Hellersdorf,21.98,31.66,8.67,4.34,42.38,13.1
-Mitte,12.76,7.16,9.72,3.21,25.9,6.61
-Neukölln,28.97,9.4,53.6,3.37,61.97,8.64
-Pankow,16.73,24.9,5.72,4.38,43.09,14.25
-Reinickendorf,16.82,24.97,48.29,3.43,98.39,13.55
-Spandau,40.39,32.6,148.26,3.54,36.89,31.94
-Steglitz-Zehlendorf,14.55,30.29,148.59,3.44,41.6,12.6
-Tempelhof-Schöneberg,16.57,10.95,90.99,3.26,37.55,8.45
-Treptow-Köpenick,17.78,66.34,9.63,3.77,67.43,17.64
+district,S-Bahn,U-Bahn,Tram,Bus,Regionalbahn,S- or U-Bahn,Any mode
+Berlin,16.67,15.94,33.06,3.6,38.43,10.54,3.4
+Charlottenburg-Wilmersdorf,13.68,7.82,59.47,3.33,26.82,7.04,3.25
+Friedrichshain-Kreuzberg,15.59,7.41,17.59,3.51,24.08,7.12,3.04
+Lichtenberg,14.04,26.26,6.49,3.95,25.09,12.19,3.58
+Marzahn-Hellersdorf,21.98,31.66,8.67,4.34,42.38,13.1,4.07
+Mitte,12.76,7.16,9.72,3.21,25.9,6.61,3.06
+Neukölln,28.97,9.4,53.6,3.37,61.97,8.64,3.28
+Pankow,16.73,24.9,5.72,4.38,43.09,14.25,3.52
+Reinickendorf,16.82,24.97,48.29,3.43,98.39,13.55,3.42
+Spandau,40.39,32.6,148.26,3.54,36.89,31.94,3.53
+Steglitz-Zehlendorf,14.55,30.29,148.59,3.44,41.6,12.6,3.43
+Tempelhof-Schöneberg,16.57,10.95,90.99,3.26,37.55,8.45,3.2
+Treptow-Köpenick,17.78,66.34,9.63,3.77,67.43,17.64,3.69

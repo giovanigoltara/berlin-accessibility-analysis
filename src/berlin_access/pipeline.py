@@ -253,6 +253,10 @@ def run(cfg: Config) -> None:
     pop = pd.concat([pop, pd.DataFrame({"plr_id": absent, "residents": 0})], ignore_index=True).fillna(0)
     weight, wstats = population.residential_weight(bld, cfg["min_residential_footprint_m2"])
     bld["residents"], pop_check = population.allocate_residents(bld, pop, weight)
+    # Older residents: only their count per Planungsraum is known, so within a
+    # Planungsraum they are spread like all residents.
+    share65 = (pop.set_index("plr_id")["age_65_plus"] / pop.set_index("plr_id")["residents"]).fillna(0)
+    bld["residents_65plus"] = bld["residents"] * bld["plr_id"].map(share65).fillna(0)
     pop_check = pop_check.merge(lor[["plr_id", "plr_name", "district"]], on="plr_id", how="left")
     pop_check.to_csv(out_dir / "population_allocation_check.csv", index=False)
     meta["residents"] = {
@@ -260,6 +264,7 @@ def run(cfg: Config) -> None:
         "register_total": int(pop["residents"].sum()),
         "planungsraeume_absent_from_population_table": absent,
         "allocated_total": round(float(bld["residents"].sum()), 1),
+        "register_65plus_total": int(pop["age_65_plus"].sum()),
         "planungsraeume_with_unallocated_residents": int((pop_check["unallocated"] > 0.5).sum()),
         "unallocated_total": round(float(pop_check["unallocated"].clip(lower=0).sum()), 1),
     }
@@ -282,16 +287,35 @@ def run(cfg: Config) -> None:
     print(ssum.to_string(index=False))
     stops = stops[stops["snap_m"] <= cfg["max_stop_snap_m"]]
 
-    # Main run, plus a sensitivity run with a different stop buffer.
-    scenarios = {"": buf_main}
-    if buf_sens is not None and buf_sens != buf_main:
-        scenarios[f"_stopbuffer_{buf_sens}m"] = buf_sens
+    # Frequent stops: at least one departure every `max_headway_min` on
+    # average in the peak window of a reference weekday (per stop and mode).
+    fq = cfg["frequency"]
+    dep = gtfs_modes.stop_departures(tables, routes, str(fq["date"]), fq["window"][0], fq["window"][1])
+    window_min = (pd.Timestamp(f"2000-01-01 {fq['window'][1]}") - pd.Timestamp(f"2000-01-01 {fq['window'][0]}")).seconds / 60
+    min_dep = window_min / fq["max_headway_min"]
+    stops = stops.merge(dep, on=["stop_id", "mode"], how="left").fillna({"departures": 0})
+    stops["frequent"] = stops["departures"] >= min_dep
+    fsum = stops[stops["m_outside_berlin"] <= buf_main].groupby("mode").agg(
+        stops_used=("stop_id", "size"), stops_frequent=("frequent", "sum"), median_peak_departures=("departures", "median"))
+    fsum.reset_index().to_csv(out_dir / "stops_frequency_by_mode.csv", index=False)
+    print(fsum.to_string())
+    meta["frequency"] = {"date": str(fq["date"]), "window": fq["window"], "max_headway_min": fq["max_headway_min"],
+                         "min_departures_in_window": min_dep}
 
-    dist = bld[["osm_id", "district", "bzr_id", "plr_id", "building", "footprint_m2", "snap_m", "residents"]].copy()
-    for suffix, buf in scenarios.items():
+    # Main run; sensitivity run with a different stop buffer; frequent stops only.
+    scenarios = {"": (buf_main, False)}
+    if buf_sens is not None and buf_sens != buf_main:
+        scenarios[f"_stopbuffer_{buf_sens}m"] = (buf_sens, False)
+    scenarios[f"_frequent_{fq['max_headway_min']}min"] = (buf_main, True)
+
+    dist = bld[["osm_id", "district", "bzr_id", "plr_id", "building", "footprint_m2", "snap_m",
+                "residents", "residents_65plus"]].copy()
+    for suffix, (buf, frequent_only) in scenarios.items():
         for mode in modes:
             s = stops[(stops["mode"] == mode) & (stops["m_outside_berlin"] <= buf)]
-            log(f"dijkstra {mode}, stop buffer {buf} m: {len(s)} stops")
+            if frequent_only:
+                s = s[s["frequent"]]
+            log(f"dijkstra {mode}, stop buffer {buf} m, frequent only {frequent_only}: {len(s)} stops")
             d_node = multi_source_distance(net, s["node"].to_numpy(), s["snap_m"].to_numpy())
             dist[f"dist_m_{mode}{suffix}"] = d_node[bld["node"].to_numpy()] + bld["snap_m"].to_numpy()
         # Nearest stop of any of several modes = the shortest of their distances.
@@ -311,10 +335,11 @@ def run(cfg: Config) -> None:
     log("aggregating")
     for suffix in scenarios:
         cols = {f"dist_m_{m}{suffix}": f"dist_m_{m}" for m in modes}
-        d = dist[["district", "bzr_id", "plr_id", "residents", *cols]].rename(columns=cols)
+        d = dist[["district", "bzr_id", "plr_id", "residents", "residents_65plus", *cols]].rename(columns=cols)
         for unit_col, (level, _) in UNIT_LEVELS.items():
             parts = []
-            for weighting, wcol in (("residents", "residents"), ("buildings", None)):
+            for weighting, wcol in (("residents", "residents"), ("residents_65plus", "residents_65plus"),
+                                    ("buildings", None)):
                 a = aggregate(d, unit_col, modes, speeds, thresholds, weight_col=wcol)
                 a.insert(1, "weighting", weighting)
                 parts.append(a)
