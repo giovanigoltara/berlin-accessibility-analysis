@@ -303,6 +303,20 @@ used is a private function and may change between versions).
    adjacency between segments becomes an edge, the turn angle between them is
    the angular cost.
 
+## Scaling to all districts: one citywide run
+
+All 12 districts are analysed as **one network** (Berlin + 2 km buffer)
+rather than 12 district runs. With a 2 km buffer a segment's values should
+not depend on which run computed it, but separate runs would clean the
+network 12 times (slightly differently where buffers overlap) and compute
+border streets twice. Each live segment is assigned to the district that
+contains its midpoint (nearest district for the few whose midpoint lies just
+outside the city). Ranks, percentiles and top-10 lists are computed within
+each district. The Friedrichshain-Kreuzberg pilot (district + 2 km) is kept
+and compared segment by segment with the citywide run
+(`scripts/compare_segment_runs.py`), which tests whether 2 km of buffer is
+enough.
+
 ## Edge effects
 
 The network includes everything within 2 km of the district (the largest
@@ -361,7 +375,9 @@ NACH percentile is between 69 (Skalitzer Straße) and 97 (Karl-Marx-Allee).
 At 800 m the ranks are lower, as expected for a local radius.
 
 **NACH artifact.** At 2000 m the highest NACH values are on the Stralau
-peninsula (Tunnelstraße: 52nd percentile on choice but 99th on NACH). NACH =
+peninsula: Tunnelstraße ranks first on NACH at 800, 1200 and 2000 m but is in
+none of the angular-choice top 10 lists at those radii
+(`output/segments_friedrichshain-kreuzberg_top10.csv`). NACH =
 log(CH+1) / log(TD+3) rises when total depth TD is small, so a street that
 every route into a small, enclosed network must use scores high. Hillier et
 al. introduced NACH to compare whole cities; within one district, angular

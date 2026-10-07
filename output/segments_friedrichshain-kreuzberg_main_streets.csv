@@ -1,13 +1,13 @@
-street,segments,length_m,choice_800_pct,nach_800_pct,nain_800_pct,choice_2000_pct,nach_2000_pct,nain_2000_pct
-frankfurter allee,24,1637.0,0.79,0.8,0.93,0.88,0.9,0.97
-karl-marx-allee,30,2466.0,0.89,0.86,0.9,0.95,0.97,0.95
-warschauer straße,18,2004.0,0.53,0.58,0.68,0.79,0.81,0.74
-skalitzer straße,26,2007.0,0.66,0.61,0.55,0.67,0.69,0.55
-kottbusser damm,13,1020.0,0.66,0.72,0.69,0.83,0.81,0.52
-oranienstraße,33,2335.0,0.92,0.83,0.77,0.93,0.94,0.88
-gneisenaustraße,18,1952.0,0.63,0.68,0.85,0.8,0.82,0.78
-yorckstraße,22,1776.0,0.8,0.78,0.66,0.72,0.72,0.68
-mehringdamm,17,1470.0,0.72,0.77,0.6,0.79,0.81,0.64
-petersburger straße,20,1806.0,0.64,0.64,0.74,0.79,0.76,0.88
-boxhagener straße,15,1642.0,0.65,0.81,0.99,0.81,0.87,0.94
-revaler straße,17,1277.0,0.61,0.83,0.88,0.76,0.85,0.83
+district,street,segments,length_m,choice_800_pct,nach_800_pct,nain_800_pct,choice_2000_pct,nach_2000_pct,nain_2000_pct
+Friedrichshain-Kreuzberg,frankfurter allee,24,1637.0,0.79,0.8,0.93,0.88,0.9,0.97
+Friedrichshain-Kreuzberg,karl-marx-allee,29,2348.0,0.89,0.9,0.9,0.95,0.97,0.95
+Friedrichshain-Kreuzberg,warschauer straße,18,2004.0,0.53,0.58,0.68,0.79,0.81,0.74
+Friedrichshain-Kreuzberg,skalitzer straße,26,2007.0,0.66,0.61,0.55,0.67,0.69,0.55
+Friedrichshain-Kreuzberg,kottbusser damm,13,1020.0,0.66,0.71,0.69,0.83,0.81,0.52
+Friedrichshain-Kreuzberg,oranienstraße,33,2335.0,0.92,0.82,0.76,0.93,0.94,0.88
+Friedrichshain-Kreuzberg,gneisenaustraße,18,1952.0,0.63,0.68,0.85,0.8,0.82,0.78
+Friedrichshain-Kreuzberg,yorckstraße,21,1358.0,0.79,0.74,0.65,0.72,0.71,0.68
+Friedrichshain-Kreuzberg,mehringdamm,17,1470.0,0.72,0.77,0.6,0.79,0.81,0.64
+Friedrichshain-Kreuzberg,petersburger straße,20,1806.0,0.64,0.64,0.74,0.79,0.76,0.88
+Friedrichshain-Kreuzberg,boxhagener straße,15,1642.0,0.65,0.81,0.99,0.81,0.87,0.94
+Friedrichshain-Kreuzberg,revaler straße,17,1277.0,0.61,0.83,0.87,0.77,0.85,0.83

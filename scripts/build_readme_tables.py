@@ -157,33 +157,54 @@ def build(cfg) -> str:
             + md_table(pd.DataFrame(rows))
         )
 
-    for ms in sorted(out.glob("segments_*_main_streets.csv")):
-        name = ms.name[len("segments_"):-len("_main_streets.csv")]
-        m = pd.read_csv(ms)
+    seg_name = "berlin" if (out / "segments_berlin_by_district.csv").exists() else None
+    if seg_name:
+        bd = pd.read_csv(out / f"segments_{seg_name}_by_district.csv")
         tbl = pd.DataFrame({
-            "Street": m["street"].str.title(),
-            "Segments": m["segments"],
-            "Choice 800 m": m["choice_800_pct"].map(lambda x: fmt(100 * x)),
-            "NACH 800 m": m["nach_800_pct"].map(lambda x: fmt(100 * x)),
-            "Choice 2000 m": m["choice_2000_pct"].map(lambda x: fmt(100 * x)),
-            "NACH 2000 m": m["nach_2000_pct"].map(lambda x: fmt(100 * x)),
-            "NAIN 2000 m": m["nain_2000_pct"].map(lambda x: fmt(100 * x)),
+            "District": bd["district"], "Segments": bd["segments"].map(lambda x: f"{x:,}"),
+            "Network km": bd["network_km"].map(fmt), "Median segment m": bd["median_segment_m"].map(fmt),
+            "Median NAIN 800 m": bd["median_nain_800"].map(lambda x: f"{x:.3f}"),
+            "Median NAIN 2000 m": bd["median_nain_2000"].map(lambda x: f"{x:.3f}"),
+            "Median NACH 2000 m": bd["median_nach_2000"].map(lambda x: f"{x:.3f}"),
         })
-        part = (f"#### Phase 1 pilot ({name}): where known main streets rank\n\n"
-                "Median percentile of each street's segments among all segments in the district "
-                "(100 = most central).\n\n" + md_table(tbl))
-        top = out / f"segments_{name}_top10.csv"
-        if top.exists():
-            t = pd.read_csv(top)
-            cols = {}
-            for r, meas in ((800, "angular choice"), (2000, "angular choice"), (800, "NAIN"), (2000, "NAIN"), (2000, "NACH")):
-                x = t[(t["radius_m"] == r) & (t["measure"] == meas)].sort_values("rank")
-                cols[f"{meas} {r} m"] = x["street"].str.title().tolist()
-            n = max(len(v) for v in cols.values())
-            tt = pd.DataFrame({k: v + [""] * (n - len(v)) for k, v in cols.items()})
-            tt.insert(0, "Rank", range(1, n + 1))
-            part += "\n\nTop 10 named streets per measure (a street's value is its highest segment):\n\n" + md_table(tt)
-        parts.append(part)
+        parts.append("#### Phase 1: segment map and centrality per district\n\n"
+                     "One citywide angular segment analysis (city + 2 km buffer); each segment assigned to the "
+                     "district containing its midpoint.\n\n" + md_table(tbl))
+        t = pd.read_csv(out / f"segments_{seg_name}_top10.csv")
+        rows = []
+        for dname, g in t.groupby("district"):
+            def top3(meas, r):
+                x = g[(g["measure"] == meas) & (g["radius_m"] == r)].sort_values("rank").head(3)
+                return ", ".join(x["street"].str.title())
+            rows.append({"District": dname, "Angular choice 2000 m": top3("angular choice", 2000),
+                         "NAIN 2000 m": top3("NAIN", 2000), "NAIN 800 m": top3("NAIN", 800)})
+        parts.append("#### Phase 1: top three named streets per district\n\n"
+                     "A street's value is its highest segment; full top-10 lists in "
+                     f"`output/segments_{seg_name}_top10.csv`.\n\n" + md_table(pd.DataFrame(rows)))
+        ms = out / f"segments_{seg_name}_main_streets.csv"
+        if ms.exists():
+            m = pd.read_csv(ms)
+            tbl = pd.DataFrame({
+                "District": m["district"], "Street": m["street"].str.title(), "Segments": m["segments"],
+                "Choice 800 m": m["choice_800_pct"].map(lambda x: fmt(100 * x)),
+                "Choice 2000 m": m["choice_2000_pct"].map(lambda x: fmt(100 * x)),
+                "NACH 2000 m": m["nach_2000_pct"].map(lambda x: fmt(100 * x)),
+                "NAIN 2000 m": m["nain_2000_pct"].map(lambda x: fmt(100 * x)),
+            })
+            parts.append("#### Phase 1 sanity check: where known main streets rank\n\n"
+                         "Median percentile of each street's segments among all segments of its district "
+                         "(100 = most central).\n\n" + md_table(tbl))
+        for cmp_csv in sorted(out.glob("segments_*_vs_berlin.csv")):
+            c = pd.read_csv(cmp_csv)
+            c = c[c["radius_m"].isin([800, 2000])]
+            tbl = pd.DataFrame({"Radius m": c["radius_m"], "Measure": c["measure"],
+                                "Matched segments": c["matched_segments"], "Spearman": c["spearman"].map(lambda x: f"{x:.3f}"),
+                                "Median relative difference": c["median_abs_rel_diff"].map(lambda x: fmt(x, pct=True))})
+            dname = cmp_csv.name[len("segments_"):-len("_vs_berlin.csv")]
+            parts.append(f"#### Phase 1 check: pilot run ({dname} + 2 km) against the citywide run\n\n"
+                         f"Same segments matched by midpoint and length "
+                         f"({fmt(c['share_matched'].iloc[0], pct=True)} of the pilot's segments matched). Values near "
+                         "1 and 0% mean the 2 km buffer removes edge effects.\n\n" + md_table(tbl))
 
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():

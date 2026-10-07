@@ -1,121 +1,637 @@
-radius_m,measure,rank,street,value
-400,NACH,1,arndtstraße,1.3508
-400,NACH,2,tunnelstraße,1.3325
-400,NACH,3,hildegard-jadamowitz-straße,1.3124
-400,NACH,4,willibald-alexis-straße,1.2809
-400,NACH,5,höchste straße,1.2706
-400,NACH,6,yorckstraße,1.2665
-400,NACH,7,gitschiner straße,1.2648
-400,NACH,8,markgrafenstraße,1.26
-400,NACH,9,bergfriedstraße,1.2545
-400,NACH,10,singerstraße,1.2483
-400,angular choice,1,friedrichstraße,998.0
-400,angular choice,2,hildegard-jadamowitz-straße,952.0
-400,angular choice,3,singerstraße,875.0
-400,angular choice,4,tunnelstraße,807.0
-400,angular choice,5,höchste straße,759.5
-400,angular choice,6,mehringplatz,749.5
-400,angular choice,7,hedemannstraße,748.25
-400,angular choice,8,kommandantenstraße,739.0
-400,angular choice,9,wilhelmstraße,713.0
-400,angular choice,10,bergfriedstraße,712.0
-400,NAIN,1,görlitzer straße,2.0782
-400,NAIN,2,reichenberger straße,1.8676
-400,NAIN,3,wühlischstraße,1.8172
-400,NAIN,4,wrangelstraße,1.7977
-400,NAIN,5,ebertystraße,1.7974
-400,NAIN,6,skalitzer straße,1.7631
-400,NAIN,7,hasenheide,1.7464
-400,NAIN,8,richard-ermisch-straße,1.7385
-400,NAIN,9,gneisenaustraße,1.7088
-400,NAIN,10,wiener straße,1.7018
-800,NACH,1,tunnelstraße,1.3718
-800,NACH,2,rudi-dutschke-straße,1.3043
-800,NACH,3,karl-marx-allee,1.2873
-800,NACH,4,singerstraße,1.2736
-800,NACH,5,hildegard-jadamowitz-straße,1.2731
-800,NACH,6,alt-stralau,1.2731
-800,NACH,7,wilhelmstraße,1.2649
-800,NACH,8,friedrichstraße,1.2623
-800,NACH,9,andreasstraße,1.2623
-800,NACH,10,yorckstraße,1.2581
-800,angular choice,1,friedrichstraße,6992.0
-800,angular choice,2,oranienstraße,6794.0
-800,angular choice,3,singerstraße,6759.0
-800,angular choice,4,alexandrinenstraße,6558.0
-800,angular choice,5,palisadenstraße,6267.25
-800,angular choice,6,ritterstraße,5964.0
-800,angular choice,7,lichtenberger straße; singerstraße,5750.5
-800,angular choice,8,prinzenstraße,5490.5
-800,angular choice,9,platz der vereinten nationen,5131.5
-800,angular choice,10,koppenstraße,5127.5
-800,NAIN,1,holteistraße,1.4813
-800,NAIN,2,eldenaer straße,1.4232
-800,NAIN,3,wiener straße,1.4188
-800,NAIN,4,boxhagener straße,1.4182
-800,NAIN,5,wühlischstraße,1.3905
-800,NAIN,6,oranienstraße,1.3826
-800,NAIN,7,reichenberger straße,1.3754
-800,NAIN,8,gryphiusstraße,1.3696
-800,NAIN,9,rudi-dutschke-straße,1.3665
-800,NAIN,10,charlottenstraße,1.3581
-1200,NACH,1,tunnelstraße,1.4416
-1200,NACH,2,alt-stralau,1.4245
-1200,NACH,3,karl-marx-allee,1.34
-1200,NACH,4,rudi-dutschke-straße,1.2901
-1200,NACH,5,stralauer allee,1.287
-1200,NACH,6,wilhelmstraße,1.2863
-1200,NACH,7,modersohnstraße,1.2854
-1200,NACH,8,karl-marx-allee; petersburger straße; warschauer straße,1.2849
-1200,NACH,9,singerstraße,1.2838
-1200,NACH,10,oranienstraße,1.28
-1200,angular choice,1,alexandrinenstraße,25745.75
-1200,angular choice,2,oranienstraße,25686.0
-1200,angular choice,3,platz der vereinten nationen,23677.75
-1200,angular choice,4,singerstraße,23600.0
-1200,angular choice,5,prinzenstraße,23194.25
-1200,angular choice,6,palisadenstraße,21443.3333
-1200,angular choice,7,alte jakobstraße,20615.3333
-1200,angular choice,8,wilhelmstraße,20350.5
-1200,angular choice,9,lichtenberger straße; singerstraße,20263.5
-1200,angular choice,10,andreasstraße,20248.75
-1200,NAIN,1,rudi-dutschke-straße,1.3143
-1200,NAIN,2,tunnelstraße,1.2591
-1200,NAIN,3,alt-stralau,1.2516
-1200,NAIN,4,boxhagener straße,1.25
-1200,NAIN,5,modersohnstraße,1.2201
-1200,NAIN,6,oranienstraße,1.2107
-1200,NAIN,7,eldenaer straße,1.2076
-1200,NAIN,8,proskauer straße,1.1978
-1200,NAIN,9,modersohnbrücke; modersohnstraße,1.1975
-1200,NAIN,10,holteistraße,1.1909
-2000,NACH,1,tunnelstraße,1.315
-2000,NACH,2,alt-stralau,1.299
-2000,NACH,3,oranienstraße,1.2916
-2000,NACH,4,rudi-dutschke-straße,1.2894
-2000,NACH,5,wilhelmstraße,1.2827
-2000,NACH,6,alexandrinenstraße,1.2771
-2000,NACH,7,prinzenstraße,1.2761
-2000,NACH,8,lebuser straße,1.2719
-2000,NACH,9,dudenstraße; kolonnenbrücke; kolonnenstraße,1.2701
-2000,NACH,10,andreasstraße,1.2695
-2000,angular choice,1,oranienstraße,162420.8333
-2000,angular choice,2,alexandrinenstraße,154937.0
-2000,angular choice,3,prinzenstraße,149324.3333
-2000,angular choice,4,alte jakobstraße,148401.25
-2000,angular choice,5,rudi-dutschke-straße,147316.5833
-2000,angular choice,6,andreasstraße,141603.75
-2000,angular choice,7,danziger straße; landsberger allee,135669.0
-2000,angular choice,8,lebuser straße,135543.5
-2000,angular choice,9,wilhelmstraße,132173.5
-2000,angular choice,10,landsberger allee,132171.5
-2000,NAIN,1,rudi-dutschke-straße,1.0665
-2000,NAIN,2,wilhelmstraße,1.0636
-2000,NAIN,3,oranienstraße,1.0327
-2000,NAIN,4,kochstraße,1.0199
-2000,NAIN,5,frankfurter allee,1.0162
-2000,NAIN,6,friedrichstraße,1.0124
-2000,NAIN,7,karl-marx-allee,1.0081
-2000,NAIN,8,landsberger allee,1.0071
-2000,NAIN,9,karl-marx-allee; petersburger straße; warschauer straße,0.9942
-2000,NAIN,10,charlottenstraße,0.9846
+district,radius_m,measure,rank,street,value
+Friedrichshain-Kreuzberg,400,NACH,1,arndtstraße,1.3508
+Friedrichshain-Kreuzberg,400,NACH,2,tunnelstraße,1.3325
+Friedrichshain-Kreuzberg,400,NACH,3,hildegard-jadamowitz-straße,1.3124
+Friedrichshain-Kreuzberg,400,NACH,4,willibald-alexis-straße,1.2809
+Friedrichshain-Kreuzberg,400,NACH,5,höchste straße,1.2706
+Friedrichshain-Kreuzberg,400,NACH,6,yorckstraße,1.2665
+Friedrichshain-Kreuzberg,400,NACH,7,gitschiner straße,1.2648
+Friedrichshain-Kreuzberg,400,NACH,8,markgrafenstraße,1.26
+Friedrichshain-Kreuzberg,400,NACH,9,bergfriedstraße,1.2545
+Friedrichshain-Kreuzberg,400,NACH,10,singerstraße,1.2483
+Friedrichshain-Kreuzberg,400,angular choice,1,friedrichstraße,998.0
+Friedrichshain-Kreuzberg,400,angular choice,2,hildegard-jadamowitz-straße,952.0
+Friedrichshain-Kreuzberg,400,angular choice,3,singerstraße,875.0
+Friedrichshain-Kreuzberg,400,angular choice,4,tunnelstraße,807.0
+Friedrichshain-Kreuzberg,400,angular choice,5,höchste straße,759.5
+Friedrichshain-Kreuzberg,400,angular choice,6,mehringplatz,749.5
+Friedrichshain-Kreuzberg,400,angular choice,7,hedemannstraße,748.25
+Friedrichshain-Kreuzberg,400,angular choice,8,kommandantenstraße,739.0
+Friedrichshain-Kreuzberg,400,angular choice,9,wilhelmstraße,713.0
+Friedrichshain-Kreuzberg,400,angular choice,10,bergfriedstraße,712.0
+Friedrichshain-Kreuzberg,400,NAIN,1,görlitzer straße,2.0782
+Friedrichshain-Kreuzberg,400,NAIN,2,reichenberger straße,1.8676
+Friedrichshain-Kreuzberg,400,NAIN,3,wühlischstraße,1.8172
+Friedrichshain-Kreuzberg,400,NAIN,4,wrangelstraße,1.7977
+Friedrichshain-Kreuzberg,400,NAIN,5,ebertystraße,1.7974
+Friedrichshain-Kreuzberg,400,NAIN,6,skalitzer straße,1.7631
+Friedrichshain-Kreuzberg,400,NAIN,7,hasenheide,1.7464
+Friedrichshain-Kreuzberg,400,NAIN,8,gneisenaustraße,1.7088
+Friedrichshain-Kreuzberg,400,NAIN,9,wiener straße,1.7018
+Friedrichshain-Kreuzberg,400,NAIN,10,kreuzbergstraße,1.6838
+Friedrichshain-Kreuzberg,800,NACH,1,tunnelstraße,1.3718
+Friedrichshain-Kreuzberg,800,NACH,2,rudi-dutschke-straße,1.3043
+Friedrichshain-Kreuzberg,800,NACH,3,karl-marx-allee,1.2873
+Friedrichshain-Kreuzberg,800,NACH,4,singerstraße,1.2736
+Friedrichshain-Kreuzberg,800,NACH,5,hildegard-jadamowitz-straße,1.2731
+Friedrichshain-Kreuzberg,800,NACH,6,alt-stralau,1.2731
+Friedrichshain-Kreuzberg,800,NACH,7,wilhelmstraße,1.2649
+Friedrichshain-Kreuzberg,800,NACH,8,friedrichstraße,1.2623
+Friedrichshain-Kreuzberg,800,NACH,9,andreasstraße,1.2623
+Friedrichshain-Kreuzberg,800,NACH,10,yorckstraße,1.2581
+Friedrichshain-Kreuzberg,800,angular choice,1,friedrichstraße,6992.0
+Friedrichshain-Kreuzberg,800,angular choice,2,oranienstraße,6794.0
+Friedrichshain-Kreuzberg,800,angular choice,3,singerstraße,6759.0
+Friedrichshain-Kreuzberg,800,angular choice,4,alexandrinenstraße,6558.0
+Friedrichshain-Kreuzberg,800,angular choice,5,palisadenstraße,6267.25
+Friedrichshain-Kreuzberg,800,angular choice,6,ritterstraße,5964.0
+Friedrichshain-Kreuzberg,800,angular choice,7,lichtenberger straße; singerstraße,5750.5
+Friedrichshain-Kreuzberg,800,angular choice,8,prinzenstraße,5490.5
+Friedrichshain-Kreuzberg,800,angular choice,9,platz der vereinten nationen,5131.5
+Friedrichshain-Kreuzberg,800,angular choice,10,koppenstraße,5127.5
+Friedrichshain-Kreuzberg,800,NAIN,1,holteistraße,1.4813
+Friedrichshain-Kreuzberg,800,NAIN,2,eldenaer straße,1.4232
+Friedrichshain-Kreuzberg,800,NAIN,3,wiener straße,1.4188
+Friedrichshain-Kreuzberg,800,NAIN,4,boxhagener straße,1.4182
+Friedrichshain-Kreuzberg,800,NAIN,5,wühlischstraße,1.3905
+Friedrichshain-Kreuzberg,800,NAIN,6,oranienstraße,1.3826
+Friedrichshain-Kreuzberg,800,NAIN,7,reichenberger straße,1.3754
+Friedrichshain-Kreuzberg,800,NAIN,8,gryphiusstraße,1.3696
+Friedrichshain-Kreuzberg,800,NAIN,9,rudi-dutschke-straße,1.3665
+Friedrichshain-Kreuzberg,800,NAIN,10,charlottenstraße,1.3581
+Friedrichshain-Kreuzberg,1200,NACH,1,tunnelstraße,1.4416
+Friedrichshain-Kreuzberg,1200,NACH,2,alt-stralau,1.4245
+Friedrichshain-Kreuzberg,1200,NACH,3,karl-marx-allee,1.34
+Friedrichshain-Kreuzberg,1200,NACH,4,rudi-dutschke-straße,1.2901
+Friedrichshain-Kreuzberg,1200,NACH,5,stralauer allee,1.287
+Friedrichshain-Kreuzberg,1200,NACH,6,wilhelmstraße,1.2863
+Friedrichshain-Kreuzberg,1200,NACH,7,modersohnstraße,1.2854
+Friedrichshain-Kreuzberg,1200,NACH,8,karl-marx-allee; petersburger straße; warschauer straße,1.2849
+Friedrichshain-Kreuzberg,1200,NACH,9,singerstraße,1.2838
+Friedrichshain-Kreuzberg,1200,NACH,10,oranienstraße,1.28
+Friedrichshain-Kreuzberg,1200,angular choice,1,alexandrinenstraße,25745.75
+Friedrichshain-Kreuzberg,1200,angular choice,2,oranienstraße,25686.0
+Friedrichshain-Kreuzberg,1200,angular choice,3,platz der vereinten nationen,23677.75
+Friedrichshain-Kreuzberg,1200,angular choice,4,singerstraße,23600.0
+Friedrichshain-Kreuzberg,1200,angular choice,5,prinzenstraße,23194.25
+Friedrichshain-Kreuzberg,1200,angular choice,6,palisadenstraße,21443.3333
+Friedrichshain-Kreuzberg,1200,angular choice,7,alte jakobstraße,20615.3333
+Friedrichshain-Kreuzberg,1200,angular choice,8,wilhelmstraße,20350.5
+Friedrichshain-Kreuzberg,1200,angular choice,9,lichtenberger straße; singerstraße,20263.5
+Friedrichshain-Kreuzberg,1200,angular choice,10,andreasstraße,20248.75
+Friedrichshain-Kreuzberg,1200,NAIN,1,rudi-dutschke-straße,1.3143
+Friedrichshain-Kreuzberg,1200,NAIN,2,tunnelstraße,1.2591
+Friedrichshain-Kreuzberg,1200,NAIN,3,alt-stralau,1.2516
+Friedrichshain-Kreuzberg,1200,NAIN,4,boxhagener straße,1.25
+Friedrichshain-Kreuzberg,1200,NAIN,5,modersohnstraße,1.2201
+Friedrichshain-Kreuzberg,1200,NAIN,6,oranienstraße,1.2107
+Friedrichshain-Kreuzberg,1200,NAIN,7,eldenaer straße,1.2076
+Friedrichshain-Kreuzberg,1200,NAIN,8,proskauer straße,1.1978
+Friedrichshain-Kreuzberg,1200,NAIN,9,modersohnbrücke; modersohnstraße,1.1975
+Friedrichshain-Kreuzberg,1200,NAIN,10,holteistraße,1.1909
+Friedrichshain-Kreuzberg,2000,NACH,1,tunnelstraße,1.315
+Friedrichshain-Kreuzberg,2000,NACH,2,alt-stralau,1.299
+Friedrichshain-Kreuzberg,2000,NACH,3,oranienstraße,1.2916
+Friedrichshain-Kreuzberg,2000,NACH,4,rudi-dutschke-straße,1.2894
+Friedrichshain-Kreuzberg,2000,NACH,5,wilhelmstraße,1.2827
+Friedrichshain-Kreuzberg,2000,NACH,6,alexandrinenstraße,1.2771
+Friedrichshain-Kreuzberg,2000,NACH,7,prinzenstraße,1.2761
+Friedrichshain-Kreuzberg,2000,NACH,8,lebuser straße,1.2719
+Friedrichshain-Kreuzberg,2000,NACH,9,andreasstraße,1.2695
+Friedrichshain-Kreuzberg,2000,NACH,10,alte jakobstraße,1.2668
+Friedrichshain-Kreuzberg,2000,angular choice,1,oranienstraße,162420.8333
+Friedrichshain-Kreuzberg,2000,angular choice,2,alexandrinenstraße,154937.0
+Friedrichshain-Kreuzberg,2000,angular choice,3,prinzenstraße,149324.3333
+Friedrichshain-Kreuzberg,2000,angular choice,4,alte jakobstraße,148401.25
+Friedrichshain-Kreuzberg,2000,angular choice,5,rudi-dutschke-straße,147316.5833
+Friedrichshain-Kreuzberg,2000,angular choice,6,andreasstraße,141603.75
+Friedrichshain-Kreuzberg,2000,angular choice,7,danziger straße; landsberger allee,135669.0
+Friedrichshain-Kreuzberg,2000,angular choice,8,lebuser straße,135543.5
+Friedrichshain-Kreuzberg,2000,angular choice,9,wilhelmstraße,132173.5
+Friedrichshain-Kreuzberg,2000,angular choice,10,platz der vereinten nationen,128830.3333
+Friedrichshain-Kreuzberg,2000,NAIN,1,rudi-dutschke-straße,1.0665
+Friedrichshain-Kreuzberg,2000,NAIN,2,wilhelmstraße,1.0636
+Friedrichshain-Kreuzberg,2000,NAIN,3,oranienstraße,1.0327
+Friedrichshain-Kreuzberg,2000,NAIN,4,kochstraße,1.0199
+Friedrichshain-Kreuzberg,2000,NAIN,5,frankfurter allee,1.0162
+Friedrichshain-Kreuzberg,2000,NAIN,6,friedrichstraße,1.0124
+Friedrichshain-Kreuzberg,2000,NAIN,7,karl-marx-allee,1.0081
+Friedrichshain-Kreuzberg,2000,NAIN,8,landsberger allee,0.9998
+Friedrichshain-Kreuzberg,2000,NAIN,9,karl-marx-allee; petersburger straße; warschauer straße,0.9942
+Friedrichshain-Kreuzberg,2000,NAIN,10,charlottenstraße,0.9846
+Lichtenberg,400,NACH,1,gürtelstraße,1.0384
+Lichtenberg,400,NACH,2,wiesenweg,0.9963
+Lichtenberg,400,NACH,3,hauptstraße,0.657
+Lichtenberg,400,NACH,4,an der mole,0.0
+Lichtenberg,400,NACH,5,kietzer weg,0.0
+Lichtenberg,400,angular choice,1,gürtelstraße,224.0
+Lichtenberg,400,angular choice,2,wiesenweg,69.0
+Lichtenberg,400,angular choice,3,hauptstraße,20.0
+Lichtenberg,400,angular choice,4,an der mole,0.0
+Lichtenberg,400,angular choice,5,kietzer weg,0.0
+Lichtenberg,400,NAIN,1,wiesenweg,1.2292
+Lichtenberg,400,NAIN,2,gürtelstraße,1.0176
+Lichtenberg,400,NAIN,3,hauptstraße,0.8208
+Lichtenberg,400,NAIN,4,kietzer weg,0.7589
+Lichtenberg,400,NAIN,5,an der mole,0.2867
+Lichtenberg,800,NACH,1,hauptstraße,1.1277
+Lichtenberg,800,NACH,2,gürtelstraße,1.1184
+Lichtenberg,800,NACH,3,wiesenweg,1.061
+Lichtenberg,800,NACH,4,an der mole,0.0
+Lichtenberg,800,NACH,5,kietzer weg,0.0
+Lichtenberg,800,angular choice,1,gürtelstraße,2063.5
+Lichtenberg,800,angular choice,2,wiesenweg,1073.0
+Lichtenberg,800,angular choice,3,hauptstraße,803.0
+Lichtenberg,800,angular choice,4,an der mole,0.0
+Lichtenberg,800,angular choice,5,kietzer weg,0.0
+Lichtenberg,800,NAIN,1,gürtelstraße,0.9318
+Lichtenberg,800,NAIN,2,hauptstraße,0.9071
+Lichtenberg,800,NAIN,3,wiesenweg,0.8767
+Lichtenberg,800,NAIN,4,kietzer weg,0.6815
+Lichtenberg,800,NAIN,5,an der mole,0.3309
+Lichtenberg,1200,NACH,1,hauptstraße,1.1529
+Lichtenberg,1200,NACH,2,gürtelstraße,1.1196
+Lichtenberg,1200,NACH,3,wiesenweg,1.1019
+Lichtenberg,1200,NACH,4,an der mole,0.0
+Lichtenberg,1200,NACH,5,kietzer weg,0.0
+Lichtenberg,1200,angular choice,1,gürtelstraße,6538.5
+Lichtenberg,1200,angular choice,2,wiesenweg,5413.0
+Lichtenberg,1200,angular choice,3,hauptstraße,3781.0
+Lichtenberg,1200,angular choice,4,an der mole,0.0
+Lichtenberg,1200,angular choice,5,kietzer weg,0.0
+Lichtenberg,1200,NAIN,1,gürtelstraße,0.9286
+Lichtenberg,1200,NAIN,2,hauptstraße,0.8275
+Lichtenberg,1200,NAIN,3,wiesenweg,0.7861
+Lichtenberg,1200,NAIN,4,kietzer weg,0.6521
+Lichtenberg,1200,NAIN,5,an der mole,0.3869
+Lichtenberg,2000,NACH,1,hauptstraße,1.1661
+Lichtenberg,2000,NACH,2,gürtelstraße,1.1348
+Lichtenberg,2000,NACH,3,wiesenweg,1.1244
+Lichtenberg,2000,NACH,4,kietzer weg,0.2562
+Lichtenberg,2000,NACH,5,an der mole,0.0
+Lichtenberg,2000,angular choice,1,hauptstraße,34071.0
+Lichtenberg,2000,angular choice,2,gürtelstraße,31356.0
+Lichtenberg,2000,angular choice,3,wiesenweg,27000.0
+Lichtenberg,2000,angular choice,4,kietzer weg,9.0
+Lichtenberg,2000,angular choice,5,an der mole,0.0
+Lichtenberg,2000,NAIN,1,gürtelstraße,0.8492
+Lichtenberg,2000,NAIN,2,hauptstraße,0.7501
+Lichtenberg,2000,NAIN,3,wiesenweg,0.7024
+Lichtenberg,2000,NAIN,4,kietzer weg,0.6138
+Lichtenberg,2000,NAIN,5,an der mole,0.4328
+Mitte,400,NACH,1,weydemeyerstraße,1.1617
+Mitte,400,NACH,2,singerstraße,1.063
+Mitte,400,NACH,3,stallschreiberstraße,1.0511
+Mitte,400,NACH,4,büschingstraße,1.0189
+Mitte,400,NACH,5,lichtenberger straße,1.002
+Mitte,400,NACH,6,holzmarktstraße,0.9853
+Mitte,400,NACH,7,sebastianstraße,0.9712
+Mitte,400,NACH,8,bernburger treppe,0.9518
+Mitte,400,NACH,9,legiendamm,0.93
+Mitte,400,NACH,10,karl-marx-allee,0.7634
+Mitte,400,angular choice,1,stallschreiberstraße,528.0
+Mitte,400,angular choice,2,weydemeyerstraße,519.0
+Mitte,400,angular choice,3,singerstraße,408.0
+Mitte,400,angular choice,4,büschingstraße,292.0
+Mitte,400,angular choice,5,lichtenberger straße,231.0
+Mitte,400,angular choice,6,sebastianstraße,223.0
+Mitte,400,angular choice,7,holzmarktstraße,165.0
+Mitte,400,angular choice,8,bernburger treppe,141.0
+Mitte,400,angular choice,9,legiendamm,116.0
+Mitte,400,angular choice,10,karl-marx-allee,41.0
+Mitte,400,NAIN,1,an der michaelbrücke; michaelbrücke; michaelkirchstraße,1.4221
+Mitte,400,NAIN,2,weydemeyerstraße,1.2006
+Mitte,400,NAIN,3,singerstraße,1.1837
+Mitte,400,NAIN,4,holzmarktstraße,1.0624
+Mitte,400,NAIN,5,legiendamm,1.0177
+Mitte,400,NAIN,6,lichtenberger straße,1.0174
+Mitte,400,NAIN,7,büschingstraße,1.014
+Mitte,400,NAIN,8,sebastianstraße,0.936
+Mitte,400,NAIN,9,bernburger treppe,0.9173
+Mitte,400,NAIN,10,leuschnerdamm,0.8776
+Mitte,800,NACH,1,singerstraße,1.2428
+Mitte,800,NACH,2,weydemeyerstraße,1.1553
+Mitte,800,NACH,3,büschingstraße,1.1502
+Mitte,800,NACH,4,sebastianstraße,1.103
+Mitte,800,NACH,5,holzmarktstraße,1.076
+Mitte,800,NACH,6,stallschreiberstraße,1.0441
+Mitte,800,NACH,7,legiendamm,1.0234
+Mitte,800,NACH,8,an der michaelbrücke; michaelbrücke; michaelkirchstraße,1.0182
+Mitte,800,NACH,9,karl-marx-allee,1.0001
+Mitte,800,NACH,10,lichtenberger straße,0.9773
+Mitte,800,angular choice,1,singerstraße,6178.5
+Mitte,800,angular choice,2,büschingstraße,3616.0
+Mitte,800,angular choice,3,weydemeyerstraße,3159.25
+Mitte,800,angular choice,4,sebastianstraße,3069.0
+Mitte,800,angular choice,5,stallschreiberstraße,1965.5
+Mitte,800,angular choice,6,holzmarktstraße,1833.0
+Mitte,800,angular choice,7,legiendamm,1530.5
+Mitte,800,angular choice,8,karl-marx-allee,1489.5
+Mitte,800,angular choice,9,lichtenberger straße,923.0
+Mitte,800,angular choice,10,an der michaelbrücke; michaelbrücke; michaelkirchstraße,883.0
+Mitte,800,NAIN,1,singerstraße,1.0516
+Mitte,800,NAIN,2,an der michaelbrücke; michaelbrücke; michaelkirchstraße,1.006
+Mitte,800,NAIN,3,holzmarktstraße,0.9556
+Mitte,800,NAIN,4,weydemeyerstraße,0.8853
+Mitte,800,NAIN,5,legiendamm,0.8755
+Mitte,800,NAIN,6,sebastianstraße,0.8628
+Mitte,800,NAIN,7,büschingstraße,0.8519
+Mitte,800,NAIN,8,karl-marx-allee,0.8374
+Mitte,800,NAIN,9,stallschreiberstraße,0.8242
+Mitte,800,NAIN,10,lichtenberger straße,0.8022
+Mitte,1200,NACH,1,singerstraße,1.2424
+Mitte,1200,NACH,2,holzmarktstraße,1.1572
+Mitte,1200,NACH,3,weydemeyerstraße,1.1489
+Mitte,1200,NACH,4,an der michaelbrücke; michaelbrücke; michaelkirchstraße,1.1297
+Mitte,1200,NACH,5,büschingstraße,1.1167
+Mitte,1200,NACH,6,sebastianstraße,1.1022
+Mitte,1200,NACH,7,karl-marx-allee,1.0687
+Mitte,1200,NACH,8,legiendamm,1.0268
+Mitte,1200,NACH,9,stallschreiberstraße,1.0165
+Mitte,1200,NACH,10,lichtenberger straße,0.9777
+Mitte,1200,angular choice,1,singerstraße,19747.5
+Mitte,1200,angular choice,2,weydemeyerstraße,10140.5
+Mitte,1200,angular choice,3,holzmarktstraße,9551.0
+Mitte,1200,angular choice,4,büschingstraße,8845.5
+Mitte,1200,angular choice,5,an der michaelbrücke; michaelbrücke; michaelkirchstraße,8049.5
+Mitte,1200,angular choice,6,sebastianstraße,7963.5
+Mitte,1200,angular choice,7,karl-marx-allee,6488.1667
+Mitte,1200,angular choice,8,stallschreiberstraße,4466.0
+Mitte,1200,angular choice,9,legiendamm,3710.0
+Mitte,1200,angular choice,10,lichtenberger straße,2678.5
+Mitte,1200,NAIN,1,an der michaelbrücke; michaelbrücke; michaelkirchstraße,0.9792
+Mitte,1200,NAIN,2,holzmarktstraße,0.947
+Mitte,1200,NAIN,3,singerstraße,0.9363
+Mitte,1200,NAIN,4,sebastianstraße,0.8877
+Mitte,1200,NAIN,5,karl-marx-allee,0.8132
+Mitte,1200,NAIN,6,legiendamm,0.8019
+Mitte,1200,NAIN,7,weydemeyerstraße,0.7784
+Mitte,1200,NAIN,8,stallschreiberstraße,0.7736
+Mitte,1200,NAIN,9,büschingstraße,0.7341
+Mitte,1200,NAIN,10,lichtenberger straße,0.7242
+Mitte,2000,NACH,1,singerstraße,1.1882
+Mitte,2000,NACH,2,an der michaelbrücke; michaelbrücke; michaelkirchstraße,1.1815
+Mitte,2000,NACH,3,holzmarktstraße,1.1768
+Mitte,2000,NACH,4,karl-marx-allee,1.1234
+Mitte,2000,NACH,5,weydemeyerstraße,1.1088
+Mitte,2000,NACH,6,sebastianstraße,1.0865
+Mitte,2000,NACH,7,büschingstraße,1.0622
+Mitte,2000,NACH,8,stallschreiberstraße,1.0119
+Mitte,2000,NACH,9,gabriele-tergit-promenade,0.9906
+Mitte,2000,NACH,10,legiendamm,0.9622
+Mitte,2000,angular choice,1,singerstraße,80361.0
+Mitte,2000,angular choice,2,an der michaelbrücke; michaelbrücke; michaelkirchstraße,75890.25
+Mitte,2000,angular choice,3,holzmarktstraße,72170.25
+Mitte,2000,angular choice,4,karl-marx-allee,49384.1667
+Mitte,2000,angular choice,5,weydemeyerstraße,41327.25
+Mitte,2000,angular choice,6,büschingstraße,29764.0
+Mitte,2000,angular choice,7,sebastianstraße,27307.0
+Mitte,2000,angular choice,8,stallschreiberstraße,15146.25
+Mitte,2000,angular choice,9,legiendamm,10904.5
+Mitte,2000,angular choice,10,lichtenberger straße,9311.5
+Mitte,2000,NAIN,1,sebastianstraße,0.8579
+Mitte,2000,NAIN,2,an der michaelbrücke; michaelbrücke; michaelkirchstraße,0.8464
+Mitte,2000,NAIN,3,holzmarktstraße,0.7954
+Mitte,2000,NAIN,4,singerstraße,0.7414
+Mitte,2000,NAIN,5,gabriele-tergit-promenade,0.7374
+Mitte,2000,NAIN,6,stallschreiberstraße,0.7298
+Mitte,2000,NAIN,7,karl-marx-allee,0.727
+Mitte,2000,NAIN,8,legiendamm,0.6908
+Mitte,2000,NAIN,9,leuschnerdamm,0.6775
+Mitte,2000,NAIN,10,weydemeyerstraße,0.6581
+Neukölln,400,NACH,1,bürknerstraße,1.0116
+Neukölln,400,NACH,2,pflügerstraße,0.8745
+Neukölln,400,NACH,3,schinkestraße,0.8317
+Neukölln,400,NACH,4,sanderstraße,0.8168
+Neukölln,400,NACH,5,lucy-lameck-straße,0.8156
+Neukölln,400,NACH,6,weserstraße,0.6892
+Neukölln,400,NACH,7,lenaustraße,0.6293
+Neukölln,400,NACH,8,maybachufer,0.5379
+Neukölln,400,angular choice,1,bürknerstraße,138.0
+Neukölln,400,angular choice,2,pflügerstraße,67.0
+Neukölln,400,angular choice,3,sanderstraße,41.0
+Neukölln,400,angular choice,4,lucy-lameck-straße,29.0
+Neukölln,400,angular choice,5,schinkestraße,29.0
+Neukölln,400,angular choice,6,weserstraße,27.0
+Neukölln,400,angular choice,7,lenaustraße,21.0
+Neukölln,400,angular choice,8,maybachufer,7.0
+Neukölln,400,NAIN,1,maybachufer,1.2167
+Neukölln,400,NAIN,2,schinkestraße,1.0899
+Neukölln,400,NAIN,3,sanderstraße,1.0831
+Neukölln,400,NAIN,4,lenaustraße,0.9888
+Neukölln,400,NAIN,5,pflügerstraße,0.9705
+Neukölln,400,NAIN,6,bürknerstraße,0.9197
+Neukölln,400,NAIN,7,weserstraße,0.9179
+Neukölln,400,NAIN,8,lucy-lameck-straße,0.8192
+Neukölln,800,NACH,1,pflügerstraße,1.0342
+Neukölln,800,NACH,2,bürknerstraße,1.0044
+Neukölln,800,NACH,3,lucy-lameck-straße,0.9708
+Neukölln,800,NACH,4,sanderstraße,0.97
+Neukölln,800,NACH,5,maybachufer,0.956
+Neukölln,800,NACH,6,schinkestraße,0.9389
+Neukölln,800,NACH,7,lenaustraße,0.8307
+Neukölln,800,NACH,8,weserstraße,0.7216
+Neukölln,800,angular choice,1,pflügerstraße,717.0
+Neukölln,800,angular choice,2,bürknerstraße,566.0
+Neukölln,800,angular choice,3,maybachufer,472.5
+Neukölln,800,angular choice,4,schinkestraße,431.0
+Neukölln,800,angular choice,5,sanderstraße,357.0
+Neukölln,800,angular choice,6,lucy-lameck-straße,353.0
+Neukölln,800,angular choice,7,lenaustraße,210.0
+Neukölln,800,angular choice,8,weserstraße,119.0
+Neukölln,800,NAIN,1,sanderstraße,0.9234
+Neukölln,800,NAIN,2,pflügerstraße,0.9171
+Neukölln,800,NAIN,3,maybachufer,0.8699
+Neukölln,800,NAIN,4,lenaustraße,0.8383
+Neukölln,800,NAIN,5,bürknerstraße,0.8083
+Neukölln,800,NAIN,6,weserstraße,0.7866
+Neukölln,800,NAIN,7,lucy-lameck-straße,0.742
+Neukölln,800,NAIN,8,schinkestraße,0.7054
+Neukölln,1200,NACH,1,maybachufer,1.0904
+Neukölln,1200,NACH,2,lucy-lameck-straße,0.9872
+Neukölln,1200,NACH,3,pflügerstraße,0.9799
+Neukölln,1200,NACH,4,sanderstraße,0.963
+Neukölln,1200,NACH,5,bürknerstraße,0.9551
+Neukölln,1200,NACH,6,schinkestraße,0.9203
+Neukölln,1200,NACH,7,lenaustraße,0.7984
+Neukölln,1200,NACH,8,weserstraße,0.7546
+Neukölln,1200,angular choice,1,maybachufer,3687.0
+Neukölln,1200,angular choice,2,pflügerstraße,1685.0
+Neukölln,1200,angular choice,3,lucy-lameck-straße,1424.5
+Neukölln,1200,angular choice,4,bürknerstraße,1080.0
+Neukölln,1200,angular choice,5,schinkestraße,1032.5
+Neukölln,1200,angular choice,6,sanderstraße,901.0
+Neukölln,1200,angular choice,7,lenaustraße,362.0
+Neukölln,1200,angular choice,8,weserstraße,284.0
+Neukölln,1200,NAIN,1,sanderstraße,0.8341
+Neukölln,1200,NAIN,2,maybachufer,0.8209
+Neukölln,1200,NAIN,3,pflügerstraße,0.7615
+Neukölln,1200,NAIN,4,lenaustraße,0.756
+Neukölln,1200,NAIN,5,weserstraße,0.7558
+Neukölln,1200,NAIN,6,bürknerstraße,0.7322
+Neukölln,1200,NAIN,7,lucy-lameck-straße,0.6751
+Neukölln,1200,NAIN,8,schinkestraße,0.6699
+Neukölln,2000,NACH,1,maybachufer,1.1092
+Neukölln,2000,NACH,2,lucy-lameck-straße,0.9906
+Neukölln,2000,NACH,3,sanderstraße,0.9882
+Neukölln,2000,NACH,4,pflügerstraße,0.9779
+Neukölln,2000,NACH,5,schinkestraße,0.9189
+Neukölln,2000,NACH,6,bürknerstraße,0.8883
+Neukölln,2000,NACH,7,lenaustraße,0.8209
+Neukölln,2000,NACH,8,weserstraße,0.7921
+Neukölln,2000,angular choice,1,maybachufer,28341.0833
+Neukölln,2000,angular choice,2,pflügerstraße,10542.5
+Neukölln,2000,angular choice,3,lucy-lameck-straße,9555.0
+Neukölln,2000,angular choice,4,sanderstraße,7109.25
+Neukölln,2000,angular choice,5,schinkestraße,5259.0
+Neukölln,2000,angular choice,6,bürknerstraße,3773.8333
+Neukölln,2000,angular choice,7,lenaustraße,2246.5
+Neukölln,2000,angular choice,8,weserstraße,1816.5
+Neukölln,2000,NAIN,1,maybachufer,0.6471
+Neukölln,2000,NAIN,2,sanderstraße,0.6127
+Neukölln,2000,NAIN,3,lucy-lameck-straße,0.5992
+Neukölln,2000,NAIN,4,bürknerstraße,0.597
+Neukölln,2000,NAIN,5,schinkestraße,0.5884
+Neukölln,2000,NAIN,6,weserstraße,0.5823
+Neukölln,2000,NAIN,7,pflügerstraße,0.5808
+Neukölln,2000,NAIN,8,lenaustraße,0.5802
+Pankow,400,NACH,1,richard-ermisch-straße,1.2352
+Pankow,400,NACH,2,james-hobrecht-straße,1.0946
+Pankow,400,NACH,3,mendelssohnstraße,1.0586
+Pankow,400,NACH,4,thaerstraße,1.0437
+Pankow,400,NACH,5,danziger straße,1.0
+Pankow,400,NACH,6,hermann-blankenstein-straße,0.9865
+Pankow,400,NACH,7,conrad-blenkle-straße,0.9646
+Pankow,400,NACH,8,fritz-riedel-straße,0.9495
+Pankow,400,NACH,9,am viehhof,0.932
+Pankow,400,NACH,10,landsberger allee,0.9259
+Pankow,400,angular choice,1,richard-ermisch-straße,375.0
+Pankow,400,angular choice,2,mendelssohnstraße,305.0
+Pankow,400,angular choice,3,thaerstraße,163.0
+Pankow,400,angular choice,4,james-hobrecht-straße,121.0
+Pankow,400,angular choice,5,am viehhof,106.0
+Pankow,400,angular choice,6,hermann-blankenstein-straße,101.0
+Pankow,400,angular choice,7,fritz-riedel-straße,90.0
+Pankow,400,angular choice,8,danziger straße,86.0
+Pankow,400,angular choice,9,viehtrift,77.0
+Pankow,400,angular choice,10,landsberger allee,71.0
+Pankow,400,NAIN,1,richard-ermisch-straße,1.7385
+Pankow,400,NAIN,2,thaerstraße,1.5059
+Pankow,400,NAIN,3,james-hobrecht-straße,1.4743
+Pankow,400,NAIN,4,conrad-blenkle-straße,1.4403
+Pankow,400,NAIN,5,landsberger allee,1.3283
+Pankow,400,NAIN,6,viehtrift,1.2672
+Pankow,400,NAIN,7,hermann-blankenstein-straße,1.217
+Pankow,400,NAIN,8,danziger straße,1.2106
+Pankow,400,NAIN,9,otto-braun-straße,1.1182
+Pankow,400,NAIN,10,am viehhof,1.0952
+Pankow,800,NACH,1,richard-ermisch-straße,1.2478
+Pankow,800,NACH,2,james-hobrecht-straße,1.173
+Pankow,800,NACH,3,landsberger allee,1.1433
+Pankow,800,NACH,4,thaerstraße,1.1367
+Pankow,800,NACH,5,mendelssohnstraße,1.1212
+Pankow,800,NACH,6,fritz-riedel-straße,1.0799
+Pankow,800,NACH,7,danziger straße,1.0196
+Pankow,800,NACH,8,conrad-blenkle-straße,1.0017
+Pankow,800,NACH,9,hermann-blankenstein-straße,1.0
+Pankow,800,NACH,10,otto-braun-straße,0.991
+Pankow,800,angular choice,1,richard-ermisch-straße,2858.75
+Pankow,800,angular choice,2,mendelssohnstraße,2634.0
+Pankow,800,angular choice,3,thaerstraße,2144.75
+Pankow,800,angular choice,4,landsberger allee,1779.0
+Pankow,800,angular choice,5,james-hobrecht-straße,1306.0
+Pankow,800,angular choice,6,fritz-riedel-straße,1275.0
+Pankow,800,angular choice,7,otto-braun-straße,873.0
+Pankow,800,angular choice,8,danziger straße,738.0
+Pankow,800,angular choice,9,hermann-blankenstein-straße,563.5
+Pankow,800,angular choice,10,viehtrift,547.0
+Pankow,800,NAIN,1,richard-ermisch-straße,1.2403
+Pankow,800,NAIN,2,james-hobrecht-straße,1.1235
+Pankow,800,NAIN,3,conrad-blenkle-straße,1.1145
+Pankow,800,NAIN,4,hermann-blankenstein-straße,1.0792
+Pankow,800,NAIN,5,thaerstraße,1.0059
+Pankow,800,NAIN,6,landsberger allee,1.0014
+Pankow,800,NAIN,7,eldenaer straße,0.9847
+Pankow,800,NAIN,8,danziger straße,0.9742
+Pankow,800,NAIN,9,viehtrift,0.9624
+Pankow,800,NAIN,10,otto-braun-straße,0.9347
+Pankow,1200,NACH,1,landsberger allee,1.205
+Pankow,1200,NACH,2,thaerstraße,1.1872
+Pankow,1200,NACH,3,richard-ermisch-straße,1.1731
+Pankow,1200,NACH,4,james-hobrecht-straße,1.1473
+Pankow,1200,NACH,5,otto-braun-straße,1.102
+Pankow,1200,NACH,6,fritz-riedel-straße,1.0808
+Pankow,1200,NACH,7,mendelssohnstraße,1.0793
+Pankow,1200,NACH,8,danziger straße,1.058
+Pankow,1200,NACH,9,conrad-blenkle-straße,1.0434
+Pankow,1200,NACH,10,hermann-blankenstein-straße,0.9566
+Pankow,1200,angular choice,1,landsberger allee,10379.0
+Pankow,1200,angular choice,2,thaerstraße,9555.0
+Pankow,1200,angular choice,3,richard-ermisch-straße,7981.0
+Pankow,1200,angular choice,4,mendelssohnstraße,6607.5
+Pankow,1200,angular choice,5,otto-braun-straße,6480.5
+Pankow,1200,angular choice,6,fritz-riedel-straße,4843.0
+Pankow,1200,angular choice,7,danziger straße,4429.75
+Pankow,1200,angular choice,8,james-hobrecht-straße,4286.0
+Pankow,1200,angular choice,9,conrad-blenkle-straße,2957.0
+Pankow,1200,angular choice,10,viehtrift,1730.0
+Pankow,1200,NAIN,1,landsberger allee,1.0428
+Pankow,1200,NAIN,2,james-hobrecht-straße,0.9682
+Pankow,1200,NAIN,3,conrad-blenkle-straße,0.9382
+Pankow,1200,NAIN,4,danziger straße,0.8995
+Pankow,1200,NAIN,5,richard-ermisch-straße,0.8986
+Pankow,1200,NAIN,6,hermann-blankenstein-straße,0.8832
+Pankow,1200,NAIN,7,otto-braun-straße,0.8717
+Pankow,1200,NAIN,8,eldenaer straße,0.8635
+Pankow,1200,NAIN,9,thaerstraße,0.8327
+Pankow,1200,NAIN,10,fritz-riedel-straße,0.7813
+Pankow,2000,NACH,1,landsberger allee,1.2666
+Pankow,2000,NACH,2,thaerstraße,1.1918
+Pankow,2000,NACH,3,danziger straße,1.1763
+Pankow,2000,NACH,4,otto-braun-straße,1.1563
+Pankow,2000,NACH,5,richard-ermisch-straße,1.1152
+Pankow,2000,NACH,6,conrad-blenkle-straße,1.1128
+Pankow,2000,NACH,7,fritz-riedel-straße,1.0795
+Pankow,2000,NACH,8,james-hobrecht-straße,1.067
+Pankow,2000,NACH,9,mendelssohnstraße,1.0245
+Pankow,2000,NACH,10,hermann-blankenstein-straße,0.9847
+Pankow,2000,angular choice,1,landsberger allee,132171.5
+Pankow,2000,angular choice,2,danziger straße,75481.25
+Pankow,2000,angular choice,3,otto-braun-straße,67788.5
+Pankow,2000,angular choice,4,thaerstraße,65067.0
+Pankow,2000,angular choice,5,conrad-blenkle-straße,37062.5
+Pankow,2000,angular choice,6,richard-ermisch-straße,29065.75
+Pankow,2000,angular choice,7,fritz-riedel-straße,29018.0
+Pankow,2000,angular choice,8,james-hobrecht-straße,22276.75
+Pankow,2000,angular choice,9,mendelssohnstraße,21176.0
+Pankow,2000,angular choice,10,hermann-blankenstein-straße,11512.75
+Pankow,2000,NAIN,1,landsberger allee,1.0071
+Pankow,2000,NAIN,2,conrad-blenkle-straße,0.9022
+Pankow,2000,NAIN,3,danziger straße,0.902
+Pankow,2000,NAIN,4,fritz-riedel-straße,0.7951
+Pankow,2000,NAIN,5,otto-braun-straße,0.7585
+Pankow,2000,NAIN,6,eldenaer straße,0.748
+Pankow,2000,NAIN,7,hermann-blankenstein-straße,0.7447
+Pankow,2000,NAIN,8,richard-ermisch-straße,0.7426
+Pankow,2000,NAIN,9,james-hobrecht-straße,0.723
+Pankow,2000,NAIN,10,am viehhof,0.7163
+Tempelhof-Schöneberg,400,NACH,1,mussehlstraße,1.0534
+Tempelhof-Schöneberg,400,NACH,2,dudenstraße; kolonnenbrücke; kolonnenstraße,1.0273
+Tempelhof-Schöneberg,400,NACH,3,loewenhardtdamm,0.9549
+Tempelhof-Schöneberg,400,NACH,4,höhndorfstraße,0.9435
+Tempelhof-Schöneberg,400,NACH,5,yorckbrücke 5,0.8796
+Tempelhof-Schöneberg,400,NACH,6,monumentenbrücke; monumentenstraße,0.7337
+Tempelhof-Schöneberg,400,NACH,7,am lokdepot,0.7093
+Tempelhof-Schöneberg,400,NACH,8,platz der luftbrücke,0.4739
+Tempelhof-Schöneberg,400,NACH,9,boelckestraße,0.3422
+Tempelhof-Schöneberg,400,NACH,10,burgherrenstraße,0.0
+Tempelhof-Schöneberg,400,angular choice,1,mussehlstraße,205.0
+Tempelhof-Schöneberg,400,angular choice,2,loewenhardtdamm,126.0
+Tempelhof-Schöneberg,400,angular choice,3,dudenstraße; kolonnenbrücke; kolonnenstraße,119.0
+Tempelhof-Schöneberg,400,angular choice,4,höhndorfstraße,114.0
+Tempelhof-Schöneberg,400,angular choice,5,yorckbrücke 5,106.0
+Tempelhof-Schöneberg,400,angular choice,6,monumentenbrücke; monumentenstraße,20.0
+Tempelhof-Schöneberg,400,angular choice,7,am lokdepot,16.0
+Tempelhof-Schöneberg,400,angular choice,8,platz der luftbrücke,9.0
+Tempelhof-Schöneberg,400,angular choice,9,boelckestraße,5.0
+Tempelhof-Schöneberg,400,angular choice,10,burgherrenstraße,0.0
+Tempelhof-Schöneberg,400,NAIN,1,monumentenbrücke; monumentenstraße,1.1815
+Tempelhof-Schöneberg,400,NAIN,2,dudenstraße; kolonnenbrücke; kolonnenstraße,1.1456
+Tempelhof-Schöneberg,400,NAIN,3,mussehlstraße,1.0659
+Tempelhof-Schöneberg,400,NAIN,4,höhndorfstraße,0.9867
+Tempelhof-Schöneberg,400,NAIN,5,am lokdepot,0.9363
+Tempelhof-Schöneberg,400,NAIN,6,loewenhardtdamm,0.9092
+Tempelhof-Schöneberg,400,NAIN,7,burgherrenstraße,0.8244
+Tempelhof-Schöneberg,400,NAIN,8,platz der luftbrücke,0.7535
+Tempelhof-Schöneberg,400,NAIN,9,yorckstraße,0.7157
+Tempelhof-Schöneberg,400,NAIN,10,boelckestraße,0.6561
+Tempelhof-Schöneberg,800,NACH,1,mussehlstraße,1.1644
+Tempelhof-Schöneberg,800,NACH,2,yorckstraße,1.1506
+Tempelhof-Schöneberg,800,NACH,3,dudenstraße; kolonnenbrücke; kolonnenstraße,1.1156
+Tempelhof-Schöneberg,800,NACH,4,loewenhardtdamm,1.0769
+Tempelhof-Schöneberg,800,NACH,5,monumentenbrücke; monumentenstraße,1.0263
+Tempelhof-Schöneberg,800,NACH,6,höhndorfstraße,1.0224
+Tempelhof-Schöneberg,800,NACH,7,am lokdepot,0.7771
+Tempelhof-Schöneberg,800,NACH,8,yorckbrücke 5,0.7679
+Tempelhof-Schöneberg,800,NACH,9,platz der luftbrücke,0.749
+Tempelhof-Schöneberg,800,NACH,10,boelckestraße,0.614
+Tempelhof-Schöneberg,800,angular choice,1,mussehlstraße,2003.0
+Tempelhof-Schöneberg,800,angular choice,2,dudenstraße; kolonnenbrücke; kolonnenstraße,1796.0
+Tempelhof-Schöneberg,800,angular choice,3,yorckstraße,1767.0
+Tempelhof-Schöneberg,800,angular choice,4,loewenhardtdamm,1538.5
+Tempelhof-Schöneberg,800,angular choice,5,höhndorfstraße,964.5
+Tempelhof-Schöneberg,800,angular choice,6,monumentenbrücke; monumentenstraße,520.5
+Tempelhof-Schöneberg,800,angular choice,7,yorckbrücke 5,208.0
+Tempelhof-Schöneberg,800,angular choice,8,am lokdepot,191.0
+Tempelhof-Schöneberg,800,angular choice,9,platz der luftbrücke,128.75
+Tempelhof-Schöneberg,800,angular choice,10,boelckestraße,70.5
+Tempelhof-Schöneberg,800,NAIN,1,mussehlstraße,1.0393
+Tempelhof-Schöneberg,800,NAIN,2,dudenstraße; kolonnenbrücke; kolonnenstraße,0.9531
+Tempelhof-Schöneberg,800,NAIN,3,loewenhardtdamm,0.9409
+Tempelhof-Schöneberg,800,NAIN,4,monumentenbrücke; monumentenstraße,0.9368
+Tempelhof-Schöneberg,800,NAIN,5,yorckstraße,0.912
+Tempelhof-Schöneberg,800,NAIN,6,höhndorfstraße,0.9007
+Tempelhof-Schöneberg,800,NAIN,7,burgherrenstraße,0.7382
+Tempelhof-Schöneberg,800,NAIN,8,platz der luftbrücke,0.7228
+Tempelhof-Schöneberg,800,NAIN,9,boelckestraße,0.7
+Tempelhof-Schöneberg,800,NAIN,10,am lokdepot,0.6902
+Tempelhof-Schöneberg,1200,NACH,1,yorckstraße,1.2425
+Tempelhof-Schöneberg,1200,NACH,2,mussehlstraße,1.2185
+Tempelhof-Schöneberg,1200,NACH,3,dudenstraße; kolonnenbrücke; kolonnenstraße,1.2025
+Tempelhof-Schöneberg,1200,NACH,4,loewenhardtdamm,1.148
+Tempelhof-Schöneberg,1200,NACH,5,monumentenbrücke; monumentenstraße,1.0774
+Tempelhof-Schöneberg,1200,NACH,6,höhndorfstraße,1.026
+Tempelhof-Schöneberg,1200,NACH,7,boelckestraße,0.8399
+Tempelhof-Schöneberg,1200,NACH,8,platz der luftbrücke,0.8342
+Tempelhof-Schöneberg,1200,NACH,9,am lokdepot,0.8326
+Tempelhof-Schöneberg,1200,NACH,10,yorckbrücke 5,0.7136
+Tempelhof-Schöneberg,1200,angular choice,1,dudenstraße; kolonnenbrücke; kolonnenstraße,10424.5
+Tempelhof-Schöneberg,1200,angular choice,2,loewenhardtdamm,8843.0
+Tempelhof-Schöneberg,1200,angular choice,3,yorckstraße,8205.0
+Tempelhof-Schöneberg,1200,angular choice,4,mussehlstraße,7493.75
+Tempelhof-Schöneberg,1200,angular choice,5,höhndorfstraße,3164.5
+Tempelhof-Schöneberg,1200,angular choice,6,monumentenbrücke; monumentenstraße,2805.0
+Tempelhof-Schöneberg,1200,angular choice,7,boelckestraße,802.0
+Tempelhof-Schöneberg,1200,angular choice,8,am lokdepot,728.0
+Tempelhof-Schöneberg,1200,angular choice,9,platz der luftbrücke,433.5
+Tempelhof-Schöneberg,1200,angular choice,10,yorckbrücke 5,276.0
+Tempelhof-Schöneberg,1200,NAIN,1,mussehlstraße,0.9907
+Tempelhof-Schöneberg,1200,NAIN,2,dudenstraße; kolonnenbrücke; kolonnenstraße,0.9497
+Tempelhof-Schöneberg,1200,NAIN,3,yorckstraße,0.9475
+Tempelhof-Schöneberg,1200,NAIN,4,loewenhardtdamm,0.8939
+Tempelhof-Schöneberg,1200,NAIN,5,monumentenbrücke; monumentenstraße,0.8844
+Tempelhof-Schöneberg,1200,NAIN,6,höhndorfstraße,0.8627
+Tempelhof-Schöneberg,1200,NAIN,7,burgherrenstraße,0.794
+Tempelhof-Schöneberg,1200,NAIN,8,platz der luftbrücke,0.7539
+Tempelhof-Schöneberg,1200,NAIN,9,boelckestraße,0.7478
+Tempelhof-Schöneberg,1200,NAIN,10,am lokdepot,0.7035
+Tempelhof-Schöneberg,2000,NACH,1,dudenstraße; kolonnenbrücke; kolonnenstraße,1.2701
+Tempelhof-Schöneberg,2000,NACH,2,loewenhardtdamm,1.2466
+Tempelhof-Schöneberg,2000,NACH,3,mussehlstraße,1.184
+Tempelhof-Schöneberg,2000,NACH,4,yorckstraße,1.177
+Tempelhof-Schöneberg,2000,NACH,5,monumentenbrücke; monumentenstraße,1.1129
+Tempelhof-Schöneberg,2000,NACH,6,höhndorfstraße,1.0679
+Tempelhof-Schöneberg,2000,NACH,7,boelckestraße,0.9987
+Tempelhof-Schöneberg,2000,NACH,8,platz der luftbrücke,0.9004
+Tempelhof-Schöneberg,2000,NACH,9,am lokdepot,0.8607
+Tempelhof-Schöneberg,2000,NACH,10,yorckbrücke 5,0.6601
+Tempelhof-Schöneberg,2000,angular choice,1,dudenstraße; kolonnenbrücke; kolonnenstraße,98220.5833
+Tempelhof-Schöneberg,2000,angular choice,2,loewenhardtdamm,85844.5
+Tempelhof-Schöneberg,2000,angular choice,3,yorckstraße,46586.25
+Tempelhof-Schöneberg,2000,angular choice,4,mussehlstraße,44912.75
+Tempelhof-Schöneberg,2000,angular choice,5,monumentenbrücke; monumentenstraße,23887.6667
+Tempelhof-Schöneberg,2000,angular choice,6,höhndorfstraße,15745.0
+Tempelhof-Schöneberg,2000,angular choice,7,boelckestraße,9077.5
+Tempelhof-Schöneberg,2000,angular choice,8,platz der luftbrücke,3991.75
+Tempelhof-Schöneberg,2000,angular choice,9,am lokdepot,2989.9167
+Tempelhof-Schöneberg,2000,angular choice,10,yorckbrücke 5,500.5
+Tempelhof-Schöneberg,2000,NAIN,1,dudenstraße; kolonnenbrücke; kolonnenstraße,0.8355
+Tempelhof-Schöneberg,2000,NAIN,2,höhndorfstraße,0.7904
+Tempelhof-Schöneberg,2000,NAIN,3,monumentenbrücke; monumentenstraße,0.7874
+Tempelhof-Schöneberg,2000,NAIN,4,loewenhardtdamm,0.7797
+Tempelhof-Schöneberg,2000,NAIN,5,mussehlstraße,0.779
+Tempelhof-Schöneberg,2000,NAIN,6,yorckstraße,0.7766
+Tempelhof-Schöneberg,2000,NAIN,7,boelckestraße,0.7587
+Tempelhof-Schöneberg,2000,NAIN,8,am lokdepot,0.7033
+Tempelhof-Schöneberg,2000,NAIN,9,burgherrenstraße,0.7012
+Tempelhof-Schöneberg,2000,NAIN,10,platz der luftbrücke,0.6436

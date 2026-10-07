@@ -1,6 +1,12 @@
-"""Phase 1: angular segment analysis for one district (pilot) or all.
+"""Phase 1: angular segment analysis for one district (pilot) or all of Berlin.
 
 Usage: python scripts/run_segments.py --district Friedrichshain-Kreuzberg
+       python scripts/run_segments.py --district Berlin      # whole city, reported per district
+
+With --district Berlin the city is analysed as one network (city + 2 km
+buffer) and each segment is assigned to the district containing its midpoint;
+ranks and percentiles are then computed within each district, so they are
+comparable with a single-district run. Output names use "berlin".
 
 Writes
   output/segments_<district>.gpkg                 all measures per segment (git-ignored, large)
@@ -62,19 +68,19 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
-def nach_map(seg, ctx, outline, r, district, path):
+def nach_map(seg, ctx, outline, r, district, path, figsize=(12, 8.5), width_scale=1.0):
     """Segments in quintile classes of NACH, darker and thicker = higher. Context
     (buffer) segments thin gray. Quintiles because NACH is a relative measure."""
     col = f"nach_{r}"
     q = seg[col].quantile([0.2, 0.4, 0.6, 0.8]).to_numpy()
     cls = np.searchsorted(q, seg[col].to_numpy(), side="right")
-    fig, ax = plt.subplots(figsize=(12, 8.5), dpi=150, facecolor=SURFACE)
+    fig, ax = plt.subplots(figsize=figsize, dpi=150, facecolor=SURFACE)
     ax.set_facecolor(SURFACE)
     ctx.plot(ax=ax, color=CONTEXT, linewidth=0.3)
     for k in range(5):
         part = seg[cls == k]
         if len(part):
-            part.plot(ax=ax, color=RAMP[k], linewidth=WIDTHS[k], capstyle="round")
+            part.plot(ax=ax, color=RAMP[k], linewidth=WIDTHS[k] * width_scale, capstyle="round")
     outline.boundary.plot(ax=ax, color=TEXT_2, linewidth=0.8, linestyle=(0, (4, 2)))
     xmin, ymin, xmax, ymax = outline.total_bounds
     pad = 600
@@ -82,6 +88,8 @@ def nach_map(seg, ctx, outline, r, district, path):
     ax.set_ylim(ymin - pad, ymax + pad)
     ax.set_axis_off()
     ax.set_title(f"Normalised angular choice (NACH), radius {r} m: {district}", loc="left", fontsize=13, color=TEXT)
+    if district == "Berlin":
+        ax.text(0.0, -0.01, "Quintiles over all Berlin segments.", transform=ax.transAxes, fontsize=8, color=TEXT_2)
     labels = ["lowest 20%", "20-40%", "40-60%", "60-80%", "highest 20%"]
     handles = [plt.Line2D([], [], color=c, linewidth=w * 2.2, label=lbl) for c, w, lbl in zip(RAMP, WIDTHS, labels)]
     handles.append(plt.Line2D([], [], color=CONTEXT, linewidth=1, label="buffer (context only)"))
@@ -110,13 +118,15 @@ def main():
         raise SystemExit("buffer must be at least the largest radius to avoid edge effects")
 
     lor = load_lor(cfg.path("lor"), crs)
-    district = lor[lor["district"] == args.district]
+    districts = lor.dissolve("district").reset_index()[["district", "geometry"]]
+    whole_city = args.district == "Berlin"
+    district = districts if whole_city else districts[districts["district"] == args.district]
     if district.empty:
-        raise SystemExit(f"unknown district {args.district}; choose from {sorted(lor['district'].unique())}")
+        raise SystemExit(f"unknown district {args.district}; choose Berlin or one of {sorted(districts['district'])}")
     study = district.union_all()
     area = study.buffer(args.buffer_m)
     area_wgs = gpd.GeoSeries([area], crs=crs).to_crs(4326).iloc[0]
-    meta = {"district": args.district, "buffer_m": args.buffer_m, "distances": sg.DISTANCES}
+    meta = {"study_area": args.district, "buffer_m": args.buffer_m, "distances": sg.DISTANCES}
 
     cache = der / f"segments_{name}_primal.pkl"
     if cache.exists():
@@ -147,36 +157,54 @@ def main():
 
     seg = n[n["live"]].copy()
     ctx = n[~n["live"]]
-    meta["segments_in_district"] = int(len(seg))
+    # District of each live segment: the one containing its midpoint (nearest
+    # district for the few whose midpoint lies just outside the city).
+    mid = gpd.GeoDataFrame(geometry=seg.geometry.interpolate(0.5, normalized=True), crs=crs)
+    seg["district"] = gpd.sjoin_nearest(mid, districts, how="left")["district"].groupby(level=0).first()
+    meta["segments_in_study_area"] = int(len(seg))
     meta["segments_in_buffer"] = int(len(ctx))
+    meta["segments_by_district"] = seg["district"].value_counts().sort_index().to_dict()
+    n.loc[seg.index, "district"] = seg["district"]
+    n.to_file(out / f"segments_{name}.gpkg", layer="segments", driver="GPKG")
 
     measures = [c for c in seg.columns if c.startswith(("cc_", "nain_", "nach_"))]
     seg[measures].describe(percentiles=[0.1, 0.5, 0.9]).T.round(4).to_csv(out / f"segments_{name}_summary.csv")
 
-    # Top 10 distinct named streets per measure and radius (a street's value =
-    # its highest segment), for the sanity check against known main streets.
-    named = seg[seg["street"].notna()]
-    rows = []
-    for r in sg.DISTANCES:
-        for measure, col in (("NACH", f"nach_{r}"), ("angular choice", f"cc_betweenness_{r}_ang"), ("NAIN", f"nain_{r}")):
-            top = named.groupby("street")[col].max().sort_values(ascending=False).head(10)
-            for rank, (street, value) in enumerate(top.items(), start=1):
-                rows.append({"radius_m": r, "measure": measure, "rank": rank, "street": street, "value": round(value, 4)})
-    pd.DataFrame(rows).to_csv(out / f"segments_{name}_top10.csv", index=False)
-
-    # Where known main streets rank: median percentile of their segments in the district.
-    rows = []
-    for street in MAIN_STREETS.get(args.district, []):
-        x = seg["street"].fillna("").str.contains(street, regex=False)
-        row = {"street": street, "segments": int(x.sum()), "length_m": round(float(seg.loc[x, "length_m"].sum()), 0)}
+    top_rows, main_rows, dist_rows = [], [], []
+    for dname, g in seg.groupby("district"):
+        # Top 10 distinct named streets per measure and radius (a street's value =
+        # its highest segment), for the sanity check against known main streets.
+        named = g[g["street"].notna()]
+        for r in sg.DISTANCES:
+            for measure, col in (("NACH", f"nach_{r}"), ("angular choice", f"cc_betweenness_{r}_ang"), ("NAIN", f"nain_{r}")):
+                top = named.groupby("street")[col].max().sort_values(ascending=False).head(10)
+                for rank, (street, value) in enumerate(top.items(), start=1):
+                    top_rows.append({"district": dname, "radius_m": r, "measure": measure, "rank": rank,
+                                     "street": street, "value": round(value, 4)})
+        # Where known main streets rank: median percentile of their segments in the district.
+        for street in MAIN_STREETS.get(dname, []):
+            x = g["street"].fillna("").str.contains(street, regex=False)
+            row = {"district": dname, "street": street, "segments": int(x.sum()),
+                   "length_m": round(float(g.loc[x, "length_m"].sum()), 0)}
+            for r in (800, 2000):
+                for label, col in (("choice", f"cc_betweenness_{r}_ang"), ("nach", f"nach_{r}"), ("nain", f"nain_{r}")):
+                    row[f"{label}_{r}_pct"] = round(float(g[col].rank(pct=True)[x].median()), 2) if x.any() else None
+            main_rows.append(row)
+        row = {"district": dname, "segments": len(g), "network_km": round(g["length_m"].sum() / 1000, 1),
+               "median_segment_m": round(g["length_m"].median(), 1)}
         for r in (800, 2000):
-            for label, col in (("choice", f"cc_betweenness_{r}_ang"), ("nach", f"nach_{r}"), ("nain", f"nain_{r}")):
-                row[f"{label}_{r}_pct"] = round(float(seg[col].rank(pct=True)[x].median()), 2) if x.any() else None
-        rows.append(row)
-    pd.DataFrame(rows).to_csv(out / f"segments_{name}_main_streets.csv", index=False)
+            row[f"median_nain_{r}"] = round(g[f"nain_{r}"].median(), 3)
+            row[f"median_nach_{r}"] = round(g[f"nach_{r}"].median(), 3)
+        dist_rows.append(row)
+    pd.DataFrame(top_rows).to_csv(out / f"segments_{name}_top10.csv", index=False)
+    if main_rows:
+        pd.DataFrame(main_rows).to_csv(out / f"segments_{name}_main_streets.csv", index=False)
+    pd.DataFrame(dist_rows).to_csv(out / f"segments_{name}_by_district.csv", index=False)
 
+    title = "Berlin" if whole_city else args.district
+    size, ws = ((14, 10.5), 0.45) if whole_city else ((12, 8.5), 1.0)
     for r in (800, 2000):
-        nach_map(seg, ctx, district.dissolve(), r, args.district, out / "maps" / f"segments_{name}_nach_{r}.png")
+        nach_map(seg, ctx, district, r, title, out / "maps" / f"segments_{name}_nach_{r}.png", size, ws)
 
     (out / f"segments_{name}_metadata.json").write_text(json.dumps(meta, indent=2, default=str))
     log("done")

@@ -1,5 +1,5 @@
 {
-  "district": "Friedrichshain-Kreuzberg",
+  "study_area": "Friedrichshain-Kreuzberg",
   "buffer_m": 2000,
   "distances": [
     400,
@@ -18,6 +18,15 @@
     "primal_edges_before_cleaning": 200335,
     "primal_edges_after_cleaning": 21342
   },
-  "segments_in_district": 4900,
-  "segments_in_buffer": 16442
+  "segments_in_study_area": 4900,
+  "segments_in_buffer": 16442,
+  "segments_by_district": {
+    "Friedrichshain-Kreuzberg": 4804,
+    "Lichtenberg": 7,
+    "Mitte": 34,
+    "Neuk\u00f6lln": 16,
+    "Pankow": 20,
+    "Tempelhof-Sch\u00f6neberg": 18,
+    "Treptow-K\u00f6penick": 1
+  }
 }

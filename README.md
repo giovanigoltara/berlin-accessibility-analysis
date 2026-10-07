@@ -263,40 +263,6 @@ Distribution over the 537 Planungsräume with at least 100 residents (5 excluded
 | S- or U-Bahn | 537 | 5.6 | 11.2 | 30.6 | 158.8 |
 | Any mode | 537 | 2.6 | 3.5 | 5.0 | 8.0 |
 
-#### Phase 1 pilot (friedrichshain-kreuzberg): where known main streets rank
-
-Median percentile of each street's segments among all segments in the district (100 = most central).
-
-| Street | Segments | Choice 800 m | NACH 800 m | Choice 2000 m | NACH 2000 m | NAIN 2000 m |
-|---|---|---|---|---|---|---|
-| Frankfurter Allee | 24 | 79.0 | 80.0 | 88.0 | 90.0 | 97.0 |
-| Karl-Marx-Allee | 30 | 89.0 | 86.0 | 95.0 | 97.0 | 95.0 |
-| Warschauer Straße | 18 | 53.0 | 58.0 | 79.0 | 81.0 | 74.0 |
-| Skalitzer Straße | 26 | 66.0 | 61.0 | 67.0 | 69.0 | 55.0 |
-| Kottbusser Damm | 13 | 66.0 | 72.0 | 83.0 | 81.0 | 52.0 |
-| Oranienstraße | 33 | 92.0 | 83.0 | 93.0 | 94.0 | 88.0 |
-| Gneisenaustraße | 18 | 63.0 | 68.0 | 80.0 | 82.0 | 78.0 |
-| Yorckstraße | 22 | 80.0 | 78.0 | 72.0 | 72.0 | 68.0 |
-| Mehringdamm | 17 | 72.0 | 77.0 | 79.0 | 81.0 | 64.0 |
-| Petersburger Straße | 20 | 64.0 | 64.0 | 79.0 | 76.0 | 88.0 |
-| Boxhagener Straße | 15 | 65.0 | 81.0 | 81.0 | 87.0 | 94.0 |
-| Revaler Straße | 17 | 61.0 | 83.0 | 76.0 | 85.0 | 83.0 |
-
-Top 10 named streets per measure (a street's value is its highest segment):
-
-| Rank | angular choice 800 m | angular choice 2000 m | NAIN 800 m | NAIN 2000 m | NACH 2000 m |
-|---|---|---|---|---|---|
-| 1 | Friedrichstraße | Oranienstraße | Holteistraße | Rudi-Dutschke-Straße | Tunnelstraße |
-| 2 | Oranienstraße | Alexandrinenstraße | Eldenaer Straße | Wilhelmstraße | Alt-Stralau |
-| 3 | Singerstraße | Prinzenstraße | Wiener Straße | Oranienstraße | Oranienstraße |
-| 4 | Alexandrinenstraße | Alte Jakobstraße | Boxhagener Straße | Kochstraße | Rudi-Dutschke-Straße |
-| 5 | Palisadenstraße | Rudi-Dutschke-Straße | Wühlischstraße | Frankfurter Allee | Wilhelmstraße |
-| 6 | Ritterstraße | Andreasstraße | Oranienstraße | Friedrichstraße | Alexandrinenstraße |
-| 7 | Lichtenberger Straße; Singerstraße | Danziger Straße; Landsberger Allee | Reichenberger Straße | Karl-Marx-Allee | Prinzenstraße |
-| 8 | Prinzenstraße | Lebuser Straße | Gryphiusstraße | Landsberger Allee | Lebuser Straße |
-| 9 | Platz Der Vereinten Nationen | Wilhelmstraße | Rudi-Dutschke-Straße | Karl-Marx-Allee; Petersburger Straße; Warschauer Straße | Dudenstraße; Kolonnenbrücke; Kolonnenstraße |
-| 10 | Koppenstraße | Landsberger Allee | Charlottenstraße | Charlottenstraße | Andreasstraße |
-
 #### GTFS stops per mode
 
 | mode | stops_inside_berlin | stops_outside_within_sensitivity_buffer | stops_dropped_snap | stops_used | snap_m_median |
