@@ -1,0 +1,37 @@
+{
+  "study_area": "Berlin",
+  "buffer_m": 2000,
+  "distances": [
+    400,
+    800,
+    1200,
+    2000
+  ],
+  "network": {
+    "osm_segments": 1638835,
+    "dropped_sidewalk": 289079,
+    "dropped_excluded_highway": 9702,
+    "dropped_foot_no": 8933,
+    "dropped_area": 0,
+    "dropped_indoor": 7305,
+    "dropped_deep_level": 286,
+    "primal_edges_before_cleaning": 1323530,
+    "primal_edges_after_cleaning": 185185
+  },
+  "segments_in_study_area": 153073,
+  "segments_in_buffer": 32112,
+  "segments_by_district": {
+    "Charlottenburg-Wilmersdorf": 10578,
+    "Friedrichshain-Kreuzberg": 4796,
+    "Lichtenberg": 11101,
+    "Marzahn-Hellersdorf": 12435,
+    "Mitte": 9254,
+    "Neuk\u00f6lln": 11460,
+    "Pankow": 16868,
+    "Reinickendorf": 14666,
+    "Spandau": 13554,
+    "Steglitz-Zehlendorf": 14910,
+    "Tempelhof-Sch\u00f6neberg": 10681,
+    "Treptow-K\u00f6penick": 22770
+  }
+}

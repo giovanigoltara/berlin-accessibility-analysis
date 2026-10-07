@@ -1,0 +1,13 @@
+district,segments,network_km,median_segment_m,median_nain_800,median_nach_800,median_nain_2000,median_nach_2000
+Charlottenburg-Wilmersdorf,10578,921.0,60.0,0.833,0.904,0.65,0.911
+Friedrichshain-Kreuzberg,4796,327.0,50.6,0.786,0.92,0.66,0.908
+Lichtenberg,11101,782.2,49.0,0.801,0.899,0.652,0.884
+Marzahn-Hellersdorf,12435,930.7,51.7,0.763,0.905,0.613,0.896
+Mitte,9254,633.6,49.4,0.786,0.917,0.652,0.907
+Neukölln,11460,772.9,49.8,0.819,0.918,0.66,0.893
+Pankow,16868,1408.7,57.1,0.871,0.907,0.702,0.908
+Reinickendorf,14666,1182.3,55.7,0.79,0.902,0.644,0.9
+Spandau,13554,1172.6,60.8,0.824,0.898,0.669,0.892
+Steglitz-Zehlendorf,14910,1329.3,62.7,0.843,0.91,0.698,0.915
+Tempelhof-Schöneberg,10681,830.3,57.1,0.83,0.911,0.678,0.905
+Treptow-Köpenick,22770,2012.1,59.0,0.887,0.908,0.708,0.91

@@ -382,3 +382,28 @@ log(CH+1) / log(TD+3) rises when total depth TD is small, so a street that
 every route into a small, enclosed network must use scores high. Hillier et
 al. introduced NACH to compare whole cities; within one district, angular
 choice and NAIN are the more robust readings. Kept as computed, flagged here.
+
+## Citywide results and checks
+
+From `output/segments_berlin_metadata.json` and
+`output/segments_berlin_by_district.csv`: 1,638,835 OSM segments read for
+Berlin + 2 km; 185,185 segments after cleaning, of which those inside Berlin
+are reported per district.
+
+**Edge effects.** `output/segments_friedrichshain-kreuzberg_vs_berlin.csv`:
+94.6% of the pilot's segments match a citywide segment (midpoint and length
+within 1 m). Over all measures and radii, Spearman rank correlation is
+between 0.991 and 0.9997 and the median relative difference at most 3.2%.
+The 2 km buffer is sufficient; the residual differences come from cleaning
+two slightly different networks.
+
+**Known problem: forest tracks.** In several outer districts the top NAIN
+streets (`output/segments_berlin_top10.csv`) are forest rides and tracks,
+e.g. Teltower Weg and E-Gestell (Charlottenburg-Wilmersdorf), Birkengestell
+(Treptow-Köpenick), Oberjägerweg (Spandau). cityseer's recipe removes
+footways inside parks and forests but keeps `highway=track` and similar
+ways. What remains in a forest is a sparse, straight grid with low angular
+depth, which raises integration. This is a property of the input network,
+not of the measures. Not yet fixed; options under consideration: remove
+`highway=track` from the segment map, and/or keep forest segments in the
+network but exclude them from reporting.
