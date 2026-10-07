@@ -407,3 +407,39 @@ depth, which raises integration. This is a property of the input network,
 not of the measures. Not yet fixed; options under consideration: remove
 `highway=track` from the segment map, and/or keep forest segments in the
 network but exclude them from reporting.
+
+## Revision: forestry tracks removed, residential streets reported
+
+Decided with the project owner after the first citywide run.
+
+1. **`highway=track` is removed from the segment map** before cleaning
+   (`segments.EXCLUDED_HIGHWAYS`). Forestry and field tracks are not part of
+   the urban street system that angular segment analysis describes, and they
+   produced the forest artifact above.
+2. **Only residential streets are reported.** A live segment is residential
+   if at least one building with allocated residents (Phase 0, `residents >
+   0`) lies within `segment_residential_buffer_m` (50 m) of it. 50 m covers a
+   street's half-width plus the depth of a typical Berlin front building, so
+   perimeter-block streets qualify while streets through parks, industrial
+   estates and rail land do not. Counts per segment (`res_buildings`,
+   `residents_nearby`) are in the GeoPackage.
+3. **All other streets stay in the network.** Removing non-residential
+   streets from the graph would cut the routes that pass through parks or
+   industrial areas and change the integration and choice of the residential
+   streets themselves (false segregation at every edge of a non-residential
+   zone). They therefore still carry paths; they are only left out of
+   statistics, rankings, percentiles and colouring (drawn gray).
+
+Percentiles in the main-street check are now among residential segments of
+the district, so they are not directly comparable with the first run.
+
+Revised citywide run (`output/segments_berlin_metadata.json`): 168,869
+segments after cleaning (185,185 before removing tracks), 141,631 of them
+inside Berlin, of which 116,972 (82.6%) are residential streets and reported.
+The pilot still matches the citywide run (Spearman at least 0.9905 for every
+measure and radius, `output/segments_friedrichshain-kreuzberg_vs_berlin.csv`).
+The forest rides that topped integration before no longer appear in
+`output/segments_berlin_top10.csv`. Still open: in outer districts the top
+NAIN streets are often long main roads of low-density areas, and angular
+choice in Mitte is led by Annenstraße and Fischerinsel rather than the
+historic main streets; not yet investigated.

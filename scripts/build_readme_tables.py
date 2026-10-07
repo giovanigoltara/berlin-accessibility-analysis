@@ -161,15 +161,20 @@ def build(cfg) -> str:
     if seg_name:
         bd = pd.read_csv(out / f"segments_{seg_name}_by_district.csv")
         tbl = pd.DataFrame({
-            "District": bd["district"], "Segments": bd["segments"].map(lambda x: f"{x:,}"),
+            "District": bd["district"],
+            "All segments": bd["live_segments"].map(lambda x: f"{x:,}") if "live_segments" in bd else "",
+            "Residential segments": bd["segments"].map(lambda x: f"{x:,}"),
+            "Residential share": bd["residential_share"].map(lambda x: fmt(x, pct=True)) if "residential_share" in bd else "",
             "Network km": bd["network_km"].map(fmt), "Median segment m": bd["median_segment_m"].map(fmt),
             "Median NAIN 800 m": bd["median_nain_800"].map(lambda x: f"{x:.3f}"),
             "Median NAIN 2000 m": bd["median_nain_2000"].map(lambda x: f"{x:.3f}"),
             "Median NACH 2000 m": bd["median_nach_2000"].map(lambda x: f"{x:.3f}"),
         })
         parts.append("#### Phase 1: segment map and centrality per district\n\n"
-                     "One citywide angular segment analysis (city + 2 km buffer); each segment assigned to the "
-                     "district containing its midpoint.\n\n" + md_table(tbl))
+                     "One citywide angular segment analysis (city + 2 km buffer, forestry tracks removed); each "
+                     "segment assigned to the district containing its midpoint. All streets are used for routing; "
+                     "statistics, rankings and maps cover residential streets only (a building with residents "
+                     f"within {cfg.raw.get('segment_residential_buffer_m', 50)} m).\n\n" + md_table(tbl))
         t = pd.read_csv(out / f"segments_{seg_name}_top10.csv")
         rows = []
         for dname, g in t.groupby("district"):
@@ -192,8 +197,8 @@ def build(cfg) -> str:
                 "NAIN 2000 m": m["nain_2000_pct"].map(lambda x: fmt(100 * x)),
             })
             parts.append("#### Phase 1 sanity check: where known main streets rank\n\n"
-                         "Median percentile of each street's segments among all segments of its district "
-                         "(100 = most central).\n\n" + md_table(tbl))
+                         "Median percentile of each street's segments among the residential segments of its "
+                         "district (100 = most central).\n\n" + md_table(tbl))
         for cmp_csv in sorted(out.glob("segments_*_vs_berlin.csv")):
             c = pd.read_csv(cmp_csv)
             c = c[c["radius_m"].isin([800, 2000])]

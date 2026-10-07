@@ -10,23 +10,35 @@
   "network": {
     "osm_segments": 253181,
     "dropped_sidewalk": 46934,
-    "dropped_excluded_highway": 1728,
+    "dropped_excluded_highway": 2191,
     "dropped_foot_no": 1315,
     "dropped_area": 0,
     "dropped_indoor": 2660,
     "dropped_deep_level": 209,
-    "primal_edges_before_cleaning": 200335,
-    "primal_edges_after_cleaning": 21342
+    "primal_edges_before_cleaning": 199872,
+    "primal_edges_after_cleaning": 21052
   },
-  "segments_in_study_area": 4900,
-  "segments_in_buffer": 16442,
-  "segments_by_district": {
-    "Friedrichshain-Kreuzberg": 4804,
+  "residential_buffer_m": 50,
+  "live_segments": 4906,
+  "live_residential_segments": 4216,
+  "segments_reported": 4216,
+  "segments_context": 16836,
+  "segments_reported_by_district": {
+    "Friedrichshain-Kreuzberg": 4130,
+    "Lichtenberg": 5,
+    "Mitte": 30,
+    "Neuk\u00f6lln": 15,
+    "Pankow": 21,
+    "Tempelhof-Sch\u00f6neberg": 14,
+    "Treptow-K\u00f6penick": 1
+  },
+  "live_segments_by_district": {
+    "Friedrichshain-Kreuzberg": 4810,
     "Lichtenberg": 7,
-    "Mitte": 34,
+    "Mitte": 35,
     "Neuk\u00f6lln": 16,
-    "Pankow": 20,
-    "Tempelhof-Sch\u00f6neberg": 18,
+    "Pankow": 21,
+    "Tempelhof-Sch\u00f6neberg": 16,
     "Treptow-K\u00f6penick": 1
   }
 }

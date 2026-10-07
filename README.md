@@ -265,22 +265,22 @@ Distribution over the 537 Planungsräume with at least 100 residents (5 excluded
 
 #### Phase 1: segment map and centrality per district
 
-One citywide angular segment analysis (city + 2 km buffer); each segment assigned to the district containing its midpoint.
+One citywide angular segment analysis (city + 2 km buffer, forestry tracks removed); each segment assigned to the district containing its midpoint. All streets are used for routing; statistics, rankings and maps cover residential streets only (a building with residents within 50 m).
 
-| District | Segments | Network km | Median segment m | Median NAIN 800 m | Median NAIN 2000 m | Median NACH 2000 m |
-|---|---|---|---|---|---|---|
-| Charlottenburg-Wilmersdorf | 10,578 | 921.0 | 60.0 | 0.833 | 0.650 | 0.911 |
-| Friedrichshain-Kreuzberg | 4,796 | 327.0 | 50.6 | 0.786 | 0.660 | 0.908 |
-| Lichtenberg | 11,101 | 782.2 | 49.0 | 0.801 | 0.652 | 0.884 |
-| Marzahn-Hellersdorf | 12,435 | 930.7 | 51.7 | 0.763 | 0.613 | 0.896 |
-| Mitte | 9,254 | 633.6 | 49.4 | 0.786 | 0.652 | 0.907 |
-| Neukölln | 11,460 | 772.9 | 49.8 | 0.819 | 0.660 | 0.893 |
-| Pankow | 16,868 | 1408.7 | 57.1 | 0.871 | 0.702 | 0.908 |
-| Reinickendorf | 14,666 | 1182.3 | 55.7 | 0.790 | 0.644 | 0.900 |
-| Spandau | 13,554 | 1172.6 | 60.8 | 0.824 | 0.669 | 0.892 |
-| Steglitz-Zehlendorf | 14,910 | 1329.3 | 62.7 | 0.843 | 0.698 | 0.915 |
-| Tempelhof-Schöneberg | 10,681 | 830.3 | 57.1 | 0.830 | 0.678 | 0.905 |
-| Treptow-Köpenick | 22,770 | 2012.1 | 59.0 | 0.887 | 0.708 | 0.910 |
+| District | All segments | Residential segments | Residential share | Network km | Median segment m | Median NAIN 800 m | Median NAIN 2000 m | Median NACH 2000 m |
+|---|---|---|---|---|---|---|---|---|
+| Charlottenburg-Wilmersdorf | 9,267 | 7,416 | 80.0% | 609.4 | 58.6 | 0.843 | 0.658 | 0.922 |
+| Friedrichshain-Kreuzberg | 4,806 | 4,121 | 85.7% | 289.5 | 52.4 | 0.793 | 0.663 | 0.911 |
+| Lichtenberg | 10,866 | 8,627 | 79.4% | 607.6 | 50.3 | 0.804 | 0.659 | 0.878 |
+| Marzahn-Hellersdorf | 12,304 | 10,020 | 81.4% | 763.8 | 54.4 | 0.773 | 0.614 | 0.894 |
+| Mitte | 9,196 | 7,071 | 76.9% | 497.7 | 50.6 | 0.808 | 0.670 | 0.917 |
+| Neukölln | 11,204 | 10,026 | 89.5% | 672.9 | 49.1 | 0.814 | 0.661 | 0.895 |
+| Pankow | 15,510 | 13,357 | 86.1% | 1027.6 | 56.4 | 0.881 | 0.713 | 0.911 |
+| Reinickendorf | 13,730 | 11,469 | 83.5% | 854.2 | 52.3 | 0.778 | 0.637 | 0.897 |
+| Spandau | 12,196 | 10,269 | 84.2% | 815.3 | 57.9 | 0.812 | 0.658 | 0.886 |
+| Steglitz-Zehlendorf | 13,498 | 11,691 | 86.6% | 947.6 | 59.3 | 0.838 | 0.699 | 0.923 |
+| Tempelhof-Schöneberg | 10,592 | 9,151 | 86.4% | 703.5 | 57.6 | 0.831 | 0.682 | 0.911 |
+| Treptow-Köpenick | 18,462 | 13,754 | 74.5% | 1079.1 | 54.5 | 0.840 | 0.683 | 0.893 |
 
 #### Phase 1: top three named streets per district
 
@@ -288,56 +288,56 @@ A street's value is its highest segment; full top-10 lists in `output/segments_b
 
 | District | Angular choice 2000 m | NAIN 2000 m | NAIN 800 m |
 |---|---|---|---|
-| Charlottenburg-Wilmersdorf | Heckerdamm, Heilmannring, Straße Des 17. Juni | Verbindungschaussee, Teltower Weg, E-Gestell | Teltower Weg, Verbindungschaussee, Wiesbadener Straße |
-| Friedrichshain-Kreuzberg | Oranienstraße, Alexandrinenstraße, Platz Der Vereinten Nationen | Rudi-Dutschke-Straße, Landsberger Allee, Wilhelmstraße | Köpenicker Straße, Holteistraße, Eldenaer Straße |
-| Lichtenberg | Volkradstraße, Sewanstraße, Rummelsburger Straße | Sewanstraße, Lückstraße, Ruschestraße | Barnimer Dörferweg, Münsterlandstraße, Straße 3 |
-| Marzahn-Hellersdorf | Quedlinburger Straße, Kastanienallee, Alice-Salomon-Platz; Riesaer Straße | Hultschiner Damm, Pilgramer Straße, Lehnitzstraße | Hultschiner Damm, Akazienallee, Roedernstraße |
-| Mitte | Annenstraße, Fischerinsel, Neue Roßstraße | Wilhelmstraße, Brüsseler Straße, Bernauer Straße | Friedrichstraße, Französische Straße, Cornelius-Fredericks-Straße |
-| Neukölln | Wutzkyallee, Sonnenallee, Hermannstraße | Buckower Damm, Groß-Ziethener Chaussee, Gerlinger Straße | Haselnussweg, Lieselotte-Berger-Straße, Wildrosenweg |
-| Pankow | Wilhelmsruher Damm, Greifswalder Straße, Quickborner Straße | Alt-Karow, Bahnhofstraße, Blankenburger Chaussee | Schönerlinder Chaussee, Schönerlinder Straße, Schillingweg |
-| Reinickendorf | Wilhelmsruher Damm, Senftenberger Ring, Treuenbrietzener Straße | Bernauer Straße, Schwarzer Weg, Maienwerderweg | Alter Bernauer Heerweg, Am Dachsbau, Schwarzer Weg |
-| Spandau | Sandstraße, Magistratsweg, Heerstraße | Ritterfelddamm, Schönwalder Allee, Oberjägerweg | Oberjägerweg, Straße 265, Am Landschaftspark Gatow |
-| Steglitz-Zehlendorf | Seydlitzstraße, Gallwitzallee, Osteweg | Finckensteinallee, Kronprinzessinnenweg, Carstennstraße | Schwanenwerderweg, Alte Poststraße, E-Gestell |
-| Tempelhof-Schöneberg | Prellerweg, Friedenfelser Straße, Dudenstraße; Kolonnenbrücke; Kolonnenstraße | Lichtenrader Damm, Barnetstraße, Töpchiner Weg | Horstwalder Straße, Lessingstraße, Priesterweg |
-| Treptow-Köpenick | Kiefholzstraße, Dammweg, Rudower Chaussee | Schöneicher Landstraße, Birkenweg, Adlergestell | Birkenweg, Fürstenweg, Birkengestell |
+| Charlottenburg-Wilmersdorf | Heckerdamm, Heilmannring, Straße Des 17. Juni | Heckerdamm, Paulsborner Straße, Nestorstraße | Wiesbadener Straße, Droysenstraße, Pücklerstraße |
+| Friedrichshain-Kreuzberg | Oranienstraße, Alte Jakobstraße, Alexandrinenstraße | Rudi-Dutschke-Straße, Wilhelmstraße, Oranienstraße | Holteistraße, Eldenaer Straße, Boxhagener Straße |
+| Lichtenberg | Volkradstraße, Rummelsburger Straße, Sewanstraße | Gudrunstraße, Rüdigerstraße, Sewanstraße | Dorfstraße, Münsterlandstraße, Straße 3 |
+| Marzahn-Hellersdorf | Quedlinburger Straße, Kastanienallee, Cottbusser Straße | Hultschiner Damm, Pilgramer Straße, Paul-Wegener-Straße | Hultschiner Damm, Akazienallee, Roedernstraße |
+| Mitte | Annenstraße, Alte Jakobstraße, Fischerinsel | Wilhelmstraße, Luisenstraße, Bernauer Straße | Friedrichstraße, Französische Straße, Cornelius-Fredericks-Straße |
+| Neukölln | Wutzkyallee, Sonnenallee, Hermannstraße | Groß-Ziethener Chaussee, Schönefelder Straße, Buckower Damm | Lieselotte-Berger-Straße, Treptower Straße, Elly-Heuss-Knapp-Straße |
+| Pankow | Wilhelmsruher Damm, Greifswalder Straße, Quickborner Straße | Schillingweg, Alt-Karow, Blankenburger Chaussee | Schönerlinder Straße, Blankenfelder Chaussee, Schillingweg |
+| Reinickendorf | Wilhelmsruher Damm, Senftenberger Ring, Treuenbrietzener Straße | Am Dachsbau, Ruppiner Chaussee, Berliner Straße; Oranienburger Chaussee | Alter Bernauer Heerweg, Am Dachsbau, Berliner Straße |
+| Spandau | Sandstraße, Magistratsweg, Heerstraße | Ritterfelddamm, Seekorso, Alt-Gatow | Maximilian-Kolbe-Straße, Am Landschaftspark Gatow, Aalemannufer |
+| Steglitz-Zehlendorf | Seydlitzstraße, Gallwitzallee, Osteweg | Finckensteinallee, Carstennstraße, Ringstraße | Ringstraße, Kommandantenstraße; Ringstraße, Baseler Straße |
+| Tempelhof-Schöneberg | Prellerweg, Friedenfelser Straße, Dudenstraße; Kolonnenbrücke; Kolonnenstraße | Lichtenrader Damm, Rathausstraße, Barnetstraße | Lessingstraße, Horstwalder Straße, Paplitzer Straße |
+| Treptow-Köpenick | Dammweg, Kiefholzstraße, Rudower Chaussee | Wendenschloßstraße, Waldstraße, Möllhausenufer; Wendenschloßstraße | Waltersdorfer Straße, Ligusterweg, Heideweg |
 
 #### Phase 1 sanity check: where known main streets rank
 
-Median percentile of each street's segments among all segments of its district (100 = most central).
+Median percentile of each street's segments among the residential segments of its district (100 = most central).
 
 | District | Street | Segments | Choice 800 m | Choice 2000 m | NACH 2000 m | NAIN 2000 m |
 |---|---|---|---|---|---|---|
-| Friedrichshain-Kreuzberg | Frankfurter Allee | 24 | 80.0 | 90.0 | 92.0 | 98.0 |
-| Friedrichshain-Kreuzberg | Karl-Marx-Allee | 29 | 89.0 | 95.0 | 97.0 | 94.0 |
-| Friedrichshain-Kreuzberg | Warschauer Straße | 17 | 52.0 | 76.0 | 79.0 | 76.0 |
-| Friedrichshain-Kreuzberg | Skalitzer Straße | 26 | 60.0 | 65.0 | 66.0 | 50.0 |
-| Friedrichshain-Kreuzberg | Kottbusser Damm | 12 | 66.0 | 85.0 | 85.0 | 63.0 |
-| Friedrichshain-Kreuzberg | Oranienstraße | 33 | 93.0 | 94.0 | 94.0 | 89.0 |
-| Friedrichshain-Kreuzberg | Gneisenaustraße | 18 | 63.0 | 81.0 | 87.0 | 80.0 |
-| Friedrichshain-Kreuzberg | Yorckstraße | 22 | 81.0 | 83.0 | 83.0 | 75.0 |
-| Friedrichshain-Kreuzberg | Mehringdamm | 18 | 72.0 | 79.0 | 80.0 | 63.0 |
-| Friedrichshain-Kreuzberg | Petersburger Straße | 19 | 66.0 | 78.0 | 76.0 | 90.0 |
-| Friedrichshain-Kreuzberg | Boxhagener Straße | 14 | 64.0 | 80.0 | 87.0 | 94.0 |
-| Friedrichshain-Kreuzberg | Revaler Straße | 17 | 65.0 | 77.0 | 85.0 | 83.0 |
+| Friedrichshain-Kreuzberg | Frankfurter Allee | 23 | 75.0 | 89.0 | 91.0 | 98.0 |
+| Friedrichshain-Kreuzberg | Karl-Marx-Allee | 21 | 86.0 | 96.0 | 97.0 | 88.0 |
+| Friedrichshain-Kreuzberg | Warschauer Straße | 13 | 49.0 | 75.0 | 78.0 | 78.0 |
+| Friedrichshain-Kreuzberg | Skalitzer Straße | 26 | 62.0 | 63.0 | 64.0 | 53.0 |
+| Friedrichshain-Kreuzberg | Kottbusser Damm | 11 | 63.0 | 83.0 | 81.0 | 44.0 |
+| Friedrichshain-Kreuzberg | Oranienstraße | 32 | 93.0 | 94.0 | 93.0 | 85.0 |
+| Friedrichshain-Kreuzberg | Gneisenaustraße | 18 | 63.0 | 80.0 | 82.0 | 76.0 |
+| Friedrichshain-Kreuzberg | Yorckstraße | 21 | 79.0 | 71.0 | 70.0 | 67.0 |
+| Friedrichshain-Kreuzberg | Mehringdamm | 16 | 70.0 | 80.0 | 80.0 | 66.0 |
+| Friedrichshain-Kreuzberg | Petersburger Straße | 15 | 45.0 | 77.0 | 76.0 | 83.0 |
+| Friedrichshain-Kreuzberg | Boxhagener Straße | 14 | 64.0 | 82.0 | 88.0 | 96.0 |
+| Friedrichshain-Kreuzberg | Revaler Straße | 16 | 65.0 | 77.0 | 85.0 | 83.0 |
 
 #### Phase 1 check: pilot run (friedrichshain-kreuzberg + 2 km) against the citywide run
 
-Same segments matched by midpoint and length (94.6% of the pilot's segments matched). Values near 1 and 0% mean the 2 km buffer removes edge effects.
+Same segments matched by midpoint and length (95.3% of the pilot's segments matched). Values near 1 and 0% mean the 2 km buffer removes edge effects.
 
 | Radius m | Measure | Matched segments | Spearman | Median relative difference |
 |---|---|---|---|---|
-| 800 | cc_harmonic_800_ang | 4544 | 0.997 | 1.3% |
-| 800 | cc_betweenness_800_ang | 4544 | 0.995 | 1.1% |
-| 800 | nain_800 | 4544 | 0.994 | 0.7% |
-| 800 | nach_800 | 4544 | 0.995 | 0.2% |
-| 800 | cc_harmonic_800 | 4544 | 1.000 | 0.5% |
-| 800 | cc_betweenness_800 | 4544 | 0.995 | 0.6% |
-| 2000 | cc_harmonic_2000_ang | 4544 | 0.996 | 1.1% |
-| 2000 | cc_betweenness_2000_ang | 4544 | 0.994 | 3.2% |
-| 2000 | nain_2000 | 4544 | 0.991 | 0.9% |
-| 2000 | nach_2000 | 4544 | 0.994 | 0.4% |
-| 2000 | cc_harmonic_2000 | 4544 | 1.000 | 0.4% |
-| 2000 | cc_betweenness_2000 | 4544 | 0.994 | 0.8% |
+| 800 | cc_harmonic_800_ang | 4584 | 0.997 | 1.3% |
+| 800 | cc_betweenness_800_ang | 4584 | 0.997 | 0.8% |
+| 800 | nain_800 | 4584 | 0.995 | 0.6% |
+| 800 | nach_800 | 4584 | 0.996 | 0.2% |
+| 800 | cc_harmonic_800 | 4584 | 0.999 | 0.6% |
+| 800 | cc_betweenness_800 | 4584 | 0.996 | 0.6% |
+| 2000 | cc_harmonic_2000_ang | 4584 | 0.996 | 1.2% |
+| 2000 | cc_betweenness_2000_ang | 4584 | 0.996 | 3.2% |
+| 2000 | nain_2000 | 4584 | 0.991 | 0.9% |
+| 2000 | nach_2000 | 4584 | 0.995 | 0.4% |
+| 2000 | cc_harmonic_2000 | 4584 | 1.000 | 0.5% |
+| 2000 | cc_betweenness_2000 | 4584 | 0.996 | 0.9% |
 
 #### GTFS stops per mode
 
@@ -413,9 +413,10 @@ Frequent stops only: [Any mode](output/maps/plr_frequent_10min_median_walk_Any-m
 
 Space Syntax measures for every street segment in Berlin, computed with
 [cityseer](https://cityseer.benchmarkurbanism.com/) on a segment map cleaned from the
-same OSM data (parallel carriageways merged, sidewalks and dangling slivers removed).
-The whole city is one network with a 2 km buffer against edge effects; results are
-reported per district. Angular (simplest-path) integration and choice at 400, 800,
+same OSM data (parallel carriageways merged; sidewalks, forestry tracks and dangling
+slivers removed). The whole city is one network with a 2 km buffer against edge
+effects. All streets carry routes, but results are reported only for **residential
+streets** (a building with residents within 50 m), per district. Angular (simplest-path) integration and choice at 400, 800,
 1200 and 2000 m, metric (shortest-path) measures for contrast, and NAIN / NACH after
 Hillier, Yang and Turner (2012). Method and all choices:
 [`docs/methods.md`](docs/methods.md#phase-1-angular-segment-analysis-space-syntax).
@@ -428,24 +429,27 @@ Maps: Friedrichshain-Kreuzberg pilot NACH at
 [800 m](output/maps/segments_berlin_nach_800.png) and
 [2000 m](output/maps/segments_berlin_nach_2000.png) (dense at city scale).
 All measures per segment: `python scripts/run_segments.py --district Berlin` writes
-`output/segments_berlin.gpkg` (not committed, about 125 MB).
+`output/segments_berlin.gpkg` (not committed, over 100 MB).
 
 **Checks.**
 - *Edge effects:* the pilot (district + 2 km) and the citywide run agree almost
   exactly on the same segments (table "pilot run against the citywide run" above), so
   2 km of buffer is enough.
-- *Inner city:* in Friedrichshain-Kreuzberg the known main streets rank high; at
-  2000 m their median NACH percentile ranges from 66 (Skalitzer Straße) to 97
-  (Karl-Marx-Allee).
+- *Inner city:* in Friedrichshain-Kreuzberg the known main streets rank high among
+  residential streets; at 2000 m their median NACH percentile ranges from 64
+  (Skalitzer Straße) to 97 (Karl-Marx-Allee).
 - *NACH artifact:* the top NACH values in Friedrichshain-Kreuzberg are on the Stralau
   peninsula, a small network with one way in. NACH divides choice by total depth, so
   a street every route into a small enclosed area must use scores high.
-- **Known problem, not yet fixed: forests.** Outside the inner city the top NAIN
-  streets are often forest rides and tracks (Grunewald, Spandau and Köpenick forests,
-  e.g. Teltower Weg, E-Gestell, Birkengestell). The cleaning removes footways in
-  forests and parks but keeps forestry tracks, leaving sparse, straight grids with
-  little angular depth, which score high on integration. Until this is addressed,
-  read the outer-district rankings with caution; see `docs/methods.md`.
+- *Forests:* the first citywide run ranked forest rides highest on integration in
+  several outer districts (sparse, straight track grids). Forestry tracks are now
+  removed from the network and only residential streets are reported; those forest
+  rides no longer appear in the rankings.
+- *Still open:* in the outer districts the top integration streets are often the
+  long main roads of low-density areas (e.g. Groß-Ziethener Chaussee, Alt-Karow), and
+  angular choice in Mitte is led by Annenstraße and Fischerinsel rather than the
+  historic main streets. Not yet investigated; read outer-district and Mitte rankings
+  with care.
 
 ## Changes from the first version (v0)
 
@@ -477,8 +481,8 @@ earlier README did not come from the code at all and has been removed.
 
 ## Next steps
 
-- **Phase 1:** computed for all districts; next, deal with forest tracks (see the
-  known problem above).
+- **Phase 1:** computed for all districts on residential streets; open questions on
+  outer-district and Mitte rankings (see Checks above).
 - **Phase 2:** Place Syntax Tool inputs (QGIS GeoPackage) and a Python cross-check of
   attraction reach.
 - **Phase 3:** per-building comparison of metric walk time and configurational

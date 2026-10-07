@@ -1,13 +1,13 @@
 district,street,segments,length_m,choice_800_pct,nach_800_pct,nain_800_pct,choice_2000_pct,nach_2000_pct,nain_2000_pct
-Friedrichshain-Kreuzberg,frankfurter allee,24,1637.0,0.79,0.8,0.93,0.88,0.9,0.97
-Friedrichshain-Kreuzberg,karl-marx-allee,29,2348.0,0.89,0.9,0.9,0.95,0.97,0.95
-Friedrichshain-Kreuzberg,warschauer straße,18,2004.0,0.53,0.58,0.68,0.79,0.81,0.74
-Friedrichshain-Kreuzberg,skalitzer straße,26,2007.0,0.66,0.61,0.55,0.67,0.69,0.55
-Friedrichshain-Kreuzberg,kottbusser damm,13,1020.0,0.66,0.71,0.69,0.83,0.81,0.52
-Friedrichshain-Kreuzberg,oranienstraße,33,2335.0,0.92,0.82,0.76,0.93,0.94,0.88
-Friedrichshain-Kreuzberg,gneisenaustraße,18,1952.0,0.63,0.68,0.85,0.8,0.82,0.78
-Friedrichshain-Kreuzberg,yorckstraße,21,1358.0,0.79,0.74,0.65,0.72,0.71,0.68
-Friedrichshain-Kreuzberg,mehringdamm,17,1470.0,0.72,0.77,0.6,0.79,0.81,0.64
-Friedrichshain-Kreuzberg,petersburger straße,20,1806.0,0.64,0.64,0.74,0.79,0.76,0.88
-Friedrichshain-Kreuzberg,boxhagener straße,15,1642.0,0.65,0.81,0.99,0.81,0.87,0.94
-Friedrichshain-Kreuzberg,revaler straße,17,1277.0,0.61,0.83,0.87,0.77,0.85,0.83
+Friedrichshain-Kreuzberg,frankfurter allee,23,1597.0,0.75,0.79,0.93,0.91,0.92,0.98
+Friedrichshain-Kreuzberg,karl-marx-allee,21,1853.0,0.84,0.72,0.82,0.96,0.97,0.91
+Friedrichshain-Kreuzberg,warschauer straße,14,1734.0,0.5,0.57,0.63,0.7,0.73,0.77
+Friedrichshain-Kreuzberg,skalitzer straße,24,1992.0,0.62,0.6,0.6,0.66,0.68,0.53
+Friedrichshain-Kreuzberg,kottbusser damm,13,1020.0,0.67,0.74,0.68,0.84,0.82,0.45
+Friedrichshain-Kreuzberg,oranienstraße,32,2258.0,0.91,0.8,0.76,0.94,0.92,0.86
+Friedrichshain-Kreuzberg,gneisenaustraße,17,1908.0,0.62,0.72,0.9,0.82,0.87,0.83
+Friedrichshain-Kreuzberg,yorckstraße,21,1401.0,0.82,0.8,0.68,0.78,0.79,0.8
+Friedrichshain-Kreuzberg,mehringdamm,16,1471.0,0.68,0.74,0.55,0.78,0.78,0.55
+Friedrichshain-Kreuzberg,petersburger straße,16,1578.0,0.46,0.51,0.69,0.78,0.75,0.81
+Friedrichshain-Kreuzberg,boxhagener straße,15,1642.0,0.65,0.8,0.99,0.8,0.87,0.94
+Friedrichshain-Kreuzberg,revaler straße,16,1221.0,0.61,0.86,0.88,0.77,0.85,0.82

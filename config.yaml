@@ -33,6 +33,10 @@ max_building_snap_m: 250     # buildings further than this from the walk network
 min_residential_footprint_m2: 40  # smaller buildings get no residents (sheds, garages tagged building=yes)
 min_unit_residents: 100      # units with fewer residents are flagged low_population
 
+# Phase 1: a street segment is residential if a building with residents lies
+# within this distance; only residential segments are ranked and mapped.
+segment_residential_buffer_m: 50
+
 modes: [S-Bahn, U-Bahn, Tram, Bus, Regionalbahn]
 # Nearest stop of any member mode (shortest of their distances), reported like a mode.
 combined_modes:

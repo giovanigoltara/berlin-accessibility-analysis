@@ -34,3 +34,16 @@ def test_segment_pipeline_on_sample():
     assert np.isfinite(live["nain_400"]).all() and (live["nain_400"] >= 0).all()
     names = sg.segment_names(G, n)
     assert names.notna().any()
+
+
+def test_residential_frontage():
+    from shapely.geometry import LineString, Point
+
+    # string index, as cityseer's dual node keys
+    segs = gpd.GeoDataFrame(geometry=[LineString([(0, 0), (100, 0)]), LineString([(0, 500), (100, 500)])], crs=CRS,
+                            index=["a_b_k0", "c_d_k0"])
+    blds = gpd.GeoDataFrame({"residents": [10.0, 0.0, 5.0]},
+                            geometry=[Point(50, 30), Point(50, 480), Point(50, 200)], crs=CRS)
+    f = sg.residential_frontage(segs, blds, buffer_m=50)
+    assert f["residential"].tolist() == [True, False]  # shed-like building (0 residents) does not count
+    assert f.loc["a_b_k0", "residents_nearby"] == 10.0

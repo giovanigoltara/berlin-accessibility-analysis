@@ -92,11 +92,12 @@ def nach_map(seg, ctx, outline, r, district, path, figsize=(12, 8.5), width_scal
         ax.text(0.0, -0.01, "Quintiles over all Berlin segments.", transform=ax.transAxes, fontsize=8, color=TEXT_2)
     labels = ["lowest 20%", "20-40%", "40-60%", "60-80%", "highest 20%"]
     handles = [plt.Line2D([], [], color=c, linewidth=w * 2.2, label=lbl) for c, w, lbl in zip(RAMP, WIDTHS, labels)]
-    handles.append(plt.Line2D([], [], color=CONTEXT, linewidth=1, label="buffer (context only)"))
+    handles.append(plt.Line2D([], [], color=CONTEXT, linewidth=1, label="non-residential or buffer\n(in network, not ranked)"))
     ax.legend(handles=handles, loc="center left", bbox_to_anchor=(1.0, 0.5), frameon=False, fontsize=9,
               labelcolor=TEXT_2, title="Segments by NACH quintile", title_fontsize=9, alignment="left")
-    fig.text(0.01, 0.01, "Angular segment analysis with cityseer on the cleaned OSM pedestrian network; "
-             "2 km network buffer. Data: OpenStreetMap (ODbL).", fontsize=7, color=TEXT_2)
+    fig.text(0.01, 0.01, "Angular segment analysis with cityseer on the cleaned OSM street network (2 km buffer). "
+             "Coloured: residential streets (homes within 50 m). Data: OpenStreetMap (ODbL), "
+             "Einwohnerregister 31.12.2025.", fontsize=7, color=TEXT_2)
     fig.tight_layout(rect=(0, 0.02, 1, 1))
     fig.savefig(path, facecolor=SURFACE)
     plt.close(fig)
@@ -128,7 +129,7 @@ def main():
     area_wgs = gpd.GeoSeries([area], crs=crs).to_crs(4326).iloc[0]
     meta = {"study_area": args.district, "buffer_m": args.buffer_m, "distances": sg.DISTANCES}
 
-    cache = der / f"segments_{name}_primal.pkl"
+    cache = der / f"segments_{name}_primal_v{sg.WAY_SELECTION_VERSION}.pkl"
     if cache.exists():
         log(f"using cached primal graph {cache.name}")
         G, meta["network"] = pickle.loads(cache.read_bytes())
@@ -155,17 +156,31 @@ def main():
     n["length_m"] = n.geometry.length
     n.to_file(out / f"segments_{name}.gpkg", layer="segments", driver="GPKG")
 
-    seg = n[n["live"]].copy()
-    ctx = n[~n["live"]]
+    # Residential streets: segments with a building with residents (Phase 0
+    # allocation) within the frontage buffer. All streets stay in the network
+    # for routing; only residential ones are ranked, summarised and coloured.
+    bld_file = der / "building_walk_dist.parquet"
+    if not bld_file.exists():
+        raise SystemExit("run scripts/run_accessibility.py first: residential streets need its building residents")
+    buf = cfg.raw.get("segment_residential_buffer_m", 50)
+    front = sg.residential_frontage(n, gpd.read_parquet(bld_file), buf)
+    n = n.join(front)
+    meta["residential_buffer_m"] = buf
+    meta["live_segments"] = int(n["live"].sum())
+    meta["live_residential_segments"] = int((n["live"] & n["residential"]).sum())
     # District of each live segment: the one containing its midpoint (nearest
     # district for the few whose midpoint lies just outside the city).
-    mid = gpd.GeoDataFrame(geometry=seg.geometry.interpolate(0.5, normalized=True), crs=crs)
-    seg["district"] = gpd.sjoin_nearest(mid, districts, how="left")["district"].groupby(level=0).first()
-    meta["segments_in_study_area"] = int(len(seg))
-    meta["segments_in_buffer"] = int(len(ctx))
-    meta["segments_by_district"] = seg["district"].value_counts().sort_index().to_dict()
-    n.loc[seg.index, "district"] = seg["district"]
+    live = n[n["live"]]
+    mid = gpd.GeoDataFrame(geometry=live.geometry.interpolate(0.5, normalized=True), crs=crs)
+    n.loc[live.index, "district"] = gpd.sjoin_nearest(mid, districts, how="left")["district"].groupby(level=0).first()
     n.to_file(out / f"segments_{name}.gpkg", layer="segments", driver="GPKG")
+
+    seg = n[n["live"] & n["residential"]].copy()
+    ctx = n[~(n["live"] & n["residential"])]
+    meta["segments_reported"] = int(len(seg))
+    meta["segments_context"] = int(len(ctx))
+    meta["segments_reported_by_district"] = seg["district"].value_counts().sort_index().to_dict()
+    meta["live_segments_by_district"] = n.loc[live.index, "district"].value_counts().sort_index().to_dict()
 
     measures = [c for c in seg.columns if c.startswith(("cc_", "nain_", "nach_"))]
     seg[measures].describe(percentiles=[0.1, 0.5, 0.9]).T.round(4).to_csv(out / f"segments_{name}_summary.csv")
@@ -190,7 +205,10 @@ def main():
                 for label, col in (("choice", f"cc_betweenness_{r}_ang"), ("nach", f"nach_{r}"), ("nain", f"nain_{r}")):
                     row[f"{label}_{r}_pct"] = round(float(g[col].rank(pct=True)[x].median()), 2) if x.any() else None
             main_rows.append(row)
-        row = {"district": dname, "segments": len(g), "network_km": round(g["length_m"].sum() / 1000, 1),
+        n_live = meta["live_segments_by_district"].get(dname, 0)
+        row = {"district": dname, "live_segments": n_live, "segments": len(g),
+               "residential_share": round(len(g) / n_live, 3) if n_live else None,
+               "network_km": round(g["length_m"].sum() / 1000, 1),
                "median_segment_m": round(g["length_m"].median(), 1)}
         for r in (800, 2000):
             row[f"median_nain_{r}"] = round(g[f"nain_{r}"].median(), 3)

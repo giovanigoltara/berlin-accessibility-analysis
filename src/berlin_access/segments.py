@@ -38,12 +38,17 @@ AREA_FILTERS = {
 
 
 # Highway values cityseer's default Overpass query excludes, plus motorways and
-# busways (not walkable).
+# busways (not walkable) and forestry/agricultural tracks: in the first citywide
+# run, sparse straight track grids in the Grunewald, Spandau and Köpenick
+# forests dominated the integration rankings.
 EXCLUDED_HIGHWAYS = {
     "bus_guideway", "busway", "escape", "raceway", "proposed", "planned", "abandoned", "platform",
     "emergency_bay", "rest_area", "disused", "corridor", "ladder", "bus_stop", "elevator", "services",
-    "motorway", "motorway_link", "construction",
+    "motorway", "motorway_link", "construction", "track",
 }
+
+# Version of the way selection; part of the cache name so a change forces a rebuild.
+WAY_SELECTION_VERSION = 2
 
 
 def read_ways(osm: OSM, crs: str) -> tuple[gpd.GeoDataFrame, gpd.GeoDataFrame, dict]:
@@ -209,3 +214,21 @@ def centralities(G_dual: nx.MultiGraph, distances=DISTANCES) -> gpd.GeoDataFrame
         nodes_gdf[f"nain_{d}"] = nc**1.2 / (td + 2)
         nodes_gdf[f"nach_{d}"] = np.log(ch + 1) / np.log(td + 3)
     return nodes_gdf
+
+
+def residential_frontage(segments: gpd.GeoDataFrame, buildings: gpd.GeoDataFrame, buffer_m: float) -> pd.DataFrame:
+    """Residential buildings and residents within `buffer_m` of each segment.
+
+    `buildings` are building points with a `residents` column (Phase 0
+    allocation); only buildings with residents count. A segment with at least
+    one such building nearby is a residential street.
+    """
+    homes = buildings[buildings["residents"] > 0][["residents", "geometry"]].to_crs(segments.crs)
+    zones = gpd.GeoDataFrame({"seg": segments.index.to_numpy()},
+                             geometry=segments.geometry.buffer(buffer_m).to_numpy(), crs=segments.crs)
+    hits = gpd.sjoin(homes, zones, predicate="within", how="inner")
+    agg = hits.groupby("seg").agg(res_buildings=("residents", "size"), residents_nearby=("residents", "sum"))
+    out = pd.DataFrame(index=segments.index).join(agg).fillna(0)
+    out["res_buildings"] = out["res_buildings"].astype(int)
+    out["residential"] = out["res_buildings"] > 0
+    return out
