@@ -55,18 +55,23 @@ def load_stops(tables: dict, routes: pd.DataFrame, districts: gpd.GeoDataFrame, 
     city = districts.union_all()
     g = g[g.within(city.buffer(buffer_m))].copy()
     g["inside_berlin"] = g.within(city)
+    g["m_outside_berlin"] = np.where(g["inside_berlin"], 0.0, g.distance(city))
     g = g.reset_index(drop=True)
     g["node"], g["snap_m"] = snap(net, g.geometry)
     return g
 
 
-def stop_summary(stops: gpd.GeoDataFrame, max_snap_m: float) -> pd.DataFrame:
-    s = stops.assign(used=stops["snap_m"] <= max_snap_m)
+def stop_summary(stops: gpd.GeoDataFrame, max_snap_m: float, buffer_m: float) -> pd.DataFrame:
+    """Stop counts per mode. `stops_used` is for the main run (stops within
+    `buffer_m` of Berlin and close enough to the network)."""
+    s = stops.assign(
+        snap_ok=stops["snap_m"] <= max_snap_m,
+        used=(stops["snap_m"] <= max_snap_m) & (stops["m_outside_berlin"] <= buffer_m),
+    )
     out = s.groupby("mode").agg(
-        stops_total=("stop_id", "size"),
         stops_inside_berlin=("inside_berlin", "sum"),
-        stops_in_buffer_zone=("inside_berlin", lambda x: int((~x).sum())),
-        stops_dropped_snap=("used", lambda x: int((~x).sum())),
+        stops_outside_within_sensitivity_buffer=("inside_berlin", lambda x: int((~x).sum())),
+        stops_dropped_snap=("snap_ok", lambda x: int((~x).sum())),
         stops_used=("used", "sum"),
         snap_m_median=("snap_m", "median"),
     )
@@ -160,27 +165,40 @@ def run(cfg: Config) -> None:
     print(check.to_string(index=False))
     meta["routes_by_mode_source"] = routes["mode_source"].value_counts().to_dict()
 
-    stops = load_stops(tables, routes, districts, net, cfg["stop_buffer_m"])
-    ssum = stop_summary(stops, cfg["max_stop_snap_m"])
+    buf_main = cfg["stop_buffer_m"]
+    buf_sens = cfg.raw.get("stop_buffer_sensitivity_m")
+    stops = load_stops(tables, routes, districts, net, max(buf_main, buf_sens or 0))
+    ssum = stop_summary(stops, cfg["max_stop_snap_m"], buf_main)
     ssum.to_csv(out_dir / "stops_by_mode.csv", index=False)
     print(ssum.to_string(index=False))
     stops = stops[stops["snap_m"] <= cfg["max_stop_snap_m"]]
 
+    # Main run, plus a sensitivity run that also allows stops just outside Berlin.
+    scenarios = {"": buf_main}
+    if buf_sens is not None and buf_sens != buf_main:
+        scenarios[f"_stopbuffer_{buf_sens}m"] = buf_sens
+
     dist = pd.DataFrame({"osm_id": bld["osm_id"], "district": bld["district"], "snap_m": bld["snap_m"]})
-    for mode in modes:
-        s = stops[stops["mode"] == mode]
-        log(f"dijkstra {mode}: {len(s)} stops")
-        d_node = multi_source_distance(net, s["node"].to_numpy(), s["snap_m"].to_numpy())
-        dist[f"dist_m_{mode}"] = d_node[bld["node"].to_numpy()] + bld["snap_m"].to_numpy()
+    for suffix, buf in scenarios.items():
+        for mode in modes:
+            s = stops[(stops["mode"] == mode) & (stops["m_outside_berlin"] <= buf)]
+            log(f"dijkstra {mode}, stop buffer {buf} m: {len(s)} stops")
+            d_node = multi_source_distance(net, s["node"].to_numpy(), s["snap_m"].to_numpy())
+            dist[f"dist_m_{mode}{suffix}"] = d_node[bld["node"].to_numpy()] + bld["snap_m"].to_numpy()
 
     gpd.GeoDataFrame(dist, geometry=bld.geometry, crs=crs).to_parquet(der_dir / "building_walk_dist.parquet")
 
-    summary = aggregate(dist, modes, speeds, cfg["share_thresholds_min"])
-    summary.to_csv(out_dir / "walk_time_by_district.csv", index=False)
-    for v in speeds:
-        wide = summary[summary["speed_mps"] == v].pivot(index="district", columns="mode", values="median_min")
-        wide = wide.reindex(columns=modes).round(2)
-        wide.to_csv(out_dir / f"median_walk_min_{v:.1f}mps.csv")
+    for suffix in scenarios:
+        cols = {f"dist_m_{m}{suffix}": f"dist_m_{m}" for m in modes}
+        d = dist[["district", *cols]].rename(columns=cols)
+        summary = aggregate(d, modes, speeds, cfg["share_thresholds_min"])
+        summary.to_csv(out_dir / f"walk_time_by_district{suffix}.csv", index=False)
+        if suffix:
+            continue
+        for v in speeds:
+            wide = summary[summary["speed_mps"] == v].pivot(index="district", columns="mode", values="median_min")
+            wide = wide.reindex(columns=modes).round(2)
+            wide.to_csv(out_dir / f"median_walk_min_{v:.1f}mps.csv")
 
     meta["generated_utc"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     (out_dir / "run_metadata.json").write_text(json.dumps(meta, indent=2, default=str, ensure_ascii=False))

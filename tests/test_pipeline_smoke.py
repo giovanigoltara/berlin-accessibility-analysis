@@ -66,6 +66,7 @@ def test_pipeline_runs_on_sample(tmp_path):
     b = s[(s["district"] == "Berlin") & (s["mode"] == "Bus")].set_index("speed_mps")["median_min"]
     assert b[1.0] > b[1.3] > b[1.4]
     assert (out / "median_walk_min_1.3mps.csv").exists()
+    assert (out / f"walk_time_by_district_stopbuffer_{cfg_dict['stop_buffer_sensitivity_m']}m.csv").exists()
     meta = json.loads((out / "run_metadata.json").read_text())
     assert meta["buildings"]["buildings_used"] > 0
 

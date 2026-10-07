@@ -64,6 +64,23 @@ def build(cfg) -> str:
     sens = sens.apply(lambda c: c.map(fmt)).reset_index().rename(columns={"mode": "Mode"})
     parts.append("#### Sensitivity to walking speed (Berlin-wide median, minutes)\n\n" + md_table(sens))
 
+    buf = cfg.raw.get("stop_buffer_sensitivity_m")
+    sens_csv = out / f"walk_time_by_district_stopbuffer_{buf}m.csv"
+    if buf is not None and sens_csv.exists():
+        b = pd.read_csv(sens_csv)
+        b = b[b["speed_mps"] == v_main].set_index(["district", "mode"])["median_min"]
+        a = main.set_index(["district", "mode"])["median_min"]
+        diff = (b - a).unstack("mode").reindex(index=order, columns=modes)
+        diff = diff.apply(lambda c: c.map(lambda x: "n/a" if pd.isna(x) else f"{x:+.1f}"))
+        parts.append(
+            f"#### Sensitivity to the city limit: stops up to {buf} m outside Berlin instead of "
+            f"{cfg['stop_buffer_m']} m (change in median, minutes, {v_main} m/s)\n\n"
+            f"Main results above count stops up to {cfg['stop_buffer_m']} m outside Berlin. "
+            f"Values show how the median changes when the limit is {buf} m instead "
+            "(0 m = only stops inside Berlin).\n\n"
+            + md_table(diff.reset_index().rename(columns={"district": "District"}))
+        )
+
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():
         st = pd.read_csv(stops_csv).set_index("mode").reindex(modes).reset_index()

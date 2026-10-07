@@ -14,6 +14,7 @@ import _bootstrap  # noqa: F401
 
 from berlin_access import gtfs_modes
 from berlin_access.config import load_config
+from berlin_access.pipeline import load_districts
 
 if __name__ == "__main__":
     cfg = load_config()
@@ -21,6 +22,9 @@ if __name__ == "__main__":
     t = gtfs_modes.read_gtfs_tables(cfg.path("gtfs"))
     sm = gtfs_modes.stop_modes(t, gtfs_modes.classify_routes(t["routes"]))
     sm = gpd.GeoDataFrame(sm, geometry=gpd.points_from_xy(sm.stop_lon, sm.stop_lat, crs=4326)).to_crs(cfg["crs"])
+    # Same stop set as the main run: inside Berlin plus stop_buffer_m.
+    city = load_districts(cfg.path("districts"), cfg["district_name_column"], cfg["crs"]).union_all()
+    sm = sm[sm.within(city.buffer(cfg["stop_buffer_m"])) if cfg["stop_buffer_m"] > 0 else sm.within(city)]
     bxy = np.c_[b.geometry.x, b.geometry.y]
     rows = []
     for mode in cfg["modes"]:
