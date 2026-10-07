@@ -64,6 +64,7 @@ python scripts/download_data.py
 python scripts/run_accessibility.py      # writes output/*.csv and output/run_metadata.json
                                          # (first run ~15 min to parse OSM; cached afterwards)
 python scripts/build_readme_tables.py    # regenerates the Results section below
+python scripts/make_maps.py              # writes output/maps/*.png
 pytest                                   # unit tests + smoke test on a bundled sample
 ```
 
@@ -213,6 +214,23 @@ Distribution over the 537 Planungsräume with at least 100 residents (5 excluded
 
 <!-- END GENERATED: results -->
 
+### Maps per Planungsraum
+
+Median walk per resident to the nearest stop of each mode, per LOR Planungsraum
+(written by `scripts/make_maps.py` from `output/walk_time_by_planungsraum.csv`). All
+maps share one scale; hatched units have fewer than 100 residents. Where a mode does
+not run in an area (trams in the west, S-Bahn in Kladow), the value is the walk to the
+nearest stop elsewhere, so read those areas as "no service", not as a long walk.
+
+![Median walk per resident to the nearest stop, by mode and Planungsraum](output/maps/plr_median_walk_all_modes.png)
+
+One map per mode, with district names:
+[S-Bahn](output/maps/plr_median_walk_S-Bahn.png) ·
+[U-Bahn](output/maps/plr_median_walk_U-Bahn.png) ·
+[Tram](output/maps/plr_median_walk_Tram.png) ·
+[Bus](output/maps/plr_median_walk_Bus.png) ·
+[Regionalbahn](output/maps/plr_median_walk_Regionalbahn.png)
+
 ## Changes from the first version (v0)
 
 The original notebook (`notebooks/fussweg_oepnv.ipynb`, kept unchanged for
@@ -240,8 +258,7 @@ earlier README did not come from the code at all and has been removed.
 
 ## Next steps
 
-- Walk times for older residents (65+ share per Planungsraum at 1.0 m/s) and maps per
-  Planungsraum.
+- Walk times for older residents (65+ share per Planungsraum at 1.0 m/s).
 - **Phase 1:** angular segment analysis (cityseer) at 400 / 800 / 1200 / 2000 m,
   pilot in Friedrichshain-Kreuzberg; NAIN / NACH.
 - **Phase 2:** Place Syntax Tool inputs (QGIS GeoPackage) and a Python cross-check of

@@ -27,6 +27,7 @@ def test_pipeline_runs_on_sample(tmp_path):
     from berlin_access.config import load_config
     from berlin_access.pipeline import run
     import build_readme_tables
+    import make_maps
 
     pbf = pyrosm.get_data("helsinki_pbf")
     raw = tmp_path / "data" / "raw"
@@ -89,6 +90,10 @@ def test_pipeline_runs_on_sample(tmp_path):
 
     run(cfg)  # second run must use the cache
     assert json.loads((out / "run_metadata.json").read_text())["network"] == meta["network"]
+
+    make_maps.main(cfg)
+    assert (out / "maps" / "plr_median_walk_all_modes.png").exists()
+    assert (out / "maps" / "plr_median_walk_S-Bahn.png").exists()
 
     (tmp_path / "README.md").write_text(f"x\n{build_readme_tables.BEGIN}\nold\n{build_readme_tables.END}\n")
     text = build_readme_tables.build(cfg)
