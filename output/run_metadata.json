@@ -3,15 +3,17 @@
     "paths": {
       "pbf": "data/raw/Berlin.bbbike.osm.pbf",
       "gtfs": "data/raw/GTFS.zip",
-      "districts": "data/bezirksgrenzen.geojson",
+      "lor": "data/raw/lor_plr_2021.json",
+      "population": "data/raw/SB_A01-16-00_2025h02_BE.xlsx",
       "derived": "data/derived",
       "output": "output"
     },
     "downloads": {
-      "pbf_url": "https://download.bbbike.org/osm/bbbike/Berlin/Berlin.osm.pbf",
-      "gtfs_url": "https://www.vbb.de/vbbgtfs"
+      "pbf": "https://download.bbbike.org/osm/bbbike/Berlin/Berlin.osm.pbf",
+      "gtfs": "https://www.vbb.de/vbbgtfs",
+      "lor": "https://gdi.berlin.de/services/wfs/lor_2021?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=lor_2021:a_lor_plr_2021&OUTPUTFORMAT=application/json&SRSNAME=EPSG:25833",
+      "population": "https://download.statistik-berlin-brandenburg.de/1df9da7ea6dbfa3a/f6ac408f14cd/SB_A01-16-00_2025h02_BE.xlsx"
     },
-    "district_name_column": "spatial_alias",
     "crs": "EPSG:32633",
     "walk_speed_main_mps": 1.3,
     "walk_speeds_mps": [
@@ -23,10 +25,13 @@
       15,
       30
     ],
-    "stop_buffer_m": 1000,
+    "stop_buffer_m": 0,
+    "stop_buffer_sensitivity_m": 1000,
     "network_buffer_m": 3000,
     "max_stop_snap_m": 250,
     "max_building_snap_m": 250,
+    "min_residential_footprint_m2": 40,
+    "min_unit_residents": 100,
     "modes": [
       "S-Bahn",
       "U-Bahn",
@@ -38,13 +43,19 @@
   "inputs": {
     "pbf": {
       "file": "Berlin.bbbike.osm.pbf",
-      "bytes": 182271838,
-      "mtime_utc": "2026-10-07T11:07:06Z"
+      "bytes": 182271838
     },
     "gtfs": {
       "file": "GTFS.zip",
-      "bytes": 65691511,
-      "mtime_utc": "2026-10-07T11:02:32Z"
+      "bytes": 65691511
+    },
+    "lor": {
+      "file": "lor_plr_2021.json",
+      "bytes": 5266861
+    },
+    "population": {
+      "file": "SB_A01-16-00_2025h02_BE.xlsx",
+      "bytes": 725787
     }
   },
   "downloads": {
@@ -62,22 +73,50 @@
       "server_last_modified": "Sat, 03 Oct 2026 16:51:26 GMT",
       "bytes": 182271838,
       "sha256": "8fc15928d1e85d04ceca0d286eade391d983429475ac828db8fc341384b118d9"
+    },
+    "lor": {
+      "url": "https://gdi.berlin.de/services/wfs/lor_2021?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=lor_2021:a_lor_plr_2021&OUTPUTFORMAT=application/json&SRSNAME=EPSG:25833",
+      "final_url": "https://gdi.berlin.de/services/wfs/lor_2021?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=lor_2021:a_lor_plr_2021&OUTPUTFORMAT=application/json&SRSNAME=EPSG:25833",
+      "downloaded_utc": "2026-10-07T12:01:08Z",
+      "bytes": 5266861,
+      "sha256": "e0b923cfcdd487b371bdf7edb824f02b35032b45edfefdabd1d0c27dcda659b2"
+    },
+    "population": {
+      "url": "https://download.statistik-berlin-brandenburg.de/1df9da7ea6dbfa3a/f6ac408f14cd/SB_A01-16-00_2025h02_BE.xlsx",
+      "final_url": "https://download.statistik-berlin-brandenburg.de/1df9da7ea6dbfa3a/f6ac408f14cd/SB_A01-16-00_2025h02_BE.xlsx",
+      "downloaded_utc": "2026-10-07T12:01:08Z",
+      "bytes": 725787,
+      "sha256": "b95b49f113648d59563d68e62cd57e50715b083a046cc35ce2db881abc9c544c"
     }
   },
   "network": {
-    "osm_nodes": 1278778,
-    "osm_edges": 1410357,
-    "graph_nodes": 1245759,
-    "graph_edges": 1381737,
-    "nodes_outside_largest_component": 33019,
-    "graph_total_length_km": 26237.3
+    "osm_nodes": 1278761,
+    "osm_edges": 1410339,
+    "graph_nodes": 1245735,
+    "graph_edges": 1381713,
+    "nodes_outside_largest_component": 33026,
+    "graph_total_length_km": 26237.7
   },
   "buildings": {
-    "osm_buildings": 690322,
-    "building_points_in_districts": 504035,
+    "osm_buildings": 690323,
+    "building_points_in_berlin": 504038,
     "buildings_snap_over_max": 413,
-    "buildings_used": 503622,
+    "buildings_used": 503625,
     "building_snap_m_median": 23.3
+  },
+  "residents": {
+    "candidate_buildings": 331880,
+    "non_residential_by_tag": 100265,
+    "below_min_footprint": 71480,
+    "levels_known_share_of_candidates": 0.4178,
+    "city_median_levels": 3.0,
+    "register_total": 3913644,
+    "planungsraeume_absent_from_population_table": [
+      "03400831"
+    ],
+    "allocated_total": 3913644.0,
+    "planungsraeume_with_unallocated_residents": 0,
+    "unallocated_total": 0.0
   },
   "gtfs_feed": {
     "calendar_min_start": "20261006",
@@ -87,5 +126,5 @@
     "route_type": 1243,
     "excluded": 6
   },
-  "generated_utc": "2026-10-07T11:31:07Z"
+  "generated_utc": "2026-10-07T12:14:56Z"
 }

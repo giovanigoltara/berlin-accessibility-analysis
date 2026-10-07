@@ -1,6 +1,6 @@
-mode,stops_total,stops_inside_berlin,stops_in_buffer_zone,stops_dropped_snap,stops_used,snap_m_median
-Bus,6826,6237,589,0,6826,6.0
-Regionalbahn,74,63,11,0,74,14.6
-S-Bahn,314,298,16,0,314,21.6
-Tram,820,804,16,0,820,13.9
-U-Bahn,384,384,0,0,384,7.9
+mode,stops_inside_berlin,stops_outside_within_sensitivity_buffer,stops_dropped_snap,stops_used,snap_m_median
+Bus,6237,589,0,6237,6.0
+Regionalbahn,63,11,0,63,14.6
+S-Bahn,298,16,0,298,21.6
+Tram,804,16,0,804,13.9
+U-Bahn,384,0,0,384,7.9
