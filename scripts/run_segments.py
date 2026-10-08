@@ -17,6 +17,7 @@ Writes
   data/derived/segments_<district>_primal.pkl     cleaned primal graph (cache)
 """
 import argparse
+import os
 import json
 import pickle
 import re
@@ -117,7 +118,10 @@ def main():
     area_wgs = gpd.GeoSeries([area], crs=crs).to_crs(4326).iloc[0]
     meta = {"study_area": args.district, "buffer_m": args.buffer_m, "distances": sg.DISTANCES}
 
-    cache = der / f"segments_{name}_primal_v{sg.WAY_SELECTION_VERSION}.pkl"
+    # The cleaned network depends on the hash seed (see _bootstrap.py), so it is part of the cache name.
+    seed = os.environ.get("PYTHONHASHSEED", "random")
+    meta["python_hash_seed"] = seed
+    cache = der / f"segments_{name}_primal_v{sg.WAY_SELECTION_VERSION}_seed{seed}.pkl"
     if cache.exists():
         log(f"using cached primal graph {cache.name}")
         G, meta["network"] = pickle.loads(cache.read_bytes())
