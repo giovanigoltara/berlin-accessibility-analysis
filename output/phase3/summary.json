@@ -1,0 +1,28 @@
+{
+  "walk_speed_mps": 1.3,
+  "divergence_measure": "nain_2000",
+  "buildings": 331872,
+  "median_distance_to_segment_m": 19.4,
+  "thirds": {
+    "walk_su_min": [
+      8.36,
+      15.6
+    ],
+    "nain_2000": [
+      0.6428,
+      0.7189
+    ]
+  },
+  "planungsraeume_by_class": {
+    "middle": 313,
+    "concordant": 124,
+    "far from transit, integrated": 51,
+    "close to transit, segregated": 49
+  },
+  "residents_by_class": {
+    "close to transit, segregated": 357260.0,
+    "concordant": 877193.0,
+    "far from transit, integrated": 386364.0,
+    "middle": 2292715.0
+  }
+}
