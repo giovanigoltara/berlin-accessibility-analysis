@@ -1,0 +1,107 @@
+district,street,provenance,segments,length_m,choice_800_pct,choice_lw_800_pct,nach_800_pct,nain_800_pct,choice_2000_pct,choice_lw_2000_pct,nach_2000_pct,nain_2000_pct
+Charlottenburg-Wilmersdorf,kurfürstendamm,fixed in advance,30,3532.0,0.52,0.75,0.61,0.79,0.7,0.79,0.71,0.89
+Charlottenburg-Wilmersdorf,kantstraße,fixed in advance,26,3187.0,0.49,0.62,0.6,0.68,0.64,0.72,0.69,0.57
+Charlottenburg-Wilmersdorf,wilmersdorfer straße,fixed in advance,41,2476.0,0.64,0.62,0.56,0.63,0.53,0.48,0.51,0.63
+Charlottenburg-Wilmersdorf,bismarckstraße,fixed in advance,12,1591.0,0.59,0.65,0.53,0.69,0.75,0.78,0.7,0.8
+Charlottenburg-Wilmersdorf,otto-suhr-allee,fixed in advance,25,1652.0,0.87,0.84,0.78,0.59,0.88,0.84,0.79,0.65
+Charlottenburg-Wilmersdorf,hohenzollerndamm,fixed in advance,69,4421.0,0.85,0.88,0.86,0.83,0.89,0.9,0.88,0.88
+Charlottenburg-Wilmersdorf,bundesallee,fixed in advance,28,4283.0,0.62,0.7,0.59,0.69,0.76,0.77,0.69,0.64
+Charlottenburg-Wilmersdorf,uhlandstraße,fixed in advance,24,2743.0,0.63,0.74,0.65,0.71,0.82,0.87,0.77,0.79
+Charlottenburg-Wilmersdorf,kaiserdamm,fixed in advance,16,1613.0,0.79,0.82,0.64,0.51,0.96,0.92,0.97,0.86
+Friedrichshain-Kreuzberg,frankfurter allee,fixed in advance,23,1596.0,0.75,0.87,0.79,0.93,0.89,0.91,0.91,0.98
+Friedrichshain-Kreuzberg,karl-marx-allee,fixed in advance,21,1857.0,0.86,0.87,0.75,0.81,0.96,0.96,0.97,0.88
+Friedrichshain-Kreuzberg,warschauer straße,fixed in advance,13,1756.0,0.49,0.63,0.58,0.7,0.75,0.79,0.78,0.78
+Friedrichshain-Kreuzberg,skalitzer straße,fixed in advance,26,1982.0,0.62,0.63,0.61,0.51,0.63,0.66,0.64,0.53
+Friedrichshain-Kreuzberg,kottbusser damm,fixed in advance,11,1014.0,0.63,0.75,0.69,0.67,0.83,0.89,0.81,0.44
+Friedrichshain-Kreuzberg,oranienstraße,fixed in advance,32,2258.0,0.93,0.91,0.81,0.72,0.94,0.93,0.93,0.85
+Friedrichshain-Kreuzberg,gneisenaustraße,fixed in advance,18,1952.0,0.63,0.74,0.68,0.85,0.8,0.81,0.82,0.76
+Friedrichshain-Kreuzberg,yorckstraße,fixed in advance,21,1358.0,0.79,0.72,0.75,0.64,0.71,0.72,0.7,0.67
+Friedrichshain-Kreuzberg,mehringdamm,fixed in advance,16,1466.0,0.7,0.84,0.75,0.61,0.8,0.83,0.8,0.66
+Friedrichshain-Kreuzberg,petersburger straße,added after results,15,1576.0,0.45,0.55,0.47,0.73,0.77,0.8,0.76,0.83
+Friedrichshain-Kreuzberg,boxhagener straße,added after results,14,1643.0,0.64,0.82,0.81,0.99,0.82,0.9,0.88,0.96
+Friedrichshain-Kreuzberg,revaler straße,added after results,16,1221.0,0.65,0.85,0.88,0.88,0.77,0.86,0.85,0.83
+Lichtenberg,frankfurter allee,fixed in advance,31,2803.0,0.85,0.87,0.76,0.73,0.88,0.85,0.87,0.93
+Lichtenberg,möllendorffstraße,fixed in advance,37,2608.0,0.88,0.86,0.83,0.79,0.92,0.91,0.87,0.92
+Lichtenberg,landsberger allee,fixed in advance,68,5461.0,0.71,0.68,0.64,0.48,0.66,0.64,0.62,0.7
+Lichtenberg,treskowallee,fixed in advance,29,2438.0,0.75,0.82,0.73,0.79,0.92,0.95,0.9,0.82
+Lichtenberg,konrad-wolf-straße,fixed in advance,40,2764.0,0.71,0.78,0.77,0.94,0.94,0.95,0.96,0.97
+Lichtenberg,weitlingstraße,fixed in advance,17,1323.0,0.74,0.72,0.84,0.98,0.84,0.83,0.82,0.96
+Lichtenberg,siegfriedstraße,fixed in advance,24,1909.0,0.78,0.82,0.84,0.96,0.94,0.94,0.95,0.97
+Lichtenberg,falkenberger chaussee,fixed in advance,35,3416.0,0.59,0.65,0.62,0.5,0.66,0.69,0.69,0.47
+Marzahn-Hellersdorf,märkische allee,fixed in advance,83,8718.0,0.64,0.63,0.62,0.63,0.68,0.63,0.64,0.54
+Marzahn-Hellersdorf,landsberger allee,fixed in advance,39,3304.0,0.81,0.78,0.76,0.45,0.88,0.78,0.78,0.55
+Marzahn-Hellersdorf,allee der kosmonauten,fixed in advance,60,5748.0,0.8,0.77,0.66,0.41,0.86,0.79,0.83,0.57
+Marzahn-Hellersdorf,hellersdorfer straße,fixed in advance,73,6038.0,0.85,0.79,0.67,0.57,0.92,0.8,0.82,0.76
+Marzahn-Hellersdorf,stendaler straße,fixed in advance,20,1203.0,0.78,0.56,0.57,0.44,0.69,0.56,0.55,0.62
+Marzahn-Hellersdorf,alt-biesdorf,fixed in advance,28,2702.0,0.79,0.85,0.81,0.76,0.94,0.96,0.97,0.87
+Marzahn-Hellersdorf,cecilienstraße,fixed in advance,29,2493.0,0.85,0.89,0.87,0.76,0.93,0.95,0.91,0.78
+Marzahn-Hellersdorf,blumberger damm,fixed in advance,93,7750.0,0.76,0.75,0.74,0.71,0.87,0.79,0.83,0.58
+Mitte,friedrichstraße,fixed in advance,24,1991.0,0.85,0.92,0.9,0.98,0.94,0.97,0.9,0.97
+Mitte,unter den linden,fixed in advance,7,926.0,0.75,0.73,0.74,0.93,0.85,0.86,0.83,0.97
+Mitte,leipziger straße,fixed in advance,11,1295.0,0.59,0.74,0.62,0.85,0.86,0.87,0.79,0.91
+Mitte,torstraße,fixed in advance,18,2151.0,0.67,0.8,0.72,0.89,0.96,0.96,0.9,0.88
+Mitte,karl-liebknecht-straße,fixed in advance,8,709.0,0.91,0.93,0.83,0.75,0.99,0.99,0.96,0.83
+Mitte,invalidenstraße,fixed in advance,44,2317.0,0.84,0.88,0.85,0.77,0.93,0.92,0.87,0.84
+Mitte,brunnenstraße,fixed in advance,23,2260.0,0.78,0.86,0.78,0.93,0.91,0.94,0.94,0.98
+Mitte,müllerstraße,fixed in advance,37,3605.0,0.75,0.85,0.77,0.89,0.93,0.96,0.96,0.98
+Mitte,turmstraße,fixed in advance,15,1702.0,0.56,0.67,0.58,0.71,0.84,0.91,0.88,0.86
+Mitte,alt-moabit,fixed in advance,24,2710.0,0.55,0.68,0.56,0.65,0.86,0.88,0.81,0.71
+Mitte,rosenthaler straße,fixed in advance,17,1168.0,0.58,0.76,0.62,0.67,0.82,0.85,0.74,0.59
+Mitte,badstraße,fixed in advance,12,910.0,0.59,0.81,0.62,0.65,0.81,0.89,0.8,0.78
+Neukölln,karl-marx-straße,fixed in advance,40,3052.0,0.75,0.88,0.77,0.83,0.94,0.96,0.93,0.92
+Neukölln,sonnenallee,seen in top three,41,3568.0,0.67,0.78,0.72,0.79,0.79,0.86,0.78,0.77
+Neukölln,hermannstraße,seen in top three,32,2826.0,0.8,0.92,0.78,0.86,0.98,0.99,0.99,0.95
+Neukölln,weserstraße,fixed in advance,29,2215.0,0.71,0.77,0.87,0.96,0.83,0.86,0.85,0.91
+Neukölln,buschkrugallee,fixed in advance,37,2739.0,0.76,0.79,0.79,0.83,0.91,0.92,0.92,0.92
+Neukölln,britzer damm,fixed in advance,30,2244.0,0.82,0.9,0.83,0.89,0.96,0.97,0.98,0.99
+Neukölln,johannisthaler chaussee,fixed in advance,42,3378.0,0.73,0.8,0.74,0.75,0.9,0.93,0.84,0.65
+Neukölln,alt-rudow,fixed in advance,16,901.0,0.81,0.86,0.83,0.81,0.81,0.83,0.77,0.79
+Pankow,schönhauser allee,fixed in advance,30,3048.0,0.74,0.81,0.69,0.79,0.91,0.93,0.85,0.88
+Pankow,prenzlauer allee,fixed in advance,37,3268.0,0.77,0.8,0.73,0.87,0.96,0.95,0.9,0.96
+Pankow,greifswalder straße,seen in top three,34,2933.0,0.92,0.91,0.74,0.66,0.97,0.96,0.93,0.86
+Pankow,kastanienallee,fixed in advance,41,3916.0,0.66,0.75,0.81,0.94,0.83,0.88,0.86,0.94
+Pankow,berliner straße,fixed in advance,41,3641.0,0.79,0.82,0.72,0.66,0.95,0.96,0.9,0.81
+Pankow,breite straße,fixed in advance,33,1864.0,0.88,0.85,0.81,0.49,0.81,0.81,0.76,0.59
+Pankow,wisbyer straße,fixed in advance,20,1620.0,0.7,0.69,0.61,0.73,0.72,0.7,0.62,0.73
+Pankow,bornholmer straße,fixed in advance,18,1342.0,0.77,0.74,0.74,0.68,0.87,0.87,0.82,0.67
+Pankow,danziger straße,fixed in advance,34,3773.0,0.72,0.77,0.63,0.81,0.91,0.9,0.84,0.86
+Reinickendorf,residenzstraße,fixed in advance,21,1823.0,0.85,0.92,0.83,0.87,0.97,0.98,0.93,0.96
+Reinickendorf,ollenhauerstraße,fixed in advance,17,1629.0,0.76,0.86,0.88,0.85,0.91,0.94,0.9,0.84
+Reinickendorf,scharnweberstraße,fixed in advance,22,1919.0,0.66,0.81,0.78,0.89,0.91,0.93,0.95,0.97
+Reinickendorf,berliner straße,fixed in advance,47,3632.0,0.84,0.89,0.89,0.9,0.93,0.94,0.95,0.92
+Reinickendorf,oranienburger straße,fixed in advance,39,3566.0,0.74,0.85,0.76,0.83,0.94,0.96,0.89,0.93
+Reinickendorf,alt-tegel,fixed in advance,19,1036.0,0.73,0.69,0.69,0.52,0.52,0.51,0.59,0.25
+Reinickendorf,hermsdorfer damm,fixed in advance,30,3862.0,0.66,0.78,0.73,0.91,0.86,0.89,0.88,0.93
+Reinickendorf,wilhelmsruher damm,seen in top three,28,2290.0,0.94,0.95,0.84,0.92,1.0,1.0,0.99,0.99
+Spandau,carl-schurz-straße,fixed in advance,11,523.0,0.96,0.96,0.94,0.83,0.91,0.88,0.85,0.7
+Spandau,breite straße,fixed in advance,9,573.0,0.81,0.87,0.75,0.77,0.86,0.88,0.79,0.63
+Spandau,klosterstraße,fixed in advance,8,513.0,0.87,0.85,0.83,0.81,0.95,0.94,0.9,0.88
+Spandau,heerstraße,seen in top three,66,7245.0,0.81,0.85,0.82,0.73,0.92,0.93,0.93,0.92
+Spandau,falkenseer chaussee,fixed in advance,42,3147.0,0.88,0.91,0.86,0.87,0.94,0.95,0.95,0.96
+Spandau,seegefelder straße,fixed in advance,25,2322.0,0.68,0.73,0.84,0.88,0.9,0.9,0.85,0.92
+Spandau,schönwalder straße,fixed in advance,15,1368.0,0.8,0.87,0.78,0.85,0.96,0.96,0.94,0.94
+Spandau,pichelsdorfer straße,fixed in advance,20,1721.0,0.9,0.93,0.93,0.99,0.96,0.97,0.96,0.88
+Steglitz-Zehlendorf,schloßstraße,fixed in advance,28,2163.0,0.82,0.82,0.66,0.43,0.8,0.81,0.71,0.35
+Steglitz-Zehlendorf,clayallee,fixed in advance,42,4041.0,0.78,0.82,0.68,0.68,0.93,0.95,0.92,0.87
+Steglitz-Zehlendorf,potsdamer chaussee,fixed in advance,29,4862.0,0.59,0.73,0.66,0.78,0.85,0.88,0.88,0.89
+Steglitz-Zehlendorf,unter den eichen,fixed in advance,33,4012.0,0.45,0.64,0.48,0.56,0.65,0.72,0.61,0.57
+Steglitz-Zehlendorf,teltower damm,fixed in advance,39,3764.0,0.76,0.8,0.73,0.72,0.9,0.93,0.86,0.82
+Steglitz-Zehlendorf,hindenburgdamm,fixed in advance,37,3090.0,0.72,0.75,0.69,0.61,0.8,0.8,0.75,0.67
+Steglitz-Zehlendorf,albrechtstraße,fixed in advance,32,2472.0,0.88,0.87,0.81,0.69,0.86,0.83,0.82,0.7
+Steglitz-Zehlendorf,argentinische allee,fixed in advance,25,3227.0,0.77,0.8,0.84,0.71,0.89,0.9,0.94,0.84
+Tempelhof-Schöneberg,hauptstraße,fixed in advance,39,3428.0,0.66,0.72,0.64,0.51,0.85,0.87,0.76,0.48
+Tempelhof-Schöneberg,potsdamer straße,fixed in advance,13,1654.0,0.66,0.79,0.66,0.81,0.88,0.93,0.88,0.84
+Tempelhof-Schöneberg,tempelhofer damm,fixed in advance,30,3499.0,0.69,0.75,0.69,0.7,0.89,0.92,0.82,0.69
+Tempelhof-Schöneberg,mariendorfer damm,fixed in advance,71,5326.0,0.85,0.87,0.79,0.85,0.92,0.91,0.9,0.91
+Tempelhof-Schöneberg,martin-luther-straße,fixed in advance,27,2651.0,0.62,0.65,0.52,0.51,0.68,0.69,0.63,0.39
+Tempelhof-Schöneberg,grunewaldstraße,fixed in advance,21,1610.0,0.86,0.87,0.87,0.88,0.95,0.95,0.93,0.86
+Tempelhof-Schöneberg,akazienstraße,fixed in advance,5,478.0,0.69,0.74,0.68,0.68,0.77,0.77,0.72,0.6
+Tempelhof-Schöneberg,lichtenrader damm,seen in top three,32,3304.0,0.74,0.81,0.71,0.9,0.85,0.87,0.83,0.93
+Treptow-Köpenick,bahnhofstraße,fixed in advance,9,940.0,0.81,0.82,0.74,0.71,0.91,0.93,0.88,0.41
+Treptow-Köpenick,alt-köpenick,fixed in advance,13,656.0,0.85,0.8,0.8,0.33,0.97,0.94,0.9,0.32
+Treptow-Köpenick,schnellerstraße,fixed in advance,21,2572.0,0.68,0.74,0.8,0.79,0.89,0.87,0.82,0.62
+Treptow-Köpenick,adlergestell,fixed in advance,50,8454.0,0.61,0.73,0.77,0.88,0.78,0.86,0.89,0.86
+Treptow-Köpenick,baumschulenstraße,fixed in advance,20,2089.0,0.88,0.94,0.84,0.91,0.99,1.0,0.98,0.99
+Treptow-Köpenick,elsenstraße,fixed in advance,9,991.0,0.54,0.71,0.61,0.74,0.88,0.92,0.86,0.86
+Treptow-Köpenick,dörpfeldstraße,fixed in advance,18,1590.0,0.87,0.93,0.84,0.95,0.99,0.99,0.96,0.9
+Treptow-Köpenick,grünauer straße,fixed in advance,21,2850.0,0.61,0.66,0.66,0.59,0.84,0.84,0.88,0.59

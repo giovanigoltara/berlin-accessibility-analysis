@@ -1,0 +1,33 @@
+{
+  "district": "Friedrichshain-Kreuzberg",
+  "buffer_m": 2000,
+  "radii_m": [
+    400,
+    800
+  ],
+  "distance_limit_m": 2000,
+  "segments_before_split": 21279,
+  "stations_by_column": {
+    "sb": 28,
+    "ub": 63,
+    "tr": 105,
+    "bu": 422,
+    "rb": 5,
+    "su": 82,
+    "anyf": 337
+  },
+  "segments": 83749,
+  "origins": 9564,
+  "destinations": 479,
+  "unlink_points": 86,
+  "origin_connection_m_median": 21.2,
+  "destination_connection_m_median": 1.5,
+  "check_vs_phase0_su": {
+    "buildings_compared": 9564,
+    "spearman": 0.899,
+    "median_segment_map_m": 553.1,
+    "median_phase0_m": 551.1
+  },
+  "resident_weighted_share_without_su_within_800m": 0.185,
+  "resident_weighted_share_without_frequent_stop_within_400m": 0.299
+}

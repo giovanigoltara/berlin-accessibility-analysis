@@ -1,0 +1,2 @@
+pbf,n_sources,seed,edge_pairs_with_reverse_listed,graph_nodes,reachable_directed,reachable_undirected,share_unreachable_directed,share_reachable_longer_directed,median_extra_m_where_longer
+Helsinki.osm.pbf,10,0,0.0003,5266,4167,5266,0.2087,0.9426,201.5
