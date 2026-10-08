@@ -1,7 +1,8 @@
-"""Regenerate the results section of README.md from output/*.csv.
+"""Regenerate docs/results.md and the key-results block of README.md from output/.
 
-Everything between the GENERATED markers is overwritten. If the pipeline has
-not been run, the section says so and contains no numbers.
+docs/results.md is overwritten completely. In README.md only the text between
+the GENERATED markers is replaced. If the pipeline has not been run, both say
+so and contain no numbers.
 """
 import argparse
 import json
@@ -14,8 +15,18 @@ import _bootstrap  # noqa: F401
 from berlin_access.config import load_config
 from berlin_access.pipeline import report_modes
 
-BEGIN = "<!-- BEGIN GENERATED: results (scripts/build_readme_tables.py) -->"
-END = "<!-- END GENERATED: results -->"
+BEGIN = "<!-- BEGIN GENERATED: key results (scripts/build_readme_tables.py) -->"
+END = "<!-- END GENERATED: key results -->"
+RESULTS_HEADER = """# Results
+
+All tables in this file are written by `scripts/build_readme_tables.py` from the
+files in `output/`. Do not edit them by hand. What the numbers show is discussed
+in [findings.md](findings.md); the method is in [methods.md](methods.md).
+"""
+MEASURE_NAMES = {"nain_800": "NAIN 800", "nain_2000": "NAIN 2000", "nach_800": "NACH 800",
+                 "nach_2000": "NACH 2000", "cc_harmonic_800": "metric closeness 800"}
+TRANSIT_NAMES = {"walk_su_min": "Walk to S- or U-Bahn",
+                 "walk_frequent_any_min": "Walk to frequent stop, any mode"}
 
 
 def fmt(x, pct=False, signed=False):
@@ -281,6 +292,10 @@ def build(cfg) -> str:
                          "PST 3.3.2 run in QGIS 4.2.3 on the exported inputs; `scripts/compare_pst_results.py`.\n\n"
                          + md_table(pd.DataFrame(rows)))
 
+    p3 = out / "phase3"
+    if (p3 / "correlations.csv").exists():
+        parts.append(phase3_tables(p3))
+
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():
         st = pd.read_csv(stops_csv).set_index("mode").reindex(cfg["modes"]).reset_index()
@@ -308,14 +323,98 @@ def build(cfg) -> str:
     return "\n\n".join(parts)
 
 
+def phase3_tables(p3) -> str:
+    c = pd.read_csv(p3 / "correlations.csv", dtype={"district": str})
+    summ = json.loads((p3 / "summary.json").read_text())
+    parts = []
+    for level, col in [("buildings", "rho_buildings"), ("Planungsräume", "rho_planungsraeume")]:
+        w = c[c["district"] == "Berlin"].pivot(index="measure", columns="transit", values=col)
+        w = w.reindex(index=list(MEASURE_NAMES), columns=list(TRANSIT_NAMES))
+        w.index = [MEASURE_NAMES[m] for m in w.index]
+        w.columns = [TRANSIT_NAMES[x] for x in w.columns]
+        parts.append(f"## Phase 3: Spearman correlation, Berlin, unit = {level}\n\n"
+                     "Walk time to transit against the measures of the nearest residential street segment "
+                     "(`output/phase3/correlations.csv`). Negative: more central streets go with shorter walks.\n\n"
+                     + md_table(w.rename_axis("Measure").reset_index()))
+    d = c[(c["district"] != "Berlin") & (c["transit"] == "walk_su_min")]
+    w = d.pivot(index="district", columns="measure", values="rho_buildings")[list(MEASURE_NAMES)]
+    w.columns = [MEASURE_NAMES[m] for m in w.columns]
+    parts.append("## Phase 3: Spearman correlation with the walk to S- or U-Bahn per district (unit = buildings)\n\n"
+                 + md_table(w.rename_axis("District").reset_index()))
+    t = summ["thirds"]
+    rows = [{"Class": k, "Planungsräume": summ["planungsraeume_by_class"].get(k, 0),
+             "Residents": f"{summ['residents_by_class'].get(k, 0):,.0f}"}
+            for k in ["close to transit, segregated", "far from transit, integrated", "concordant", "middle"]]
+    parts.append("## Phase 3: divergence classes per Planungsraum\n\n"
+                 f"Citywide thirds of the median walk to S- or U-Bahn (cuts {t['walk_su_min'][0]} and "
+                 f"{t['walk_su_min'][1]} min) and of NAIN at 2000 m (cuts {t['nain_2000'][0]} and "
+                 f"{t['nain_2000'][1]}); `output/phase3/divergence_by_planungsraum.csv`. "
+                 f"{summ['buildings']:,} buildings, median distance to their street segment "
+                 f"{summ['median_distance_to_segment_m']} m.\n\n" + md_table(pd.DataFrame(rows)))
+    div = pd.read_csv(p3 / "divergence_by_planungsraum.csv", dtype={"plr_id": str})
+    k = div[div["divergence"].isin(["close to transit, segregated", "far from transit, integrated"])]
+    k = k.groupby(["district", "divergence"]).size().unstack(fill_value=0).reset_index()
+    parts.append("## Phase 3: divergent Planungsräume per district\n\n" + md_table(k.rename(columns={"district": "District"})))
+    return "\n\n".join(parts)
+
+
+def key_results(cfg) -> str:
+    out = cfg.path("output")
+    csv = out / "walk_time_by_district.csv"
+    if not csv.exists():
+        return "_Results have not been generated yet; see Quick start._"
+    v = cfg["walk_speed_main_mps"]
+    s = pd.read_csv(csv)
+    s = s[(s["weighting"] == "residents") & (s["speed_mps"] == v)]
+    b = s[s["unit_id"] == "Berlin"].set_index("mode")
+    rows = []
+    for m in ["S- or U-Bahn", "Tram", "Bus", "Any mode"]:
+        if m in b.index:
+            rows.append({"Nearest stop": m, "Median walk (min)": fmt(b.loc[m, "median_min"]),
+                         "Residents > 15 min": fmt(b.loc[m, "share_over_15min"], pct=True),
+                         "Residents > 30 min": fmt(b.loc[m, "share_over_30min"], pct=True)})
+    fq = cfg.raw.get("frequency")
+    fcsv = out / f"walk_time_by_district_frequent_{fq['max_headway_min']}min.csv" if fq else None
+    if fcsv is not None and fcsv.exists():
+        f = pd.read_csv(fcsv)
+        f = f[(f["weighting"] == "residents") & (f["speed_mps"] == v) & (f["unit_id"] == "Berlin")].set_index("mode")
+        if "Any mode" in f.index:
+            rows.append({"Nearest stop": f"Frequent stop (every {fq['max_headway_min']} min), any mode",
+                         "Median walk (min)": fmt(f.loc["Any mode", "median_min"]),
+                         "Residents > 15 min": fmt(f.loc["Any mode", "share_over_15min"], pct=True),
+                         "Residents > 30 min": fmt(f.loc["Any mode", "share_over_30min"], pct=True)})
+    parts = [f"Berlin, per resident, walking at {v} m/s:\n\n" + md_table(pd.DataFrame(rows))]
+    su = s[(s["mode"] == "S- or U-Bahn") & (s["unit_id"] != "Berlin")].sort_values("median_min")
+    if len(su):
+        lo, hi = su.iloc[0], su.iloc[-1]
+        parts.append(f"Median walk to S- or U-Bahn by district: from {fmt(lo['median_min'])} min "
+                     f"({lo['unit_name']}) to {fmt(hi['median_min'])} min ({hi['unit_name']}).")
+    c3 = out / "phase3" / "correlations.csv"
+    if c3.exists():
+        c = pd.read_csv(c3, dtype={"district": str})
+        c = c[(c["district"] == "Berlin") & (c["transit"] == "walk_su_min")].set_index("measure")
+        rows = [{"Street measure": MEASURE_NAMES[m], "rho, buildings": f"{c.loc[m, 'rho_buildings']:.2f}",
+                 "rho, Planungsräume": f"{c.loc[m, 'rho_planungsraeume']:.2f}"}
+                for m in MEASURE_NAMES if m in c.index]
+        parts.append("Phase 3, Spearman correlation between the walk to S- or U-Bahn and the home street's "
+                     "measures (negative: more central streets, shorter walks):\n\n" + md_table(pd.DataFrame(rows)))
+    return "\n\n".join(parts)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--config", default=None)
     cfg = load_config(ap.parse_args().config)
+    body = build(cfg).replace("\n#### ", "\n## ")
+    if body.startswith("#### "):
+        body = "## " + body[5:]
+    results = cfg.root / "docs" / "results.md"
+    results.write_text(RESULTS_HEADER + "\n" + body + "\n", encoding="utf-8")
     readme = cfg.root / "README.md"
     text = readme.read_text(encoding="utf-8")
     if BEGIN not in text or END not in text:
         raise SystemExit(f"README.md is missing the markers:\n{BEGIN}\n{END}")
-    new = re.sub(re.escape(BEGIN) + r".*?" + re.escape(END), lambda _: f"{BEGIN}\n\n{build(cfg)}\n\n{END}", text, flags=re.S)
+    new = re.sub(re.escape(BEGIN) + r".*?" + re.escape(END),
+                 lambda _: f"{BEGIN}\n\n{key_results(cfg)}\n\n{END}", text, flags=re.S)
     readme.write_text(new, encoding="utf-8")
-    print("README.md results section regenerated")
+    print("docs/results.md and README.md key results regenerated")
