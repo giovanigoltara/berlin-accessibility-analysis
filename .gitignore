@@ -56,3 +56,6 @@ data/raw/
 data/derived/
 *.parquet
 *.zip
+
+# Phase 2 PST inputs are small and needed in QGIS: keep them
+!output/pst/*.gpkg

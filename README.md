@@ -356,6 +356,19 @@ Same segments matched by midpoint and length (95.3% of the pilot's segments matc
 | 2000 | cc_harmonic_2000 | 4584 | 1.000 | 0.5% |
 | 2000 | cc_betweenness_2000 | 4584 | 0.996 | 0.9% |
 
+#### Phase 2: attraction reach, Python cross-check (Friedrichshain-Kreuzberg)
+
+Walking distance on the Phase 1 segment map, points joined to their closest line as in PST. PST itself is run by hand in QGIS (`docs/pst_howto.md`).
+
+| Item | Value |
+|---|---|
+| Segments / residential buildings (origins) / stations (destinations) | 21,279 / 9,564 / 479 |
+| Stations: S-Bahn, U-Bahn, tram, bus, regional rail | 28, 63, 105, 422, 5 |
+| Stations with a departure every 10 min or better (any mode) | 337 |
+| Residents without an S- or U-Bahn station within 800 m walk | 18.5% |
+| Residents without a frequent stop of any mode within 400 m walk | 29.9% |
+| Check: median walk to S/U station, segment map vs Phase 0 network (m) | 553.1 vs 551.1 (Spearman 0.899) |
+
 #### GTFS stops per mode
 
 | mode | stops_inside_berlin | stops_outside_within_sensitivity_buffer | stops_dropped_snap | stops_used | snap_m_median |
@@ -475,6 +488,19 @@ All measures per segment: `python scripts/run_segments.py --district Berlin` wri
   reported alongside the standard unweighted measures; it raises the reference
   streets slightly in most districts, mainly at 800 m.
 
+## Phase 2: Place Syntax Tool inputs and attraction reach
+
+[Place Syntax Tool](https://github.com/SMoG-Chalmers/PST) (PST) is a QGIS plugin, so it
+is run by hand: [`docs/pst_howto.md`](docs/pst_howto.md) gives the steps for Attraction
+Reach and Attraction Distance (walking distance 400 / 800 m, plus an angular variant).
+The inputs for the Friedrichshain-Kreuzberg pilot are in
+`output/pst/pst_inputs_friedrichshain-kreuzberg.gpkg` (segment map, residential
+buildings as origins, stations with 0/1 columns per mode and frequency, unlink points).
+A Python cross-check computes the same walking-distance reach and distance
+(`output/pst/python_reach_friedrichshain-kreuzberg*.csv`), and
+`scripts/compare_pst_results.py` compares it with PST's output once PST has been run.
+Summary in the Results section above.
+
 ## Changes from the first version (v0)
 
 The original notebook (`notebooks/fussweg_oepnv.ipynb`, kept unchanged for
@@ -506,7 +532,9 @@ earlier README did not come from the code at all and has been removed.
 ## Next steps
 
 - **Phase 1:** computed for all districts on residential streets and checked against
-  reference streets; next, Phase 2 (Place Syntax Tool inputs).
+  reference streets.
+- **Phase 2:** inputs and Python cross-check ready for Friedrichshain-Kreuzberg; next,
+  run PST in QGIS and compare (`docs/pst_howto.md`).
 - **Phase 2:** Place Syntax Tool inputs (QGIS GeoPackage) and a Python cross-check of
   attraction reach.
 - **Phase 3:** per-building comparison of metric walk time and configurational

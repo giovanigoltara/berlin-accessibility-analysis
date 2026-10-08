@@ -234,6 +234,27 @@ def build(cfg) -> str:
                          f"({fmt(c['share_matched'].iloc[0], pct=True)} of the pilot's segments matched). Values near "
                          "1 and 0% mean the 2 km buffer removes edge effects.\n\n" + md_table(tbl))
 
+    for js in sorted((out / "pst").glob("python_reach_*_summary.json")):
+        j = json.loads(js.read_text())
+        chk = j.get("check_vs_phase0_su", {})
+        st_ = j.get("stations_by_column", {})
+        rows = [
+            {"Item": "Segments / residential buildings (origins) / stations (destinations)",
+             "Value": f"{j['segments']:,} / {j['origins']:,} / {j['destinations']:,}"},
+            {"Item": "Stations: S-Bahn, U-Bahn, tram, bus, regional rail",
+             "Value": ", ".join(str(st_.get(c, "")) for c in ("sb", "ub", "tr", "bu", "rb"))},
+            {"Item": "Stations with a departure every 10 min or better (any mode)", "Value": str(st_.get("anyf", ""))},
+            {"Item": "Residents without an S- or U-Bahn station within 800 m walk",
+             "Value": fmt(j["resident_weighted_share_without_su_within_800m"], pct=True)},
+            {"Item": "Residents without a frequent stop of any mode within 400 m walk",
+             "Value": fmt(j["resident_weighted_share_without_frequent_stop_within_400m"], pct=True)},
+            {"Item": "Check: median walk to S/U station, segment map vs Phase 0 network (m)",
+             "Value": f"{chk.get('median_segment_map_m')} vs {chk.get('median_phase0_m')} (Spearman {chk.get('spearman')})"},
+        ]
+        parts.append(f"#### Phase 2: attraction reach, Python cross-check ({j['district']})\n\n"
+                     "Walking distance on the Phase 1 segment map, points joined to their closest line as in PST. "
+                     "PST itself is run by hand in QGIS (`docs/pst_howto.md`).\n\n" + md_table(pd.DataFrame(rows)))
+
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():
         st = pd.read_csv(stops_csv).set_index("mode").reindex(cfg["modes"]).reset_index()

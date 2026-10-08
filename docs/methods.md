@@ -509,3 +509,45 @@ Marzahn-Hellersdorf) and at 2000 m in 7 (unchanged in 3, lower in
 Marzahn-Hellersdorf and Lichtenberg). Weakest reference streets:
 Wilmersdorfer Straße (53rd percentile) and Alt-Tegel (52nd), both largely
 pedestrian shopping zones.
+
+
+# Phase 2: Place Syntax Tool inputs and attraction reach
+
+Script `scripts/run_pst_inputs.py`, module `src/berlin_access/pst.py`, guide
+`docs/pst_howto.md`. PST dialogs and options were read from the PST 3.3.2
+source (github.com/SMoG-Chalmers/PST); the Chalmers documentation site was
+not reachable from the build environment.
+
+- **Area.** Friedrichshain-Kreuzberg pilot: segments within district + 2 km,
+  origins inside the district. All of Berlin is likely too large for PST in
+  QGIS; the script takes any district.
+- **Network.** The citywide Phase 1 segment map (tracks removed), cropped, so
+  PST and the Phase 1 results use the same lines. Lines connect only at
+  shared end points. Where two lines cross without one (bridges, tunnels) a
+  point is written to the `unlinks` layer for PST's *Unlink points* option.
+- **Origins.** Residential buildings only (allocated residents > 0), as one
+  point each, with residents and residents 65+.
+- **Destinations: stations, not stop points.** VBB stop points are single
+  platforms or poles; counting them would count one station several times.
+  Stop points are grouped by their IFOPT stop place (first three parts of
+  the stop id, e.g. de:11000:900007104), which works also for bus poles
+  without a `parent_station`. Station point = mean of its served stop
+  points. 0/1 columns per mode (`sb`, `ub`, `tr`, `bu`, `rb`), `su` (S- or
+  U-Bahn), frequent flags (`<mode>f`: at least one stop point of the station
+  meets the frequent-stop rule of Phase 0 for that mode) and `anyf`. Only
+  stations inside Berlin (strict city limit, as in Phase 0).
+- **Python cross-check, walking distance only.** Follows PST's rules as
+  read from its source: each point is joined to its closest line (straight
+  connection), the connection length counts, and walking runs along the
+  lines; two points on the same line walk directly along it. Attraction
+  reach = number of stations with the column = 1 within 400 and 800 m;
+  attraction distance = walk to the nearest such station, capped at 2 km.
+  Unit-tested on a small network with hand-computed distances. The angular
+  variant has no cross-check yet.
+- **Check against Phase 0.** For the pilot's residential buildings, the
+  median walk to the nearest S- or U-Bahn station on the segment map and
+  the Phase 0 median on the full walking network differ by about 2 m (553.1
+  vs 551.1 m; `output/pst/python_reach_friedrichshain-kreuzberg_summary.json`).
+  The rank correlation is 0.899, lower because Phase 0 measures to the
+  nearest platform and uses sidewalks, while here it is the station's centre
+  point on the street centre-line network.
