@@ -7,7 +7,7 @@ the two runs clean slightly different networks. Writes
 output/segments_<district>_vs_berlin.csv: matched share and Spearman rank
 correlation per measure.
 
-With --run-a, --run-b and --label any two runs can be compared, e.g. two
+With --run-a, --run-b and --out any two runs can be compared, e.g. two
 citywide runs made with different hash seeds (docs/validation.md §8); only
 segments marked residential in both are then compared.
 """
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     ap.add_argument("--district", default="Friedrichshain-Kreuzberg")
     ap.add_argument("--run-a", default=None, help="segment GeoPackage (default: output/segments_<district>.gpkg)")
     ap.add_argument("--run-b", default=None, help="segment GeoPackage (default: output/segments_berlin.gpkg)")
-    ap.add_argument("--label", default=None, help="output name: output/segments_<label>.csv")
+    ap.add_argument("--out", default=None, help="output CSV (default: output/segments_<district>_vs_berlin.csv)")
     args = ap.parse_args()
     cfg = load_config()
     out = cfg.path("output")
@@ -54,5 +54,5 @@ if __name__ == "__main__":
                          "share_matched": round(ok.mean(), 3), "spearman": round(spearmanr(x, y).statistic, 4),
                          "median_abs_rel_diff": round(float(np.median(np.abs(x - y) / np.maximum(np.abs(y), 1e-9))), 4)})
     res = pd.DataFrame(rows)
-    res.to_csv(out / f"segments_{args.label or name + '_vs_berlin'}.csv", index=False)
+    res.to_csv(args.out or out / f"segments_{name}_vs_berlin.csv", index=False)
     print(res.to_string(index=False))
