@@ -198,18 +198,18 @@ One citywide angular segment analysis (city + 2 km buffer, forestry tracks remov
 
 | District | All segments | Residential segments | Residential share | Network km | Median segment m | Median NAIN 800 m | Median NAIN 2000 m | Median NACH 2000 m |
 |---|---|---|---|---|---|---|---|---|
-| Charlottenburg-Wilmersdorf | 9,267 | 7,416 | 80.0% | 609.4 | 58.6 | 0.843 | 0.658 | 0.922 |
-| Friedrichshain-Kreuzberg | 4,806 | 4,121 | 85.7% | 289.5 | 52.4 | 0.793 | 0.663 | 0.911 |
-| Lichtenberg | 10,866 | 8,627 | 79.4% | 607.6 | 50.3 | 0.804 | 0.659 | 0.878 |
-| Marzahn-Hellersdorf | 12,304 | 10,020 | 81.4% | 763.8 | 54.4 | 0.773 | 0.614 | 0.894 |
-| Mitte | 9,196 | 7,071 | 76.9% | 497.7 | 50.6 | 0.808 | 0.670 | 0.917 |
-| Neukölln | 11,204 | 10,026 | 89.5% | 672.9 | 49.1 | 0.814 | 0.661 | 0.895 |
-| Pankow | 15,510 | 13,357 | 86.1% | 1027.6 | 56.4 | 0.881 | 0.713 | 0.911 |
-| Reinickendorf | 13,730 | 11,469 | 83.5% | 854.2 | 52.3 | 0.778 | 0.637 | 0.897 |
-| Spandau | 12,196 | 10,269 | 84.2% | 815.3 | 57.9 | 0.812 | 0.658 | 0.886 |
-| Steglitz-Zehlendorf | 13,498 | 11,691 | 86.6% | 947.6 | 59.3 | 0.838 | 0.699 | 0.923 |
-| Tempelhof-Schöneberg | 10,592 | 9,151 | 86.4% | 703.5 | 57.6 | 0.831 | 0.682 | 0.911 |
-| Treptow-Köpenick | 18,462 | 13,754 | 74.5% | 1079.1 | 54.5 | 0.840 | 0.683 | 0.893 |
+| Charlottenburg-Wilmersdorf | 9,254 | 7,412 | 80.1% | 609.5 | 58.7 | 0.845 | 0.661 | 0.922 |
+| Friedrichshain-Kreuzberg | 4,796 | 4,116 | 85.8% | 290.0 | 52.6 | 0.793 | 0.666 | 0.909 |
+| Lichtenberg | 10,843 | 8,619 | 79.5% | 607.8 | 50.3 | 0.801 | 0.654 | 0.878 |
+| Marzahn-Hellersdorf | 12,313 | 10,022 | 81.4% | 763.7 | 54.5 | 0.774 | 0.618 | 0.894 |
+| Mitte | 9,198 | 7,068 | 76.8% | 497.9 | 50.6 | 0.806 | 0.673 | 0.915 |
+| Neukölln | 11,210 | 10,024 | 89.4% | 672.8 | 49.1 | 0.810 | 0.659 | 0.894 |
+| Pankow | 15,501 | 13,359 | 86.2% | 1027.4 | 56.4 | 0.880 | 0.709 | 0.910 |
+| Reinickendorf | 13,741 | 11,483 | 83.6% | 854.1 | 52.1 | 0.776 | 0.634 | 0.896 |
+| Spandau | 12,212 | 10,286 | 84.2% | 815.4 | 57.9 | 0.813 | 0.660 | 0.886 |
+| Steglitz-Zehlendorf | 13,505 | 11,697 | 86.6% | 947.3 | 59.2 | 0.838 | 0.701 | 0.923 |
+| Tempelhof-Schöneberg | 10,617 | 9,170 | 86.4% | 704.1 | 57.6 | 0.827 | 0.679 | 0.910 |
+| Treptow-Köpenick | 18,457 | 13,752 | 74.5% | 1079.2 | 54.6 | 0.841 | 0.682 | 0.892 |
 
 ## Phase 1: top three named streets per district
 
@@ -217,17 +217,17 @@ A street's value is its highest segment; full top-10 lists in `output/segments_b
 
 | District | Angular choice 2000 m | NAIN 2000 m | NAIN 800 m |
 |---|---|---|---|
-| Charlottenburg-Wilmersdorf | Heckerdamm, Heilmannring, Straße Des 17. Juni | Heckerdamm, Paulsborner Straße, Nestorstraße | Wiesbadener Straße, Droysenstraße, Pücklerstraße |
-| Friedrichshain-Kreuzberg | Oranienstraße, Alte Jakobstraße, Alexandrinenstraße | Rudi-Dutschke-Straße, Wilhelmstraße, Oranienstraße | Holteistraße, Eldenaer Straße, Boxhagener Straße |
-| Lichtenberg | Volkradstraße, Rummelsburger Straße, Sewanstraße | Gudrunstraße, Rüdigerstraße, Sewanstraße | Dorfstraße, Münsterlandstraße, Straße 3 |
-| Marzahn-Hellersdorf | Quedlinburger Straße, Kastanienallee, Cottbusser Straße | Hultschiner Damm, Pilgramer Straße, Paul-Wegener-Straße | Hultschiner Damm, Akazienallee, Roedernstraße |
-| Mitte | Annenstraße, Alte Jakobstraße, Fischerinsel | Wilhelmstraße, Luisenstraße, Bernauer Straße | Friedrichstraße, Französische Straße, Cornelius-Fredericks-Straße |
-| Neukölln | Wutzkyallee, Sonnenallee, Hermannstraße | Groß-Ziethener Chaussee, Schönefelder Straße, Buckower Damm | Lieselotte-Berger-Straße, Treptower Straße, Elly-Heuss-Knapp-Straße |
-| Pankow | Wilhelmsruher Damm, Greifswalder Straße, Quickborner Straße | Schillingweg, Alt-Karow, Blankenburger Chaussee | Schönerlinder Straße, Blankenfelder Chaussee, Schillingweg |
-| Reinickendorf | Wilhelmsruher Damm, Senftenberger Ring, Treuenbrietzener Straße | Am Dachsbau, Ruppiner Chaussee, Berliner Straße; Oranienburger Chaussee | Alter Bernauer Heerweg, Am Dachsbau, Berliner Straße |
-| Spandau | Sandstraße, Magistratsweg, Heerstraße | Ritterfelddamm, Seekorso, Alt-Gatow | Maximilian-Kolbe-Straße, Am Landschaftspark Gatow, Aalemannufer |
+| Charlottenburg-Wilmersdorf | Heckerdamm, Straße Des 17. Juni, Heilmannring | Paulsborner Straße, Droysenstraße, Nestorstraße | Wiesbadener Straße, Droysenstraße, Pücklerstraße |
+| Friedrichshain-Kreuzberg | Oranienstraße, Alexandrinenstraße, Rudi-Dutschke-Straße | Landsberger Allee, Rudi-Dutschke-Straße, Wilhelmstraße | Holteistraße, Eldenaer Straße, Boxhagener Straße |
+| Lichtenberg | Sewanstraße, Volkradstraße, Rummelsburger Straße | Gudrunstraße, Rüdigerstraße, Landsberger Allee | Dorfstraße, Münsterlandstraße, Straße 3 |
+| Marzahn-Hellersdorf | Quedlinburger Straße, Kastanienallee, Cottbusser Straße | Hultschiner Damm, Pilgramer Straße, Lehnitzstraße | Hultschiner Damm, Akazienallee, Roedernstraße |
+| Mitte | Annenstraße, Fischerinsel, Neue Roßstraße | Wilhelmstraße, Luisenstraße, Brüsseler Straße | Französische Straße, Friedrichstraße, Cornelius-Fredericks-Straße |
+| Neukölln | Wutzkyallee, Hermannstraße, Aronsstraße | Buckower Damm, Buckower Damm; Karl-Marx-Straße, Schönefelder Straße | Seeadlerweg, Lieselotte-Berger-Straße, Treptower Straße |
+| Pankow | Wilhelmsruher Damm, Greifswalder Straße, Landsberger Allee | Schillingweg, Alt-Karow, Blankenburger Chaussee | Schönerlinder Straße, Blankenfelder Chaussee, Schillingweg |
+| Reinickendorf | Treuenbrietzener Straße, Wilhelmsruher Damm, Senftenberger Ring | Eichborndamm, Ruppiner Chaussee, Am Dachsbau | Alter Bernauer Heerweg, Am Dachsbau, Berliner Straße |
+| Spandau | Sandstraße, Heerstraße, Magistratsweg | Ritterfelddamm, Seekorso, Alt-Gatow | Maximilian-Kolbe-Straße, Am Landschaftspark Gatow, Aalemannufer |
 | Steglitz-Zehlendorf | Seydlitzstraße, Gallwitzallee, Osteweg | Finckensteinallee, Carstennstraße, Ringstraße | Ringstraße, Kommandantenstraße; Ringstraße, Baseler Straße |
-| Tempelhof-Schöneberg | Prellerweg, Friedenfelser Straße, Dudenstraße; Kolonnenbrücke; Kolonnenstraße | Lichtenrader Damm, Rathausstraße, Barnetstraße | Lessingstraße, Horstwalder Straße, Paplitzer Straße |
+| Tempelhof-Schöneberg | Prellerweg, Friedenfelser Straße, Hildburghauser Straße | Barnetstraße, Rathausstraße, Lankwitzer Straße | Horstwalder Straße, Lessingstraße, Paplitzer Straße |
 | Treptow-Köpenick | Dammweg, Kiefholzstraße, Rudower Chaussee | Wendenschloßstraße, Waldstraße, Möllhausenufer; Wendenschloßstraße | Waltersdorfer Straße, Ligusterweg, Heideweg |
 
 ## Phase 1 sanity check: reference streets per district
@@ -236,35 +236,35 @@ Median, over each district's reference streets, of the street's median percentil
 
 | District | Reference streets | Choice 800 m | Choice 800 m, length-weighted | Choice 2000 m | Choice 2000 m, length-weighted | NACH 2000 m | NAIN 2000 m |
 |---|---|---|---|---|---|---|---|
-| Charlottenburg-Wilmersdorf | 9 | 63.0 | 74.0 | 76.0 | 79.0 | 71.0 | 79.0 |
-| Friedrichshain-Kreuzberg | 9 | 70.0 | 75.0 | 80.0 | 83.0 | 81.0 | 76.0 |
-| Lichtenberg | 8 | 74.5 | 80.0 | 90.0 | 88.0 | 87.0 | 92.5 |
-| Marzahn-Hellersdorf | 8 | 79.5 | 77.5 | 87.5 | 79.0 | 82.5 | 60.0 |
-| Mitte | 12 | 71.0 | 80.5 | 88.5 | 91.5 | 87.5 | 87.0 |
-| Neukölln | 6 | 75.5 | 83.0 | 90.5 | 92.5 | 88.5 | 91.5 |
-| Pankow | 8 | 75.5 | 78.5 | 89.0 | 89.0 | 84.5 | 83.5 |
-| Reinickendorf | 7 | 74.0 | 85.0 | 91.0 | 94.0 | 90.0 | 93.0 |
-| Spandau | 7 | 87.0 | 87.0 | 94.0 | 94.0 | 90.0 | 88.0 |
-| Steglitz-Zehlendorf | 8 | 76.5 | 80.0 | 85.5 | 85.5 | 84.0 | 76.0 |
-| Tempelhof-Schöneberg | 7 | 69.0 | 75.0 | 88.0 | 91.0 | 82.0 | 69.0 |
-| Treptow-Köpenick | 8 | 74.5 | 77.0 | 90.0 | 92.5 | 88.5 | 74.0 |
+| Charlottenburg-Wilmersdorf | 9 | 63.0 | 77.0 | 76.0 | 82.0 | 74.0 | 79.0 |
+| Friedrichshain-Kreuzberg | 9 | 72.0 | 81.0 | 82.0 | 87.0 | 86.0 | 75.0 |
+| Lichtenberg | 8 | 72.5 | 79.5 | 90.0 | 88.0 | 87.5 | 93.5 |
+| Marzahn-Hellersdorf | 8 | 79.5 | 77.5 | 87.5 | 79.0 | 82.0 | 64.0 |
+| Mitte | 12 | 69.5 | 77.5 | 89.0 | 92.5 | 88.0 | 88.0 |
+| Neukölln | 6 | 78.0 | 83.5 | 91.0 | 93.5 | 90.0 | 92.5 |
+| Pankow | 8 | 74.5 | 78.0 | 87.0 | 87.5 | 84.5 | 83.0 |
+| Reinickendorf | 7 | 74.0 | 87.0 | 91.0 | 94.0 | 91.0 | 94.0 |
+| Spandau | 7 | 87.0 | 88.0 | 94.0 | 95.0 | 90.0 | 92.0 |
+| Steglitz-Zehlendorf | 8 | 77.0 | 81.0 | 86.5 | 87.5 | 85.5 | 77.5 |
+| Tempelhof-Schöneberg | 7 | 65.0 | 76.0 | 88.0 | 92.0 | 83.0 | 64.0 |
+| Treptow-Köpenick | 8 | 77.5 | 77.5 | 91.5 | 93.0 | 90.0 | 72.5 |
 
 ## Phase 1 sanity check: Friedrichshain-Kreuzberg reference streets in detail
 
 | Street | Provenance | Segments | Choice 2000 m | Choice 2000 m, length-weighted | NACH 2000 m | NAIN 2000 m |
 |---|---|---|---|---|---|---|
-| Frankfurter Allee | fixed in advance | 23 | 89.0 | 91.0 | 91.0 | 98.0 |
-| Karl-Marx-Allee | fixed in advance | 21 | 96.0 | 96.0 | 97.0 | 88.0 |
-| Warschauer Straße | fixed in advance | 13 | 75.0 | 79.0 | 78.0 | 78.0 |
-| Skalitzer Straße | fixed in advance | 26 | 63.0 | 66.0 | 64.0 | 53.0 |
-| Kottbusser Damm | fixed in advance | 11 | 83.0 | 89.0 | 81.0 | 44.0 |
-| Oranienstraße | fixed in advance | 32 | 94.0 | 93.0 | 93.0 | 85.0 |
-| Gneisenaustraße | fixed in advance | 18 | 80.0 | 81.0 | 82.0 | 76.0 |
-| Yorckstraße | fixed in advance | 21 | 71.0 | 72.0 | 70.0 | 67.0 |
-| Mehringdamm | fixed in advance | 16 | 80.0 | 83.0 | 80.0 | 66.0 |
-| Petersburger Straße | added after results | 15 | 77.0 | 80.0 | 76.0 | 83.0 |
-| Boxhagener Straße | added after results | 14 | 82.0 | 90.0 | 88.0 | 96.0 |
-| Revaler Straße | added after results | 16 | 77.0 | 86.0 | 85.0 | 83.0 |
+| Frankfurter Allee | fixed in advance | 23 | 90.0 | 91.0 | 91.0 | 98.0 |
+| Karl-Marx-Allee | fixed in advance | 21 | 96.0 | 95.0 | 97.0 | 89.0 |
+| Warschauer Straße | fixed in advance | 13 | 76.0 | 79.0 | 78.0 | 75.0 |
+| Skalitzer Straße | fixed in advance | 24 | 61.0 | 67.0 | 65.0 | 56.0 |
+| Kottbusser Damm | fixed in advance | 10 | 87.0 | 92.0 | 86.0 | 63.0 |
+| Oranienstraße | fixed in advance | 32 | 93.0 | 91.0 | 91.0 | 85.0 |
+| Gneisenaustraße | fixed in advance | 18 | 82.0 | 87.0 | 86.0 | 77.0 |
+| Yorckstraße | fixed in advance | 23 | 74.0 | 73.0 | 74.0 | 72.0 |
+| Mehringdamm | fixed in advance | 18 | 79.0 | 83.0 | 82.0 | 64.0 |
+| Petersburger Straße | added after results | 16 | 79.0 | 81.0 | 79.0 | 85.0 |
+| Boxhagener Straße | added after results | 15 | 81.0 | 89.0 | 88.0 | 95.0 |
+| Revaler Straße | added after results | 16 | 78.0 | 87.0 | 86.0 | 80.0 |
 
 ## Phase 1 check: pilot run (friedrichshain-kreuzberg + 2 km) against the citywide run
 
@@ -313,10 +313,10 @@ Walk time to transit against the measures of the nearest residential street segm
 
 | Measure | Walk to S- or U-Bahn | Walk to frequent stop, any mode |
 |---|---|---|
-| NAIN 800 | 0.042 | -0.004 |
-| NAIN 2000 | 0.043 | -0.141 |
-| NACH 800 | -0.108 | -0.144 |
-| NACH 2000 | -0.107 | -0.154 |
+| NAIN 800 | 0.043 | -0.002 |
+| NAIN 2000 | 0.042 | -0.14 |
+| NACH 800 | -0.108 | -0.143 |
+| NACH 2000 | -0.108 | -0.154 |
 | metric closeness 800 | -0.321 | -0.428 |
 
 ## Phase 3: Spearman correlation, Berlin, unit = Planungsräume
@@ -325,56 +325,56 @@ Walk time to transit against the measures of the nearest residential street segm
 
 | Measure | Walk to S- or U-Bahn | Walk to frequent stop, any mode |
 |---|---|---|
-| NAIN 800 | -0.095 | -0.043 |
-| NAIN 2000 | -0.078 | -0.133 |
-| NACH 800 | -0.377 | -0.264 |
-| NACH 2000 | -0.385 | -0.221 |
-| metric closeness 800 | -0.211 | -0.329 |
+| NAIN 800 | -0.093 | -0.037 |
+| NAIN 2000 | -0.072 | -0.12 |
+| NACH 800 | -0.374 | -0.266 |
+| NACH 2000 | -0.377 | -0.221 |
+| metric closeness 800 | -0.209 | -0.329 |
 
 ## Phase 3: Spearman correlation with the walk to S- or U-Bahn per district (unit = buildings)
 
 | District | NAIN 800 | NAIN 2000 | NACH 800 | NACH 2000 | metric closeness 800 |
 |---|---|---|---|---|---|
-| Charlottenburg-Wilmersdorf | -0.053 | -0.08 | -0.131 | -0.142 | -0.251 |
-| Friedrichshain-Kreuzberg | 0.031 | -0.018 | -0.143 | -0.125 | -0.344 |
-| Lichtenberg | 0.102 | 0.107 | -0.04 | -0.001 | -0.308 |
-| Marzahn-Hellersdorf | 0.412 | 0.61 | 0.073 | 0.139 | -0.322 |
-| Mitte | -0.057 | -0.159 | -0.066 | -0.115 | -0.298 |
-| Neukölln | -0.03 | -0.112 | -0.147 | -0.138 | -0.457 |
-| Pankow | -0.076 | -0.103 | -0.167 | -0.157 | -0.352 |
-| Reinickendorf | 0.067 | -0.113 | -0.07 | -0.089 | -0.379 |
-| Spandau | 0.039 | 0.022 | -0.082 | -0.073 | -0.316 |
-| Steglitz-Zehlendorf | -0.06 | 0.018 | -0.085 | -0.086 | 0.045 |
-| Tempelhof-Schöneberg | 0.014 | 0.088 | -0.084 | -0.106 | -0.115 |
-| Treptow-Köpenick | 0.079 | 0.11 | -0.098 | -0.094 | -0.362 |
+| Charlottenburg-Wilmersdorf | -0.059 | -0.088 | -0.131 | -0.143 | -0.252 |
+| Friedrichshain-Kreuzberg | 0.038 | -0.019 | -0.133 | -0.115 | -0.332 |
+| Lichtenberg | 0.104 | 0.123 | -0.042 | -0.001 | -0.308 |
+| Marzahn-Hellersdorf | 0.403 | 0.601 | 0.071 | 0.139 | -0.329 |
+| Mitte | -0.068 | -0.171 | -0.07 | -0.116 | -0.302 |
+| Neukölln | -0.029 | -0.115 | -0.148 | -0.141 | -0.458 |
+| Pankow | -0.079 | -0.119 | -0.17 | -0.161 | -0.357 |
+| Reinickendorf | 0.073 | -0.114 | -0.071 | -0.091 | -0.379 |
+| Spandau | 0.035 | 0.007 | -0.083 | -0.073 | -0.319 |
+| Steglitz-Zehlendorf | -0.051 | 0.033 | -0.084 | -0.085 | 0.045 |
+| Tempelhof-Schöneberg | 0.027 | 0.097 | -0.083 | -0.106 | -0.117 |
+| Treptow-Köpenick | 0.083 | 0.119 | -0.098 | -0.092 | -0.362 |
 
 ## Phase 3: divergence classes per Planungsraum
 
-Citywide thirds of the median walk to S- or U-Bahn (cuts 8.36 and 15.6 min) and of NAIN at 2000 m (cuts 0.6428 and 0.7189); `output/phase3/divergence_by_planungsraum.csv`. 331,872 buildings, median distance to their street segment 19.4 m.
+Citywide thirds of the median walk to S- or U-Bahn (cuts 8.36 and 15.6 min) and of NAIN at 2000 m (cuts 0.6434 and 0.7158); `output/phase3/divergence_by_planungsraum.csv`. 331,872 buildings, median distance to their street segment 19.4 m.
 
 | Class | Planungsräume | Residents |
 |---|---|---|
-| close to transit, segregated | 49 | 357,260 |
-| far from transit, integrated | 51 | 386,364 |
-| concordant | 124 | 877,193 |
-| middle | 313 | 2,292,715 |
+| close to transit, segregated | 53 | 380,371 |
+| far from transit, integrated | 52 | 396,648 |
+| concordant | 126 | 891,434 |
+| middle | 306 | 2,245,079 |
 
 ## Phase 3: divergent Planungsräume per district
 
 | District | close to transit, segregated | far from transit, integrated |
 |---|---|---|
 | Charlottenburg-Wilmersdorf | 8 | 3 |
-| Friedrichshain-Kreuzberg | 5 | 0 |
-| Lichtenberg | 4 | 1 |
+| Friedrichshain-Kreuzberg | 4 | 0 |
+| Lichtenberg | 7 | 1 |
 | Marzahn-Hellersdorf | 5 | 4 |
-| Mitte | 4 | 0 |
-| Neukölln | 11 | 5 |
-| Pankow | 0 | 16 |
-| Reinickendorf | 2 | 2 |
-| Spandau | 0 | 5 |
-| Steglitz-Zehlendorf | 0 | 4 |
-| Tempelhof-Schöneberg | 8 | 5 |
-| Treptow-Köpenick | 2 | 6 |
+| Mitte | 5 | 0 |
+| Neukölln | 10 | 5 |
+| Pankow | 0 | 15 |
+| Reinickendorf | 1 | 2 |
+| Spandau | 0 | 6 |
+| Steglitz-Zehlendorf | 1 | 4 |
+| Tempelhof-Schöneberg | 10 | 5 |
+| Treptow-Köpenick | 2 | 7 |
 
 ## GTFS stops per mode
 

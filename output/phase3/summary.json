@@ -9,20 +9,20 @@
       15.6
     ],
     "nain_2000": [
-      0.6428,
-      0.7189
+      0.6434,
+      0.7158
     ]
   },
   "planungsraeume_by_class": {
-    "middle": 313,
-    "concordant": 124,
-    "far from transit, integrated": 51,
-    "close to transit, segregated": 49
+    "middle": 306,
+    "concordant": 126,
+    "close to transit, segregated": 53,
+    "far from transit, integrated": 52
   },
   "residents_by_class": {
-    "close to transit, segregated": 357260.0,
-    "concordant": 877193.0,
-    "far from transit, integrated": 386364.0,
-    "middle": 2292715.0
+    "close to transit, segregated": 380371.0,
+    "concordant": 891434.0,
+    "far from transit, integrated": 396648.0,
+    "middle": 2245079.0
   }
 }
