@@ -29,7 +29,8 @@ def test_segment_pipeline_on_sample():
     n = sg.centralities(D, distances=[400])
     live = n[n["live"]]
     assert 0 < len(live) < len(n)
-    for c in ("cc_harmonic_400_ang", "cc_betweenness_400_ang", "cc_harmonic_400", "nain_400", "nach_400"):
+    for c in ("cc_harmonic_400_ang", "cc_betweenness_400_ang", "cc_betweenness_400_ang_lw", "cc_harmonic_400",
+              "nain_400", "nach_400"):
         assert c in n.columns
     assert np.isfinite(live["nain_400"]).all() and (live["nain_400"] >= 0).all()
     names = sg.segment_names(G, n)
@@ -47,3 +48,20 @@ def test_residential_frontage():
     f = sg.residential_frontage(segs, blds, buffer_m=50)
     assert f["residential"].tolist() == [True, False]  # shed-like building (0 residents) does not count
     assert f.loc["a_b_k0", "residents_nearby"] == 10.0
+
+
+def test_length_weighted_choice_on_chain():
+    import networkx as nx
+    from pyproj import CRS as PCRS
+    from shapely.geometry import LineString
+
+    G = nx.MultiGraph()
+    G.graph["crs"] = PCRS(32633)
+    pts = {"a": (0, 0), "b": (100, 0), "c": (150, 0), "d": (450, 0)}  # segments 100, 50, 300 m
+    for k, (x, y) in pts.items():
+        G.add_node(k, x=x, y=y)
+    for u, v in [("a", "b"), ("b", "c"), ("c", "d")]:
+        G.add_edge(u, v, geom=LineString([pts[u], pts[v]]))
+    n = sg.centralities(graphs.nx_to_dual(G), distances=[1000])
+    assert n.loc["b_c_k0", "cc_betweenness_1000_ang"] == 1  # one route through the middle
+    assert n.loc["b_c_k0", "cc_betweenness_1000_ang_lw"] == 100 * 300  # weighted by end lengths

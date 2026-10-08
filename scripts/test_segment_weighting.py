@@ -28,16 +28,8 @@ import _bootstrap  # noqa: F401
 from berlin_access import segments as sg
 from berlin_access.config import load_config
 from berlin_access.pipeline import load_lor
+from berlin_access.reference_streets import REFERENCE_STREETS
 
-# Fixed before looking at any weighted or unweighted Mitte results: main
-# streets of the historic centre, Wedding and Moabit.
-REFERENCE_STREETS = {
-    "Mitte": [
-        "friedrichstraße", "unter den linden", "leipziger straße", "torstraße", "karl-liebknecht-straße",
-        "invalidenstraße", "brunnenstraße", "müllerstraße", "turmstraße", "alt-moabit",
-        "rosenthaler straße", "badstraße",
-    ],
-}
 RADII = [800, 2000]
 
 

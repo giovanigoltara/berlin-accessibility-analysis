@@ -478,3 +478,34 @@ Results (`output/segments_mitte_weighting_{summary,test,top10}.csv`):
 - Lesson for checks: a top-10 list of street maxima is driven by single
   segments and is a fragile sanity check; median percentiles of reference
   streets are more robust.
+
+## Decision: length-weighted choice as an extra measure; reference streets for every district
+
+1. **Measures.** The unweighted angular measures stay the main ones, because
+   NAIN and NACH are defined on them and that keeps results comparable with
+   the Space Syntax literature. Length-weighted angular choice
+   (`cc_betweenness_<r>_ang_lw`, origin length x destination length per
+   route) is added to every run as a supplementary column.
+2. **Sanity check.** Top-10 lists of street maxima are driven by single
+   segments and proved fragile (Mitte test above). The check is now the
+   median percentile of reference streets, for all 12 districts. Lists are
+   in `src/berlin_access/reference_streets.py` with their provenance:
+   Friedrichshain-Kreuzberg and Mitte were fixed before their results; the
+   other ten were drafted on 2026-10-08 from general knowledge of Berlin, but
+   *after* each district's top-three streets from the citywide run had been
+   shown in the README. Streets that appeared in those top-three lists
+   (Sonnenallee, Hermannstraße, Greifswalder Straße, Wilhelmsruher Damm,
+   Heerstraße, Lichtenrader Damm) and the three Friedrichshain-Kreuzberg
+   streets added after the pilot are flagged and excluded from the
+   per-district summary in the README.
+
+Results of the reference-street check after the rerun with length-weighted
+choice (README table "reference streets per district", from
+`output/segments_berlin_main_streets.csv`, streets fixed in advance only):
+the median percentile of reference streets on angular choice at 2000 m is
+between 76 (Charlottenburg-Wilmersdorf) and 94 (Spandau). Length weighting
+raises it at 800 m in 10 of 12 districts (unchanged in Spandau, lower in
+Marzahn-Hellersdorf) and at 2000 m in 7 (unchanged in 3, lower in
+Marzahn-Hellersdorf and Lichtenberg). Weakest reference streets:
+Wilmersdorfer Straße (53rd percentile) and Alt-Tegel (52nd), both largely
+pedestrian shopping zones.

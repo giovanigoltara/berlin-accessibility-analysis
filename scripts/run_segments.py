@@ -36,6 +36,7 @@ import _bootstrap  # noqa: F401, E402
 
 from berlin_access import segments as sg  # noqa: E402
 from berlin_access.config import load_config  # noqa: E402
+from berlin_access.reference_streets import ADDED_AFTER_RESULTS, REFERENCE_STREETS, SEEN  # noqa: E402
 from berlin_access.pipeline import load_lor  # noqa: E402
 
 SURFACE = "#fcfcfb"
@@ -45,19 +46,6 @@ CONTEXT = "#d9d8d3"
 RAMP = ["#86b6ef", "#5598e7", "#2a78d6", "#1c5cab", "#0d366b"]  # validated ordinal ramp, see make_maps.py
 WIDTHS = [0.35, 0.55, 0.8, 1.2, 1.8]
 
-# Streets expected to be among the most central, for the sanity check
-# (lower-case OSM names): the main arterials and shopping streets of each pilot
-# district. Frankfurter Allee, Kottbusser Damm and Oranienstraße come from the
-# project brief; Karl-Marx-Allee, Warschauer, Skalitzer, Gneisenau-, Yorckstraße
-# and Mehringdamm were named before the first run; Petersburger, Boxhagener and
-# Revaler Straße were added after it.
-MAIN_STREETS = {
-    "Friedrichshain-Kreuzberg": [
-        "frankfurter allee", "karl-marx-allee", "warschauer straße", "skalitzer straße", "kottbusser damm",
-        "oranienstraße", "gneisenaustraße", "yorckstraße", "mehringdamm", "petersburger straße",
-        "boxhagener straße", "revaler straße",
-    ],
-}
 
 
 def log(msg):
@@ -197,12 +185,15 @@ def main():
                     top_rows.append({"district": dname, "radius_m": r, "measure": measure, "rank": rank,
                                      "street": street, "value": round(value, 4)})
         # Where known main streets rank: median percentile of their segments in the district.
-        for street in MAIN_STREETS.get(dname, []):
+        for street in REFERENCE_STREETS.get(dname, []):
             x = g["street"].fillna("").str.contains(street, regex=False)
-            row = {"district": dname, "street": street, "segments": int(x.sum()),
+            provenance = ("seen in top three" if (dname, street) in SEEN
+                          else "added after results" if (dname, street) in ADDED_AFTER_RESULTS else "fixed in advance")
+            row = {"district": dname, "street": street, "provenance": provenance, "segments": int(x.sum()),
                    "length_m": round(float(g.loc[x, "length_m"].sum()), 0)}
             for r in (800, 2000):
-                for label, col in (("choice", f"cc_betweenness_{r}_ang"), ("nach", f"nach_{r}"), ("nain", f"nain_{r}")):
+                for label, col in (("choice", f"cc_betweenness_{r}_ang"), ("choice_lw", f"cc_betweenness_{r}_ang_lw"),
+                                   ("nach", f"nach_{r}"), ("nain", f"nain_{r}")):
                     row[f"{label}_{r}_pct"] = round(float(g[col].rank(pct=True)[x].median()), 2) if x.any() else None
             main_rows.append(row)
         n_live = meta["live_segments_by_district"].get(dname, 0)

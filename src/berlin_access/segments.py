@@ -199,6 +199,16 @@ def centralities(G_dual: nx.MultiGraph, distances=DISTANCES) -> gpd.GeoDataFrame
         betweenness={"betweenness": "1"},
         postprocess={},
     )
+    # Segment-length-weighted angular choice: each route counts with origin
+    # length x destination length, so many short segments (path fragments)
+    # do not outweigh long streets. Computed on a copy because cityseer would
+    # otherwise overwrite the unweighted columns of the same name.
+    weighted = networks.centrality_simplest(
+        ns, nodes_gdf[["ns_node_idx", "x", "y", "live", "weight", "primal_edge"]].copy(), distances=distances,
+        closeness={}, betweenness={"betweenness": "1"}, postprocess={}, segment_weighted=True,
+    )
+    for d in distances:
+        nodes_gdf[f"cc_betweenness_{d}_ang_lw"] = weighted[f"cc_betweenness_{d}_ang"]
     nodes_gdf = networks.centrality_shortest(
         ns, nodes_gdf, distances=distances,
         closeness={"density": "1", "farness": "c", "harmonic": "1 / c"},

@@ -301,24 +301,41 @@ A street's value is its highest segment; full top-10 lists in `output/segments_b
 | Tempelhof-Schöneberg | Prellerweg, Friedenfelser Straße, Dudenstraße; Kolonnenbrücke; Kolonnenstraße | Lichtenrader Damm, Rathausstraße, Barnetstraße | Lessingstraße, Horstwalder Straße, Paplitzer Straße |
 | Treptow-Köpenick | Dammweg, Kiefholzstraße, Rudower Chaussee | Wendenschloßstraße, Waldstraße, Möllhausenufer; Wendenschloßstraße | Waltersdorfer Straße, Ligusterweg, Heideweg |
 
-#### Phase 1 sanity check: where known main streets rank
+#### Phase 1 sanity check: reference streets per district
 
-Median percentile of each street's segments among the residential segments of its district (100 = most central).
+Median, over each district's reference streets, of the street's median percentile among the district's residential segments (100 = most central). Only streets named before seeing results for that district are included; lists and their provenance are in `src/berlin_access/reference_streets.py`, per-street values in `output/segments_berlin_main_streets.csv`.
 
-| District | Street | Segments | Choice 800 m | Choice 2000 m | NACH 2000 m | NAIN 2000 m |
+| District | Reference streets | Choice 800 m | Choice 800 m, length-weighted | Choice 2000 m | Choice 2000 m, length-weighted | NACH 2000 m | NAIN 2000 m |
+|---|---|---|---|---|---|---|---|
+| Charlottenburg-Wilmersdorf | 9 | 63.0 | 74.0 | 76.0 | 79.0 | 71.0 | 79.0 |
+| Friedrichshain-Kreuzberg | 9 | 70.0 | 75.0 | 80.0 | 83.0 | 81.0 | 76.0 |
+| Lichtenberg | 8 | 74.5 | 80.0 | 90.0 | 88.0 | 87.0 | 92.5 |
+| Marzahn-Hellersdorf | 8 | 79.5 | 77.5 | 87.5 | 79.0 | 82.5 | 60.0 |
+| Mitte | 12 | 71.0 | 80.5 | 88.5 | 91.5 | 87.5 | 87.0 |
+| Neukölln | 6 | 75.5 | 83.0 | 90.5 | 92.5 | 88.5 | 91.5 |
+| Pankow | 8 | 75.5 | 78.5 | 89.0 | 89.0 | 84.5 | 83.5 |
+| Reinickendorf | 7 | 74.0 | 85.0 | 91.0 | 94.0 | 90.0 | 93.0 |
+| Spandau | 7 | 87.0 | 87.0 | 94.0 | 94.0 | 90.0 | 88.0 |
+| Steglitz-Zehlendorf | 8 | 76.5 | 80.0 | 85.5 | 85.5 | 84.0 | 76.0 |
+| Tempelhof-Schöneberg | 7 | 69.0 | 75.0 | 88.0 | 91.0 | 82.0 | 69.0 |
+| Treptow-Köpenick | 8 | 74.5 | 77.0 | 90.0 | 92.5 | 88.5 | 74.0 |
+
+#### Phase 1 sanity check: Friedrichshain-Kreuzberg reference streets in detail
+
+| Street | Provenance | Segments | Choice 2000 m | Choice 2000 m, length-weighted | NACH 2000 m | NAIN 2000 m |
 |---|---|---|---|---|---|---|
-| Friedrichshain-Kreuzberg | Frankfurter Allee | 23 | 75.0 | 89.0 | 91.0 | 98.0 |
-| Friedrichshain-Kreuzberg | Karl-Marx-Allee | 21 | 86.0 | 96.0 | 97.0 | 88.0 |
-| Friedrichshain-Kreuzberg | Warschauer Straße | 13 | 49.0 | 75.0 | 78.0 | 78.0 |
-| Friedrichshain-Kreuzberg | Skalitzer Straße | 26 | 62.0 | 63.0 | 64.0 | 53.0 |
-| Friedrichshain-Kreuzberg | Kottbusser Damm | 11 | 63.0 | 83.0 | 81.0 | 44.0 |
-| Friedrichshain-Kreuzberg | Oranienstraße | 32 | 93.0 | 94.0 | 93.0 | 85.0 |
-| Friedrichshain-Kreuzberg | Gneisenaustraße | 18 | 63.0 | 80.0 | 82.0 | 76.0 |
-| Friedrichshain-Kreuzberg | Yorckstraße | 21 | 79.0 | 71.0 | 70.0 | 67.0 |
-| Friedrichshain-Kreuzberg | Mehringdamm | 16 | 70.0 | 80.0 | 80.0 | 66.0 |
-| Friedrichshain-Kreuzberg | Petersburger Straße | 15 | 45.0 | 77.0 | 76.0 | 83.0 |
-| Friedrichshain-Kreuzberg | Boxhagener Straße | 14 | 64.0 | 82.0 | 88.0 | 96.0 |
-| Friedrichshain-Kreuzberg | Revaler Straße | 16 | 65.0 | 77.0 | 85.0 | 83.0 |
+| Frankfurter Allee | fixed in advance | 23 | 89.0 | 91.0 | 91.0 | 98.0 |
+| Karl-Marx-Allee | fixed in advance | 21 | 96.0 | 96.0 | 97.0 | 88.0 |
+| Warschauer Straße | fixed in advance | 13 | 75.0 | 79.0 | 78.0 | 78.0 |
+| Skalitzer Straße | fixed in advance | 26 | 63.0 | 66.0 | 64.0 | 53.0 |
+| Kottbusser Damm | fixed in advance | 11 | 83.0 | 89.0 | 81.0 | 44.0 |
+| Oranienstraße | fixed in advance | 32 | 94.0 | 93.0 | 93.0 | 85.0 |
+| Gneisenaustraße | fixed in advance | 18 | 80.0 | 81.0 | 82.0 | 76.0 |
+| Yorckstraße | fixed in advance | 21 | 71.0 | 72.0 | 70.0 | 67.0 |
+| Mehringdamm | fixed in advance | 16 | 80.0 | 83.0 | 80.0 | 66.0 |
+| Petersburger Straße | added after results | 15 | 77.0 | 80.0 | 76.0 | 83.0 |
+| Boxhagener Straße | added after results | 14 | 82.0 | 90.0 | 88.0 | 96.0 |
+| Revaler Straße | added after results | 16 | 77.0 | 86.0 | 85.0 | 83.0 |
 
 #### Phase 1 check: pilot run (friedrichshain-kreuzberg + 2 km) against the citywide run
 
@@ -445,11 +462,18 @@ All measures per segment: `python scripts/run_segments.py --district Berlin` wri
   several outer districts (sparse, straight track grids). Forestry tracks are now
   removed from the network and only residential streets are reported; those forest
   rides no longer appear in the rankings.
-- *Still open:* in the outer districts the top integration streets are often the
-  long main roads of low-density areas (e.g. Groß-Ziethener Chaussee, Alt-Karow), and
-  angular choice in Mitte is led by Annenstraße and Fischerinsel rather than the
-  historic main streets. Not yet investigated; read outer-district and Mitte rankings
-  with care.
+- *Reference streets, all districts:* each district's main streets, named before
+  seeing that district's results, rank high: their median percentile on angular
+  choice at 2000 m is between 76 (Charlottenburg-Wilmersdorf) and 94 (Spandau)
+  (table "reference streets per district" above). The clearest misses are two
+  largely pedestrian shopping streets, Wilmersdorfer Straße and Alt-Tegel.
+- *Top-10 lists are fragile:* they rank streets by their single best segment. In
+  Mitte, Annenstraße and Fischerinsel top choice at 2000 m because they form the
+  straightest route over the Spree via the Roßstraßenbrücke, with or without length
+  weighting (diagnostic map `output/maps/diagnostic_mitte_fischerinsel_choice_2000.png`).
+- *Length-weighted choice* (each route counted by the lengths of its end segments) is
+  reported alongside the standard unweighted measures; it raises the reference
+  streets slightly in most districts, mainly at 800 m.
 
 ## Changes from the first version (v0)
 
@@ -481,8 +505,8 @@ earlier README did not come from the code at all and has been removed.
 
 ## Next steps
 
-- **Phase 1:** computed for all districts on residential streets; open questions on
-  outer-district and Mitte rankings (see Checks above).
+- **Phase 1:** computed for all districts on residential streets and checked against
+  reference streets; next, Phase 2 (Place Syntax Tool inputs).
 - **Phase 2:** Place Syntax Tool inputs (QGIS GeoPackage) and a Python cross-check of
   attraction reach.
 - **Phase 3:** per-building comparison of metric walk time and configurational

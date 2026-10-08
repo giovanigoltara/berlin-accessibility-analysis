@@ -189,16 +189,39 @@ def build(cfg) -> str:
         ms = out / f"segments_{seg_name}_main_streets.csv"
         if ms.exists():
             m = pd.read_csv(ms)
+            pct = lambda c: m[c].map(lambda x: fmt(100 * x))  # noqa: E731
+            if "provenance" in m:
+                # Summary: median over each district's reference streets fixed in advance.
+                fixed = m[m["provenance"] == "fixed in advance"]
+                summ = fixed.groupby("district").agg(
+                    streets=("street", "size"),
+                    choice_800=("choice_800_pct", "median"), choice_lw_800=("choice_lw_800_pct", "median"),
+                    choice_2000=("choice_2000_pct", "median"), choice_lw_2000=("choice_lw_2000_pct", "median"),
+                    nach_2000=("nach_2000_pct", "median"), nain_2000=("nain_2000_pct", "median"),
+                ).reset_index()
+                tbl = pd.DataFrame({"District": summ["district"], "Reference streets": summ["streets"]})
+                for c, label in (("choice_800", "Choice 800 m"), ("choice_lw_800", "Choice 800 m, length-weighted"),
+                                 ("choice_2000", "Choice 2000 m"), ("choice_lw_2000", "Choice 2000 m, length-weighted"),
+                                 ("nach_2000", "NACH 2000 m"), ("nain_2000", "NAIN 2000 m")):
+                    tbl[label] = summ[c].map(lambda x: fmt(100 * x))
+                parts.append(
+                    "#### Phase 1 sanity check: reference streets per district\n\n"
+                    "Median, over each district's reference streets, of the street's median percentile among the "
+                    "district's residential segments (100 = most central). Only streets named before seeing results "
+                    "for that district are included; lists and their provenance are in "
+                    "`src/berlin_access/reference_streets.py`, per-street values in "
+                    f"`output/segments_{seg_name}_main_streets.csv`.\n\n" + md_table(tbl))
             tbl = pd.DataFrame({
-                "District": m["district"], "Street": m["street"].str.title(), "Segments": m["segments"],
-                "Choice 800 m": m["choice_800_pct"].map(lambda x: fmt(100 * x)),
-                "Choice 2000 m": m["choice_2000_pct"].map(lambda x: fmt(100 * x)),
-                "NACH 2000 m": m["nach_2000_pct"].map(lambda x: fmt(100 * x)),
-                "NAIN 2000 m": m["nain_2000_pct"].map(lambda x: fmt(100 * x)),
+                "District": m["district"], "Street": m["street"].str.title(),
+                "Provenance": m["provenance"] if "provenance" in m else "",
+                "Segments": m["segments"],
+                "Choice 2000 m": pct("choice_2000_pct"),
+                "Choice 2000 m, length-weighted": pct("choice_lw_2000_pct") if "choice_lw_2000_pct" in m else "",
+                "NACH 2000 m": pct("nach_2000_pct"), "NAIN 2000 m": pct("nain_2000_pct"),
             })
-            parts.append("#### Phase 1 sanity check: where known main streets rank\n\n"
-                         "Median percentile of each street's segments among the residential segments of its "
-                         "district (100 = most central).\n\n" + md_table(tbl))
+            tbl = tbl[tbl["District"] == "Friedrichshain-Kreuzberg"]
+            parts.append("#### Phase 1 sanity check: Friedrichshain-Kreuzberg reference streets in detail\n\n"
+                         + md_table(tbl.drop(columns="District")))
         for cmp_csv in sorted(out.glob("segments_*_vs_berlin.csv")):
             c = pd.read_csv(cmp_csv)
             c = c[c["radius_m"].isin([800, 2000])]
