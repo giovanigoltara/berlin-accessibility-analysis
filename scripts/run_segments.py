@@ -174,7 +174,8 @@ def main():
     meta["segments_reported_by_district"] = seg["district"].value_counts().sort_index().to_dict()
     meta["live_segments_by_district"] = n.loc[live.index, "district"].value_counts().sort_index().to_dict()
 
-    measures = [c for c in seg.columns if c.startswith(("cc_", "nain_", "nach_"))]
+    # sorted: the column order cityseer returns varies between runs
+    measures = sorted(c for c in seg.columns if c.startswith(("cc_", "nain_", "nach_")))
     seg[measures].describe(percentiles=[0.1, 0.5, 0.9]).T.round(4).to_csv(out / f"segments_{name}_summary.csv")
 
     top_rows, main_rows, dist_rows = [], [], []
