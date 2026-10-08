@@ -376,6 +376,7 @@ PST 3.3.2 run in QGIS 4.2.3 on the exported inputs; `scripts/compare_pst_results
 | PST column | Python column | Homes | Same 'none within radius' status | Homes with a station in reach | Within 1 m | Median / max difference (m) | Spearman |
 |---|---|---|---|---|---|---|---|
 | ADww800st | dist_su | 9,564 | 100.0% | 8,012 | 100.0% | 0.025 / 0.12 | 1.0 |
+| ARw800st | reach_su_800 | 9,564 |  |  | identical count: 100.0% | median difference 0.0 | 1.0 |
 
 #### GTFS stops per mode
 
@@ -506,7 +507,9 @@ The inputs for the Friedrichshain-Kreuzberg pilot are in
 buildings as origins, stations with 0/1 columns per mode and frequency, unlink points).
 A Python cross-check computes the same walking-distance reach and distance
 (`output/pst/python_reach_friedrichshain-kreuzberg*.csv`), and
-`scripts/compare_pst_results.py` compares it with PST's output once PST has been run.
+`scripts/compare_pst_results.py` compares it with PST's output: PST run in QGIS gives
+the same attraction distance (within 1 m) and the same attraction reach for every one of
+the pilot's 9,564 residential buildings.
 Summary in the Results section above.
 
 ## Changes from the first version (v0)
@@ -541,8 +544,10 @@ earlier README did not come from the code at all and has been removed.
 
 - **Phase 1:** computed for all districts on residential streets and checked against
   reference streets.
-- **Phase 2:** inputs and Python cross-check ready for Friedrichshain-Kreuzberg; next,
-  run PST in QGIS and compare (`docs/pst_howto.md`).
+- **Phase 2:** done for Friedrichshain-Kreuzberg; PST's attraction distance and
+  attraction reach are reproduced exactly by the Python cross-check (see Results).
+- **Phase 3:** per-building comparison of walk time to transit with the centrality of
+  the nearest street segment.
 - **Phase 2:** Place Syntax Tool inputs (QGIS GeoPackage) and a Python cross-check of
   attraction reach.
 - **Phase 3:** per-building comparison of metric walk time and configurational

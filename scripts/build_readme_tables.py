@@ -263,9 +263,17 @@ def build(cfg) -> str:
                 rows.append({
                     "PST column": r.pst_column, "Python column": r.python_column, "Homes": f"{r.rows_matched:,}",
                     "Same 'none within radius' status": fmt(r.share_same_within_radius_status, pct=True),
-                    "Homes with a station in reach": f"{r.both_within_radius:,}",
+                    "Homes with a station in reach": f"{int(r.both_within_radius):,}",
                     "Within 1 m": fmt(r.share_within_1m, pct=True),
                     "Median / max difference (m)": f"{r.median_abs_diff_m} / {r.max_abs_diff_m}",
+                    "Spearman": r.spearman,
+                })
+            else:
+                rows.append({
+                    "PST column": r.pst_column, "Python column": r.python_column, "Homes": f"{r.rows_matched:,}",
+                    "Same 'none within radius' status": "", "Homes with a station in reach": "",
+                    "Within 1 m": f"identical count: {fmt(r.share_equal, pct=True)}",
+                    "Median / max difference (m)": f"median difference {r.median_abs_diff}",
                     "Spearman": r.spearman,
                 })
         if rows:

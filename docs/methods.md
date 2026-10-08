@@ -576,5 +576,9 @@ not reachable from the build environment.
   buildings (1,552 with none within 800 m). For the 8,012 with a station in
   reach, all distances agree within 1 m (median absolute difference 0.025 m,
   maximum 0.12 m, Spearman 1.0). The Python cross-check therefore
-  reproduces PST's attraction distance on this network. Attraction Reach
-  (counts) has not been run in PST yet.
+  reproduces PST's attraction distance on this network.
+  Attraction Reach was then run in PST as well (walking distance 800 m,
+  attractions weighted by `su`, output `ARw800st`, same file): the station
+  count equals the Python `reach_su_800` for all 9,564 buildings (0 of 9,564
+  differ; 1,552 / 4,226 / 3,072 / 638 / 76 buildings with 0 / 1 / 2 / 3 / 4
+  stations within 800 m). Both PST measures are reproduced exactly.
