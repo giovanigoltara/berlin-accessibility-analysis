@@ -32,24 +32,50 @@ if __name__ == "__main__":
     ap.add_argument("--layer", default="origins")
     ap.add_argument("--district", default="Friedrichshain-Kreuzberg")
     ap.add_argument("--map", action="append", required=True, help="PST_COLUMN=python_column")
+    ap.add_argument("--radius", type=float, default=None,
+                    help="radius used in PST for distance columns: PST writes -1 where nothing is within it")
     args = ap.parse_args()
     cfg = load_config()
     name = re.sub(r"[^a-z0-9]+", "-", args.district.lower()).strip("-")
     py = pd.read_csv(cfg.path("output") / "pst" / f"python_reach_{name}.csv")
-    ps = gpd.read_file(args.pst, layer=args.layer)
+    import pyogrio
+
+    layers = [lyr[0] for lyr in pyogrio.list_layers(args.pst)]
+    layer = args.layer if args.layer in layers else layers[0]  # QGIS export may rename the layer
+    ps = gpd.read_file(args.pst, layer=layer)
     m = ps.drop(columns="geometry").merge(py, on="osm_id", how="inner", suffixes=("_pst", ""))
     rows = []
     for pair in args.map:
         pcol, ycol = pair.split("=", 1)
         x = pd.to_numeric(m[pcol], errors="coerce").to_numpy(float)
         y = m[ycol].to_numpy(float)
-        ok = np.isfinite(x) & np.isfinite(y)
-        rows.append({
-            "pst_column": pcol, "python_column": ycol, "rows_matched": int(ok.sum()),
-            "share_equal": round(float(np.mean(np.isclose(x[ok], y[ok], atol=0.5))), 3),
-            "median_abs_diff": round(float(np.median(np.abs(x[ok] - y[ok]))), 2),
-            "spearman": round(float(spearmanr(x[ok], y[ok]).statistic), 3) if ok.sum() > 2 else None,
-        })
+        row = {"pst_column": pcol, "python_column": ycol, "rows_matched": int(len(m))}
+        if ycol.startswith("dist_"):
+            # Distance: PST writes -1 where no destination is within its radius;
+            # the Python value counts as "none" if it is beyond that radius.
+            r = args.radius if args.radius is not None else np.inf
+            px_none = x < 0
+            py_none = ~np.isfinite(y) | (y > r)
+            both = ~px_none & ~py_none
+            d = np.abs(x[both] - y[both])
+            row.update({
+                "pst_none_within_radius": int(px_none.sum()),
+                "python_none_within_radius": int(py_none.sum()),
+                "share_same_within_radius_status": round(float(np.mean(px_none == py_none)), 4),
+                "both_within_radius": int(both.sum()),
+                "share_within_1m": round(float(np.mean(d <= 1.0)), 4) if both.any() else None,
+                "median_abs_diff_m": round(float(np.median(d)), 3) if both.any() else None,
+                "max_abs_diff_m": round(float(d.max()), 2) if both.any() else None,
+                "spearman": round(float(spearmanr(x[both], y[both]).statistic), 4) if both.sum() > 2 else None,
+            })
+        else:
+            ok = np.isfinite(x) & np.isfinite(y)
+            row.update({
+                "share_equal": round(float(np.mean(np.isclose(x[ok], y[ok], atol=0.5))), 4),
+                "median_abs_diff": round(float(np.median(np.abs(x[ok] - y[ok]))), 3),
+                "spearman": round(float(spearmanr(x[ok], y[ok]).statistic), 4) if ok.sum() > 2 else None,
+            })
+        rows.append(row)
     res = pd.DataFrame(rows)
     res.to_csv(cfg.path("output") / "pst" / f"pst_vs_python_{name}.csv", index=False)
     print(res.to_string(index=False))

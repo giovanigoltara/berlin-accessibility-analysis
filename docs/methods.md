@@ -563,3 +563,18 @@ not reachable from the build environment.
   where two lines share an end point and cross elsewhere (20 such points in
   the pilot), which would have cut real junctions. Now only intersections
   that are not a shared end point of both lines are unlinks (86 points).
+
+- **PST run and comparison (pilot).** The project owner ran PST 3.3.2 in
+  QGIS 4.2.3 (macOS) on `pst_inputs_friedrichshain-kreuzberg.gpkg`:
+  Attraction Distance, walking distance, radius 800 m, destinations with
+  `su` = 1 (S- or U-Bahn stations), output `ADww800st`
+  (`output/pst/pst_results_friedrichshain-kreuzberg.gpkg`).
+  `scripts/compare_pst_results.py --map ADww800st=dist_su --radius 800`
+  (`output/pst/pst_vs_python_friedrichshain-kreuzberg.csv`): PST writes -1
+  where no station is within the radius; the Python value counts as "none"
+  beyond 800 m. Both agree on that status for all 9,564 residential
+  buildings (1,552 with none within 800 m). For the 8,012 with a station in
+  reach, all distances agree within 1 m (median absolute difference 0.025 m,
+  maximum 0.12 m, Spearman 1.0). The Python cross-check therefore
+  reproduces PST's attraction distance on this network. Attraction Reach
+  (counts) has not been run in PST yet.

@@ -132,7 +132,10 @@ python scripts/compare_pst_results.py \
     --map ARw800anyf=reach_anyf_800 --map ADwsu=dist_su
 ```
 
-(Replace the PST column names with the ones in the attribute table.)
+(Replace the PST column names with the ones in the attribute table. For
+Attraction Distance columns add `--radius 800` (the radius used in PST),
+because PST writes -1 where nothing is within the radius. If QGIS renamed the
+layer on export, the script uses the file's only layer.)
 Python columns in `output/pst/python_reach_friedrichshain-kreuzberg.csv`:
 `reach_<col>_400`, `reach_<col>_800` and `dist_<col>` for `<col>` in
 `sb, ub, tr, bu, rb, su, anyf`. The result goes to

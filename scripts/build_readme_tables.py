@@ -255,6 +255,24 @@ def build(cfg) -> str:
                      "Walking distance on the Phase 1 segment map, points joined to their closest line as in PST. "
                      "PST itself is run by hand in QGIS (`docs/pst_howto.md`).\n\n" + md_table(pd.DataFrame(rows)))
 
+    for vs in sorted((out / "pst").glob("pst_vs_python_*.csv")):
+        v = pd.read_csv(vs)
+        rows = []
+        for r in v.itertuples(index=False):
+            if str(r.python_column).startswith("dist_"):
+                rows.append({
+                    "PST column": r.pst_column, "Python column": r.python_column, "Homes": f"{r.rows_matched:,}",
+                    "Same 'none within radius' status": fmt(r.share_same_within_radius_status, pct=True),
+                    "Homes with a station in reach": f"{r.both_within_radius:,}",
+                    "Within 1 m": fmt(r.share_within_1m, pct=True),
+                    "Median / max difference (m)": f"{r.median_abs_diff_m} / {r.max_abs_diff_m}",
+                    "Spearman": r.spearman,
+                })
+        if rows:
+            parts.append("#### Phase 2: Place Syntax Tool against the Python cross-check\n\n"
+                         "PST 3.3.2 run in QGIS 4.2.3 on the exported inputs; `scripts/compare_pst_results.py`.\n\n"
+                         + md_table(pd.DataFrame(rows)))
+
     stops_csv = out / "stops_by_mode.csv"
     if stops_csv.exists():
         st = pd.read_csv(stops_csv).set_index("mode").reindex(cfg["modes"]).reset_index()

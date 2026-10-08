@@ -369,6 +369,14 @@ Walking distance on the Phase 1 segment map, points joined to their closest line
 | Residents without a frequent stop of any mode within 400 m walk | 29.9% |
 | Check: median walk to S/U station, segment map vs Phase 0 network (m) | 553.1 vs 551.1 (Spearman 0.899) |
 
+#### Phase 2: Place Syntax Tool against the Python cross-check
+
+PST 3.3.2 run in QGIS 4.2.3 on the exported inputs; `scripts/compare_pst_results.py`.
+
+| PST column | Python column | Homes | Same 'none within radius' status | Homes with a station in reach | Within 1 m | Median / max difference (m) | Spearman |
+|---|---|---|---|---|---|---|---|
+| ADww800st | dist_su | 9,564 | 100.0% | 8,012 | 100.0% | 0.025 / 0.12 | 1.0 |
+
 #### GTFS stops per mode
 
 | mode | stops_inside_berlin | stops_outside_within_sensitivity_buffer | stops_dropped_snap | stops_used | snap_m_median |
