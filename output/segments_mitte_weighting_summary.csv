@@ -1,0 +1,8 @@
+,value
+segments_live,9293.0
+segments_residential,7152.0
+median_segment_m_residential,50.8
+spearman_choice_800,0.955
+spearman_harmonic_800,0.892
+spearman_choice_2000,0.986
+spearman_harmonic_2000,0.972

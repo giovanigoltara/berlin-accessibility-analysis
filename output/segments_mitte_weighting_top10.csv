@@ -1,0 +1,41 @@
+radius_m,choice,rank,street,median_segment_m
+800,unweighted,1,luisenstraße,72.4
+800,unweighted,2,charitéplatz,24.5
+800,unweighted,3,schumannstraße,58.5
+800,unweighted,4,annenstraße,46.6
+800,unweighted,5,ostring,49.1
+800,unweighted,6,bartningallee,25.6
+800,unweighted,7,ostender straße,33.4
+800,unweighted,8,amrumer straße,95.9
+800,unweighted,9,invalidenstraße,40.6
+800,unweighted,10,berolinastraße,57.7
+800,length-weighted,1,annenstraße,46.6
+800,length-weighted,2,luisenstraße,72.4
+800,length-weighted,3,clara-jaschke-straße,41.3
+800,length-weighted,4,fischerinsel; neue roßstraße; roßstraßenbrücke,29.3
+800,length-weighted,5,neue roßstraße,112.3
+800,length-weighted,6,fischerinsel,44.5
+800,length-weighted,7,ostring,49.1
+800,length-weighted,8,schumannstraße,58.5
+800,length-weighted,9,singerstraße,26.2
+800,length-weighted,10,charitéplatz,24.5
+2000,unweighted,1,annenstraße,46.6
+2000,unweighted,2,alte jakobstraße,93.7
+2000,unweighted,3,fischerinsel,44.5
+2000,unweighted,4,neue roßstraße,112.3
+2000,unweighted,5,fischerinsel; neue roßstraße; roßstraßenbrücke,29.3
+2000,unweighted,6,luisenstraße,72.4
+2000,unweighted,7,wilhelmstraße,109.2
+2000,unweighted,8,heinrich-heine-straße,47.2
+2000,unweighted,9,brückenstraße,98.5
+2000,unweighted,10,invalidenstraße,40.6
+2000,length-weighted,1,annenstraße,46.6
+2000,length-weighted,2,fischerinsel; neue roßstraße; roßstraßenbrücke,29.3
+2000,length-weighted,3,fischerinsel,44.5
+2000,length-weighted,4,neue roßstraße,112.3
+2000,length-weighted,5,alte jakobstraße,93.7
+2000,length-weighted,6,wilhelmstraße,109.2
+2000,length-weighted,7,luisenstraße,72.4
+2000,length-weighted,8,alexanderstraße; karl-liebknecht-straße,27.8
+2000,length-weighted,9,französische straße,83.1
+2000,length-weighted,10,heinrich-heine-straße,47.2

@@ -443,3 +443,38 @@ The forest rides that topped integration before no longer appear in
 NAIN streets are often long main roads of low-density areas, and angular
 choice in Mitte is led by Annenstraße and Fischerinsel rather than the
 historic main streets; not yet investigated.
+
+## Test: segment-length weighting (Mitte)
+
+`scripts/test_segment_weighting.py --district Mitte` crops the cached
+citywide segment map to Mitte + 2 km and computes angular choice and
+integration twice: unweighted, and weighted by segment length (cityseer
+`segment_weighted`; verified on a 3-segment chain that choice then counts each
+route by origin length x destination length, 100 m x 300 m = 30,000, and
+integration sums reachable length). Reference streets were fixed before
+looking at results: Friedrichstraße, Unter den Linden, Leipziger Straße,
+Torstraße, Karl-Liebknecht-Straße, Invalidenstraße, Brunnenstraße,
+Müllerstraße, Turmstraße, Alt-Moabit, Rosenthaler Straße, Badstraße.
+
+Results (`output/segments_mitte_weighting_{summary,test,top10}.csv`):
+- Unweighted, the reference streets already rank high at 2000 m: median
+  percentile among residential segments 80 (Badstraße) to 99
+  (Karl-Liebknecht-Straße).
+- Weighting mainly helps at 800 m, e.g. Badstraße 59 -> 80, Rosenthaler
+  Straße 58 -> 76, Leipziger Straße 59 -> 74, Alt-Moabit 55 -> 68.
+- The two versions are closely related (Spearman over residential segments:
+  choice 0.955 at 800 m, 0.986 at 2000 m).
+- The top of the 2000 m choice list (Annenstraße, Fischerinsel, Neue
+  Roßstraße, Alte Jakobstraße) is the same with and without weighting, so
+  segment counting does not explain it. These streets form one continuous,
+  low-angle route from Kreuzberg's Alte Jakobstraße corridor over the
+  Roßstraßenbrücke onto Fischerinsel and Gertraudenstraße
+  (`output/maps/diagnostic_mitte_fischerinsel_choice_2000.png`). Angular
+  choice rewards straight alignments across bottlenecks such as the Spree,
+  which is a likely explanation. The Mühlendamm bridge is in the OSM data as
+  an ordinary primary road (checked), so missing data is not the cause; a
+  cleaning effect on the Mühlendamm/Gertraudenstraße carriageways is not
+  ruled out.
+- Lesson for checks: a top-10 list of street maxima is driven by single
+  segments and is a fragile sanity check; median percentiles of reference
+  streets are more robust.
