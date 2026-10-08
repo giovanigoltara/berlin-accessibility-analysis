@@ -131,6 +131,10 @@ README Quick start in order (2026-10-08).
   (`scripts/_bootstrap.py`); the seed is recorded in
   `output/segments_berlin_metadata.json`. The published Phase 1 and 3 results
   come from this seeded run (168,910 edges).
+  A second seeded citywide run, in a separate clone without cached data,
+  reproduced the cleaned network and every Phase 1 output file byte for
+  byte (after sorting the rows of the summary file, whose order followed
+  cityseer's unstable column order and is now fixed).
 - **How much it mattered.** Between the two unseeded runs, 97.2% of
   residential segments match one to one and the Spearman correlation is at
   least 0.993 for every measure and radius
