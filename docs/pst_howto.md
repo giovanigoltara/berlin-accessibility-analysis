@@ -14,9 +14,30 @@ buildings) is likely to be slow; try the pilot first.
 
 ## 1. Requirements
 
-- QGIS 3.x (PST 3.3.2 declares QGIS 3.0 to 3.99 and Qt6 support).
-- PST plugin: *Plugins › Manage and Install Plugins*, search "PST", install.
-  After installation the analyses are under **Vector › PST**.
+- QGIS 3.x (PST 3.3.2 declares QGIS 3.0 to 3.99 and Qt6 support). The PST
+  install notes cover Windows and Mac.
+- PST plugin. Its own install notes (`pstqgis/doc/readme.txt` in the source)
+  describe installing from a ZIP file:
+  1. Download the PST ZIP from the SMoG / Chalmers PST page
+     (https://www.smog.chalmers.se/PST.html). First try *Plugins › Manage and
+     Install Plugins*, tab *All*, search "PST": if it is listed there, install
+     it from there instead.
+  2. *Plugins › Manage and Install Plugins › Install from ZIP*, click `...`,
+     select the ZIP, *Install Plugin* (QGIS may warn about untrusted sources).
+  3. In the same dialog, tab *Installed*, make sure PST is ticked.
+  4. The analyses are now under **Vector › PST**.
+  5. Mac only: the first run may say `"libpstalgo.dylib" cannot be opened
+     because the developer cannot be verified`. Open *System Settings ›
+     Privacy & Security*, click *Allow anyway* for libpstalgo.dylib, and
+     restart QGIS.
+
+## 1b. Getting the input file onto your computer
+
+The input file is in the GitHub repository, on branch
+`claude/vibrant-darwin-phsgo4`: open the repository on github.com, switch to
+that branch (branch menu top left), go to `output/pst/`, click
+`pst_inputs_friedrichshain-kreuzberg.gpkg`, then the download button
+("Download raw file").
 
 ## 2. Input data
 
@@ -88,12 +109,16 @@ turning. This variant has no Python cross-check yet.
 6. **Destination Attributes**: optional; skip.
 7. Run.
 
-## 5. Save and compare with the Python cross-check
+## 5. Save the results and send them back
 
-1. Right-click `origins` › *Export › Save Features As...* › GeoPackage, file
-   `output/pst/pst_results_friedrichshain-kreuzberg.gpkg`, layer `origins`.
-2. Map each PST column to the Python column it should match and run, for
-   example:
+1. In the *Layers* panel, right-click `origins` › *Export › Save Features
+   As...*. Format: GeoPackage. File name:
+   `pst_results_friedrichshain-kreuzberg.gpkg`. Layer name: `origins`. OK.
+2. Upload it to the repository: on github.com, branch
+   `claude/vibrant-darwin-phsgo4`, folder `output/pst/`, *Add file › Upload
+   files*, drop the file, *Commit changes* (to the same branch).
+3. The comparison can then be run (it reads the PST column names from the
+   file; they only need to be mapped once):
 
 ```bash
 python scripts/compare_pst_results.py \
@@ -102,14 +127,12 @@ python scripts/compare_pst_results.py \
     --map ARw800anyf=reach_anyf_800 --map ADwsu=dist_su
 ```
 
-(Replace the PST column names with the ones in your attribute table.)
+(Replace the PST column names with the ones in the attribute table.)
 Python columns in `output/pst/python_reach_friedrichshain-kreuzberg.csv`:
 `reach_<col>_400`, `reach_<col>_800` and `dist_<col>` for `<col>` in
-`sb, ub, tr, bu, rb, su, anyf`.
-
-The result goes to `output/pst/pst_vs_python_friedrichshain-kreuzberg.csv`:
-share of buildings with the same value, median absolute difference, and
-Spearman correlation.
+`sb, ub, tr, bu, rb, su, anyf`. The result goes to
+`output/pst/pst_vs_python_friedrichshain-kreuzberg.csv`: share of buildings
+with the same value, median absolute difference, and Spearman correlation.
 
 ## 6. What to expect
 
