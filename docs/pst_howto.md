@@ -18,10 +18,14 @@ buildings) is likely to be slow; try the pilot first.
   install notes cover Windows and Mac.
 - PST plugin. Its own install notes (`pstqgis/doc/readme.txt` in the source)
   describe installing from a ZIP file:
-  1. Download the PST ZIP from the SMoG / Chalmers PST page
-     (https://www.smog.chalmers.se/PST.html). First try *Plugins › Manage and
-     Install Plugins*, tab *All*, search "PST": if it is listed there, install
-     it from there instead.
+  1. Download the plugin ZIP from the PST releases on GitHub:
+     https://github.com/SMoG-Chalmers/PST/releases. Take the release marked
+     *Latest* (v3.3.2 at the time of writing), open its *Assets* list and
+     download the plugin ZIP (a name starting with `pstqgis`; if there are
+     separate files per operating system, take yours). Do **not** take the
+     "Source code" archives: they lack the compiled library and will not
+     install as a plugin. Do not unzip the file. (The SMoG page linked in the
+     plugin's metadata, smog.chalmers.se/PST.html, no longer exists.)
   2. *Plugins › Manage and Install Plugins › Install from ZIP*, click `...`,
      select the ZIP, *Install Plugin* (QGIS may warn about untrusted sources).
   3. In the same dialog, tab *Installed*, make sure PST is ticked.
