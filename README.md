@@ -45,10 +45,10 @@ Phase 3, Spearman correlation between the walk to S- or U-Bahn and the home stre
 
 | Street measure | rho, buildings | rho, Planungsräume |
 |---|---|---|
-| NAIN 800 | 0.04 | -0.10 |
-| NAIN 2000 | 0.04 | -0.08 |
-| NACH 800 | -0.11 | -0.38 |
-| NACH 2000 | -0.11 | -0.39 |
+| NAIN 800 | 0.04 | -0.09 |
+| NAIN 2000 | 0.04 | -0.07 |
+| NACH 800 | -0.11 | -0.37 |
+| NACH 2000 | -0.11 | -0.38 |
 | metric closeness 800 | -0.32 | -0.21 |
 
 <!-- END GENERATED: key results -->
@@ -98,6 +98,10 @@ python scripts/build_readme_tables.py            # docs/results.md and the key r
 pytest
 ```
 
+Runtime: about 18 min for the first Phase 0 run and 65 min for the citywide
+Phase 1 run; the rest takes minutes. Scripts restart themselves with
+`PYTHONHASHSEED=0` so that network cleaning is reproducible
+([validation §8](docs/validation.md#8-reproducibility-from-a-clean-clone)).
 If the GTFS URL in `config.yaml` has moved, download the feed by hand from the
 VBB page and save it as `data/raw/GTFS.zip`. Large inputs and caches stay in
 `data/` and are never committed.

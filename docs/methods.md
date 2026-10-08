@@ -166,6 +166,9 @@ cityseer 5.8.0 (pinned; the cleaning recipe used is a private function).
    (trunk 40 m to tertiary 24 m), consolidates complex intersections,
    links gapped endings, removes dangling slivers, and cleans minor streets at
    4 m and 8 m. The result approximates a road-centre-line segment map.
+   The result depends on the order in which nodes are visited, which follows
+   Python's per-process hash seed; all scripts therefore run with
+   `PYTHONHASHSEED=0` (validation §8).
 4. **Dual graph** (`graphs.nx_to_dual`): segments become nodes; the turn angle
    between adjacent segments is the angular cost.
 

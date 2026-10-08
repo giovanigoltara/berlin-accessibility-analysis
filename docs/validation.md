@@ -8,10 +8,11 @@ named next to it. Method: [methods.md](methods.md); history: [decisions.md](deci
 | 1 | [GTFS mode mapping](#1-gtfs-mode-mapping) | Every route type matches its line names |
 | 2 | [Directed walk graph in v0](#2-directed-walk-graph-in-v0) | v0 walks were one-way; large effect on a sample |
 | 3 | [Network detours](#3-network-detours) | Detour factors 1.22-1.54, typical for cities |
-| 4 | [Edge effects of the 2 km buffer](#4-edge-effects-of-the-2-km-buffer) | Pilot and citywide run agree (Spearman >= 0.9905) |
+| 4 | [Edge effects of the 2 km buffer](#4-edge-effects-of-the-2-km-buffer) | Pilot and citywide run agree (Spearman >= 0.991) |
 | 5 | [Reference streets](#5-reference-streets) | Main streets rank at the 76th-94th percentile on choice |
 | 6 | [Segment-length weighting (Mitte)](#6-segment-length-weighting-mitte) | Helps at 800 m; does not change the 2000 m top list |
 | 7 | [Place Syntax Tool against Python](#7-place-syntax-tool-against-python) | Identical reach and distance for all 9,564 homes |
+| 8 | [Reproducibility from a clean clone](#8-reproducibility-from-a-clean-clone) | Same inputs, same Phase 0; network cleaning needed a fixed hash seed |
 
 ---
 
@@ -45,7 +46,7 @@ the populous south.
 `scripts/compare_segment_runs.py` → `output/segments_friedrichshain-kreuzberg_vs_berlin.csv`:
 the Friedrichshain-Kreuzberg pilot (district + 2 km) against the citywide run
 (Berlin + 2 km), segments matched by midpoint and length within 1 m. Spearman
-rank correlation at least 0.9905 for every measure and radius. The residual
+rank correlation at least 0.991 for every measure and radius. The residual
 differences come from cleaning two slightly different networks; 2 km of
 buffer is enough.
 
@@ -60,7 +61,7 @@ used in the summary (97 of 106 entries).
 - Weakest: Wilmersdorfer Straße (53rd) and Alt-Tegel (52nd), both largely
   pedestrian shopping zones.
 - Pilot detail (Friedrichshain-Kreuzberg, citywide run): NACH at 2000 m from
-  64 (Skalitzer Straße) to 97 (Karl-Marx-Allee).
+  65 (Skalitzer Straße) to 97 (Karl-Marx-Allee).
 - **NACH artefact**: Tunnelstraße on the Stralau peninsula ranks first on NACH
   at 800, 1200 and 2000 m but is in none of the angular-choice top-10 lists
   (`output/segments_friedrichshain-kreuzberg_top10.csv`). NACH rises when total
@@ -103,3 +104,41 @@ PST 3.3.2 run by the project owner in QGIS 4.2.3 (macOS) on
   `output/pst/python_reach_friedrichshain-kreuzberg_summary.json`; Spearman
   0.899, lower because Phase 0 measures to the nearest platform along
   sidewalks).
+- These files are a snapshot made on the segment map of the citywide run
+  before the hash seed was fixed (§8). Regenerating the inputs now gives a
+  slightly different network, so PST must be rerun on the new inputs before
+  the comparison is repeated; until then the files in `output/pst/` are kept
+  together as one consistent set.
+
+## 8. Reproducibility from a clean clone
+Fresh clone of `main`, new virtual environment from `requirements.txt`,
+`scripts/download_data.py` into an empty `data/raw/`, then every step of the
+README Quick start in order (2026-10-08).
+- **Inputs.** OSM extract, GTFS feed and population report are byte-identical
+  to those of the published run (SHA-256 in `output/run_metadata.json` and
+  `output/reproducibility/run_metadata_clean_clone.json`). The LOR file
+  differs only in the `timeStamp` the WFS server writes into each response;
+  its features are identical.
+- **Phase 0.** All walk-time tables, maps and checks came out byte-identical.
+- **Phase 1.** Network cleaning was not reproducible: from the same
+  1,282,972 primal edges, the published run kept 168,869 edges and the clean
+  clone 168,885 (`output/reproducibility/segments_berlin_metadata_unseeded_run{1,2}.json`).
+  Cause: Python randomises string hashing per process, which changes the
+  iteration order of sets of OSM ids, and cityseer's cleaning depends on that
+  order. Cleaning a small test area around Alexanderplatz gave a different
+  network for each seed and an identical one when the seed was repeated.
+  Every script now restarts itself with `PYTHONHASHSEED=0`
+  (`scripts/_bootstrap.py`); the seed is recorded in
+  `output/segments_berlin_metadata.json`. The published Phase 1 and 3 results
+  come from this seeded run (168,910 edges).
+- **How much it mattered.** Between the two unseeded runs, 97.2% of
+  residential segments match one to one and the Spearman correlation is at
+  least 0.993 for every measure and radius
+  (`output/reproducibility/segments_berlin_unseeded_run1_vs_run2.csv`). The
+  district medians in the segment summary change in the second or third
+  decimal, the reference-street medians by up to 8 percentile points; rankings by single segments (top-three streets) change more,
+  as noted in §5. In Phase 3, the divergence classes changed by up to four
+  Planungsräume per class (49 and 51 in commit `792eb1b`, 53 and 52 now).
+- **Runtime** on the build machine: about 18 min for Phase 0 (first run,
+  including OSM parsing) and 65 min for the citywide Phase 1 run; all other
+  steps take under a minute each.
