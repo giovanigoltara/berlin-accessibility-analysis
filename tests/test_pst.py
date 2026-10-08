@@ -52,3 +52,28 @@ def test_unlink_points_only_for_unconnected_crossings():
     ], crs=CRS)
     u = pst.unlink_points(g)
     assert len(u) == 1 and u.geometry.iloc[0].equals(Point(50, 0))
+
+
+def test_split_to_straight_keeps_length_and_distances():
+    bent = gpd.GeoDataFrame({"seg_id": [7]}, geometry=[LineString([(0, 0), (100, 0), (100, 100)])], crs=CRS)
+    pieces = pst.split_to_straight(bent)
+    assert len(pieces) == 2 and (pieces["seg_id"] == 7).all()
+    assert all(len(g.coords) == 2 for g in pieces.geometry)
+    assert np.isclose(pieces.length.sum(), bent.length.sum())
+    # same walking distance as on the unsplit test network
+    g = pst.SegmentGraph(pieces)
+    o = g.attach(gpd.GeoSeries([Point(20, 5)], crs=CRS))
+    d = g.attach(gpd.GeoSeries([Point(103, 60)], crs=CRS))
+    assert np.isclose(pst.walking_distances(g, o, d, 1000)[0, 0], 148, atol=0.01)
+
+
+def test_unlink_points_after_split():
+    g = gpd.GeoDataFrame(geometry=[
+        LineString([(0, 0), (100, 0)]),
+        LineString([(50, -50), (50, 0), (50, 50)]),   # bridge with a bend exactly over the street
+    ], crs=CRS)
+    u = pst.unlink_points(pst.split_to_straight(g))
+    assert len(u) == 1 and u.geometry.iloc[0].equals(Point(50, 0))
+    # a real junction (shared end points) is not an unlink
+    j = gpd.GeoDataFrame(geometry=[LineString([(0, 0), (50, 0)]), LineString([(50, 0), (50, 50)])], crs=CRS)
+    assert len(pst.unlink_points(j)) == 0

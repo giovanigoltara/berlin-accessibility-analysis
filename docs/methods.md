@@ -551,3 +551,15 @@ not reachable from the build environment.
   The rank correlation is 0.899, lower because Phase 0 measures to the
   nearest platform and uses sidewalks, while here it is the station's centre
   point on the street centre-line network.
+
+- **Straight lines for PST.** PST's line reader accepts only lines with
+  exactly two points (first PST run: "contains polyline geometry, which is
+  not supported"; `pst/model/model.py`, `readLines`). The exported segments
+  are therefore split into their straight pieces (21,279 segments -> 83,749
+  pieces for the pilot). Pieces share end points, so walking distances are
+  unchanged: the cross-check results were identical before and after the
+  split. The Python cross-check uses the same split lines.
+- **Unlink points, corrected.** The first export also put an unlink point
+  where two lines share an end point and cross elsewhere (20 such points in
+  the pilot), which would have cut real junctions. Now only intersections
+  that are not a shared end point of both lines are unlinks (86 points).

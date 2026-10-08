@@ -14,7 +14,8 @@ buildings) is likely to be slow; try the pilot first.
 
 ## 1. Requirements
 
-- QGIS 3.x (PST 3.3.2 declares QGIS 3.0 to 3.99 and Qt6 support). The PST
+- QGIS 3.x or 4.x. PST 3.3.2 declares QGIS 3.0 to 3.99 and Qt6 support; it
+  has also been installed and started on QGIS 4.2.3 on a Mac. The PST
   install notes cover Windows and Mac.
 - PST plugin. Its own install notes (`pstqgis/doc/readme.txt` in the source)
   describe installing from a ZIP file:
@@ -51,7 +52,7 @@ All layers are in EPSG:32633 (UTM 33N, metres), so distances in PST are metres.
 
 | Layer | Geometry | Content |
 |---|---|---|
-| `segments` | lines | Cleaned street segment map from Phase 1 (citywide run), cropped to the district + 2 km. Lines meet at shared end points. Columns: `seg_id`, `street`, `district`, `in_study`, `residential`, `length_m`. |
+| `segments` | lines | Cleaned street segment map from Phase 1 (citywide run), cropped to the district + 2 km, **split into straight two-point lines** because PST accepts no other line type (it stops with "contains polyline geometry, which is not supported"). Pieces of one street segment share `seg_id` and are numbered by `piece`. Lines meet at shared end points. Columns: `seg_id`, `piece`, `street`, `district`, `in_study`, `residential`, `length_m` (of the original segment). |
 | `origins` | points | Residential buildings in the district (one point inside each building with allocated residents). Columns: `osm_id`, `plr_id` (Planungsraum), `residents`, `res65` (residents 65+). |
 | `destinations` | points | Stations inside Berlin within the district + 2 km (one point per station, mean of its platforms). 0/1 columns: `sb` S-Bahn, `ub` U-Bahn, `tr` tram, `bu` bus, `rb` regional rail, `su` S- or U-Bahn; `sbf` ... `rbf` the same with a departure at least every 10 min 07:00-09:00 on Tue 10 Nov 2026; `anyf` any frequent mode. |
 | `study_area` | polygon | The district boundary, for display and selection. |

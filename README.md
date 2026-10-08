@@ -362,7 +362,7 @@ Walking distance on the Phase 1 segment map, points joined to their closest line
 
 | Item | Value |
 |---|---|
-| Segments / residential buildings (origins) / stations (destinations) | 21,279 / 9,564 / 479 |
+| Segments / residential buildings (origins) / stations (destinations) | 83,749 / 9,564 / 479 |
 | Stations: S-Bahn, U-Bahn, tram, bus, regional rail | 28, 63, 105, 422, 5 |
 | Stations with a departure every 10 min or better (any mode) | 337 |
 | Residents without an S- or U-Bahn station within 800 m walk | 18.5% |

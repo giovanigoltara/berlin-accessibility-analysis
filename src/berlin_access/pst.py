@@ -132,18 +132,59 @@ def reach_and_distance(dist: np.ndarray, dests: pd.DataFrame, columns: list[str]
     return pd.DataFrame(out)
 
 
-def unlink_points(lines: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
-    """Points where two segment lines cross without sharing an end point
-    (bridges, tunnels). In this segment map such lines are not connected; PST
-    can be told the same with an unlink layer."""
+def unlink_points(lines: gpd.GeoDataFrame, tol: float = 0.01) -> gpd.GeoDataFrame:
+    """Points where two lines meet without both having an end point there
+    (bridges, tunnels, and a line ending on the middle of another). In this
+    segment map such lines are not connected; PST can be told the same with
+    an unlink layer. Lines that share an end point are a real junction."""
+    import shapely
+
     geoms = lines.geometry.to_numpy()
     tree = STRtree(geoms)
-    left, right = tree.query(geoms, predicate="crosses")
+    left, right = tree.query(geoms, predicate="intersects")
     keep = left < right
+    ends = [(np.asarray(g.coords[0][:2]), np.asarray(g.coords[-1][:2])) for g in geoms]
+
+    def is_end(i, p):
+        return any(np.hypot(*(e - p)) <= tol for e in ends[i])
+
     pts = []
     for i, j in zip(left[keep], right[keep]):
         inter = geoms[i].intersection(geoms[j])
         for p in getattr(inter, "geoms", [inter]):
-            if p.geom_type == "Point":
-                pts.append(p)
-    return gpd.GeoDataFrame({"unlink_id": np.arange(len(pts))}, geometry=pts, crs=lines.crs)
+            if p.geom_type != "Point":
+                continue
+            xy = np.array([p.x, p.y])
+            if not (is_end(i, xy) and is_end(j, xy)):
+                pts.append(shapely.Point(xy))
+    # one point per location
+    uniq = {(round(p.x, 2), round(p.y, 2)): p for p in pts}
+    return gpd.GeoDataFrame({"unlink_id": np.arange(len(uniq))}, geometry=list(uniq.values()), crs=lines.crs)
+
+
+def split_to_straight(lines: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
+    """Split every line into its straight two-point pieces.
+
+    PST's line reader (pst/model/model.py, readLines) accepts only lines with
+    exactly two points and raises "contains polyline geometry, which is not
+    supported" otherwise. Pieces of one line share their end points, so the
+    network and all walking distances are unchanged. Attributes are copied to
+    every piece; `piece` numbers them along the original line.
+    """
+    import shapely
+
+    coords = shapely.get_coordinates(lines.geometry.to_numpy())
+    counts = shapely.get_num_coordinates(lines.geometry.to_numpy())
+    starts = np.r_[0, np.cumsum(counts)[:-1]]
+    rows, pieces, segs = [], [], []
+    for i, (s0, n) in enumerate(zip(starts, counts)):
+        for k in range(n - 1):
+            a, b = coords[s0 + k], coords[s0 + k + 1]
+            if (a == b).all():
+                continue  # drop zero-length pieces
+            rows.append(i)
+            pieces.append(k)
+            segs.append(shapely.LineString([a, b]))
+    out = lines.iloc[rows].drop(columns=lines.geometry.name).reset_index(drop=True)
+    out["piece"] = pieces
+    return gpd.GeoDataFrame(out, geometry=segs, crs=lines.crs)

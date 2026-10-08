@@ -4,7 +4,8 @@ Usage: python scripts/run_pst_inputs.py --district Friedrichshain-Kreuzberg
 
 Writes
   output/pst/pst_inputs_<district>.gpkg   layers for QGIS/PST:
-      segments      segment lines of the citywide Phase 1 map within district + 2 km
+      segments      segment lines of the citywide Phase 1 map within district + 2 km,
+                    split into straight two-point pieces (PST requirement)
       origins       residential buildings in the district (points), with residents
       destinations  stations inside Berlin within district + 2 km, 0/1 columns per mode
       study_area    the district polygon
@@ -61,6 +62,9 @@ def main():
         "in_study": (seg["district"] == args.district) & seg["live"].astype(bool),
         "residential": seg["residential"].astype(bool), "length_m": seg.geometry.length.round(1),
     }, geometry=seg.geometry, crs=crs)
+    # PST accepts only straight two-point lines: split every segment into its pieces.
+    meta["segments_before_split"] = len(seg)
+    seg = pst.split_to_straight(seg)
 
     # Origins: residential buildings in the district.
     b = gpd.read_parquet(der / "building_walk_dist.parquet").to_crs(crs)

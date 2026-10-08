@@ -6,6 +6,7 @@
     800
   ],
   "distance_limit_m": 2000,
+  "segments_before_split": 21279,
   "stations_by_column": {
     "sb": 28,
     "ub": 63,
@@ -15,10 +16,10 @@
     "su": 82,
     "anyf": 337
   },
-  "segments": 21279,
+  "segments": 83749,
   "origins": 9564,
   "destinations": 479,
-  "unlink_points": 104,
+  "unlink_points": 86,
   "origin_connection_m_median": 21.2,
   "destination_connection_m_median": 1.5,
   "check_vs_phase0_su": {
