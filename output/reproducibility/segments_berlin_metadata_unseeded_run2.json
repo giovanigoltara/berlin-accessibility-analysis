@@ -1,0 +1,54 @@
+{
+  "study_area": "Berlin",
+  "buffer_m": 2000,
+  "distances": [
+    400,
+    800,
+    1200,
+    2000
+  ],
+  "network": {
+    "osm_segments": 1638835,
+    "dropped_sidewalk": 289079,
+    "dropped_excluded_highway": 50376,
+    "dropped_foot_no": 8817,
+    "dropped_area": 0,
+    "dropped_indoor": 7305,
+    "dropped_deep_level": 286,
+    "primal_edges_before_cleaning": 1282972,
+    "primal_edges_after_cleaning": 168885
+  },
+  "residential_buffer_m": 50,
+  "live_segments": 141647,
+  "live_residential_segments": 116955,
+  "segments_reported": 116955,
+  "segments_context": 51930,
+  "segments_reported_by_district": {
+    "Charlottenburg-Wilmersdorf": 7435,
+    "Friedrichshain-Kreuzberg": 4114,
+    "Lichtenberg": 8619,
+    "Marzahn-Hellersdorf": 10024,
+    "Mitte": 7068,
+    "Neuk\u00f6lln": 10017,
+    "Pankow": 13312,
+    "Reinickendorf": 11481,
+    "Spandau": 10270,
+    "Steglitz-Zehlendorf": 11701,
+    "Tempelhof-Sch\u00f6neberg": 9150,
+    "Treptow-K\u00f6penick": 13764
+  },
+  "live_segments_by_district": {
+    "Charlottenburg-Wilmersdorf": 9283,
+    "Friedrichshain-Kreuzberg": 4798,
+    "Lichtenberg": 10867,
+    "Marzahn-Hellersdorf": 12326,
+    "Mitte": 9200,
+    "Neuk\u00f6lln": 11197,
+    "Pankow": 15451,
+    "Reinickendorf": 13742,
+    "Spandau": 12199,
+    "Steglitz-Zehlendorf": 13508,
+    "Tempelhof-Sch\u00f6neberg": 10609,
+    "Treptow-K\u00f6penick": 18467
+  }
+}

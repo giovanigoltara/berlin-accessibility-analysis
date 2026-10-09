@@ -60,16 +60,16 @@ of each building's nearest street (`output/phase3/correlations.csv`; negative
 
 | Berlin | NAIN 800 | NAIN 2000 | NACH 800 | NACH 2000 | metric closeness 800 |
 |---|---|---|---|---|---|
-| Walk to S/U, buildings | 0.042 | 0.043 | -0.108 | -0.107 | -0.321 |
-| Walk to S/U, Planungsräume | -0.095 | -0.078 | -0.377 | -0.385 | -0.211 |
-| Walk to frequent stop, buildings | -0.004 | -0.141 | -0.144 | -0.154 | -0.428 |
-| Walk to frequent stop, Planungsräume | -0.043 | -0.133 | -0.264 | -0.221 | -0.329 |
+| Walk to S/U, buildings | 0.043 | 0.042 | -0.108 | -0.108 | -0.321 |
+| Walk to S/U, Planungsräume | -0.093 | -0.072 | -0.374 | -0.377 | -0.209 |
+| Walk to frequent stop, buildings | -0.002 | -0.140 | -0.143 | -0.154 | -0.428 |
+| Walk to frequent stop, Planungsräume | -0.037 | -0.120 | -0.266 | -0.221 | -0.329 |
 
 - **Angular integration (NAIN) is nearly unrelated to rail access.** Across
   Berlin, how integrated a home's street is says almost nothing about how far
   it is from S- or U-Bahn (|rho| at most 0.1). The sign even differs between
   districts: in Marzahn-Hellersdorf more integrated streets go with *longer*
-  walks (rho 0.61 at building level for NAIN 2000).
+  walks (rho 0.60 at building level for NAIN 2000).
 - **Metric closeness relates most consistently.** Homes on streets with more
   street network within 800 m tend to be closer to transit (rho -0.32 for
   S- or U-Bahn, -0.43 for frequent stops, building level). Network density,
@@ -80,19 +80,23 @@ of each building's nearest street (`output/phase3/correlations.csv`; negative
   within them vary. The difference between the two levels is itself a
   reminder that results depend on the unit of analysis.
 - **Pilot, station counts.** In Friedrichshain-Kreuzberg the number of S- or
-  U-Bahn stations within 800 m correlates with metric closeness (rho 0.419)
-  but not with NAIN at 2000 m (rho -0.024)
+  U-Bahn stations within 800 m correlates with metric closeness (rho 0.416)
+  but not with NAIN at 2000 m (rho -0.018)
   (`output/phase3/reach_vs_centrality_friedrichshain-kreuzberg.csv`).
 - **Where the two diverge** (`output/phase3/divergence_by_planungsraum.csv`,
-  map `output/maps/phase3_divergence.png`): 49 Planungsräume (357,260
+  map `output/maps/phase3_divergence.png`): 53 Planungsräume (380,371
   residents) are close to rail but on configurationally segregated streets;
-  most are in Neukölln (11), Charlottenburg-Wilmersdorf (8) and
-  Tempelhof-Schöneberg (8). 51 Planungsräume (386,364 residents) are on
-  integrated streets but far from rail, most of them in Pankow (16) and
-  Treptow-Köpenick (6). The second group marks places where the street
+  most are in Neukölln (10), Tempelhof-Schöneberg (10) and
+  Charlottenburg-Wilmersdorf (8). 52 Planungsräume (396,648 residents) are on
+  integrated streets but far from rail, most of them in Pankow (15) and
+  Treptow-Köpenick (7). The second group marks places where the street
   network would support walking to a station that is not there; the first,
   places where a station is near but the streets leading to it are
   configurationally peripheral.
+  Planungsräume near the class boundaries can change class with small
+  changes in the cleaned network: two network-cleaning runs differing only in
+  Python's hash seed moved the counts by up to four (validation §8). Read
+  individual Planungsräume as candidates, not verdicts.
 
 ## 5. What this does not show
 

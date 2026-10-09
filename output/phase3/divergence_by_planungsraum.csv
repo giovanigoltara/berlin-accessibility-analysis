@@ -1,538 +1,538 @@
 plr_id,district,residents,walk_su_min,walk_frequent_any_min,nain_800,nain_2000,nach_800,nach_2000,cc_harmonic_800,transit_third,integration_third,divergence,plr_name
-01100101,Mitte,3469.0,10.1845,3.6879,0.6827,0.5365,0.8686,0.8748,0.5524,middle,segregated,middle,Stülerstraße
-01100102,Mitte,2082.0,8.7244,3.3546,0.5689,0.5865,0.4651,0.6854,0.69,middle,segregated,middle,Großer Tiergarten
-01100103,Mitte,5832.0,8.0317,3.5011,0.9951,0.6754,0.9484,1.0176,0.4313,close,middle,middle,Lützowstraße
-01100104,Mitte,4966.0,7.3656,3.1981,0.7924,0.643,0.9624,1.0561,0.373,close,middle,middle,Körnerstraße
-01100205,Mitte,2950.0,4.3035,3.7409,0.8068,0.7356,0.6543,0.7745,0.7055,close,integrated,concordant,Wilhelmstraße
-01100206,Mitte,1901.0,4.0096,3.3191,1.0932,0.8286,0.9281,1.0191,0.7339,close,integrated,concordant,Unter den Linden
-01100207,Mitte,8907.0,4.5545,3.5182,0.8287,0.7457,0.8908,0.943,0.7829,close,integrated,concordant,Leipziger Straße
-01100308,Mitte,7363.0,7.7288,4.2841,0.7982,0.6843,0.8215,0.926,0.7857,close,middle,middle,Charitéviertel
-01100309,Mitte,12611.0,4.0017,3.3997,0.9027,0.7319,0.9316,0.9869,0.6097,close,integrated,concordant,Oranienburger Straße
-01100310,Mitte,10157.0,4.3141,2.8181,0.8365,0.6554,0.9422,0.9636,0.8544,close,middle,middle,Alexanderplatzviertel
-01100311,Mitte,9935.0,5.1681,4.8357,0.6751,0.5889,0.796,0.8067,0.9511,close,segregated,"close to transit, segregated",Karl-Marx-Allee
-01100312,Mitte,10693.0,5.055,3.5975,0.7528,0.6822,0.8242,0.7791,0.9842,close,middle,middle,Heine-Viertel West
-01100313,Mitte,11650.0,6.9052,4.1866,0.8015,0.7189,0.8598,0.8576,0.7949,close,middle,middle,Heine-Viertel Ost
-01100414,Mitte,5566.0,4.079,4.079,0.8026,0.6747,0.8655,0.9232,0.233,close,middle,middle,Nordbahnhof
-01100415,Mitte,13460.0,6.3039,3.5618,0.992,0.7838,0.9552,1.0094,0.5041,close,integrated,concordant,Invalidenstraße
-01100416,Mitte,13760.0,6.6684,4.2063,1.0802,0.8486,0.9946,1.0478,0.7396,close,integrated,concordant,Arkonaplatz
-01200517,Mitte,3979.0,14.1932,4.3462,0.8556,0.6997,0.7779,0.825,0.3763,middle,middle,middle,Huttenkiez
-01200518,Mitte,7155.0,9.7973,3.1803,0.957,0.7409,0.8857,0.9302,0.3629,middle,integrated,middle,Beusselkiez
-01200519,Mitte,9525.0,8.7606,4.8389,1.0476,0.7416,0.9274,1.0101,0.3872,middle,integrated,middle,Emdener Straße
-01200520,Mitte,9696.0,4.1792,3.5987,1.0232,0.7189,1.0017,0.9952,0.5603,close,integrated,concordant,Bremer Straße
-01200521,Mitte,5176.0,9.6743,2.3633,0.9752,0.7602,0.9274,1.06,0.3656,middle,integrated,middle,Zwinglistraße
-01200522,Mitte,11548.0,8.1752,5.0389,0.7557,0.6139,0.9516,0.9132,0.4915,close,segregated,"close to transit, segregated",Elberfelder Straße
-01200623,Mitte,11016.0,9.7743,3.0362,0.9438,0.7115,0.9863,1.03,0.4634,middle,middle,middle,Stephankiez
-01200624,Mitte,7481.0,11.3193,7.2214,0.7726,0.5595,0.8769,0.7825,0.6285,middle,segregated,middle,Heidestraße
-01200625,Mitte,6724.0,8.9721,3.4119,0.7992,0.7742,0.8248,0.9755,0.4888,middle,integrated,middle,Lübecker Straße
-01200626,Mitte,5970.0,8.1724,3.129,0.9084,0.6961,0.8198,1.0182,0.4821,close,middle,middle,Thomasiusstraße
-01200627,Mitte,3326.0,10.0769,2.9143,0.7423,0.5817,0.8472,0.8051,0.7868,middle,segregated,middle,Zillesiedlung
-01200628,Mitte,3317.0,10.9528,3.8035,0.6734,0.5762,0.9626,0.8477,0.6503,middle,segregated,middle,Lüneburger Straße
-01200629,Mitte,5988.0,3.3765,3.3765,0.7188,0.6141,0.758,0.7429,0.8289,close,segregated,"close to transit, segregated",Hansaviertel
-01300730,Mitte,8051.0,8.5096,3.7903,0.8857,0.7334,0.871,1.0288,0.433,middle,integrated,middle,Drontheimer Straße
-01300731,Mitte,8936.0,10.4522,4.8495,0.8679,0.7229,0.9542,0.9367,0.3182,middle,integrated,middle,Koloniestraße
-01300732,Mitte,9985.0,9.809,4.2275,0.9138,0.6715,0.8814,1.0029,0.3697,middle,middle,middle,Soldiner Straße
-01300733,Mitte,11567.0,6.6138,4.5499,0.8726,0.691,0.9091,0.9545,0.4836,close,middle,middle,Gesundbrunnen
-01300834,Mitte,14258.0,6.2839,5.5901,0.9563,0.7699,0.9936,1.0196,0.7819,close,integrated,concordant,Brunnenstraße
-01300835,Mitte,10751.0,7.4399,7.2778,0.9356,0.7583,1.0327,0.9445,0.7924,close,integrated,concordant,Humboldthain Süd
-01300836,Mitte,15143.0,5.1427,3.5797,0.7825,0.7055,0.9172,0.9096,0.4977,close,middle,middle,Humboldthain Nordwest
-01400937,Mitte,11107.0,8.8497,5.9993,0.7338,0.6098,0.8268,1.0041,0.6285,middle,segregated,middle,Afrikanische Straße
-01400938,Mitte,9702.0,8.8507,4.3972,1.0475,0.853,0.9628,1.0029,0.6111,middle,integrated,middle,Kameruner Straße
-01400939,Mitte,6127.0,5.9003,3.069,1.02,0.8683,0.9125,0.9907,0.5512,close,integrated,concordant,Glasgower Straße
-01400940,Mitte,7290.0,11.8475,4.1198,0.6901,0.6382,0.777,0.7799,0.6975,middle,segregated,middle,Schillerpark
-01400941,Mitte,3832.0,5.7839,3.6551,0.7475,0.6861,0.8461,0.8614,0.6634,close,middle,middle,Londoner Straße
-01400942,Mitte,8527.0,5.6858,4.086,1.1211,0.8934,1.0562,1.1616,0.9467,close,integrated,concordant,Westliche Müllerstraße
-01401043,Mitte,7607.0,5.6775,3.4095,0.9734,0.7163,1.0461,1.0989,0.649,close,middle,middle,Antonstraße
-01401044,Mitte,10256.0,5.9758,4.18,0.7426,0.6183,0.9695,0.9472,0.4371,close,segregated,"close to transit, segregated",Uferstraße
-01401045,Mitte,5466.0,5.0167,3.0689,0.8099,0.7518,0.9991,1.0754,0.3712,close,integrated,concordant,Schwedenstraße
-01401046,Mitte,8870.0,5.4438,4.8939,0.8207,0.7262,0.9883,0.9484,0.7019,close,integrated,concordant,Nordufer
-01401047,Mitte,8086.0,5.3458,4.3243,0.8959,0.7297,1.0175,0.9928,0.5756,close,integrated,concordant,Sparrplatz
-01401048,Mitte,9575.0,6.4887,3.7884,0.9168,0.7408,0.9979,1.0428,0.588,close,integrated,concordant,Leopoldplatz
-01401049,Mitte,6540.0,5.3948,3.8958,0.9198,0.6936,1.0021,0.9471,0.5877,close,middle,middle,Schulstraße
-02100101,Friedrichshain-Kreuzberg,7741.0,4.938,3.1293,0.7696,0.6753,0.7917,0.893,0.8892,close,middle,middle,Askanischer Platz
-02100102,Friedrichshain-Kreuzberg,8669.0,4.6264,2.5363,0.7901,0.7184,0.9746,0.9605,1.0631,close,middle,middle,Mehringplatz
-02100103,Friedrichshain-Kreuzberg,5400.0,8.9805,2.7993,0.8527,0.7573,0.8035,0.8335,1.081,middle,integrated,middle,Am Berlin Museum
-02100104,Friedrichshain-Kreuzberg,5522.0,4.8915,3.3817,0.773,0.7085,1.0193,0.9906,1.1992,close,middle,middle,Moritzplatz
-02100105,Friedrichshain-Kreuzberg,9094.0,5.3081,5.0804,0.7595,0.6777,0.7883,0.7874,1.0639,close,middle,middle,Prinzenstraße
-02100106,Friedrichshain-Kreuzberg,4786.0,5.9783,5.9783,0.6138,0.5674,0.8355,0.8602,0.9029,close,segregated,"close to transit, segregated",Wassertorplatz
-02200207,Friedrichshain-Kreuzberg,2662.0,6.3876,4.1357,0.5373,0.5255,0.7983,0.8514,0.4584,close,segregated,"close to transit, segregated",Gleisdreieck
-02200208,Friedrichshain-Kreuzberg,5562.0,6.6562,4.5367,0.869,0.7536,0.8962,1.0104,0.5882,close,integrated,concordant,Rathaus Yorckstraße
-02200209,Friedrichshain-Kreuzberg,10912.0,8.8215,4.6862,0.8133,0.759,0.8714,1.0244,0.486,middle,integrated,middle,Viktoriapark
-02200210,Friedrichshain-Kreuzberg,12259.0,5.7134,3.1463,0.9054,0.6964,0.9619,0.979,0.5384,close,middle,middle,Urbanstraße
-02200211,Friedrichshain-Kreuzberg,14498.0,6.4173,3.815,0.9281,0.6471,0.963,0.997,0.4809,close,middle,middle,Chamissokiez
-02200212,Friedrichshain-Kreuzberg,8217.0,5.8361,2.7712,0.8663,0.615,0.939,0.9925,0.373,close,segregated,"close to transit, segregated",Graefekiez Süd
-02200213,Friedrichshain-Kreuzberg,9833.0,5.5208,3.4547,0.7397,0.5322,0.9069,0.99,0.4987,close,segregated,"close to transit, segregated",Graefekiez Nord
-02300314,Friedrichshain-Kreuzberg,7046.0,6.4317,2.9144,0.8399,0.7284,1.0235,1.0331,0.9034,close,integrated,concordant,Oranienplatz
-02300315,Friedrichshain-Kreuzberg,8126.0,5.9428,3.5172,0.938,0.6458,1.0508,0.994,0.6808,close,middle,middle,Lausitzer Platz
-02300316,Friedrichshain-Kreuzberg,4184.0,8.2539,3.0015,0.9293,0.6996,0.8036,0.8396,0.4457,close,middle,middle,Köpenicker Straße
-02300417,Friedrichshain-Kreuzberg,8302.0,6.5915,3.8182,0.9331,0.7114,1.0128,1.0631,0.5814,close,middle,middle,Reichenberger Straße West
-02300418,Friedrichshain-Kreuzberg,7571.0,13.4345,3.3118,1.0538,0.6553,0.9779,0.9247,0.35,middle,middle,middle,Reichenberger Straße Ost
-02300419,Friedrichshain-Kreuzberg,10289.0,8.2877,5.673,0.8836,0.6163,0.8284,0.9214,0.3159,close,segregated,"close to transit, segregated",Wrangelkiez
-02400520,Friedrichshain-Kreuzberg,5949.0,11.6397,3.7792,0.6807,0.5711,0.8063,0.801,0.8845,middle,segregated,middle,Barnimkiez
-02400521,Friedrichshain-Kreuzberg,8906.0,7.6935,4.586,0.6472,0.6486,0.7713,0.8021,0.7853,close,middle,middle,Friedenstraße
-02400522,Friedrichshain-Kreuzberg,11508.0,8.1881,4.2443,0.7441,0.667,0.8943,0.8695,0.5969,close,middle,middle,Richard-Sorge-Viertel
-02400623,Friedrichshain-Kreuzberg,14345.0,7.2029,5.437,0.7998,0.6516,0.8321,0.7984,0.8811,close,middle,middle,Andreasviertel
-02400624,Friedrichshain-Kreuzberg,12126.0,6.5131,3.0149,0.8588,0.7108,0.7795,0.9012,0.53,close,middle,middle,Weberwiese
-02400625,Friedrichshain-Kreuzberg,1299.0,11.1801,11.1801,0.6857,0.57,0.0,0.0,0.3039,middle,segregated,middle,Wriezener Bahnhof
-02500726,Friedrichshain-Kreuzberg,9193.0,10.0712,4.8623,0.9638,0.7658,0.8116,0.812,0.4149,middle,integrated,middle,Hausburgviertel
-02500727,Friedrichshain-Kreuzberg,6470.0,6.9915,5.7931,0.9008,0.7235,1.0255,1.0637,0.7055,close,integrated,concordant,Forckenbeckplatz
-02500728,Friedrichshain-Kreuzberg,10103.0,5.5455,5.5455,1.0127,0.7682,0.8946,0.9461,0.4946,close,integrated,concordant,Samariterviertel
-02500729,Friedrichshain-Kreuzberg,5430.0,5.5753,5.5414,0.9482,0.7859,0.9458,1.0394,0.4179,close,integrated,concordant,Pettenkofer Straße
-02500830,Friedrichshain-Kreuzberg,3966.0,5.2779,3.8871,0.9083,0.7534,0.781,0.874,0.4604,close,integrated,concordant,Niederbarnimstraße
-02500831,Friedrichshain-Kreuzberg,7826.0,5.9412,3.0662,1.0784,0.8017,0.9856,0.9579,0.5392,close,integrated,concordant,Wismarplatz
-02500832,Friedrichshain-Kreuzberg,9594.0,7.7268,2.9286,0.93,0.7718,0.9356,0.9773,0.496,close,integrated,concordant,Traveplatz
-02500833,Friedrichshain-Kreuzberg,9998.0,8.7913,1.8883,1.1565,0.8051,0.9413,1.0172,0.461,middle,integrated,middle,Boxhagener Platz
-02500834,Friedrichshain-Kreuzberg,11310.0,8.492,2.9754,0.9366,0.7263,0.9805,0.9192,0.4381,middle,integrated,middle,Revaler Straße
-02500835,Friedrichshain-Kreuzberg,8939.0,9.6063,6.0223,0.9657,0.7707,0.9799,1.0391,0.4352,middle,integrated,middle,Stralauer Kiez
-02500836,Friedrichshain-Kreuzberg,5154.0,12.6375,2.9279,0.9218,0.64,0.7605,0.754,0.3305,middle,segregated,middle,Stralauer Halbinsel
-03100101,Pankow,4756.0,18.0601,12.6535,0.7951,0.6413,0.2138,0.4694,0.2743,far,segregated,concordant,Bucher Forst
-03100102,Pankow,3546.0,15.5309,6.1711,0.7494,0.7084,0.7485,0.7969,0.5897,middle,middle,middle,Klinikum Buch
-03100103,Pankow,9532.0,16.6797,4.661,0.6527,0.5998,0.5889,0.6454,0.9706,far,segregated,concordant,Karower Chaussee
-03200204,Pankow,2106.0,67.0046,15.5499,0.8957,0.6621,0.695,0.7452,0.1629,far,middle,middle,Blankenfelde
-03200205,Pankow,9078.0,40.5457,8.9933,0.9856,0.7961,0.8931,0.9407,0.3964,far,integrated,"far from transit, integrated",Uhlandstraße
-03200206,Pankow,6833.0,26.1359,3.5355,0.8392,0.6663,0.9902,1.0315,0.4684,far,middle,middle,Pastor-Niemöller-Platz
-03200207,Pankow,11978.0,33.029,4.5069,0.8509,0.7478,0.8994,0.929,0.5491,far,integrated,"far from transit, integrated",Herthaplatz
-03200308,Pankow,5252.0,30.0657,3.7141,0.8162,0.7134,0.809,0.8872,0.4104,far,middle,middle,Nisbléstraße
-03200309,Pankow,5551.0,26.7452,7.8751,0.866,0.6647,0.8151,0.8425,0.3162,far,middle,middle,Eddastraße
-03200310,Pankow,8165.0,38.1485,6.0505,0.9157,0.7526,0.8542,0.9685,0.4185,far,integrated,"far from transit, integrated",Krugpfuhl
-03300411,Pankow,11704.0,24.8238,3.0997,0.8418,0.7421,0.8165,0.8241,1.0912,far,integrated,"far from transit, integrated",Karow Nord
-03300412,Pankow,5275.0,12.1262,5.0645,1.12,0.8921,0.9034,0.9535,0.3417,middle,integrated,middle,Karow Bahnhof
-03300413,Pankow,3170.0,25.9791,6.1205,1.0021,0.8055,0.8712,0.869,0.3587,far,integrated,"far from transit, integrated",Karow Ost
-03300514,Pankow,6759.0,20.9843,9.8321,1.0043,0.7,0.8332,0.8723,0.2452,far,middle,middle,Blankenburg
-03300516,Pankow,10271.0,20.0793,8.0163,0.8528,0.6396,0.7929,0.8619,0.3855,far,segregated,concordant,Heinersdorf
-03300517,Pankow,1050.0,37.9928,8.3726,1.0832,0.8232,0.9039,0.9064,0.3568,far,integrated,"far from transit, integrated",Märchenland
-03400618,Pankow,4740.0,40.9727,7.932,0.8572,0.7235,0.5885,0.6851,0.4641,far,integrated,"far from transit, integrated",Rosenthal
-03400619,Pankow,10696.0,29.9494,4.5222,0.9268,0.7213,0.898,0.9283,0.4854,far,integrated,"far from transit, integrated",Wilhelmsruh
-03400620,Pankow,3590.0,16.9892,6.4305,0.6716,0.6416,0.7375,0.8204,0.4064,far,segregated,concordant,Schönholz
-03400721,Pankow,11897.0,9.0062,3.2869,0.8513,0.6972,0.9694,0.9861,0.4885,middle,middle,middle,Florakiez
-03400722,Pankow,3823.0,13.9615,5.483,0.6979,0.6023,0.9173,0.9726,0.5101,middle,segregated,middle,Parkstraße
-03400723,Pankow,7584.0,9.4255,2.8603,0.718,0.6423,0.9106,0.8958,0.5211,middle,segregated,middle,Garbátyplatz
-03400724,Pankow,8474.0,12.2486,4.5427,0.764,0.5119,0.9225,0.8388,0.6408,middle,segregated,middle,Wolfshagener Straße
-03400725,Pankow,7717.0,17.3442,3.3494,0.8463,0.6516,0.7822,0.8015,0.6759,far,middle,middle,Schlosspark
-03400826,Pankow,7217.0,6.9819,4.9338,0.9378,0.7123,0.9917,1.0277,0.6587,close,middle,middle,Tiroler Viertel
-03400827,Pankow,9629.0,8.3846,4.9092,0.9031,0.7653,0.8968,0.9711,0.7848,middle,integrated,middle,Trelleborger Viertel
-03400828,Pankow,4898.0,15.6187,4.3201,0.8391,0.7601,0.9492,0.9335,0.9007,far,integrated,"far from transit, integrated",Spiekermann Straße
-03400829,Pankow,6188.0,10.085,3.795,1.0369,0.8144,0.9952,1.0182,0.9062,middle,integrated,middle,Arnold-Zweig-Straße
-03400830,Pankow,9227.0,10.8299,2.687,0.9838,0.7107,0.9796,0.9122,0.5029,middle,middle,middle,Kissingenviertel
-03500932,Pankow,6774.0,30.5367,4.2817,0.8959,0.7299,0.7701,0.8206,0.8276,far,integrated,"far from transit, integrated",Bühringstraße
-03500933,Pankow,7843.0,29.6031,2.8901,0.9481,0.8281,0.9194,0.9142,0.5462,far,integrated,"far from transit, integrated",Weißer See
-03500934,Pankow,10537.0,19.3369,2.9149,0.9954,0.8617,0.9939,1.0877,0.7211,far,integrated,"far from transit, integrated",Weißenseer Spitze
-03500935,Pankow,6870.0,20.8587,3.0118,1.0941,0.8748,1.0344,1.0819,0.7002,far,integrated,"far from transit, integrated",Behaimstraße
-03500936,Pankow,10138.0,25.3823,4.3652,1.0078,0.7777,1.0044,1.0395,0.7315,far,integrated,"far from transit, integrated",Komponistenviertel Weißensee
-03501037,Pankow,8492.0,40.5486,4.7787,0.8115,0.7319,0.7643,0.7842,0.4278,far,integrated,"far from transit, integrated",Rathaus Weißensee
-03501038,Pankow,7643.0,35.3026,5.4501,0.7633,0.673,0.8115,0.9164,0.4925,far,middle,middle,Hansastraße
-03601139,Pankow,4059.0,8.3708,3.1491,0.8039,0.6698,0.926,0.9424,0.7283,middle,middle,middle,Norweger Viertel
-03601140,Pankow,5968.0,7.1346,4.496,0.9648,0.7199,0.9896,1.0297,0.5619,close,integrated,concordant,Malmöer Straße
-03601141,Pankow,7074.0,7.9001,3.6962,1.0671,0.8288,1.014,1.0809,0.5943,close,integrated,concordant,Arnimplatz
-03601142,Pankow,10878.0,7.3216,5.7758,0.9014,0.7497,0.9337,0.9482,0.3583,close,integrated,concordant,Falkplatz
-03601243,Pankow,6958.0,6.8394,3.8373,1.1911,0.8656,0.9861,1.0581,0.7031,close,integrated,concordant,Rodenbergstraße
-03601244,Pankow,7611.0,8.1003,2.9137,1.1183,0.8629,1.0126,0.9555,0.8305,close,integrated,concordant,Humannplatz
-03601245,Pankow,13562.0,9.5377,3.7269,0.9615,0.8316,0.8788,0.8685,0.9244,middle,integrated,middle,Ostseestraße
-03601346,Pankow,5892.0,5.5349,2.337,1.0726,0.9004,1.0373,1.0773,0.5688,close,integrated,concordant,Gethsemanekirche
-03601347,Pankow,9527.0,8.4346,3.6658,1.1024,0.8852,1.0144,1.0549,0.531,middle,integrated,middle,Helmholtzplatz
-03601348,Pankow,7414.0,8.0826,3.4921,1.0672,0.9326,1.0456,1.0115,0.5815,close,integrated,concordant,Senefelderstraße
-03601449,Pankow,9954.0,12.3945,4.2711,0.707,0.6364,0.9149,0.8635,1.0534,middle,segregated,middle,Michelangelostraße
-03601450,Pankow,5411.0,11.7807,5.7843,0.7115,0.6232,0.5876,0.6943,0.676,middle,segregated,middle,Volkspark Prenzlauer Berg
-03601451,Pankow,6455.0,11.5773,3.7993,0.9197,0.7268,0.7923,0.8706,1.0318,middle,integrated,middle,Anton-Saefkow-Park
-03601452,Pankow,4774.0,8.761,3.9927,0.9323,0.7997,0.9277,0.9303,0.4684,middle,integrated,middle,Velodrom
-03601453,Pankow,3440.0,8.5617,7.3122,0.7905,0.6494,0.8971,0.871,0.7629,middle,middle,middle,Alter Schlachthof
-03701554,Pankow,11297.0,6.6006,3.6173,1.0342,0.8261,0.9541,1.0613,0.5435,close,integrated,concordant,Teutoburger Platz
-03701555,Pankow,7248.0,9.5887,3.5436,1.11,0.9071,1.0551,1.0396,0.6456,middle,integrated,middle,Sredzkistraße
-03701556,Pankow,8590.0,5.9369,3.913,1.1252,0.8159,1.043,1.0195,0.6964,close,integrated,concordant,Kollwitzplatz
-03701657,Pankow,3353.0,9.5232,4.6948,0.6485,0.6018,0.6741,0.6029,0.6784,middle,segregated,middle,Thälmannpark
-03701658,Pankow,8316.0,14.2056,3.2469,1.0482,0.8987,0.9584,0.996,0.6398,middle,integrated,middle,Christburger Straße
-03701659,Pankow,9548.0,12.9904,3.2709,1.0954,0.8368,1.0427,1.0891,0.5643,middle,integrated,middle,Immanuelkirchstraße
-03701660,Pankow,12527.0,17.6457,4.5862,1.2029,0.797,1.0255,1.0872,0.8095,far,integrated,"far from transit, integrated",Bötzowstraße
-04100101,Charlottenburg-Wilmersdorf,11838.0,12.1933,5.0903,0.7792,0.6326,0.5365,0.5634,0.8047,middle,segregated,middle,Jungfernheide/Plötzensee
-04100102,Charlottenburg-Wilmersdorf,7798.0,10.7361,6.6915,0.7002,0.5155,0.7087,0.6729,1.3042,middle,segregated,middle,Paul-Hertz-Siedlung
-04200203,Charlottenburg-Wilmersdorf,1419.0,9.7996,8.2996,0.6989,0.5253,0.5499,0.7437,0.1808,middle,segregated,middle,Olympiagelände
+01100101,Mitte,3469.0,10.1845,3.6879,0.6521,0.5158,0.859,0.863,0.5496,middle,segregated,middle,Stülerstraße
+01100102,Mitte,2082.0,8.7244,3.3546,0.5713,0.5977,0.4651,0.6866,0.6971,middle,segregated,middle,Großer Tiergarten
+01100103,Mitte,5832.0,8.0317,3.5011,0.9663,0.674,0.9712,1.0173,0.4447,close,middle,middle,Lützowstraße
+01100104,Mitte,4966.0,7.3656,3.1981,0.8114,0.6307,0.9532,1.032,0.3932,close,segregated,"close to transit, segregated",Körnerstraße
+01100205,Mitte,2950.0,4.3035,3.7409,0.8159,0.7386,0.6984,0.784,0.7023,close,integrated,concordant,Wilhelmstraße
+01100206,Mitte,1901.0,4.0096,3.3191,1.0686,0.7906,0.9147,0.9959,0.7393,close,integrated,concordant,Unter den Linden
+01100207,Mitte,8907.0,4.5545,3.5182,0.8414,0.7502,0.8839,0.9425,0.7791,close,integrated,concordant,Leipziger Straße
+01100308,Mitte,7363.0,7.7288,4.2841,0.7913,0.6838,0.8326,0.9305,0.7893,close,middle,middle,Charitéviertel
+01100309,Mitte,12611.0,4.0017,3.3997,0.9284,0.7359,0.9241,0.9998,0.6032,close,integrated,concordant,Oranienburger Straße
+01100310,Mitte,10157.0,4.3141,2.8181,0.8275,0.6488,0.9375,0.967,0.858,close,middle,middle,Alexanderplatzviertel
+01100311,Mitte,9935.0,5.1681,4.8357,0.6766,0.5896,0.8029,0.8064,0.95,close,segregated,"close to transit, segregated",Karl-Marx-Allee
+01100312,Mitte,10693.0,5.055,3.5975,0.7535,0.6869,0.8242,0.7829,0.9761,close,middle,middle,Heine-Viertel West
+01100313,Mitte,11650.0,6.9052,4.1866,0.8047,0.7349,0.8605,0.8586,0.7936,close,integrated,concordant,Heine-Viertel Ost
+01100414,Mitte,5566.0,4.079,4.079,0.8315,0.6682,0.9219,0.9258,0.2367,close,middle,middle,Nordbahnhof
+01100415,Mitte,13460.0,6.3039,3.5618,0.9961,0.79,0.9618,1.014,0.5144,close,integrated,concordant,Invalidenstraße
+01100416,Mitte,13760.0,6.6684,4.2063,1.078,0.8518,1.0183,1.0658,0.744,close,integrated,concordant,Arkonaplatz
+01200517,Mitte,3979.0,14.1932,4.3462,0.8555,0.7014,0.7804,0.8261,0.3764,middle,middle,middle,Huttenkiez
+01200518,Mitte,7155.0,9.7973,3.1803,0.957,0.7457,0.8839,0.9335,0.3595,middle,integrated,middle,Beusselkiez
+01200519,Mitte,9525.0,8.7606,4.8389,1.0401,0.7381,0.9265,0.9759,0.3858,middle,integrated,middle,Emdener Straße
+01200520,Mitte,9696.0,4.1792,3.5987,0.962,0.706,1.0003,0.9883,0.5409,close,middle,middle,Bremer Straße
+01200521,Mitte,5176.0,9.6743,2.3633,0.9417,0.771,0.9265,1.062,0.3675,middle,integrated,middle,Zwinglistraße
+01200522,Mitte,11548.0,8.1752,5.0389,0.768,0.6183,0.9503,0.8913,0.5049,close,segregated,"close to transit, segregated",Elberfelder Straße
+01200623,Mitte,11016.0,9.7743,3.0362,0.9371,0.7179,0.9559,1.0345,0.4534,middle,integrated,middle,Stephankiez
+01200624,Mitte,7481.0,11.3193,7.2214,0.7726,0.5722,0.8785,0.785,0.6353,middle,segregated,middle,Heidestraße
+01200625,Mitte,6724.0,8.9721,3.4119,0.7926,0.7544,0.7837,0.9836,0.4813,middle,integrated,middle,Lübecker Straße
+01200626,Mitte,5970.0,8.1724,3.129,0.9292,0.703,0.873,1.0229,0.478,close,middle,middle,Thomasiusstraße
+01200627,Mitte,3326.0,10.0769,2.9143,0.763,0.5985,0.8479,0.8337,0.7834,middle,segregated,middle,Zillesiedlung
+01200628,Mitte,3317.0,10.9528,3.8035,0.6759,0.5835,0.9597,0.8415,0.6499,middle,segregated,middle,Lüneburger Straße
+01200629,Mitte,5988.0,3.3765,3.3765,0.7188,0.6173,0.7592,0.7717,0.8293,close,segregated,"close to transit, segregated",Hansaviertel
+01300730,Mitte,8051.0,8.5096,3.7903,0.8744,0.7319,0.8565,1.0289,0.4228,middle,integrated,middle,Drontheimer Straße
+01300731,Mitte,8936.0,10.4522,4.8495,0.8531,0.7056,0.9348,0.9703,0.3397,middle,middle,middle,Koloniestraße
+01300732,Mitte,9985.0,9.809,4.2275,0.9069,0.6707,0.9125,1.0204,0.3394,middle,middle,middle,Soldiner Straße
+01300733,Mitte,11567.0,6.6138,4.5499,0.8735,0.6777,0.9088,0.9568,0.4784,close,middle,middle,Gesundbrunnen
+01300834,Mitte,14258.0,6.2839,5.5901,0.9607,0.7724,0.9923,1.0211,0.7778,close,integrated,concordant,Brunnenstraße
+01300835,Mitte,10751.0,7.4399,7.2778,0.9356,0.7784,1.033,0.9424,0.7895,close,integrated,concordant,Humboldthain Süd
+01300836,Mitte,15143.0,5.1427,3.5797,0.7787,0.7155,0.9257,0.9052,0.5095,close,middle,middle,Humboldthain Nordwest
+01400937,Mitte,11107.0,8.8497,5.9993,0.7141,0.596,0.8211,1.0079,0.6246,middle,segregated,middle,Afrikanische Straße
+01400938,Mitte,9702.0,8.8507,4.3972,1.0986,0.8548,1.0062,1.0259,0.608,middle,integrated,middle,Kameruner Straße
+01400939,Mitte,6127.0,5.9003,3.069,1.0127,0.8653,0.9112,0.9935,0.5449,close,integrated,concordant,Glasgower Straße
+01400940,Mitte,7290.0,11.8475,4.1198,0.6968,0.634,0.7617,0.7627,0.6934,middle,segregated,middle,Schillerpark
+01400941,Mitte,3832.0,5.7839,3.6551,0.7201,0.6753,0.8509,0.8404,0.6566,close,middle,middle,Londoner Straße
+01400942,Mitte,8527.0,5.6858,4.086,1.1219,0.9258,1.0615,1.167,0.9474,close,integrated,concordant,Westliche Müllerstraße
+01401043,Mitte,7607.0,5.6775,3.4095,0.975,0.7204,1.0303,1.0715,0.6469,close,integrated,concordant,Antonstraße
+01401044,Mitte,10256.0,5.9758,4.18,0.7368,0.6222,0.9322,0.9072,0.4326,close,segregated,"close to transit, segregated",Uferstraße
+01401045,Mitte,5466.0,5.0167,3.0689,0.8162,0.7376,1.0055,1.0809,0.3816,close,integrated,concordant,Schwedenstraße
+01401046,Mitte,8870.0,5.4438,4.8939,0.7994,0.7149,0.9517,0.9335,0.7006,close,middle,middle,Nordufer
+01401047,Mitte,8086.0,5.3458,4.3243,0.8953,0.7223,1.0144,0.9966,0.5756,close,integrated,concordant,Sparrplatz
+01401048,Mitte,9575.0,6.4887,3.7884,0.9685,0.7783,0.9989,1.0355,0.5848,close,integrated,concordant,Leopoldplatz
+01401049,Mitte,6540.0,5.3948,3.8958,0.9009,0.7258,1.0078,0.9498,0.5817,close,integrated,concordant,Schulstraße
+02100101,Friedrichshain-Kreuzberg,7741.0,4.938,3.1293,0.758,0.6652,0.819,0.9086,0.8655,close,middle,middle,Askanischer Platz
+02100102,Friedrichshain-Kreuzberg,8669.0,4.6264,2.5363,0.7895,0.7257,0.9741,0.9579,1.048,close,integrated,concordant,Mehringplatz
+02100103,Friedrichshain-Kreuzberg,5400.0,8.9805,2.7993,0.8485,0.7594,0.798,0.8347,1.0816,middle,integrated,middle,Am Berlin Museum
+02100104,Friedrichshain-Kreuzberg,5522.0,4.8915,3.3817,0.7844,0.7101,1.0126,0.9951,1.1828,close,middle,middle,Moritzplatz
+02100105,Friedrichshain-Kreuzberg,9094.0,5.3081,5.0804,0.7354,0.684,0.7896,0.7976,1.0479,close,middle,middle,Prinzenstraße
+02100106,Friedrichshain-Kreuzberg,4786.0,5.9783,5.9783,0.6118,0.5754,0.8465,0.8243,0.8789,close,segregated,"close to transit, segregated",Wassertorplatz
+02200207,Friedrichshain-Kreuzberg,2662.0,6.3876,4.1357,0.5912,0.5351,0.8072,0.8503,0.4818,close,segregated,"close to transit, segregated",Gleisdreieck
+02200208,Friedrichshain-Kreuzberg,5562.0,6.6562,4.5367,0.8639,0.7437,0.8966,1.0271,0.5863,close,integrated,concordant,Rathaus Yorckstraße
+02200209,Friedrichshain-Kreuzberg,10912.0,8.8215,4.6862,0.823,0.7557,0.87,1.0307,0.4895,middle,integrated,middle,Viktoriapark
+02200210,Friedrichshain-Kreuzberg,12259.0,5.7134,3.1463,0.9465,0.7031,0.9668,0.9815,0.5371,close,middle,middle,Urbanstraße
+02200211,Friedrichshain-Kreuzberg,14498.0,6.4173,3.815,0.8984,0.6475,0.955,0.9946,0.4935,close,middle,middle,Chamissokiez
+02200212,Friedrichshain-Kreuzberg,8217.0,5.8361,2.7712,0.8402,0.6098,0.9418,1.006,0.3667,close,segregated,"close to transit, segregated",Graefekiez Süd
+02200213,Friedrichshain-Kreuzberg,9833.0,5.5208,3.4547,0.7442,0.545,0.9031,0.9952,0.4881,close,segregated,"close to transit, segregated",Graefekiez Nord
+02300314,Friedrichshain-Kreuzberg,7046.0,6.4317,2.9144,0.8531,0.7421,1.0235,0.9656,0.8744,close,integrated,concordant,Oranienplatz
+02300315,Friedrichshain-Kreuzberg,8126.0,5.9428,3.5172,0.9427,0.6551,1.0495,0.997,0.6773,close,middle,middle,Lausitzer Platz
+02300316,Friedrichshain-Kreuzberg,4184.0,8.2539,3.0015,0.9249,0.7056,0.7843,0.8583,0.4274,close,middle,middle,Köpenicker Straße
+02300417,Friedrichshain-Kreuzberg,8302.0,6.5915,3.8182,0.9304,0.6806,0.9827,1.0474,0.578,close,middle,middle,Reichenberger Straße West
+02300418,Friedrichshain-Kreuzberg,7571.0,13.4345,3.3118,1.0567,0.6517,0.9581,0.9291,0.3597,middle,middle,middle,Reichenberger Straße Ost
+02300419,Friedrichshain-Kreuzberg,10289.0,8.2877,5.673,0.9243,0.6532,0.821,0.9182,0.3104,close,middle,middle,Wrangelkiez
+02400520,Friedrichshain-Kreuzberg,5949.0,11.6397,3.7792,0.7012,0.5715,0.809,0.8041,0.9085,middle,segregated,middle,Barnimkiez
+02400521,Friedrichshain-Kreuzberg,8906.0,7.6935,4.586,0.6783,0.6529,0.7675,0.7967,0.7832,close,middle,middle,Friedenstraße
+02400522,Friedrichshain-Kreuzberg,11508.0,8.1881,4.2443,0.7588,0.6603,0.8965,0.8641,0.6042,close,middle,middle,Richard-Sorge-Viertel
+02400623,Friedrichshain-Kreuzberg,14345.0,7.2029,5.437,0.808,0.6516,0.8308,0.7918,0.886,close,middle,middle,Andreasviertel
+02400624,Friedrichshain-Kreuzberg,12126.0,6.5131,3.0149,0.8508,0.7078,0.8356,0.9148,0.5314,close,middle,middle,Weberwiese
+02400625,Friedrichshain-Kreuzberg,1299.0,11.1801,11.1801,0.6818,0.5746,0.0,0.0,0.3041,middle,segregated,middle,Wriezener Bahnhof
+02500726,Friedrichshain-Kreuzberg,9193.0,10.0712,4.8623,0.9576,0.8007,0.7666,0.8174,0.4115,middle,integrated,middle,Hausburgviertel
+02500727,Friedrichshain-Kreuzberg,6470.0,6.9915,5.7931,0.9092,0.7287,1.0246,1.0645,0.7074,close,integrated,concordant,Forckenbeckplatz
+02500728,Friedrichshain-Kreuzberg,10103.0,5.5455,5.5455,1.0127,0.7777,0.8946,0.9464,0.4946,close,integrated,concordant,Samariterviertel
+02500729,Friedrichshain-Kreuzberg,5430.0,5.5753,5.5414,0.9542,0.8014,0.9483,1.0423,0.4179,close,integrated,concordant,Pettenkofer Straße
+02500830,Friedrichshain-Kreuzberg,3966.0,5.2779,3.8871,0.9082,0.7544,0.7783,0.8729,0.4623,close,integrated,concordant,Niederbarnimstraße
+02500831,Friedrichshain-Kreuzberg,7826.0,5.9412,3.0662,1.0792,0.8004,0.9847,0.9367,0.5413,close,integrated,concordant,Wismarplatz
+02500832,Friedrichshain-Kreuzberg,9594.0,7.7268,2.9286,0.9333,0.7755,0.9464,0.9826,0.4943,close,integrated,concordant,Traveplatz
+02500833,Friedrichshain-Kreuzberg,9998.0,8.7913,1.8883,1.1494,0.8021,0.9428,1.0158,0.4646,middle,integrated,middle,Boxhagener Platz
+02500834,Friedrichshain-Kreuzberg,11310.0,8.492,2.9754,0.9383,0.7225,0.9752,0.9177,0.4396,middle,integrated,middle,Revaler Straße
+02500835,Friedrichshain-Kreuzberg,8939.0,9.6063,6.0223,0.9448,0.7656,0.9638,1.0359,0.43,middle,integrated,middle,Stralauer Kiez
+02500836,Friedrichshain-Kreuzberg,5154.0,12.6375,2.9279,0.9166,0.6219,0.7605,0.7444,0.3305,middle,segregated,middle,Stralauer Halbinsel
+03100101,Pankow,4756.0,18.0601,12.6535,0.7901,0.6265,0.2138,0.4513,0.2743,far,segregated,concordant,Bucher Forst
+03100102,Pankow,3546.0,15.5309,6.1711,0.7571,0.7168,0.7447,0.7905,0.5887,middle,integrated,middle,Klinikum Buch
+03100103,Pankow,9532.0,16.6797,4.661,0.6513,0.5995,0.5889,0.5964,0.9671,far,segregated,concordant,Karower Chaussee
+03200204,Pankow,2106.0,67.0046,15.5499,0.9025,0.6492,0.6917,0.6951,0.1622,far,middle,middle,Blankenfelde
+03200205,Pankow,9078.0,40.5457,8.9933,0.9856,0.8049,0.8931,0.9401,0.3964,far,integrated,"far from transit, integrated",Uhlandstraße
+03200206,Pankow,6833.0,26.1359,3.5355,0.8283,0.6692,0.9763,1.0257,0.4695,far,middle,middle,Pastor-Niemöller-Platz
+03200207,Pankow,11978.0,33.029,4.5069,0.8422,0.7541,0.8853,0.9199,0.5449,far,integrated,"far from transit, integrated",Herthaplatz
+03200308,Pankow,5252.0,30.0657,3.7141,0.8569,0.7115,0.8134,0.8542,0.4105,far,middle,middle,Nisbléstraße
+03200309,Pankow,5551.0,26.7452,7.8751,0.8755,0.6646,0.8237,0.8436,0.3151,far,middle,middle,Eddastraße
+03200310,Pankow,8165.0,38.1485,6.0505,0.8882,0.7076,0.8316,0.9396,0.4145,far,middle,middle,Krugpfuhl
+03300411,Pankow,11704.0,24.8238,3.0997,0.8407,0.7365,0.8046,0.8147,1.0925,far,integrated,"far from transit, integrated",Karow Nord
+03300412,Pankow,5275.0,12.1262,5.0645,1.1213,0.889,0.9034,0.9534,0.3408,middle,integrated,middle,Karow Bahnhof
+03300413,Pankow,3170.0,25.9791,6.1205,0.994,0.8049,0.8702,0.8809,0.3547,far,integrated,"far from transit, integrated",Karow Ost
+03300514,Pankow,6759.0,20.9843,9.8321,0.9835,0.704,0.827,0.8738,0.2433,far,middle,middle,Blankenburg
+03300516,Pankow,10271.0,20.0793,8.0163,0.868,0.6411,0.7781,0.8629,0.3852,far,segregated,concordant,Heinersdorf
+03300517,Pankow,1050.0,37.9928,8.3726,1.0883,0.8144,0.8555,0.8828,0.3552,far,integrated,"far from transit, integrated",Märchenland
+03400618,Pankow,4740.0,40.9727,7.932,0.8577,0.7188,0.5885,0.6847,0.4643,far,integrated,"far from transit, integrated",Rosenthal
+03400619,Pankow,10696.0,29.9494,4.5222,0.9325,0.7175,0.9002,0.9287,0.4863,far,integrated,"far from transit, integrated",Wilhelmsruh
+03400620,Pankow,3590.0,16.9892,6.4305,0.6865,0.6423,0.7284,0.8194,0.4139,far,segregated,concordant,Schönholz
+03400721,Pankow,11897.0,9.0062,3.2869,0.8626,0.6884,0.9773,0.9854,0.4985,middle,middle,middle,Florakiez
+03400722,Pankow,3823.0,13.9615,5.483,0.7156,0.6181,0.9159,0.9858,0.5261,middle,segregated,middle,Parkstraße
+03400723,Pankow,7584.0,9.4255,2.8603,0.7047,0.6355,0.8645,0.8782,0.5339,middle,segregated,middle,Garbátyplatz
+03400724,Pankow,8474.0,12.2486,4.5427,0.7692,0.5225,0.9228,0.8333,0.65,middle,segregated,middle,Wolfshagener Straße
+03400725,Pankow,7717.0,17.3442,3.3494,0.8463,0.6499,0.7878,0.7948,0.6738,far,middle,middle,Schlosspark
+03400826,Pankow,7217.0,6.9819,4.9338,0.9359,0.7117,0.9897,1.0246,0.6554,close,middle,middle,Tiroler Viertel
+03400827,Pankow,9629.0,8.3846,4.9092,0.9012,0.7691,0.9008,0.9751,0.7744,middle,integrated,middle,Trelleborger Viertel
+03400828,Pankow,4898.0,15.6187,4.3201,0.8411,0.7619,0.9431,0.9328,0.8606,far,integrated,"far from transit, integrated",Spiekermann Straße
+03400829,Pankow,6188.0,10.085,3.795,1.0219,0.8014,0.9914,1.0227,0.903,middle,integrated,middle,Arnold-Zweig-Straße
+03400830,Pankow,9227.0,10.8299,2.687,0.9461,0.7072,0.9778,0.9101,0.5148,middle,middle,middle,Kissingenviertel
+03500932,Pankow,6774.0,30.5367,4.2817,0.862,0.7238,0.7696,0.8204,0.8305,far,integrated,"far from transit, integrated",Bühringstraße
+03500933,Pankow,7843.0,29.6031,2.8901,0.945,0.804,0.9157,0.907,0.5509,far,integrated,"far from transit, integrated",Weißer See
+03500934,Pankow,10537.0,19.3369,2.9149,1.0188,0.8712,1.0047,1.0853,0.7325,far,integrated,"far from transit, integrated",Weißenseer Spitze
+03500935,Pankow,6870.0,20.8587,3.0118,1.0884,0.8534,1.0325,1.0774,0.7032,far,integrated,"far from transit, integrated",Behaimstraße
+03500936,Pankow,10138.0,25.3823,4.3652,1.0052,0.7653,0.9982,1.0452,0.7216,far,integrated,"far from transit, integrated",Komponistenviertel Weißensee
+03501037,Pankow,8492.0,40.5486,4.7787,0.83,0.7174,0.7631,0.7821,0.4596,far,integrated,"far from transit, integrated",Rathaus Weißensee
+03501038,Pankow,7643.0,35.3026,5.4501,0.7447,0.6555,0.8217,0.9126,0.494,far,middle,middle,Hansastraße
+03601139,Pankow,4059.0,8.3708,3.1491,0.7835,0.6468,0.9133,0.9152,0.7145,middle,middle,middle,Norweger Viertel
+03601140,Pankow,5968.0,7.1346,4.496,0.9582,0.7046,0.992,1.0289,0.5449,close,middle,middle,Malmöer Straße
+03601141,Pankow,7074.0,7.9001,3.6962,1.0441,0.8112,1.0015,1.0488,0.5872,close,integrated,concordant,Arnimplatz
+03601142,Pankow,10878.0,7.3216,5.7758,0.8938,0.746,0.9337,0.9473,0.3513,close,integrated,concordant,Falkplatz
+03601243,Pankow,6958.0,6.8394,3.8373,1.2002,0.8602,1.0204,1.0541,0.7035,close,integrated,concordant,Rodenbergstraße
+03601244,Pankow,7611.0,8.1003,2.9137,1.1198,0.8855,1.006,0.9938,0.8239,close,integrated,concordant,Humannplatz
+03601245,Pankow,13562.0,9.5377,3.7269,0.9702,0.8465,0.8824,0.8806,0.9363,middle,integrated,middle,Ostseestraße
+03601346,Pankow,5892.0,5.5349,2.337,1.0725,0.905,1.0328,1.0737,0.5643,close,integrated,concordant,Gethsemanekirche
+03601347,Pankow,9527.0,8.4346,3.6658,1.0919,0.8832,1.0104,1.0613,0.5193,middle,integrated,middle,Helmholtzplatz
+03601348,Pankow,7414.0,8.0826,3.4921,1.0744,0.9185,1.0114,1.0028,0.5997,close,integrated,concordant,Senefelderstraße
+03601449,Pankow,9954.0,12.3945,4.2711,0.7068,0.6455,0.9052,0.8649,1.0504,middle,middle,middle,Michelangelostraße
+03601450,Pankow,5411.0,11.7807,5.7843,0.7129,0.6195,0.5939,0.6958,0.6714,middle,segregated,middle,Volkspark Prenzlauer Berg
+03601451,Pankow,6455.0,11.5773,3.7993,0.9094,0.7383,0.8403,0.8777,1.0317,middle,integrated,middle,Anton-Saefkow-Park
+03601452,Pankow,4774.0,8.761,3.9927,0.9184,0.8031,0.9067,0.8663,0.4761,middle,integrated,middle,Velodrom
+03601453,Pankow,3440.0,8.5617,7.3122,0.8023,0.6457,0.89,0.8702,0.7499,middle,middle,middle,Alter Schlachthof
+03701554,Pankow,11297.0,6.6006,3.6173,1.0378,0.8444,0.9726,1.0778,0.5268,close,integrated,concordant,Teutoburger Platz
+03701555,Pankow,7248.0,9.5887,3.5436,1.0869,0.8908,1.024,1.0415,0.6327,middle,integrated,middle,Sredzkistraße
+03701556,Pankow,8590.0,5.9369,3.913,1.1254,0.8194,1.0409,1.0321,0.7013,close,integrated,concordant,Kollwitzplatz
+03701657,Pankow,3353.0,9.5232,4.6948,0.6714,0.6316,0.6753,0.5998,0.6698,middle,segregated,middle,Thälmannpark
+03701658,Pankow,8316.0,14.2056,3.2469,1.0596,0.9299,0.9276,1.0054,0.6064,middle,integrated,middle,Christburger Straße
+03701659,Pankow,9548.0,12.9904,3.2709,1.093,0.802,1.025,1.0846,0.5672,middle,integrated,middle,Immanuelkirchstraße
+03701660,Pankow,12527.0,17.6457,4.5862,1.142,0.7858,1.0227,1.0851,0.8101,far,integrated,"far from transit, integrated",Bötzowstraße
+04100101,Charlottenburg-Wilmersdorf,11838.0,12.1933,5.0903,0.7784,0.6287,0.5299,0.5601,0.8047,middle,segregated,middle,Jungfernheide/Plötzensee
+04100102,Charlottenburg-Wilmersdorf,7798.0,10.7361,6.6915,0.6855,0.51,0.7129,0.6917,1.2887,middle,segregated,middle,Paul-Hertz-Siedlung
+04200203,Charlottenburg-Wilmersdorf,1419.0,9.7996,8.2996,0.6989,0.5262,0.5499,0.7434,0.1808,middle,segregated,middle,Olympiagelände
 04200204,Charlottenburg-Wilmersdorf,3567.0,11.4232,5.728,0.6378,0.4643,0.1817,0.3575,0.2939,middle,segregated,middle,Angerburger Allee
-04200205,Charlottenburg-Wilmersdorf,2527.0,7.1514,4.0156,0.7118,0.5408,0.0,0.3991,0.3062,close,segregated,"close to transit, segregated",Flatowallee
-04200206,Charlottenburg-Wilmersdorf,2839.0,12.5261,4.8675,0.7404,0.5384,0.8387,0.9626,0.377,middle,segregated,middle,Kranzallee
-04200207,Charlottenburg-Wilmersdorf,3030.0,9.6505,9.3338,0.8649,0.5489,0.7452,0.7222,0.2261,middle,segregated,middle,Eichkamp
-04200308,Charlottenburg-Wilmersdorf,6113.0,10.2541,4.8176,0.9448,0.7395,0.9209,0.9335,0.5348,middle,integrated,middle,Branitzer Platz
-04200309,Charlottenburg-Wilmersdorf,7114.0,7.0834,4.5076,0.8228,0.6588,0.8647,0.9413,0.4676,close,middle,middle,Neu Westend
-04200310,Charlottenburg-Wilmersdorf,7499.0,8.3313,5.5136,0.8638,0.6822,0.9634,0.9564,0.6167,close,middle,middle,Fürstenplatz
-04200311,Charlottenburg-Wilmersdorf,7312.0,8.8799,6.5884,0.6584,0.5171,0.5529,0.7626,0.2896,middle,segregated,middle,Königin-Elisabeth-Straße
-04300412,Charlottenburg-Wilmersdorf,4533.0,10.3227,2.8516,0.8174,0.6325,0.6139,0.4296,0.2277,middle,segregated,middle,Schlossgarten
-04300413,Charlottenburg-Wilmersdorf,9880.0,9.6114,5.867,0.9761,0.6512,0.9352,0.9246,0.4268,middle,middle,middle,Klausenerplatz
-04300414,Charlottenburg-Wilmersdorf,10576.0,7.0889,4.9841,0.979,0.7421,0.9555,1.0537,0.51,close,integrated,concordant,Schloßstraße
-04300415,Charlottenburg-Wilmersdorf,6343.0,7.1292,3.8162,0.7299,0.5912,0.8752,0.9772,0.27,close,segregated,"close to transit, segregated",Lietzensee
-04300416,Charlottenburg-Wilmersdorf,11822.0,6.6488,3.735,1.0858,0.8465,1.0118,1.0717,0.4525,close,integrated,concordant,Amtsgerichtsplatz
-04300517,Charlottenburg-Wilmersdorf,9400.0,5.0517,3.2883,0.9745,0.6207,0.977,0.9782,0.5935,close,segregated,"close to transit, segregated",Tegeler Weg
-04300518,Charlottenburg-Wilmersdorf,6712.0,7.5246,3.447,0.8694,0.5771,0.8732,0.8973,0.5257,close,segregated,"close to transit, segregated",Kaiserin-Augusta-Allee
-04300619,Charlottenburg-Wilmersdorf,9196.0,7.767,3.9165,0.7998,0.6489,0.9838,1.0004,0.6159,close,middle,middle,Alt-Lietzow
-04300620,Charlottenburg-Wilmersdorf,4069.0,16.6067,3.9001,0.6652,0.5633,0.6292,0.5797,0.4198,far,segregated,concordant,Spreestadt
-04300621,Charlottenburg-Wilmersdorf,10887.0,4.2686,3.0151,0.8917,0.6767,0.9382,0.9463,0.5992,close,middle,middle,Richard-Wagner-Straße
-04300622,Charlottenburg-Wilmersdorf,5258.0,6.8166,3.0037,0.8077,0.6401,0.982,1.0251,0.7406,close,segregated,"close to transit, segregated",Ernst-Reuter-Platz
-04300623,Charlottenburg-Wilmersdorf,12305.0,4.2151,3.5,0.9916,0.7773,0.9569,1.0324,0.5936,close,integrated,concordant,Karl-August-Platz
-04300624,Charlottenburg-Wilmersdorf,9228.0,6.6239,3.1582,0.8223,0.6507,0.9612,0.9982,0.645,close,middle,middle,Savignyplatz
-04400726,Charlottenburg-Wilmersdorf,5432.0,14.4896,4.2492,0.8404,0.6982,0.8761,0.9024,0.3731,middle,middle,middle,Bismarckallee
-04400727,Charlottenburg-Wilmersdorf,8251.0,12.2157,3.0329,0.9493,0.7868,0.8679,0.9137,0.4053,middle,integrated,middle,Flinsberger Platz
-04400728,Charlottenburg-Wilmersdorf,3189.0,18.5976,4.9364,1.0459,0.7787,0.9285,0.9348,0.3929,far,integrated,"far from transit, integrated",Hagenplatz
-04400729,Charlottenburg-Wilmersdorf,2819.0,18.9558,8.0378,0.7994,0.6671,0.8701,0.9064,0.2345,far,middle,middle,Hundekehle
-04400830,Charlottenburg-Wilmersdorf,8375.0,16.4951,5.2887,0.9504,0.6949,0.918,0.9012,0.5398,far,middle,middle,Forckenbeckstraße
-04400831,Charlottenburg-Wilmersdorf,1522.0,18.6592,5.6314,1.0268,0.8117,0.9509,0.9834,0.5319,far,integrated,"far from transit, integrated",Messelpark
-04400832,Charlottenburg-Wilmersdorf,6972.0,15.9015,4.1535,0.9254,0.7783,1.0232,1.0542,0.6823,far,integrated,"far from transit, integrated",Breite Straße
-04400833,Charlottenburg-Wilmersdorf,3895.0,11.3689,2.6132,1.054,0.7273,0.879,0.8344,0.6626,middle,integrated,middle,Schlangenbader Straße
-04400834,Charlottenburg-Wilmersdorf,3350.0,5.8707,3.6678,1.1483,0.7693,0.9773,1.0375,0.5234,close,integrated,concordant,Binger Straße
-04400835,Charlottenburg-Wilmersdorf,10098.0,5.9014,3.5285,1.1209,0.7693,0.9877,1.008,0.6379,close,integrated,concordant,Rüdesheimer Platz
-04500936,Charlottenburg-Wilmersdorf,5538.0,6.6356,4.0407,1.1537,0.8522,1.0471,0.9425,0.3822,close,integrated,concordant,Droysenstraße
-04500937,Charlottenburg-Wilmersdorf,7719.0,7.9311,3.9336,0.8971,0.738,0.7742,0.7804,0.2737,close,integrated,concordant,Halensee
-04500938,Charlottenburg-Wilmersdorf,8341.0,8.7436,3.4416,0.9641,0.8229,0.8815,0.9091,0.3637,middle,integrated,middle,Hochmeisterplatz
-04500939,Charlottenburg-Wilmersdorf,6778.0,5.9408,4.2405,0.9316,0.8199,0.9492,1.0041,0.4767,close,integrated,concordant,Eisenzahnstraße
-04501040,Charlottenburg-Wilmersdorf,5899.0,5.1881,3.3111,0.862,0.7676,0.8937,0.9411,0.3919,close,integrated,concordant,Hindemithplatz
-04501041,Charlottenburg-Wilmersdorf,5344.0,7.0414,3.6558,1.0683,0.84,0.9664,1.0231,0.4322,close,integrated,concordant,George-Grosz-Platz
-04501042,Charlottenburg-Wilmersdorf,3591.0,3.7298,3.0265,0.8463,0.6262,0.953,1.0097,0.5964,close,segregated,"close to transit, segregated",Breitscheidplatz
-04501043,Charlottenburg-Wilmersdorf,10846.0,6.5976,4.9436,1.0986,0.8304,0.9348,1.0095,0.4092,close,integrated,concordant,Preußenpark
-04501044,Charlottenburg-Wilmersdorf,5334.0,7.1401,4.6004,1.1188,0.8482,0.9826,1.0114,0.444,close,integrated,concordant,Ludwigkirchplatz
-04501045,Charlottenburg-Wilmersdorf,9340.0,4.7939,3.3055,0.928,0.6623,0.9818,0.9991,0.6016,close,middle,middle,Schaperstraße
-04501146,Charlottenburg-Wilmersdorf,4739.0,5.11,3.4222,0.9461,0.6778,1.0632,1.0559,0.5422,close,middle,middle,Barstraße
-04501147,Charlottenburg-Wilmersdorf,5451.0,4.6984,3.3489,0.7587,0.7047,0.8161,0.872,0.4538,close,middle,middle,Leon-Jessel-Platz
-04501148,Charlottenburg-Wilmersdorf,4605.0,5.664,3.3309,0.6648,0.5986,0.8976,0.9026,0.4471,close,segregated,"close to transit, segregated",Brabanter Platz
-04501149,Charlottenburg-Wilmersdorf,10023.0,4.8938,3.9165,0.9569,0.8018,0.9262,0.9994,0.4258,close,integrated,concordant,Nikolsburger Platz
-04501150,Charlottenburg-Wilmersdorf,3010.0,4.8412,4.1455,0.7891,0.6847,0.8611,0.8665,0.4409,close,middle,middle,Wilhelmsaue
-04501151,Charlottenburg-Wilmersdorf,7370.0,7.4937,5.8104,0.7425,0.6077,0.7973,0.8268,0.3372,close,segregated,"close to transit, segregated",Hildegardstraße
-04501152,Charlottenburg-Wilmersdorf,6946.0,4.8726,5.3744,0.9527,0.745,0.8726,0.9735,0.6222,close,integrated,concordant,Prager Platz
-04501153,Charlottenburg-Wilmersdorf,7525.0,6.1055,4.1352,0.9558,0.7011,0.9671,0.9796,0.5294,close,middle,middle,Babelsberger Straße
-05100101,Spandau,4508.0,52.0167,6.0209,0.8379,0.6667,0.6653,0.7565,0.5294,far,middle,middle,Hakenfelde Nord
-05100102,Spandau,4363.0,41.5621,5.4099,0.8095,0.6633,0.5317,0.5319,0.4889,far,middle,middle,Am Forstacker
-05100103,Spandau,6516.0,40.8933,3.1479,0.8159,0.6841,0.847,0.8396,0.6292,far,middle,middle,Mertensstraße
-05100104,Spandau,7222.0,34.4163,3.4079,0.8864,0.711,0.8565,0.8702,0.5262,far,middle,middle,Maselake
-05100105,Spandau,7734.0,35.4187,5.9288,1.0011,0.7491,0.8963,0.9548,0.3839,far,integrated,"far from transit, integrated",Amorbacher Weg
-05100206,Spandau,3632.0,59.2545,7.5207,0.7693,0.6808,0.7297,0.7364,0.3282,far,middle,middle,Griesingerstraße
-05100207,Spandau,2330.0,60.5828,4.9932,0.9038,0.6816,0.7362,0.8655,0.3031,far,middle,middle,An der Tränke
-05100208,Spandau,11101.0,47.0025,3.4002,0.7087,0.6491,0.7823,0.8015,0.3006,far,middle,middle,Im Spektefeld
-05100209,Spandau,11909.0,30.236,4.0818,0.6771,0.6238,0.743,0.7354,0.9163,far,segregated,concordant,Westerwaldstraße
-05100210,Spandau,7870.0,22.0594,2.9972,0.7222,0.7508,0.8587,0.9576,0.7622,far,integrated,"far from transit, integrated",Germersheimer Platz
-05100211,Spandau,6280.0,29.6737,3.5341,0.9404,0.7535,0.9127,0.9346,0.2675,far,integrated,"far from transit, integrated",An der Kappe
-05100312,Spandau,4065.0,22.8075,3.6016,0.835,0.6988,0.8786,0.8557,0.4876,far,middle,middle,Eckschanze
-05100313,Spandau,7595.0,23.5578,4.899,0.6523,0.5651,0.759,0.845,0.5105,far,segregated,concordant,Eiswerder
-05100314,Spandau,7481.0,15.584,2.8652,0.8289,0.6675,1.0108,0.9707,0.621,middle,middle,middle,Kurstraße
-05100315,Spandau,7391.0,13.6743,2.5917,0.8995,0.7493,0.9297,0.9779,0.6014,middle,integrated,middle,Ackerstraße
-05100316,Spandau,10543.0,7.27,3.2311,0.8453,0.6761,0.8537,0.8508,0.566,close,middle,middle,Carl-Schurz-Straße
-05100317,Spandau,4856.0,12.8823,8.1006,0.6692,0.5467,0.0,0.4873,0.132,middle,segregated,middle,Freiheit
-05200418,Spandau,3833.0,64.2722,4.3045,0.8034,0.5936,0.7689,0.7224,0.4442,far,segregated,concordant,Isenburger Weg
-05200419,Spandau,1634.0,51.2878,3.3611,0.9751,0.7048,1.0462,0.9725,0.6913,far,middle,middle,Am Heideberg
-05200420,Spandau,5868.0,31.9349,5.2752,0.7957,0.6414,0.4436,0.4964,0.3475,far,segregated,concordant,Staakener Straße
-05200421,Spandau,4428.0,50.5335,5.3702,0.6306,0.5717,0.7075,0.7502,0.5916,far,segregated,concordant,Spandauer Straße
-05200422,Spandau,1211.0,62.5234,6.3811,0.7083,0.5429,0.763,0.8124,0.2672,far,segregated,concordant,Werkstraße
-05200423,Spandau,6753.0,42.9568,3.822,0.7059,0.6072,0.5529,0.5202,0.5918,far,segregated,concordant,Magistratsweg
-05200524,Spandau,3387.0,62.8411,5.5084,0.7354,0.5701,0.8674,0.869,0.3423,far,segregated,concordant,Döberitzer Weg
-05200525,Spandau,2549.0,58.679,9.9066,0.6564,0.5837,0.0,0.0,0.205,far,segregated,concordant,Pillnitzer Weg
-05200526,Spandau,5806.0,47.1579,3.2055,0.579,0.5813,0.7537,0.7557,1.0104,far,segregated,concordant,Rudolf-Wissell-Großsiedlung
-05200527,Spandau,11987.0,38.0708,3.0534,0.7013,0.6516,0.7416,0.7755,1.0221,far,middle,middle,Maulbeerallee
-05200528,Spandau,7355.0,47.3091,5.1821,0.8339,0.6479,0.7483,0.8224,0.4994,far,middle,middle,Weinmeisterhornweg
-05200629,Spandau,8439.0,15.3439,4.1568,0.8584,0.6905,0.1125,0.449,0.4525,middle,middle,middle,Borkumer Straße
-05200630,Spandau,10090.0,26.8679,3.4153,0.8275,0.6366,0.892,0.8503,0.588,far,segregated,concordant,Wilhelmstadt West
-05200631,Spandau,8658.0,23.3713,3.7022,1.0245,0.7242,0.9394,0.9962,0.6106,far,integrated,"far from transit, integrated",Wilhelmstadt Ost
-05200632,Spandau,3428.0,21.4394,9.6949,0.6122,0.5366,0.3063,0.7321,0.1393,far,segregated,concordant,Tiefwerder
-05200633,Spandau,2178.0,36.4869,2.8537,0.6276,0.6281,0.7605,0.7737,0.6028,far,segregated,concordant,Graetschelsteig
-05200634,Spandau,4374.0,40.8562,5.1637,0.6945,0.5741,0.7506,0.7587,0.3049,far,segregated,concordant,Börnicker Straße
-05300735,Spandau,4536.0,29.1469,2.7115,0.7876,0.6329,0.765,0.7059,0.7679,far,segregated,concordant,Haveleck
-05300736,Spandau,3519.0,10.7984,5.4897,0.6807,0.4877,0.485,0.4322,0.2739,middle,segregated,middle,Zitadellenweg
-05300737,Spandau,11959.0,11.2509,3.0046,0.842,0.6604,0.9249,0.8925,0.9524,middle,middle,middle,Gartenfelder Straße
-05300839,Spandau,8711.0,15.3927,4.7584,0.7949,0.6627,0.8207,0.8166,0.6121,middle,middle,middle,Rohrdamm
-05300840,Spandau,515.0,11.3077,9.1078,0.6531,0.6168,0.4613,0.7116,0.252,middle,segregated,middle,Nonnendammallee
-05300841,Spandau,4602.0,4.1442,2.7543,0.8632,0.7014,0.8164,0.7561,0.6047,close,middle,middle,Siemensdamm
+04200205,Charlottenburg-Wilmersdorf,2527.0,7.1514,4.0156,0.7118,0.5417,0.0,0.3899,0.3062,close,segregated,"close to transit, segregated",Flatowallee
+04200206,Charlottenburg-Wilmersdorf,2839.0,12.5261,4.8675,0.7404,0.5383,0.8387,0.9625,0.377,middle,segregated,middle,Kranzallee
+04200207,Charlottenburg-Wilmersdorf,3030.0,9.6505,9.3338,0.8649,0.5489,0.7452,0.7236,0.2261,middle,segregated,middle,Eichkamp
+04200308,Charlottenburg-Wilmersdorf,6113.0,10.2541,4.8176,0.9561,0.7413,0.9218,0.9209,0.528,middle,integrated,middle,Branitzer Platz
+04200309,Charlottenburg-Wilmersdorf,7114.0,7.0834,4.5076,0.8228,0.6567,0.867,0.9399,0.4676,close,middle,middle,Neu Westend
+04200310,Charlottenburg-Wilmersdorf,7499.0,8.3313,5.5136,0.869,0.685,0.9657,0.9562,0.6151,close,middle,middle,Fürstenplatz
+04200311,Charlottenburg-Wilmersdorf,7312.0,8.8799,6.5884,0.6756,0.5184,0.5468,0.8262,0.2883,middle,segregated,middle,Königin-Elisabeth-Straße
+04300412,Charlottenburg-Wilmersdorf,4533.0,10.3227,2.8516,0.8234,0.6711,0.6139,0.4296,0.2277,middle,middle,middle,Schlossgarten
+04300413,Charlottenburg-Wilmersdorf,9880.0,9.6114,5.867,0.9842,0.6733,0.9368,0.9221,0.4257,middle,middle,middle,Klausenerplatz
+04300414,Charlottenburg-Wilmersdorf,10576.0,7.0889,4.9841,0.9838,0.7688,0.9507,1.0594,0.499,close,integrated,concordant,Schloßstraße
+04300415,Charlottenburg-Wilmersdorf,6343.0,7.1292,3.8162,0.7308,0.6008,0.8758,0.9747,0.2623,close,segregated,"close to transit, segregated",Lietzensee
+04300416,Charlottenburg-Wilmersdorf,11822.0,6.6488,3.735,1.118,0.8588,1.0147,1.0806,0.4477,close,integrated,concordant,Amtsgerichtsplatz
+04300517,Charlottenburg-Wilmersdorf,9400.0,5.0517,3.2883,0.9664,0.6172,0.9621,0.9721,0.5891,close,segregated,"close to transit, segregated",Tegeler Weg
+04300518,Charlottenburg-Wilmersdorf,6712.0,7.5246,3.447,0.8885,0.5885,0.8536,0.9058,0.5301,close,segregated,"close to transit, segregated",Kaiserin-Augusta-Allee
+04300619,Charlottenburg-Wilmersdorf,9196.0,7.767,3.9165,0.8367,0.6629,1.0011,1.0095,0.6031,close,middle,middle,Alt-Lietzow
+04300620,Charlottenburg-Wilmersdorf,4069.0,16.6067,3.9001,0.6622,0.5581,0.6456,0.5831,0.4268,far,segregated,concordant,Spreestadt
+04300621,Charlottenburg-Wilmersdorf,10887.0,4.2686,3.0151,0.8932,0.6939,0.9176,0.9343,0.5888,close,middle,middle,Richard-Wagner-Straße
+04300622,Charlottenburg-Wilmersdorf,5258.0,6.8166,3.0037,0.7769,0.6398,0.9673,1.0233,0.7434,close,segregated,"close to transit, segregated",Ernst-Reuter-Platz
+04300623,Charlottenburg-Wilmersdorf,12305.0,4.2151,3.5,0.9907,0.7829,0.9569,1.029,0.5903,close,integrated,concordant,Karl-August-Platz
+04300624,Charlottenburg-Wilmersdorf,9228.0,6.6239,3.1582,0.8185,0.644,0.9531,0.9905,0.6496,close,middle,middle,Savignyplatz
+04400726,Charlottenburg-Wilmersdorf,5432.0,14.4896,4.2492,0.8351,0.6996,0.8795,0.9237,0.3726,middle,middle,middle,Bismarckallee
+04400727,Charlottenburg-Wilmersdorf,8251.0,12.2157,3.0329,0.9524,0.793,0.8664,0.8923,0.3899,middle,integrated,middle,Flinsberger Platz
+04400728,Charlottenburg-Wilmersdorf,3189.0,18.5976,4.9364,1.0527,0.7826,0.9459,0.937,0.3999,far,integrated,"far from transit, integrated",Hagenplatz
+04400729,Charlottenburg-Wilmersdorf,2819.0,18.9558,8.0378,0.8078,0.6682,0.8701,0.9079,0.2422,far,middle,middle,Hundekehle
+04400830,Charlottenburg-Wilmersdorf,8375.0,16.4951,5.2887,0.9504,0.6962,0.9114,0.9,0.532,far,middle,middle,Forckenbeckstraße
+04400831,Charlottenburg-Wilmersdorf,1522.0,18.6592,5.6314,1.0252,0.8079,0.9535,0.9726,0.5227,far,integrated,"far from transit, integrated",Messelpark
+04400832,Charlottenburg-Wilmersdorf,6972.0,15.9015,4.1535,0.9376,0.7852,1.0239,1.0489,0.6767,far,integrated,"far from transit, integrated",Breite Straße
+04400833,Charlottenburg-Wilmersdorf,3895.0,11.3689,2.6132,0.929,0.6899,0.8277,0.8098,0.6536,middle,middle,middle,Schlangenbader Straße
+04400834,Charlottenburg-Wilmersdorf,3350.0,5.8707,3.6678,1.1499,0.7694,0.9758,1.0222,0.527,close,integrated,concordant,Binger Straße
+04400835,Charlottenburg-Wilmersdorf,10098.0,5.9014,3.5285,1.1027,0.7515,0.9808,0.9745,0.6354,close,integrated,concordant,Rüdesheimer Platz
+04500936,Charlottenburg-Wilmersdorf,5538.0,6.6356,4.0407,1.1656,0.8771,1.042,0.9441,0.383,close,integrated,concordant,Droysenstraße
+04500937,Charlottenburg-Wilmersdorf,7719.0,7.9311,3.9336,0.912,0.7553,0.7531,0.7946,0.2748,close,integrated,concordant,Halensee
+04500938,Charlottenburg-Wilmersdorf,8341.0,8.7436,3.4416,0.9662,0.8281,0.8822,0.9124,0.3605,middle,integrated,middle,Hochmeisterplatz
+04500939,Charlottenburg-Wilmersdorf,6778.0,5.9408,4.2405,0.9264,0.8305,0.9406,1.0076,0.4797,close,integrated,concordant,Eisenzahnstraße
+04501040,Charlottenburg-Wilmersdorf,5899.0,5.1881,3.3111,0.8928,0.7584,0.9114,0.9482,0.4261,close,integrated,concordant,Hindemithplatz
+04501041,Charlottenburg-Wilmersdorf,5344.0,7.0414,3.6558,1.0643,0.8035,0.9705,1.0214,0.4606,close,integrated,concordant,George-Grosz-Platz
+04501042,Charlottenburg-Wilmersdorf,3591.0,3.7298,3.0265,0.8488,0.6167,0.9525,1.0283,0.5916,close,segregated,"close to transit, segregated",Breitscheidplatz
+04501043,Charlottenburg-Wilmersdorf,10846.0,6.5976,4.9436,1.1076,0.8418,0.9414,1.0124,0.4282,close,integrated,concordant,Preußenpark
+04501044,Charlottenburg-Wilmersdorf,5334.0,7.1401,4.6004,1.1284,0.849,0.9895,1.0096,0.4474,close,integrated,concordant,Ludwigkirchplatz
+04501045,Charlottenburg-Wilmersdorf,9340.0,4.7939,3.3055,0.9544,0.6867,0.9918,1.0046,0.6015,close,middle,middle,Schaperstraße
+04501146,Charlottenburg-Wilmersdorf,4739.0,5.11,3.4222,0.946,0.6843,1.0438,1.0424,0.5285,close,middle,middle,Barstraße
+04501147,Charlottenburg-Wilmersdorf,5451.0,4.6984,3.3489,0.7673,0.7217,0.8498,0.8813,0.4384,close,integrated,concordant,Leon-Jessel-Platz
+04501148,Charlottenburg-Wilmersdorf,4605.0,5.664,3.3309,0.6296,0.5798,0.7729,0.8099,0.4476,close,segregated,"close to transit, segregated",Brabanter Platz
+04501149,Charlottenburg-Wilmersdorf,10023.0,4.8938,3.9165,0.9638,0.8045,0.9203,0.9929,0.434,close,integrated,concordant,Nikolsburger Platz
+04501150,Charlottenburg-Wilmersdorf,3010.0,4.8412,4.1455,0.8441,0.6972,0.8576,0.8783,0.4455,close,middle,middle,Wilhelmsaue
+04501151,Charlottenburg-Wilmersdorf,7370.0,7.4937,5.8104,0.7511,0.6174,0.8013,0.8263,0.3324,close,segregated,"close to transit, segregated",Hildegardstraße
+04501152,Charlottenburg-Wilmersdorf,6946.0,4.8726,5.3744,0.9846,0.7938,0.8824,0.949,0.6256,close,integrated,concordant,Prager Platz
+04501153,Charlottenburg-Wilmersdorf,7525.0,6.1055,4.1352,0.9589,0.7041,0.9543,0.9968,0.5292,close,middle,middle,Babelsberger Straße
+05100101,Spandau,4508.0,52.0167,6.0209,0.8372,0.6667,0.6653,0.7569,0.5294,far,middle,middle,Hakenfelde Nord
+05100102,Spandau,4363.0,41.5621,5.4099,0.8095,0.662,0.5324,0.5297,0.4889,far,middle,middle,Am Forstacker
+05100103,Spandau,6516.0,40.8933,3.1479,0.8159,0.6937,0.847,0.8911,0.6292,far,middle,middle,Mertensstraße
+05100104,Spandau,7222.0,34.4163,3.4079,0.8797,0.7217,0.8588,0.8671,0.5259,far,integrated,"far from transit, integrated",Maselake
+05100105,Spandau,7734.0,35.4187,5.9288,1.0084,0.7722,0.8941,0.9545,0.3839,far,integrated,"far from transit, integrated",Amorbacher Weg
+05100206,Spandau,3632.0,59.2545,7.5207,0.7635,0.6784,0.7297,0.7364,0.3282,far,middle,middle,Griesingerstraße
+05100207,Spandau,2330.0,60.5828,4.9932,0.8823,0.6842,0.7362,0.8745,0.3031,far,middle,middle,An der Tränke
+05100208,Spandau,11101.0,47.0025,3.4002,0.7087,0.6484,0.7824,0.7999,0.3006,far,middle,middle,Im Spektefeld
+05100209,Spandau,11909.0,30.236,4.0818,0.6794,0.624,0.743,0.7348,0.9163,far,segregated,concordant,Westerwaldstraße
+05100210,Spandau,7870.0,22.0594,2.9972,0.7206,0.7503,0.8583,0.9593,0.7597,far,integrated,"far from transit, integrated",Germersheimer Platz
+05100211,Spandau,6280.0,29.6737,3.5341,0.9404,0.7552,0.9127,0.9344,0.2675,far,integrated,"far from transit, integrated",An der Kappe
+05100312,Spandau,4065.0,22.8075,3.6016,0.8345,0.7019,0.8813,0.8533,0.4876,far,middle,middle,Eckschanze
+05100313,Spandau,7595.0,23.5578,4.899,0.6882,0.5939,0.7716,0.847,0.5149,far,segregated,concordant,Eiswerder
+05100314,Spandau,7481.0,15.584,2.8652,0.8313,0.6787,1.0188,0.9713,0.6242,middle,middle,middle,Kurstraße
+05100315,Spandau,7391.0,13.6743,2.5917,0.9039,0.7508,0.9281,0.9782,0.6048,middle,integrated,middle,Ackerstraße
+05100316,Spandau,10543.0,7.27,3.2311,0.8469,0.6724,0.8537,0.8509,0.5676,close,middle,middle,Carl-Schurz-Straße
+05100317,Spandau,4856.0,12.8823,8.1006,0.6664,0.5491,0.0,0.487,0.132,middle,segregated,middle,Freiheit
+05200418,Spandau,3833.0,64.2722,4.3045,0.8034,0.5936,0.7689,0.7265,0.4442,far,segregated,concordant,Isenburger Weg
+05200419,Spandau,1634.0,51.2878,3.3611,0.9751,0.706,1.0462,0.9728,0.6913,far,middle,middle,Am Heideberg
+05200420,Spandau,5868.0,31.9349,5.2752,0.8023,0.6415,0.4442,0.5028,0.3487,far,segregated,concordant,Staakener Straße
+05200421,Spandau,4428.0,50.5335,5.3702,0.6196,0.581,0.7081,0.7514,0.5916,far,segregated,concordant,Spandauer Straße
+05200422,Spandau,1211.0,62.5234,6.3811,0.7031,0.539,0.7631,0.8145,0.2702,far,segregated,concordant,Werkstraße
+05200423,Spandau,6753.0,42.9568,3.822,0.7073,0.6139,0.5527,0.5159,0.5934,far,segregated,concordant,Magistratsweg
+05200524,Spandau,3387.0,62.8411,5.5084,0.7394,0.5782,0.8674,0.8685,0.3439,far,segregated,concordant,Döberitzer Weg
+05200525,Spandau,2549.0,58.679,9.9066,0.6564,0.591,0.0,0.0,0.205,far,segregated,concordant,Pillnitzer Weg
+05200526,Spandau,5806.0,47.1579,3.2055,0.5821,0.5847,0.7507,0.7553,1.0158,far,segregated,concordant,Rudolf-Wissell-Großsiedlung
+05200527,Spandau,11987.0,38.0708,3.0534,0.702,0.6538,0.7458,0.7766,1.0231,far,middle,middle,Maulbeerallee
+05200528,Spandau,7355.0,47.3091,5.1821,0.8387,0.6504,0.7477,0.8201,0.5017,far,middle,middle,Weinmeisterhornweg
+05200629,Spandau,8439.0,15.3439,4.1568,0.8584,0.7058,0.1124,0.4524,0.4525,middle,middle,middle,Borkumer Straße
+05200630,Spandau,10090.0,26.8679,3.4153,0.8494,0.6651,0.8936,0.8522,0.5934,far,middle,middle,Wilhelmstadt West
+05200631,Spandau,8658.0,23.3713,3.7022,1.0701,0.7647,0.9758,1.0022,0.6141,far,integrated,"far from transit, integrated",Wilhelmstadt Ost
+05200632,Spandau,3428.0,21.4394,9.6949,0.6142,0.5355,0.3055,0.7346,0.1393,far,segregated,concordant,Tiefwerder
+05200633,Spandau,2178.0,36.4869,2.8537,0.6249,0.6261,0.7601,0.7746,0.6149,far,segregated,concordant,Graetschelsteig
+05200634,Spandau,4374.0,40.8562,5.1637,0.6949,0.5753,0.7519,0.7623,0.3049,far,segregated,concordant,Börnicker Straße
+05300735,Spandau,4536.0,29.1469,2.7115,0.7735,0.6242,0.7241,0.6983,0.7702,far,segregated,concordant,Haveleck
+05300736,Spandau,3519.0,10.7984,5.4897,0.6673,0.4781,0.4936,0.4321,0.269,middle,segregated,middle,Zitadellenweg
+05300737,Spandau,11959.0,11.2509,3.0046,0.8433,0.654,0.9245,0.8899,0.9524,middle,middle,middle,Gartenfelder Straße
+05300839,Spandau,8711.0,15.3927,4.7584,0.7955,0.6558,0.8207,0.8166,0.6121,middle,middle,middle,Rohrdamm
+05300840,Spandau,515.0,11.3077,9.1078,0.6531,0.5903,0.4504,0.7086,0.2519,middle,segregated,middle,Nonnendammallee
+05300841,Spandau,4602.0,4.1442,2.7543,0.8364,0.6748,0.8164,0.7493,0.6162,close,middle,middle,Siemensdamm
 05400942,Spandau,3684.0,91.0503,5.669,0.7983,0.6917,0.5541,0.627,0.2354,far,middle,middle,Alt-Gatow
-05400943,Spandau,10538.0,141.2732,6.3197,0.9133,0.7429,0.7552,0.7896,0.2605,far,integrated,"far from transit, integrated",Jägerallee
-05400944,Spandau,2187.0,142.0455,5.1288,0.7544,0.6325,0.0,0.2927,0.4007,far,segregated,concordant,Kladower Damm
-05400945,Spandau,3628.0,158.7972,3.5459,0.7967,0.6436,0.8412,0.8685,0.3187,far,middle,middle,Kafkastraße
-06100101,Steglitz-Zehlendorf,6899.0,9.0904,3.7948,0.8267,0.6564,0.9319,0.9527,0.4672,middle,middle,middle,Fichtenberg
-06100102,Steglitz-Zehlendorf,9111.0,5.5658,2.5928,0.8546,0.6481,0.9237,0.9523,0.4691,close,middle,middle,Schloßstraße
-06100103,Steglitz-Zehlendorf,6149.0,6.762,3.5784,0.927,0.704,0.9396,1.0217,0.4595,close,middle,middle,Markelstraße
-06100204,Steglitz-Zehlendorf,6846.0,11.4889,3.4744,0.7327,0.6241,0.7984,0.8073,0.4984,middle,segregated,middle,Munsterdamm
-06100205,Steglitz-Zehlendorf,9863.0,10.4642,2.609,0.8599,0.6861,0.968,0.9739,0.7069,middle,middle,middle,Südende
-06100206,Steglitz-Zehlendorf,7738.0,16.2394,3.3411,0.7929,0.7221,0.9134,0.9224,0.4251,far,integrated,"far from transit, integrated",Stadtpark
-06100207,Steglitz-Zehlendorf,8200.0,8.3538,2.8033,0.7755,0.6768,0.8445,0.8699,0.4898,close,middle,middle,Mittelstraße
-06100208,Steglitz-Zehlendorf,7095.0,11.2992,3.3173,0.9067,0.6991,0.9602,0.9274,0.5764,middle,middle,middle,Bergstraße
-06100209,Steglitz-Zehlendorf,9341.0,6.8848,3.3049,0.9285,0.681,0.9615,0.9519,0.6189,close,middle,middle,Feuerbachstraße
-06100210,Steglitz-Zehlendorf,4935.0,12.241,2.1891,0.8468,0.6683,0.9356,0.927,0.6149,middle,middle,middle,Bismarckstraße
-06200311,Steglitz-Zehlendorf,4851.0,22.409,3.1953,0.8006,0.6639,0.8218,0.8298,0.5464,far,middle,middle,Alt-Lankwitz
-06200312,Steglitz-Zehlendorf,6271.0,11.2131,5.2253,0.9169,0.785,0.9277,0.9176,0.5174,middle,integrated,middle,Komponistenviertel Lankwitz
-06200313,Steglitz-Zehlendorf,7390.0,11.6746,2.6106,0.7805,0.7597,0.8206,0.826,0.8763,middle,integrated,middle,Lankwitz Kirche
-06200314,Steglitz-Zehlendorf,7270.0,13.4071,4.0148,0.9284,0.8337,0.8416,0.8356,0.8967,middle,integrated,middle,Kaiser-Wilhelm-Straße
-06200315,Steglitz-Zehlendorf,6976.0,20.7426,4.4283,0.7676,0.7118,0.8355,0.856,0.729,far,middle,middle,Gallwitzallee
-06200316,Steglitz-Zehlendorf,5819.0,19.7993,4.2403,0.7311,0.6379,0.4244,0.6829,0.6848,far,segregated,concordant,Belßstraße
-06200317,Steglitz-Zehlendorf,6314.0,20.9521,5.067,0.8663,0.7038,0.9392,0.9598,0.6088,far,middle,middle,Lankwitz Süd
-06200419,Steglitz-Zehlendorf,4496.0,8.3558,2.9608,0.6952,0.6556,0.9022,0.8894,0.5619,middle,middle,middle,Thermometersiedlung
-06200420,Steglitz-Zehlendorf,7162.0,14.8923,3.8076,0.8304,0.7176,0.8756,0.889,0.478,middle,middle,middle,Lichterfelde Süd
-06200421,Steglitz-Zehlendorf,8492.0,11.905,3.8253,0.9575,0.7452,0.8831,0.8877,0.4125,middle,integrated,middle,Königsberger Straße
-06200422,Steglitz-Zehlendorf,7044.0,13.1653,2.8554,1.0411,0.8549,0.9638,0.9935,0.4678,middle,integrated,middle,Oberhofer Platz
-06200423,Steglitz-Zehlendorf,8574.0,20.3327,5.5707,0.7981,0.7686,0.8598,0.9409,0.4579,far,integrated,"far from transit, integrated",Schütte-Lanz-Straße
-06300524,Steglitz-Zehlendorf,5641.0,19.7812,8.6804,0.8262,0.7055,0.7233,0.7749,0.3159,far,middle,middle,Berlepschstraße
-06300525,Steglitz-Zehlendorf,5844.0,34.4272,10.1028,0.8358,0.6569,0.7577,0.7873,0.6438,far,middle,middle,Zehlendorf Süd
-06300526,Steglitz-Zehlendorf,3372.0,9.128,3.3799,0.8884,0.7259,0.88,0.9703,0.4916,middle,integrated,middle,Zehlendorf Mitte
-06300527,Steglitz-Zehlendorf,8527.0,7.3062,3.5292,0.7262,0.6935,0.8018,0.8246,0.5137,close,middle,middle,Sundgauer Straße
-06300528,Steglitz-Zehlendorf,10951.0,19.9721,4.2817,0.8684,0.7166,0.8437,0.9193,0.5212,far,middle,middle,Teltower Damm
-06300629,Steglitz-Zehlendorf,7054.0,8.9415,3.0295,0.8443,0.6982,0.8257,0.8733,0.3679,middle,middle,middle,Botanischer Garten
-06300630,Steglitz-Zehlendorf,5479.0,16.8157,3.176,0.8476,0.6811,0.8202,0.9246,0.4342,far,middle,middle,Hindenburgdamm
-06300631,Steglitz-Zehlendorf,3076.0,25.9704,3.6322,0.7891,0.7392,0.7564,0.8289,0.3289,far,integrated,"far from transit, integrated",Goerzwerke
-06300632,Steglitz-Zehlendorf,13533.0,25.5448,4.2076,0.8877,0.8212,0.8701,0.8653,0.7277,far,integrated,"far from transit, integrated",Schweizer Viertel
-06300633,Steglitz-Zehlendorf,11916.0,12.3228,4.2557,0.991,0.7803,0.9854,0.9968,0.4127,middle,integrated,middle,Augustaplatz
-06300634,Steglitz-Zehlendorf,8287.0,12.9465,5.027,1.0685,0.9043,0.9797,1.0154,0.4098,middle,integrated,middle,Lichterfelde West
-06400735,Steglitz-Zehlendorf,10057.0,31.6437,5.5546,0.735,0.5687,0.662,0.7518,0.2496,far,segregated,concordant,Wannsee
-06400736,Steglitz-Zehlendorf,5153.0,24.4078,5.6709,0.7428,0.6534,0.6093,0.7394,0.4533,far,middle,middle,Düppel
-06400737,Steglitz-Zehlendorf,10844.0,12.8857,7.8398,0.7781,0.616,0.856,0.9125,0.3129,middle,segregated,middle,Nikolassee
-06400838,Steglitz-Zehlendorf,7367.0,10.6709,7.3537,0.8298,0.6576,0.8783,0.9497,0.4212,middle,middle,middle,Krumme Lanke
-06400839,Steglitz-Zehlendorf,5408.0,9.7657,4.2589,0.8549,0.685,0.8575,0.9125,0.3629,middle,middle,middle,Fischerhüttenstraße
-06400840,Steglitz-Zehlendorf,7082.0,7.0828,6.7861,0.95,0.7377,0.848,0.9646,0.3639,close,integrated,concordant,Fischtal
-06400841,Steglitz-Zehlendorf,6241.0,11.3369,3.4385,0.8198,0.7351,0.8728,0.9401,0.4744,middle,integrated,middle,Zehlendorf Eiche
-06400842,Steglitz-Zehlendorf,4761.0,11.3682,6.1899,0.7661,0.6003,0.7791,0.8622,0.4118,middle,segregated,middle,Hüttenweg
-06400843,Steglitz-Zehlendorf,4699.0,10.6985,4.4397,0.9231,0.751,0.9209,0.9868,0.4885,middle,integrated,middle,Thielallee
-06400844,Steglitz-Zehlendorf,7210.0,8.9863,5.1748,0.8138,0.665,0.8657,0.9457,0.33,middle,middle,middle,Dahlem
-07100101,Tempelhof-Schöneberg,9846.0,4.6352,3.6724,0.8137,0.6443,0.9146,1.0129,0.5594,close,middle,middle,Wittenbergplatz
-07100102,Tempelhof-Schöneberg,8697.0,5.8467,3.4091,0.8703,0.6426,0.9086,1.0279,0.4827,close,segregated,"close to transit, segregated",Kalckreuthstraße
-07100103,Tempelhof-Schöneberg,8030.0,4.4179,3.3723,0.9669,0.6825,0.9448,1.0364,0.4168,close,middle,middle,Frobenstraße
-07100204,Tempelhof-Schöneberg,10867.0,6.8649,4.789,1.0218,0.7117,0.9943,1.0067,0.6313,close,middle,middle,Barbarossaplatz
-07100205,Tempelhof-Schöneberg,5224.0,4.7939,2.4618,0.8945,0.6849,0.9448,0.9891,0.45,close,middle,middle,Alvenslebenstraße
-07100206,Tempelhof-Schöneberg,8256.0,4.4903,3.5324,0.8265,0.6817,0.9995,1.0153,0.5016,close,middle,middle,Großgörschenstraße
-07200307,Tempelhof-Schöneberg,10567.0,4.8549,3.352,0.8687,0.693,0.9258,0.9167,0.8403,close,middle,middle,Bayerischer Platz
-07200308,Tempelhof-Schöneberg,10702.0,4.323,2.9516,0.7297,0.5938,0.9128,0.9069,0.6525,close,segregated,"close to transit, segregated",Volkspark (Rudolph-Wilde-Park)
-07200409,Tempelhof-Schöneberg,9303.0,6.0043,3.2153,0.8597,0.6893,0.9295,1.0309,0.497,close,middle,middle,Belziger Straße
-07200410,Tempelhof-Schöneberg,5624.0,7.1038,3.1755,0.7951,0.6303,0.9482,1.0215,0.4152,close,segregated,"close to transit, segregated",Feurigstraße
-07200411,Tempelhof-Schöneberg,2723.0,4.6124,2.5369,0.6939,0.6177,0.7346,0.7927,0.5038,close,segregated,"close to transit, segregated",Julius-Leber-Brücke
-07200412,Tempelhof-Schöneberg,2673.0,7.7712,4.9394,0.6571,0.5387,0.5701,0.6551,0.4099,close,segregated,"close to transit, segregated",Schöneberger Linse
-07200413,Tempelhof-Schöneberg,7741.0,6.605,1.9625,0.8074,0.5748,0.928,0.9645,0.4519,close,segregated,"close to transit, segregated",Cheruskerstraße
-07200414,Tempelhof-Schöneberg,3728.0,5.3608,3.1135,0.7562,0.7068,0.8769,0.9907,0.4291,close,middle,middle,Hohenfriedbergstraße
-07300515,Tempelhof-Schöneberg,7001.0,5.7197,4.1829,0.8431,0.6526,0.9428,0.9548,0.5612,close,middle,middle,Taunusstraße
-07300516,Tempelhof-Schöneberg,8842.0,5.3921,3.5367,0.935,0.6743,0.9543,0.9485,0.5118,close,middle,middle,Odenwaldstraße
-07300517,Tempelhof-Schöneberg,10755.0,6.14,3.9867,0.6985,0.5614,0.8746,0.914,0.4944,close,segregated,"close to transit, segregated",Perelsplatz
-07300618,Tempelhof-Schöneberg,9213.0,6.4055,3.1656,0.719,0.565,0.7693,0.8623,0.3527,close,segregated,"close to transit, segregated",Ceciliengärten
-07300619,Tempelhof-Schöneberg,12209.0,9.2147,3.3651,0.825,0.7091,0.7991,0.9019,0.6501,middle,middle,middle,Grazer Platz
-07400720,Tempelhof-Schöneberg,11707.0,9.9516,3.1161,0.8313,0.6651,0.8421,0.873,0.7343,middle,middle,middle,Gontermannstraße
-07400721,Tempelhof-Schöneberg,7604.0,10.1585,6.2398,1.1013,0.7486,1.0491,1.0973,0.5082,middle,integrated,middle,Paradestraße
-07400822,Tempelhof-Schöneberg,3299.0,16.8652,2.7377,0.72,0.6008,0.6739,0.732,0.5846,far,segregated,concordant,Lindenhofsiedlung
-07400823,Tempelhof-Schöneberg,9680.0,13.0969,3.489,0.8561,0.7211,0.89,0.8883,0.577,middle,integrated,middle,Wittekindstraße
-07400824,Tempelhof-Schöneberg,7376.0,5.5945,3.047,0.8168,0.7091,0.9622,0.9477,0.5332,close,middle,middle,Bosepark
-07400825,Tempelhof-Schöneberg,7179.0,7.38,3.6328,1.1249,0.8989,0.9785,1.0732,0.5418,close,integrated,concordant,Friedrich-Karl-Straße
-07400826,Tempelhof-Schöneberg,5025.0,12.3881,2.7491,0.8774,0.7635,0.9019,0.9694,0.4617,middle,integrated,middle,Marienhöhe
-07400927,Tempelhof-Schöneberg,11433.0,11.3207,3.7543,0.8436,0.6974,0.9494,0.9441,0.3754,middle,middle,middle,Rathaus Tempelhof
-07400928,Tempelhof-Schöneberg,3979.0,18.7823,3.3685,0.7287,0.6207,0.8459,0.9198,0.4912,far,segregated,concordant,Germaniagarten
-07501029,Tempelhof-Schöneberg,8611.0,11.5163,3.0273,0.8623,0.8165,0.7792,0.8198,0.369,middle,integrated,middle,Ringstraße
-07501030,Tempelhof-Schöneberg,8854.0,6.2327,4.6948,0.8754,0.7987,0.8758,0.9001,0.5033,close,integrated,concordant,Machonstraße
-07501031,Tempelhof-Schöneberg,9181.0,8.3972,3.6046,0.819,0.7083,0.7832,0.8007,0.4888,middle,middle,middle,Eisenacher Straße
-07501032,Tempelhof-Schöneberg,6473.0,20.3885,3.8512,0.7553,0.6316,0.8144,0.8428,0.7289,far,segregated,concordant,Imbrosweg
-07501133,Tempelhof-Schöneberg,8346.0,12.9662,3.8037,0.8207,0.7317,0.6676,0.702,0.5679,middle,integrated,middle,Fritz-Werner-Straße
-07501134,Tempelhof-Schöneberg,10618.0,19.9125,5.8544,0.8105,0.6674,0.8257,0.7741,0.5823,far,middle,middle,Hundsteinweg
-07501135,Tempelhof-Schöneberg,2261.0,21.9317,3.8755,0.9367,0.7654,0.9323,0.92,0.5204,far,integrated,"far from transit, integrated",Birnhornweg
-07601236,Tempelhof-Schöneberg,10390.0,20.6376,3.6438,0.7068,0.6485,0.828,0.8164,0.5989,far,middle,middle,Marienfelder Allee Nordwest
-07601237,Tempelhof-Schöneberg,4783.0,12.5444,5.4162,0.9321,0.6801,0.8597,0.8867,0.4434,middle,middle,middle,Kirchstraße
-07601238,Tempelhof-Schöneberg,2847.0,17.6277,3.6696,0.741,0.6863,0.6665,0.6722,0.3237,far,middle,middle,Marienfelde Nordost
-07601339,Tempelhof-Schöneberg,5774.0,35.3518,3.8213,0.7202,0.5907,0.7556,0.768,0.8679,far,segregated,concordant,Tirschenreuther Ring West
-07601340,Tempelhof-Schöneberg,6346.0,30.4551,3.5584,0.641,0.6034,0.206,0.5548,0.5276,far,segregated,concordant,Tirschenreuther Ring Ost
-07601341,Tempelhof-Schöneberg,2159.0,20.1965,7.487,0.7586,0.624,0.3166,0.52,0.2037,far,segregated,concordant,Diedersdorfer Weg
-07601442,Tempelhof-Schöneberg,10371.0,16.6736,5.0711,0.9491,0.8677,0.8876,0.971,0.4886,far,integrated,"far from transit, integrated",Kettinger Straße
-07601443,Tempelhof-Schöneberg,10804.0,28.2396,4.2946,0.9502,0.8049,0.8886,0.8944,0.4841,far,integrated,"far from transit, integrated",Töpchiner Weg
-07601544,Tempelhof-Schöneberg,9441.0,11.814,2.9279,0.763,0.7279,0.8189,0.8447,0.6412,middle,integrated,middle,John-Locke-Straße
-07601545,Tempelhof-Schöneberg,8565.0,24.8406,4.4433,0.7397,0.6721,0.651,0.7218,0.4445,far,middle,middle,Nahariyastraße
+05400943,Spandau,10538.0,141.2732,6.3197,0.9133,0.742,0.7552,0.7896,0.2605,far,integrated,"far from transit, integrated",Jägerallee
+05400944,Spandau,2187.0,142.0455,5.1288,0.7522,0.6316,0.0,0.335,0.3999,far,segregated,concordant,Kladower Damm
+05400945,Spandau,3628.0,158.7972,3.5459,0.7967,0.6436,0.841,0.8682,0.3187,far,middle,middle,Kafkastraße
+06100101,Steglitz-Zehlendorf,6899.0,9.0904,3.7948,0.819,0.6449,0.9195,0.9642,0.4672,middle,middle,middle,Fichtenberg
+06100102,Steglitz-Zehlendorf,9111.0,5.5658,2.5928,0.8546,0.6423,0.9098,0.9532,0.4663,close,segregated,"close to transit, segregated",Schloßstraße
+06100103,Steglitz-Zehlendorf,6149.0,6.762,3.5784,0.8787,0.7044,0.9314,1.0024,0.4466,close,middle,middle,Markelstraße
+06100204,Steglitz-Zehlendorf,6846.0,11.4889,3.4744,0.733,0.6265,0.8144,0.8206,0.493,middle,segregated,middle,Munsterdamm
+06100205,Steglitz-Zehlendorf,9863.0,10.4642,2.609,0.8783,0.6948,0.9925,0.9716,0.6811,middle,middle,middle,Südende
+06100206,Steglitz-Zehlendorf,7738.0,16.2394,3.3411,0.7985,0.7175,0.9153,0.9216,0.43,far,integrated,"far from transit, integrated",Stadtpark
+06100207,Steglitz-Zehlendorf,8200.0,8.3538,2.8033,0.7619,0.6737,0.8202,0.9114,0.5017,close,middle,middle,Mittelstraße
+06100208,Steglitz-Zehlendorf,7095.0,11.2992,3.3173,0.9007,0.6924,0.9543,0.9186,0.5735,middle,middle,middle,Bergstraße
+06100209,Steglitz-Zehlendorf,9341.0,6.8848,3.3049,0.9088,0.6648,0.9641,0.9437,0.5991,close,middle,middle,Feuerbachstraße
+06100210,Steglitz-Zehlendorf,4935.0,12.241,2.1891,0.9126,0.699,0.9329,0.9775,0.6038,middle,middle,middle,Bismarckstraße
+06200311,Steglitz-Zehlendorf,4851.0,22.409,3.1953,0.8028,0.6635,0.8232,0.8302,0.5493,far,middle,middle,Alt-Lankwitz
+06200312,Steglitz-Zehlendorf,6271.0,11.2131,5.2253,0.8905,0.779,0.9452,0.9625,0.5146,middle,integrated,middle,Komponistenviertel Lankwitz
+06200313,Steglitz-Zehlendorf,7390.0,11.6746,2.6106,0.7775,0.7641,0.8342,0.8647,0.8698,middle,integrated,middle,Lankwitz Kirche
+06200314,Steglitz-Zehlendorf,7270.0,13.4071,4.0148,0.9334,0.8361,0.84,0.8359,0.8827,middle,integrated,middle,Kaiser-Wilhelm-Straße
+06200315,Steglitz-Zehlendorf,6976.0,20.7426,4.4283,0.7676,0.7114,0.8342,0.8557,0.7278,far,middle,middle,Gallwitzallee
+06200316,Steglitz-Zehlendorf,5819.0,19.7993,4.2403,0.7311,0.6378,0.4244,0.677,0.6848,far,segregated,concordant,Belßstraße
+06200317,Steglitz-Zehlendorf,6314.0,20.9521,5.067,0.8672,0.7089,0.9376,0.9631,0.6082,far,middle,middle,Lankwitz Süd
+06200419,Steglitz-Zehlendorf,4496.0,8.3558,2.9608,0.6954,0.6568,0.902,0.8887,0.5557,middle,middle,middle,Thermometersiedlung
+06200420,Steglitz-Zehlendorf,7162.0,14.8923,3.8076,0.8349,0.7165,0.8756,0.8872,0.4767,middle,integrated,middle,Lichterfelde Süd
+06200421,Steglitz-Zehlendorf,8492.0,11.905,3.8253,0.9549,0.7424,0.8852,0.8904,0.416,middle,integrated,middle,Königsberger Straße
+06200422,Steglitz-Zehlendorf,7044.0,13.1653,2.8554,1.04,0.8546,0.9792,1.0142,0.465,middle,integrated,middle,Oberhofer Platz
+06200423,Steglitz-Zehlendorf,8574.0,20.3327,5.5707,0.7932,0.775,0.8596,0.9415,0.4564,far,integrated,"far from transit, integrated",Schütte-Lanz-Straße
+06300524,Steglitz-Zehlendorf,5641.0,19.7812,8.6804,0.8285,0.7013,0.7242,0.7747,0.3176,far,middle,middle,Berlepschstraße
+06300525,Steglitz-Zehlendorf,5844.0,34.4272,10.1028,0.8354,0.6585,0.7586,0.7901,0.6438,far,middle,middle,Zehlendorf Süd
+06300526,Steglitz-Zehlendorf,3372.0,9.128,3.3799,0.8969,0.7404,0.8712,0.9672,0.4959,middle,integrated,middle,Zehlendorf Mitte
+06300527,Steglitz-Zehlendorf,8527.0,7.3062,3.5292,0.7181,0.6695,0.7877,0.8245,0.5138,close,middle,middle,Sundgauer Straße
+06300528,Steglitz-Zehlendorf,10951.0,19.9721,4.2817,0.8666,0.715,0.8452,0.9219,0.5212,far,middle,middle,Teltower Damm
+06300629,Steglitz-Zehlendorf,7054.0,8.9415,3.0295,0.8402,0.6978,0.8153,0.8809,0.3701,middle,middle,middle,Botanischer Garten
+06300630,Steglitz-Zehlendorf,5479.0,16.8157,3.176,0.8374,0.7031,0.8202,0.9052,0.4456,far,middle,middle,Hindenburgdamm
+06300631,Steglitz-Zehlendorf,3076.0,25.9704,3.6322,0.7891,0.7335,0.7592,0.806,0.3289,far,integrated,"far from transit, integrated",Goerzwerke
+06300632,Steglitz-Zehlendorf,13533.0,25.5448,4.2076,0.8877,0.8169,0.8729,0.8501,0.7292,far,integrated,"far from transit, integrated",Schweizer Viertel
+06300633,Steglitz-Zehlendorf,11916.0,12.3228,4.2557,0.9829,0.7757,0.9837,1.0019,0.4166,middle,integrated,middle,Augustaplatz
+06300634,Steglitz-Zehlendorf,8287.0,12.9465,5.027,1.0599,0.8979,0.9805,1.0115,0.412,middle,integrated,middle,Lichterfelde West
+06400735,Steglitz-Zehlendorf,10057.0,31.6437,5.5546,0.7465,0.579,0.679,0.7518,0.2487,far,segregated,concordant,Wannsee
+06400736,Steglitz-Zehlendorf,5153.0,24.4078,5.6709,0.7429,0.6536,0.6093,0.7394,0.4533,far,middle,middle,Düppel
+06400737,Steglitz-Zehlendorf,10844.0,12.8857,7.8398,0.799,0.618,0.8548,0.9148,0.3119,middle,segregated,middle,Nikolassee
+06400838,Steglitz-Zehlendorf,7367.0,10.6709,7.3537,0.8176,0.6502,0.8853,0.9478,0.4336,middle,middle,middle,Krumme Lanke
+06400839,Steglitz-Zehlendorf,5408.0,9.7657,4.2589,0.8532,0.6835,0.8491,0.9118,0.3666,middle,middle,middle,Fischerhüttenstraße
+06400840,Steglitz-Zehlendorf,7082.0,7.0828,6.7861,0.9528,0.7546,0.8457,0.9636,0.3639,close,integrated,concordant,Fischtal
+06400841,Steglitz-Zehlendorf,6241.0,11.3369,3.4385,0.8523,0.7308,0.8414,0.9213,0.4844,middle,integrated,middle,Zehlendorf Eiche
+06400842,Steglitz-Zehlendorf,4761.0,11.3682,6.1899,0.7759,0.6258,0.7903,0.8428,0.4127,middle,segregated,middle,Hüttenweg
+06400843,Steglitz-Zehlendorf,4699.0,10.6985,4.4397,0.9246,0.748,0.9214,0.9875,0.4783,middle,integrated,middle,Thielallee
+06400844,Steglitz-Zehlendorf,7210.0,8.9863,5.1748,0.8219,0.6779,0.873,0.944,0.3306,middle,middle,middle,Dahlem
+07100101,Tempelhof-Schöneberg,9846.0,4.6352,3.6724,0.8104,0.6394,0.8992,1.0073,0.5463,close,segregated,"close to transit, segregated",Wittenbergplatz
+07100102,Tempelhof-Schöneberg,8697.0,5.8467,3.4091,0.8611,0.638,0.9319,0.998,0.4884,close,segregated,"close to transit, segregated",Kalckreuthstraße
+07100103,Tempelhof-Schöneberg,8030.0,4.4179,3.3723,0.9316,0.6808,0.9642,0.9929,0.4333,close,middle,middle,Frobenstraße
+07100204,Tempelhof-Schöneberg,10867.0,6.8649,4.789,1.0148,0.7182,1.008,1.0098,0.6231,close,integrated,concordant,Barbarossaplatz
+07100205,Tempelhof-Schöneberg,5224.0,4.7939,2.4618,0.8971,0.6815,0.9543,0.9712,0.4533,close,middle,middle,Alvenslebenstraße
+07100206,Tempelhof-Schöneberg,8256.0,4.4903,3.5324,0.8546,0.6845,1.0362,1.0201,0.5049,close,middle,middle,Großgörschenstraße
+07200307,Tempelhof-Schöneberg,10567.0,4.8549,3.352,0.8788,0.7038,0.9319,0.9277,0.8441,close,middle,middle,Bayerischer Platz
+07200308,Tempelhof-Schöneberg,10702.0,4.323,2.9516,0.7244,0.5697,0.9216,0.9034,0.6453,close,segregated,"close to transit, segregated",Volkspark (Rudolph-Wilde-Park)
+07200409,Tempelhof-Schöneberg,9303.0,6.0043,3.2153,0.8467,0.68,0.9419,1.0156,0.4807,close,middle,middle,Belziger Straße
+07200410,Tempelhof-Schöneberg,5624.0,7.1038,3.1755,0.8045,0.6388,0.9646,0.9902,0.4026,close,segregated,"close to transit, segregated",Feurigstraße
+07200411,Tempelhof-Schöneberg,2723.0,4.6124,2.5369,0.6902,0.6113,0.733,0.8054,0.4937,close,segregated,"close to transit, segregated",Julius-Leber-Brücke
+07200412,Tempelhof-Schöneberg,2673.0,7.7712,4.9394,0.6571,0.5406,0.5701,0.6647,0.4099,close,segregated,"close to transit, segregated",Schöneberger Linse
+07200413,Tempelhof-Schöneberg,7741.0,6.605,1.9625,0.8072,0.5828,0.9315,0.9679,0.452,close,segregated,"close to transit, segregated",Cheruskerstraße
+07200414,Tempelhof-Schöneberg,3728.0,5.3608,3.1135,0.7589,0.7061,0.8774,0.9664,0.4296,close,middle,middle,Hohenfriedbergstraße
+07300515,Tempelhof-Schöneberg,7001.0,5.7197,4.1829,0.8062,0.6363,0.9118,0.9558,0.561,close,segregated,"close to transit, segregated",Taunusstraße
+07300516,Tempelhof-Schöneberg,8842.0,5.3921,3.5367,0.9449,0.6681,0.9596,0.9665,0.5162,close,middle,middle,Odenwaldstraße
+07300517,Tempelhof-Schöneberg,10755.0,6.14,3.9867,0.6875,0.5328,0.8875,0.892,0.5019,close,segregated,"close to transit, segregated",Perelsplatz
+07300618,Tempelhof-Schöneberg,9213.0,6.4055,3.1656,0.6988,0.5286,0.8067,0.8411,0.3631,close,segregated,"close to transit, segregated",Ceciliengärten
+07300619,Tempelhof-Schöneberg,12209.0,9.2147,3.3651,0.8283,0.6973,0.8014,0.9074,0.6467,middle,middle,middle,Grazer Platz
+07400720,Tempelhof-Schöneberg,11707.0,9.9516,3.1161,0.8288,0.6445,0.8374,0.85,0.7323,middle,middle,middle,Gontermannstraße
+07400721,Tempelhof-Schöneberg,7604.0,10.1585,6.2398,1.0396,0.7039,1.0077,1.0841,0.5207,middle,middle,middle,Paradestraße
+07400822,Tempelhof-Schöneberg,3299.0,16.8652,2.7377,0.7204,0.6044,0.6729,0.7326,0.5939,far,segregated,concordant,Lindenhofsiedlung
+07400823,Tempelhof-Schöneberg,9680.0,13.0969,3.489,0.8564,0.7117,0.9072,0.8956,0.5919,middle,middle,middle,Wittekindstraße
+07400824,Tempelhof-Schöneberg,7376.0,5.5945,3.047,0.8116,0.6956,0.9411,0.935,0.5313,close,middle,middle,Bosepark
+07400825,Tempelhof-Schöneberg,7179.0,7.38,3.6328,1.1249,0.8981,0.979,1.0747,0.5442,close,integrated,concordant,Friedrich-Karl-Straße
+07400826,Tempelhof-Schöneberg,5025.0,12.3881,2.7491,0.876,0.7678,0.9066,0.9697,0.4671,middle,integrated,middle,Marienhöhe
+07400927,Tempelhof-Schöneberg,11433.0,11.3207,3.7543,0.8247,0.6827,0.9439,0.9453,0.378,middle,middle,middle,Rathaus Tempelhof
+07400928,Tempelhof-Schöneberg,3979.0,18.7823,3.3685,0.7476,0.6087,0.8589,0.9523,0.4988,far,segregated,concordant,Germaniagarten
+07501029,Tempelhof-Schöneberg,8611.0,11.5163,3.0273,0.8623,0.8083,0.7792,0.8202,0.3678,middle,integrated,middle,Ringstraße
+07501030,Tempelhof-Schöneberg,8854.0,6.2327,4.6948,0.875,0.7933,0.876,0.8998,0.502,close,integrated,concordant,Machonstraße
+07501031,Tempelhof-Schöneberg,9181.0,8.3972,3.6046,0.8108,0.6985,0.8257,0.8322,0.4906,middle,middle,middle,Eisenacher Straße
+07501032,Tempelhof-Schöneberg,6473.0,20.3885,3.8512,0.7612,0.629,0.8471,0.8428,0.7332,far,segregated,concordant,Imbrosweg
+07501133,Tempelhof-Schöneberg,8346.0,12.9662,3.8037,0.8015,0.7351,0.6615,0.7657,0.5665,middle,integrated,middle,Fritz-Werner-Straße
+07501134,Tempelhof-Schöneberg,10618.0,19.9125,5.8544,0.8127,0.6649,0.8232,0.7742,0.5806,far,middle,middle,Hundsteinweg
+07501135,Tempelhof-Schöneberg,2261.0,21.9317,3.8755,0.9252,0.7562,0.9343,0.9332,0.5174,far,integrated,"far from transit, integrated",Birnhornweg
+07601236,Tempelhof-Schöneberg,10390.0,20.6376,3.6438,0.7282,0.6485,0.8319,0.8191,0.6024,far,middle,middle,Marienfelder Allee Nordwest
+07601237,Tempelhof-Schöneberg,4783.0,12.5444,5.4162,0.9299,0.6827,0.856,0.8892,0.4378,middle,middle,middle,Kirchstraße
+07601238,Tempelhof-Schöneberg,2847.0,17.6277,3.6696,0.7197,0.6634,0.6546,0.6266,0.3182,far,middle,middle,Marienfelde Nordost
+07601339,Tempelhof-Schöneberg,5774.0,35.3518,3.8213,0.7369,0.6057,0.7644,0.7761,0.8679,far,segregated,concordant,Tirschenreuther Ring West
+07601340,Tempelhof-Schöneberg,6346.0,30.4551,3.5584,0.6547,0.6256,0.2052,0.5385,0.5301,far,segregated,concordant,Tirschenreuther Ring Ost
+07601341,Tempelhof-Schöneberg,2159.0,20.1965,7.487,0.7414,0.6303,0.3095,0.4926,0.2037,far,segregated,concordant,Diedersdorfer Weg
+07601442,Tempelhof-Schöneberg,10371.0,16.6736,5.0711,0.9498,0.8508,0.8902,0.9803,0.4886,far,integrated,"far from transit, integrated",Kettinger Straße
+07601443,Tempelhof-Schöneberg,10804.0,28.2396,4.2946,0.9502,0.8032,0.8917,0.8844,0.4843,far,integrated,"far from transit, integrated",Töpchiner Weg
+07601544,Tempelhof-Schöneberg,9441.0,11.814,2.9279,0.7649,0.7425,0.8318,0.8448,0.6412,middle,integrated,middle,John-Locke-Straße
+07601545,Tempelhof-Schöneberg,8565.0,24.8406,4.4433,0.7397,0.6722,0.651,0.7188,0.4445,far,middle,middle,Nahariyastraße
 07601546,Tempelhof-Schöneberg,6954.0,9.5377,6.8952,1.0515,0.7782,0.9443,1.0239,0.398,middle,integrated,middle,Franziusweg
-07601547,Tempelhof-Schöneberg,3886.0,21.5154,9.0726,1.0793,0.7703,0.9407,0.9209,0.4265,far,integrated,"far from transit, integrated",Horstwalder Straße
-07601548,Tempelhof-Schöneberg,2888.0,24.5483,10.4855,1.0319,0.7647,0.9942,1.0125,0.4767,far,integrated,"far from transit, integrated",Wittelsbacherstraße
-08100101,Neukölln,4671.0,4.6626,3.8564,0.7033,0.5982,0.9219,1.0303,0.3503,close,segregated,"close to transit, segregated",Hasenheide
-08100102,Neukölln,8188.0,5.3099,3.3129,0.8923,0.6902,1.0594,1.07,1.1047,close,middle,middle,Schillerpromenade Nord
-08100103,Neukölln,7157.0,5.1278,5.0073,0.8536,0.7031,1.0452,1.0076,1.2811,close,middle,middle,Schillerpromenade Süd
-08100104,Neukölln,6686.0,6.8021,5.9783,0.9099,0.8046,0.8783,0.9449,0.4283,close,integrated,concordant,Wartheplatz
-08100105,Neukölln,6414.0,10.1923,2.0776,0.7492,0.7567,0.8915,0.8757,0.574,middle,integrated,middle,Silbersteinstraße
-08100206,Neukölln,9322.0,4.0891,3.5263,0.7499,0.6849,0.9336,0.9827,0.6495,close,middle,middle,Flughafenstraße
-08100207,Neukölln,7407.0,5.6905,2.8153,0.7066,0.6258,0.9697,0.9768,1.1969,close,segregated,"close to transit, segregated",Rollberg
-08100208,Neukölln,12034.0,5.3664,4.7862,1.1619,0.8188,1.0916,1.0447,0.7248,close,integrated,concordant,Körnerpark
-08100209,Neukölln,8964.0,5.6276,3.4753,0.9442,0.7793,0.9787,0.9791,0.5152,close,integrated,concordant,Glasower Straße
-08100310,Neukölln,7555.0,5.2207,4.2807,0.8501,0.6183,0.9547,0.9733,0.517,close,segregated,"close to transit, segregated",Maybachufer
-08100311,Neukölln,7103.0,7.148,3.9943,0.9115,0.61,0.9817,0.9733,0.4966,close,segregated,"close to transit, segregated",Reuterplatz
-08100312,Neukölln,11671.0,8.921,3.4253,1.0812,0.7769,0.9611,1.0412,0.504,middle,integrated,middle,Weichselplatz
-08100313,Neukölln,3722.0,16.531,2.8315,0.9874,0.7537,0.8417,0.8733,0.7088,far,integrated,"far from transit, integrated",Bouchéstraße
-08100314,Neukölln,7993.0,4.3552,2.4026,1.076,0.7845,0.9783,1.0544,0.4861,close,integrated,concordant,Donaustraße
-08100415,Neukölln,6403.0,7.7763,2.7244,0.8703,0.7269,0.9861,1.0413,0.7206,close,integrated,concordant,Ganghoferstraße
-08100416,Neukölln,6603.0,6.5857,4.7953,0.768,0.6775,0.9625,0.9911,0.6759,close,middle,middle,Alt-Rixdorf
-08100417,Neukölln,9621.0,5.3106,3.0507,0.8162,0.6263,0.934,0.9571,0.5437,close,segregated,"close to transit, segregated",Braunschweiger Straße
-08100418,Neukölln,9227.0,12.2475,3.698,1.0443,0.7474,1.0128,0.9908,0.6687,middle,integrated,middle,Hertzbergplatz
-08100419,Neukölln,7372.0,16.6244,4.9871,1.1636,0.8428,1.0068,1.0008,0.5954,far,integrated,"far from transit, integrated",Treptower Straße Nord
-08100520,Neukölln,5751.0,9.9836,6.2293,0.6541,0.5794,0.7342,0.7618,1.0821,middle,segregated,middle,Weiße Siedlung
-08100521,Neukölln,9320.0,14.0669,7.4353,0.821,0.632,0.7987,0.8483,0.4635,middle,segregated,middle,Schulenburgpark
-08200622,Neukölln,5852.0,7.2986,5.0727,0.7746,0.6374,0.2414,0.6422,0.4061,close,segregated,"close to transit, segregated",Jahnstraße
-08200623,Neukölln,6360.0,10.0411,5.0988,0.8325,0.7251,0.7359,0.6988,0.7693,middle,integrated,middle,Park am Buschkrug
-08200624,Neukölln,9073.0,16.7086,3.7072,0.775,0.6504,0.7989,0.782,0.514,far,middle,middle,Tempelhofer Weg
-08200725,Neukölln,2537.0,27.3273,5.5656,0.7899,0.6344,0.5237,0.6003,0.3875,far,segregated,concordant,Mohriner Allee Nord
-08200726,Neukölln,6285.0,7.0307,3.3957,0.8143,0.7146,0.9387,0.9177,0.7873,close,middle,middle,Hufeisensiedlung
-08200727,Neukölln,8089.0,6.6362,3.1524,0.8288,0.6375,0.8288,0.8037,1.0612,close,segregated,"close to transit, segregated",Parchimer Allee Süd
-08200728,Neukölln,1197.0,11.5312,6.8072,0.7755,0.6814,0.8293,0.9007,0.4733,middle,middle,middle,Ortolanweg
-08200729,Neukölln,1860.0,26.3195,5.2052,0.7339,0.5621,0.0,0.3852,0.3508,far,segregated,concordant,Britzer Garten
-08200730,Neukölln,3368.0,15.9634,4.1662,0.8806,0.6641,0.7494,0.8978,0.3856,far,middle,middle,Handwerker-Siedlung
-08200831,Neukölln,8260.0,31.0869,4.7503,0.8053,0.689,0.8342,0.8818,0.5569,far,middle,middle,Buckow West
-08200832,Neukölln,12822.0,29.7253,4.3456,0.7255,0.645,0.7226,0.7573,0.5737,far,middle,middle,Buckow Mitte
-08200833,Neukölln,9451.0,20.167,2.9487,0.8269,0.6661,0.8503,0.8478,0.6804,far,middle,middle,Buckow Ost
-08300934,Neukölln,12645.0,7.3047,3.4643,0.5914,0.519,0.612,0.6755,0.9247,close,segregated,"close to transit, segregated",Gropiusstadt Nord-West
-08300935,Neukölln,7670.0,5.2415,4.2031,0.6408,0.5554,0.8224,0.8272,0.8939,close,segregated,"close to transit, segregated",Gropiusstadt Süd-West
-08301036,Neukölln,7824.0,6.1278,4.5622,0.5895,0.5463,0.7078,0.724,1.1065,close,segregated,"close to transit, segregated",Gropiusstadt Mitte
-08301037,Neukölln,11067.0,4.6047,3.1195,0.65,0.5853,0.7534,0.7332,1.4785,close,segregated,"close to transit, segregated",Gropiusstadt Süd-Ost
-08401138,Neukölln,2946.0,12.9898,4.2229,0.7319,0.5556,0.8624,0.789,1.064,middle,segregated,middle,Goldhähnchenweg
-08401139,Neukölln,4170.0,11.186,3.1779,0.7727,0.6245,0.9017,0.8746,0.8033,middle,segregated,middle,Vogelviertel Süd
-08401140,Neukölln,2673.0,19.1942,5.0798,0.8469,0.6489,0.8294,0.9768,0.458,far,middle,middle,Vogelviertel Nord
-08401241,Neukölln,8396.0,17.9053,6.5593,0.9521,0.6705,0.8944,0.9101,0.3989,far,middle,middle,Blumenviertel
-08401242,Neukölln,6902.0,13.1339,5.0588,0.9133,0.7581,0.8374,0.8317,0.5842,middle,integrated,middle,Zittauer Straße
-08401243,Neukölln,10085.0,14.6252,6.8911,0.8421,0.6883,0.7304,0.8221,0.4842,middle,middle,middle,Alt-Rudow
-08401244,Neukölln,7324.0,17.1338,5.3292,0.8725,0.7603,0.7589,0.803,0.4258,far,integrated,"far from transit, integrated",Waßmannsdorfer Chaussee
-08401245,Neukölln,3690.0,24.6493,3.0915,1.1022,0.7414,0.9066,0.8145,0.9296,far,integrated,"far from transit, integrated",Frauenviertel
-08401246,Neukölln,7893.0,20.0846,5.4851,0.8836,0.7389,0.7983,0.8456,0.4401,far,integrated,"far from transit, integrated",Waltersdorfer Chaussee Ost
-09100101,Treptow-Köpenick,13491.0,15.1001,2.8793,0.9594,0.7465,0.9559,1.0006,0.5126,middle,integrated,middle,Alt-Treptow
-09100202,Treptow-Köpenick,4273.0,11.9303,2.8664,0.9137,0.7028,0.8087,0.7964,0.3451,middle,middle,middle,Plänterwald West
-09100203,Treptow-Köpenick,7596.0,11.1928,4.7953,0.8182,0.745,0.7416,0.7905,1.1105,middle,integrated,middle,Plänterwald Ost
-09100304,Treptow-Köpenick,12065.0,10.0117,3.9827,0.8961,0.8326,0.8224,0.8859,0.7232,middle,integrated,middle,Baumschulenweg West
-09100305,Treptow-Köpenick,4428.0,5.8042,3.2861,0.8255,0.8492,0.8612,0.8861,0.6149,close,integrated,concordant,Baumschulenweg Ost
-09100306,Treptow-Köpenick,3099.0,30.0926,12.7066,1.0117,0.8025,0.7727,0.7595,0.3441,far,integrated,"far from transit, integrated",Späthsfelde
-09100407,Treptow-Köpenick,8671.0,19.3253,4.0615,0.7162,0.6153,0.7612,0.8095,0.7397,far,segregated,concordant,Johannisthal West
-09100408,Treptow-Köpenick,8881.0,16.2409,2.5874,0.88,0.7045,0.994,1.008,0.6925,far,middle,middle,Johannisthal Ost
-09100409,Treptow-Köpenick,5208.0,25.5942,5.017,0.7793,0.6616,0.8299,0.8482,0.4398,far,middle,middle,Landschaftspark Adlershof
-09200510,Treptow-Köpenick,8150.0,21.3574,6.8676,0.7727,0.6384,0.814,0.902,0.5162,far,segregated,concordant,Helmholtz-Kiez
-09200511,Treptow-Köpenick,13252.0,20.8134,4.4608,0.9328,0.6964,0.9706,1.0206,0.8348,far,middle,middle,Griechischer Park
-09200512,Treptow-Köpenick,4444.0,26.4535,5.499,0.7382,0.6642,0.9112,0.8951,0.5992,far,middle,middle,Wuhlheide
-09200613,Treptow-Köpenick,11227.0,10.281,3.946,0.8169,0.6642,0.9279,0.9453,0.4497,middle,middle,middle,Bahnhof Schöneweide
-09200614,Treptow-Köpenick,4160.0,7.7334,4.9669,0.801,0.7198,0.4618,0.5561,0.5913,close,integrated,concordant,Oberspree
-09200715,Treptow-Köpenick,4355.0,16.5059,4.0066,0.7836,0.6592,0.806,0.7867,1.2157,far,middle,middle,Wista
-09200716,Treptow-Köpenick,8373.0,8.0174,3.3289,1.1019,0.7497,0.9776,0.9373,0.7837,close,integrated,concordant,Dörpfeldstraße West
-09200717,Treptow-Köpenick,10214.0,15.8353,4.028,0.9176,0.7505,0.9585,0.9955,0.678,far,integrated,"far from transit, integrated",Dörpfeldstraße Ost
-09200818,Treptow-Köpenick,4677.0,7.8247,6.1138,0.7673,0.5068,0.836,0.8107,0.6441,close,segregated,"close to transit, segregated",Spindlersfeld
-09200819,Treptow-Köpenick,8928.0,17.2665,3.5116,0.7045,0.5969,0.8852,0.922,0.4744,far,segregated,concordant,Köllnische Vorstadt
-09300920,Treptow-Köpenick,13331.0,29.1014,5.4097,0.9513,0.7853,0.9205,0.912,0.571,far,integrated,"far from transit, integrated",Dorf Altglienicke
-09300921,Treptow-Köpenick,3045.0,17.8421,16.5955,0.9322,0.6494,0.9004,0.9646,0.4322,far,middle,middle,Preußen Siedlung
-09300922,Treptow-Köpenick,6082.0,23.6268,3.2964,0.7093,0.6673,0.5087,0.5936,0.6977,far,middle,middle,Kosmos Viertel
-09300923,Treptow-Köpenick,9537.0,14.5365,6.8915,0.8323,0.6993,0.8608,0.8508,0.684,middle,middle,middle,Kölner Viertel
-09301024,Treptow-Köpenick,3786.0,9.0892,5.6377,0.754,0.5992,0.7742,0.768,0.6676,middle,segregated,middle,Falkenberg
-09301025,Treptow-Köpenick,11905.0,20.6712,13.8006,0.9736,0.703,0.8775,0.9187,0.3178,far,middle,middle,Alt-Bohnsdorf
-09301126,Treptow-Köpenick,8551.0,18.6057,4.972,0.861,0.7063,0.8311,0.866,0.4199,far,middle,middle,Grünau
-09301227,Treptow-Köpenick,1851.0,65.2288,30.0931,0.9034,0.6875,0.8595,0.8725,0.1981,far,middle,middle,Karolinenhof
-09301228,Treptow-Köpenick,2677.0,87.3107,12.8252,0.7628,0.6402,0.4419,0.6667,0.1971,far,segregated,concordant,Schmöckwitz/Rauchfangswerder
-09401329,Treptow-Köpenick,11871.0,44.2797,5.2294,0.8708,0.7846,0.7552,0.7669,0.6807,far,integrated,"far from transit, integrated",Kietzer Feld/Nachtheide
+07601547,Tempelhof-Schöneberg,3886.0,21.5154,9.0726,1.08,0.7718,0.9407,0.9209,0.4265,far,integrated,"far from transit, integrated",Horstwalder Straße
+07601548,Tempelhof-Schöneberg,2888.0,24.5483,10.4855,1.036,0.7674,0.9942,1.0127,0.4767,far,integrated,"far from transit, integrated",Wittelsbacherstraße
+08100101,Neukölln,4671.0,4.6626,3.8564,0.7043,0.5881,0.9078,1.033,0.3519,close,segregated,"close to transit, segregated",Hasenheide
+08100102,Neukölln,8188.0,5.3099,3.3129,0.9244,0.7051,1.0636,1.104,1.1104,close,middle,middle,Schillerpromenade Nord
+08100103,Neukölln,7157.0,5.1278,5.0073,0.8587,0.705,1.0446,1.0153,1.2881,close,middle,middle,Schillerpromenade Süd
+08100104,Neukölln,6686.0,6.8021,5.9783,0.918,0.7969,0.8794,0.9422,0.4354,close,integrated,concordant,Wartheplatz
+08100105,Neukölln,6414.0,10.1923,2.0776,0.7263,0.6824,0.8977,0.875,0.5917,middle,middle,middle,Silbersteinstraße
+08100206,Neukölln,9322.0,4.0891,3.5263,0.7655,0.6746,0.9486,1.0068,0.6534,close,middle,middle,Flughafenstraße
+08100207,Neukölln,7407.0,5.6905,2.8153,0.7078,0.6368,0.9688,0.9666,1.1982,close,segregated,"close to transit, segregated",Rollberg
+08100208,Neukölln,12034.0,5.3664,4.7862,1.158,0.8138,1.0904,1.0569,0.7299,close,integrated,concordant,Körnerpark
+08100209,Neukölln,8964.0,5.6276,3.4753,0.9272,0.7836,0.997,0.9874,0.5222,close,integrated,concordant,Glasower Straße
+08100310,Neukölln,7555.0,5.2207,4.2807,0.8725,0.6305,0.9477,0.9644,0.5099,close,segregated,"close to transit, segregated",Maybachufer
+08100311,Neukölln,7103.0,7.148,3.9943,0.9352,0.61,0.981,0.9744,0.4958,close,segregated,"close to transit, segregated",Reuterplatz
+08100312,Neukölln,11671.0,8.921,3.4253,1.0481,0.7731,0.9669,1.0405,0.501,middle,integrated,middle,Weichselplatz
+08100313,Neukölln,3722.0,16.531,2.8315,0.9874,0.7549,0.8417,0.8739,0.7088,far,integrated,"far from transit, integrated",Bouchéstraße
+08100314,Neukölln,7993.0,4.3552,2.4026,1.0257,0.771,0.9588,1.0347,0.4903,close,integrated,concordant,Donaustraße
+08100415,Neukölln,6403.0,7.7763,2.7244,0.8663,0.7235,0.9815,1.0632,0.7038,close,integrated,concordant,Ganghoferstraße
+08100416,Neukölln,6603.0,6.5857,4.7953,0.7693,0.6862,0.944,0.9933,0.6768,close,middle,middle,Alt-Rixdorf
+08100417,Neukölln,9621.0,5.3106,3.0507,0.8194,0.6271,0.934,0.9556,0.5437,close,segregated,"close to transit, segregated",Braunschweiger Straße
+08100418,Neukölln,9227.0,12.2475,3.698,1.0481,0.7539,1.0075,0.9821,0.6623,middle,integrated,middle,Hertzbergplatz
+08100419,Neukölln,7372.0,16.6244,4.9871,1.1665,0.8469,1.0079,1.0054,0.5928,far,integrated,"far from transit, integrated",Treptower Straße Nord
+08100520,Neukölln,5751.0,9.9836,6.2293,0.652,0.5765,0.7326,0.7817,1.0848,middle,segregated,middle,Weiße Siedlung
+08100521,Neukölln,9320.0,14.0669,7.4353,0.7998,0.6098,0.7618,0.7715,0.4649,middle,segregated,middle,Schulenburgpark
+08200622,Neukölln,5852.0,7.2986,5.0727,0.7739,0.6615,0.2409,0.6483,0.4127,close,middle,middle,Jahnstraße
+08200623,Neukölln,6360.0,10.0411,5.0988,0.8323,0.7312,0.734,0.7042,0.7684,middle,integrated,middle,Park am Buschkrug
+08200624,Neukölln,9073.0,16.7086,3.7072,0.77,0.646,0.7813,0.7897,0.5144,far,middle,middle,Tempelhofer Weg
+08200725,Neukölln,2537.0,27.3273,5.5656,0.8008,0.6406,0.541,0.5959,0.3815,far,segregated,concordant,Mohriner Allee Nord
+08200726,Neukölln,6285.0,7.0307,3.3957,0.8142,0.7129,0.9382,0.9494,0.7873,close,middle,middle,Hufeisensiedlung
+08200727,Neukölln,8089.0,6.6362,3.1524,0.8185,0.6391,0.8273,0.7883,1.0626,close,segregated,"close to transit, segregated",Parchimer Allee Süd
+08200728,Neukölln,1197.0,11.5312,6.8072,0.7755,0.6796,0.8293,0.8496,0.4862,middle,middle,middle,Ortolanweg
+08200729,Neukölln,1860.0,26.3195,5.2052,0.7327,0.5618,0.0,0.3869,0.3508,far,segregated,concordant,Britzer Garten
+08200730,Neukölln,3368.0,15.9634,4.1662,0.8823,0.664,0.7482,0.9038,0.3753,far,middle,middle,Handwerker-Siedlung
+08200831,Neukölln,8260.0,31.0869,4.7503,0.7918,0.6894,0.8358,0.8633,0.5554,far,middle,middle,Buckow West
+08200832,Neukölln,12822.0,29.7253,4.3456,0.7318,0.6533,0.711,0.7491,0.5643,far,middle,middle,Buckow Mitte
+08200833,Neukölln,9451.0,20.167,2.9487,0.8372,0.6763,0.852,0.8483,0.6764,far,middle,middle,Buckow Ost
+08300934,Neukölln,12645.0,7.3047,3.4643,0.5997,0.5229,0.612,0.6765,0.9247,close,segregated,"close to transit, segregated",Gropiusstadt Nord-West
+08300935,Neukölln,7670.0,5.2415,4.2031,0.6647,0.5677,0.8194,0.8212,0.9011,close,segregated,"close to transit, segregated",Gropiusstadt Süd-West
+08301036,Neukölln,7824.0,6.1278,4.5622,0.6219,0.5496,0.705,0.7211,1.1112,close,segregated,"close to transit, segregated",Gropiusstadt Mitte
+08301037,Neukölln,11067.0,4.6047,3.1195,0.6455,0.5817,0.7541,0.7332,1.4825,close,segregated,"close to transit, segregated",Gropiusstadt Süd-Ost
+08401138,Neukölln,2946.0,12.9898,4.2229,0.7242,0.59,0.8655,0.779,1.0655,middle,segregated,middle,Goldhähnchenweg
+08401139,Neukölln,4170.0,11.186,3.1779,0.7667,0.6236,0.8972,0.8755,0.8058,middle,segregated,middle,Vogelviertel Süd
+08401140,Neukölln,2673.0,19.1942,5.0798,0.8465,0.6522,0.8334,0.9813,0.4655,far,middle,middle,Vogelviertel Nord
+08401241,Neukölln,8396.0,17.9053,6.5593,0.9551,0.6741,0.8944,0.8993,0.3972,far,middle,middle,Blumenviertel
+08401242,Neukölln,6902.0,13.1339,5.0588,0.9131,0.7523,0.8194,0.8392,0.5799,middle,integrated,middle,Zittauer Straße
+08401243,Neukölln,10085.0,14.6252,6.8911,0.8448,0.6847,0.7386,0.8221,0.4837,middle,middle,middle,Alt-Rudow
+08401244,Neukölln,7324.0,17.1338,5.3292,0.8705,0.7573,0.7589,0.8045,0.4219,far,integrated,"far from transit, integrated",Waßmannsdorfer Chaussee
+08401245,Neukölln,3690.0,24.6493,3.0915,1.1022,0.7357,0.9066,0.8133,0.9296,far,integrated,"far from transit, integrated",Frauenviertel
+08401246,Neukölln,7893.0,20.0846,5.4851,0.8834,0.7364,0.7984,0.8432,0.4401,far,integrated,"far from transit, integrated",Waltersdorfer Chaussee Ost
+09100101,Treptow-Köpenick,13491.0,15.1001,2.8793,0.9609,0.754,0.9559,1.0008,0.5092,middle,integrated,middle,Alt-Treptow
+09100202,Treptow-Köpenick,4273.0,11.9303,2.8664,0.9137,0.6925,0.8104,0.7984,0.3451,middle,middle,middle,Plänterwald West
+09100203,Treptow-Köpenick,7596.0,11.1928,4.7953,0.8167,0.7419,0.7416,0.7833,1.1091,middle,integrated,middle,Plänterwald Ost
+09100304,Treptow-Köpenick,12065.0,10.0117,3.9827,0.8774,0.7932,0.8447,0.8823,0.727,middle,integrated,middle,Baumschulenweg West
+09100305,Treptow-Köpenick,4428.0,5.8042,3.2861,0.7498,0.8071,0.8158,0.8822,0.6219,close,integrated,concordant,Baumschulenweg Ost
+09100306,Treptow-Köpenick,3099.0,30.0926,12.7066,1.0093,0.8019,0.7727,0.7586,0.3441,far,integrated,"far from transit, integrated",Späthsfelde
+09100407,Treptow-Köpenick,8671.0,19.3253,4.0615,0.7146,0.6067,0.7596,0.8092,0.7415,far,segregated,concordant,Johannisthal West
+09100408,Treptow-Köpenick,8881.0,16.2409,2.5874,0.8846,0.6953,0.9918,0.9935,0.7105,far,middle,middle,Johannisthal Ost
+09100409,Treptow-Köpenick,5208.0,25.5942,5.017,0.7767,0.6562,0.8272,0.863,0.4333,far,middle,middle,Landschaftspark Adlershof
+09200510,Treptow-Köpenick,8150.0,21.3574,6.8676,0.7792,0.631,0.8122,0.8753,0.5154,far,segregated,concordant,Helmholtz-Kiez
+09200511,Treptow-Köpenick,13252.0,20.8134,4.4608,0.9328,0.6956,0.9705,1.0205,0.8348,far,middle,middle,Griechischer Park
+09200512,Treptow-Köpenick,4444.0,26.4535,5.499,0.7358,0.6648,0.9112,0.8953,0.5992,far,middle,middle,Wuhlheide
+09200613,Treptow-Köpenick,11227.0,10.281,3.946,0.7948,0.6679,0.9347,0.9501,0.4427,middle,middle,middle,Bahnhof Schöneweide
+09200614,Treptow-Köpenick,4160.0,7.7334,4.9669,0.8011,0.7224,0.4619,0.556,0.5914,close,integrated,concordant,Oberspree
+09200715,Treptow-Köpenick,4355.0,16.5059,4.0066,0.7801,0.6691,0.807,0.7904,1.2175,far,middle,middle,Wista
+09200716,Treptow-Köpenick,8373.0,8.0174,3.3289,1.0965,0.7446,0.9934,0.9363,0.7855,close,integrated,concordant,Dörpfeldstraße West
+09200717,Treptow-Köpenick,10214.0,15.8353,4.028,0.9176,0.7515,0.9579,0.9929,0.678,far,integrated,"far from transit, integrated",Dörpfeldstraße Ost
+09200818,Treptow-Köpenick,4677.0,7.8247,6.1138,0.7411,0.5061,0.8203,0.8105,0.6423,close,segregated,"close to transit, segregated",Spindlersfeld
+09200819,Treptow-Köpenick,8928.0,17.2665,3.5116,0.6877,0.5916,0.8799,0.9112,0.4515,far,segregated,concordant,Köllnische Vorstadt
+09300920,Treptow-Köpenick,13331.0,29.1014,5.4097,0.9402,0.7794,0.9203,0.9109,0.5649,far,integrated,"far from transit, integrated",Dorf Altglienicke
+09300921,Treptow-Köpenick,3045.0,17.8421,16.5955,0.9322,0.6497,0.9004,0.9651,0.4322,far,middle,middle,Preußen Siedlung
+09300922,Treptow-Köpenick,6082.0,23.6268,3.2964,0.7093,0.6671,0.5026,0.5905,0.6977,far,middle,middle,Kosmos Viertel
+09300923,Treptow-Köpenick,9537.0,14.5365,6.8915,0.8275,0.6896,0.8587,0.8488,0.684,middle,middle,middle,Kölner Viertel
+09301024,Treptow-Köpenick,3786.0,9.0892,5.6377,0.754,0.5984,0.7742,0.7681,0.6676,middle,segregated,middle,Falkenberg
+09301025,Treptow-Köpenick,11905.0,20.6712,13.8006,0.9736,0.7026,0.8891,0.9292,0.3203,far,middle,middle,Alt-Bohnsdorf
+09301126,Treptow-Köpenick,8551.0,18.6057,4.972,0.864,0.7073,0.8086,0.8641,0.4218,far,middle,middle,Grünau
+09301227,Treptow-Köpenick,1851.0,65.2288,30.0931,0.9041,0.696,0.8593,0.8675,0.1981,far,middle,middle,Karolinenhof
+09301228,Treptow-Köpenick,2677.0,87.3107,12.8252,0.719,0.6376,0.4419,0.6654,0.1908,far,segregated,concordant,Schmöckwitz/Rauchfangswerder
+09401329,Treptow-Köpenick,11871.0,44.2797,5.2294,0.8688,0.7828,0.7491,0.7525,0.6781,far,integrated,"far from transit, integrated",Kietzer Feld/Nachtheide
 09401330,Treptow-Köpenick,1889.0,60.8496,4.4316,0.9702,0.9006,0.6507,0.7105,0.2127,far,integrated,"far from transit, integrated",Wendenschloß
-09401431,Treptow-Köpenick,6101.0,28.0802,3.6046,0.6883,0.5702,0.7328,0.7555,0.72,far,segregated,concordant,Allende I
-09401432,Treptow-Köpenick,1577.0,29.5563,4.3187,0.7778,0.6444,0.7946,0.7946,0.4147,far,middle,middle,Siedlung Kämmereiheide
-09401433,Treptow-Köpenick,4207.0,38.9251,3.6769,0.7336,0.5637,0.8965,0.8955,0.5517,far,segregated,concordant,Allende II
-09401534,Treptow-Köpenick,7411.0,20.7075,2.9572,0.7336,0.5591,0.8654,0.8178,0.658,far,segregated,concordant,Altstadt Köpenick
-09401635,Treptow-Köpenick,7015.0,91.4176,12.2561,0.9055,0.6931,0.7976,0.8353,0.2347,far,middle,middle,Müggelheim
-09501736,Treptow-Köpenick,4661.0,11.7958,8.3113,0.7166,0.6178,0.7139,0.7508,0.6756,middle,segregated,middle,Hirschgarten
-09501737,Treptow-Köpenick,14353.0,17.4478,6.4811,0.8299,0.7332,0.8576,0.8964,0.5483,far,integrated,"far from transit, integrated",Alt-Friedrichshagen
-09501838,Treptow-Köpenick,11227.0,22.684,14.0246,0.8544,0.7164,0.8131,0.8847,0.3178,far,middle,middle,Rahnsdorf
-09501939,Treptow-Köpenick,6828.0,11.6647,3.5575,0.7388,0.5466,0.8806,0.916,0.4738,middle,segregated,middle,Bahnhofstraße
-09501940,Treptow-Köpenick,2773.0,6.4145,2.8325,0.8571,0.5747,0.8069,0.7942,0.2636,close,segregated,"close to transit, segregated",Güterbahnhof Köpenick
-09501941,Treptow-Köpenick,2888.0,16.6872,4.8428,0.6725,0.4857,0.7249,0.7536,0.4853,far,segregated,concordant,Friedrichshagener Straße
-09502042,Treptow-Köpenick,4484.0,12.3246,4.528,0.8749,0.6424,0.9774,0.9855,0.3955,middle,segregated,middle,Mittelheide
-09502043,Treptow-Köpenick,9144.0,16.6808,4.2887,0.8919,0.6718,0.9218,0.9415,0.5002,far,middle,middle,Dammheide
-10100101,Marzahn-Hellersdorf,5826.0,11.5595,5.7667,0.7687,0.557,0.8365,0.8315,0.4906,middle,segregated,middle,Marzahn West
-10100102,Marzahn-Hellersdorf,3725.0,8.0181,2.9172,0.8467,0.6591,0.883,0.8239,1.0508,close,middle,middle,Rosenbecker Straße
-10100103,Marzahn-Hellersdorf,8113.0,10.6927,4.7545,0.7748,0.637,0.8356,0.7886,0.6039,middle,segregated,middle,Wittenberger Straße
-10100104,Marzahn-Hellersdorf,7669.0,16.1828,3.5268,0.7399,0.6207,0.7987,0.7513,0.6109,far,segregated,concordant,Golliner Straße
-10100205,Marzahn-Hellersdorf,1247.0,10.8897,8.9345,0.6964,0.5234,0.0,0.0,0.1922,middle,segregated,middle,Gewerbegebiet Bitterfelder Straße
-10100206,Marzahn-Hellersdorf,11801.0,12.3212,3.0663,0.6729,0.5439,0.8794,0.8512,0.7008,middle,segregated,middle,Wuhletalstraße
-10100207,Marzahn-Hellersdorf,8362.0,26.9448,4.1192,0.7573,0.5898,0.9098,0.8613,0.6244,far,segregated,concordant,Ahrensfelder Berge
-10100208,Marzahn-Hellersdorf,10398.0,9.1081,4.1056,0.6364,0.47,0.711,0.7214,0.6829,middle,segregated,middle,Bürgerpark
-10100209,Marzahn-Hellersdorf,9691.0,17.5807,3.3649,0.7202,0.5621,1.0184,1.0533,0.8392,far,segregated,concordant,Lea-Grundig-Straße
-10100210,Marzahn-Hellersdorf,10853.0,10.4936,4.7546,0.6296,0.5088,0.8285,0.8295,1.0819,middle,segregated,middle,Marzahner Promenade
-10100311,Marzahn-Hellersdorf,2970.0,14.9884,6.9004,0.7826,0.6015,0.6609,0.8176,0.2513,middle,segregated,middle,Marzahner Chaussee
-10100312,Marzahn-Hellersdorf,16407.0,10.259,4.9254,0.6445,0.5206,0.819,0.7981,0.5349,middle,segregated,middle,Springpfuhl
-10100313,Marzahn-Hellersdorf,5021.0,11.4338,6.4614,0.7027,0.5515,0.9344,0.8969,0.7218,middle,segregated,middle,Alt-Marzahn
-10100314,Marzahn-Hellersdorf,6418.0,20.3941,4.2893,0.6989,0.5371,0.8748,0.8273,0.8508,far,segregated,concordant,Auersbergstraße
-10100315,Marzahn-Hellersdorf,8408.0,26.0111,4.0074,0.6448,0.5646,0.827,0.9019,0.6245,far,segregated,concordant,Bärenstein
-10100316,Marzahn-Hellersdorf,3675.0,28.9606,8.9246,0.962,0.6309,1.0075,0.9182,0.99,far,segregated,concordant,Landsberger Tor
-10200417,Marzahn-Hellersdorf,8039.0,21.4385,3.4326,0.596,0.6111,0.6339,0.7052,1.0393,far,segregated,concordant,Zossener Straße
-10200418,Marzahn-Hellersdorf,7506.0,18.1831,3.7493,0.6272,0.588,0.691,0.72,1.1958,far,segregated,concordant,Kyritzer Straße
-10200419,Marzahn-Hellersdorf,4336.0,12.7823,4.0193,0.6348,0.5958,0.5884,0.5328,1.5611,middle,segregated,middle,Havelländer Ring
-10200420,Marzahn-Hellersdorf,9150.0,8.9542,4.1927,0.7018,0.6022,0.7595,0.7864,1.1575,middle,segregated,middle,Gut Hellersdorf
-10200421,Marzahn-Hellersdorf,1745.0,6.5278,1.4767,0.8107,0.721,0.8768,0.8519,1.1925,close,integrated,concordant,Helle Mitte
-10200422,Marzahn-Hellersdorf,7358.0,9.5156,3.8152,0.6441,0.578,0.7533,0.7478,1.2801,middle,segregated,middle,Hellersdorfer Promenade
-10200423,Marzahn-Hellersdorf,6284.0,5.801,3.951,0.6295,0.5498,0.5465,0.4853,0.8392,close,segregated,"close to transit, segregated",Böhlener Straße
-10200524,Marzahn-Hellersdorf,12037.0,9.3001,3.4723,0.6954,0.6276,0.7657,0.745,0.8001,middle,segregated,middle,Adele-Sandrock-Straße
-10200525,Marzahn-Hellersdorf,5407.0,15.642,5.6915,0.8109,0.6678,0.9258,0.9248,0.5163,far,middle,middle,Schleipfuhl
-10200526,Marzahn-Hellersdorf,6311.0,7.1824,6.1672,0.7022,0.5837,1.0198,0.9207,0.9799,close,segregated,"close to transit, segregated",Boulevard Kastanienallee
-10200627,Marzahn-Hellersdorf,3733.0,8.5479,4.9676,0.584,0.5587,0.6587,0.7297,0.4583,middle,segregated,middle,Am Kienberg
-10200628,Marzahn-Hellersdorf,6490.0,6.3094,5.5243,0.7635,0.6097,0.9644,0.9429,0.7868,close,segregated,"close to transit, segregated",Neue Grottkauer Straße
-10200629,Marzahn-Hellersdorf,9534.0,7.9502,5.003,0.5906,0.4734,0.8162,0.8145,0.9341,close,segregated,"close to transit, segregated",Teterower Ring
-10200630,Marzahn-Hellersdorf,7003.0,8.262,5.7694,0.6558,0.5731,0.855,0.8448,1.1254,close,segregated,"close to transit, segregated",Cecilienplatz
-10300731,Marzahn-Hellersdorf,7681.0,16.4036,7.8573,1.0064,0.6925,0.8785,0.9267,0.317,far,middle,middle,Oberfeldstraße
-10300732,Marzahn-Hellersdorf,7256.0,21.0683,5.3532,0.8149,0.5781,0.9133,0.8915,0.5779,far,segregated,concordant,Buckower Ring
-10300733,Marzahn-Hellersdorf,5260.0,8.6071,7.4922,0.7311,0.5853,0.8384,0.8373,0.6608,middle,segregated,middle,Alt-Biesdorf
-10300734,Marzahn-Hellersdorf,10694.0,14.9792,6.9035,0.9659,0.6799,0.8597,0.8704,0.3203,middle,middle,middle,Biesdorf Süd
-10400835,Marzahn-Hellersdorf,7895.0,14.5708,8.282,0.9963,0.694,0.8715,0.9213,0.3783,middle,middle,middle,Kaulsdorf Nord
-10400836,Marzahn-Hellersdorf,3977.0,11.9114,6.0305,0.8926,0.5632,0.8888,0.8791,0.3412,middle,segregated,middle,Alt-Kaulsdorf
-10400837,Marzahn-Hellersdorf,7955.0,30.0634,7.2479,1.0089,0.7917,0.8968,0.9394,0.3065,far,integrated,"far from transit, integrated",Kaulsdorf Süd
-10400938,Marzahn-Hellersdorf,10318.0,21.5575,9.9974,1.1211,0.8323,0.8835,0.9734,0.2679,far,integrated,"far from transit, integrated",Mahlsdorf Nord
-10400939,Marzahn-Hellersdorf,4465.0,12.659,6.4091,0.9211,0.7298,0.884,0.9538,0.3098,middle,integrated,middle,Alt-Mahlsdorf
-10400940,Marzahn-Hellersdorf,5816.0,40.3389,8.0504,1.2008,0.9601,0.9085,0.975,0.3177,far,integrated,"far from transit, integrated",Elsensee
-10400941,Marzahn-Hellersdorf,9853.0,35.5328,9.2977,1.3093,1.0828,0.9237,1.001,0.2817,far,integrated,"far from transit, integrated",Pilgramer Straße
-11100101,Lichtenberg,3393.0,25.3687,6.3237,0.9261,0.7045,0.6269,0.841,0.1535,far,middle,middle,Dörfer Malchow-Wartenberg
-11100102,Lichtenberg,3276.0,17.154,4.5792,0.7862,0.6285,0.7942,0.8051,0.4189,far,segregated,concordant,Dorf Falkenberg
-11100203,Lichtenberg,9448.0,16.6034,4.2677,0.619,0.5354,0.1062,0.0812,0.3387,far,segregated,concordant,Falkenberg Ost
-11100204,Lichtenberg,7428.0,11.2607,4.0958,0.7563,0.5767,0.8058,0.9076,0.5885,middle,segregated,middle,Falkenberg West
-11100205,Lichtenberg,6736.0,8.6512,5.1745,0.6556,0.5354,0.7597,0.7409,0.7774,middle,segregated,middle,Wartenberg Süd
-11100206,Lichtenberg,7885.0,7.5668,7.2369,0.6174,0.511,0.7069,0.7521,0.5421,close,segregated,"close to transit, segregated",Wartenberg Nord
-11100307,Lichtenberg,11708.0,8.3477,4.045,0.6911,0.5804,0.8212,0.8451,0.5618,close,segregated,"close to transit, segregated",Zingster Straße Ost
-11100308,Lichtenberg,9869.0,12.8991,4.3666,0.7345,0.5707,0.8234,0.8307,0.7039,middle,segregated,middle,Zingster Straße West
-11100309,Lichtenberg,6572.0,9.6567,3.805,0.7027,0.5297,0.7402,0.7662,0.633,middle,segregated,middle,Mühlengrund
-11200410,Lichtenberg,10476.0,16.6643,4.1132,0.8451,0.6729,0.908,0.8866,0.5803,far,middle,middle,Malchower Weg
-11200411,Lichtenberg,6682.0,30.8805,3.9561,0.7448,0.6506,0.6447,0.7415,0.3763,far,middle,middle,Hauptstraße
-11200512,Lichtenberg,4087.0,37.1015,8.0988,0.8764,0.6974,0.8835,0.9339,0.5567,far,middle,middle,Orankesee
-11200513,Lichtenberg,10410.0,36.9271,3.3243,1.0443,0.8254,1.0464,1.0631,0.7753,far,integrated,"far from transit, integrated",Große-Leege-Straße
-11200514,Lichtenberg,16873.0,37.9382,3.5647,0.7003,0.6529,0.7209,0.6995,0.6853,far,middle,middle,Landsberger Allee
-11200515,Lichtenberg,5317.0,37.9553,5.9094,0.9538,0.6987,0.8936,0.856,0.7978,far,middle,middle,Weiße Taube
-11300616,Lichtenberg,6072.0,16.0989,4.4338,0.707,0.6887,0.8562,0.8464,1.0145,far,middle,middle,Hohenschönhauser Straße
-11300617,Lichtenberg,4400.0,13.9269,4.3388,0.6305,0.5914,0.7122,0.6311,1.2471,middle,segregated,middle,Fennpfuhlpark
-11300618,Lichtenberg,3867.0,7.5195,4.2364,0.7897,0.6196,0.8869,0.8094,1.1802,close,segregated,"close to transit, segregated",Storkower Bogen
-11300619,Lichtenberg,8924.0,11.3733,3.4435,0.7274,0.6678,0.83,0.9122,0.6027,middle,middle,middle,Rudolf-Seiffert-Park
-11300620,Lichtenberg,11376.0,21.73,3.7034,0.7912,0.6716,0.9458,0.8905,0.6893,far,middle,middle,Fennpfuhl Ost
-11300721,Lichtenberg,7188.0,27.3854,4.8413,0.7538,0.6044,0.4792,0.7006,0.3883,far,segregated,concordant,Herzbergstraße
-11300722,Lichtenberg,10330.0,10.6274,4.2922,0.8643,0.7815,0.8685,0.884,0.8911,middle,integrated,middle,Rathaus Lichtenberg
-11300723,Lichtenberg,2549.0,16.8738,6.1106,0.7292,0.7165,0.0,0.0446,0.4632,far,middle,middle,Bornitzstraße
-11300724,Lichtenberg,4347.0,6.4765,3.5662,0.9661,0.8898,0.9539,1.0058,0.7436,close,integrated,concordant,Roedeliusplatz
-11300725,Lichtenberg,10333.0,10.0827,2.7115,1.058,0.8765,0.902,0.9264,0.7108,middle,integrated,middle,Nibelungenviertel
-11300826,Lichtenberg,10506.0,7.6422,7.6422,0.7869,0.643,0.8776,0.8361,0.99,close,middle,middle,Frankfurter Allee Süd
-11400927,Lichtenberg,4137.0,7.8386,4.8564,0.7557,0.6737,0.9241,0.9901,0.4598,close,middle,middle,Victoriastadt
-11400928,Lichtenberg,3112.0,8.9544,3.0423,0.8325,0.7885,0.9232,1.0091,0.6629,middle,integrated,middle,Nöldnerplatz
-11400929,Lichtenberg,16969.0,8.3759,3.5436,1.1675,0.8739,1.01,1.0343,0.6751,middle,integrated,middle,Weitlingkiez
-11400930,Lichtenberg,4708.0,8.0391,4.4848,0.9657,0.7814,0.9926,1.0397,0.842,close,integrated,concordant,Zachertstraße
-11400931,Lichtenberg,7178.0,5.9796,3.8141,0.7693,0.6661,0.8368,0.8224,1.039,close,middle,middle,Massower Straße
-11401032,Lichtenberg,6297.0,9.7812,4.1435,0.7222,0.6078,0.7609,0.727,0.7973,middle,segregated,middle,Rosenfelder Ring
-11401033,Lichtenberg,6845.0,11.1764,3.9666,0.5719,0.4959,0.7629,0.7627,0.3917,middle,segregated,middle,Gensinger Straße
-11401034,Lichtenberg,3412.0,11.3569,3.368,0.6248,0.5563,0.8281,0.8287,0.6832,middle,segregated,middle,Tierpark
-11401135,Lichtenberg,11215.0,11.1272,4.1846,0.8872,0.733,0.947,0.8984,1.2655,middle,integrated,middle,Dolgenseestraße
-11401136,Lichtenberg,8363.0,11.4775,3.676,0.8227,0.7527,0.7957,0.8122,1.1406,middle,integrated,middle,Volkradstraße
-11401137,Lichtenberg,9143.0,7.1039,3.178,0.7129,0.6421,0.8537,0.8331,1.0482,close,segregated,"close to transit, segregated",Erieseering
-11501238,Lichtenberg,4973.0,8.1519,7.7006,0.9351,0.6555,0.7923,0.8391,0.7183,close,middle,middle,Rummelsburg
-11501339,Lichtenberg,10528.0,15.2998,6.8003,0.9358,0.6605,0.9287,0.9815,0.6472,middle,middle,middle,Karlshorst West
-11501340,Lichtenberg,11145.0,15.5716,3.602,0.9445,0.6981,0.9358,0.9613,0.5454,middle,middle,middle,Karlshorst Nord
-11501341,Lichtenberg,10184.0,16.0973,10.6705,0.7996,0.5641,0.8684,0.9022,0.4411,far,segregated,concordant,Karlshorst Süd
-12100101,Reinickendorf,11180.0,8.927,3.4254,0.9226,0.7735,0.9556,0.9559,0.5902,middle,integrated,middle,Letteplatz
-12100102,Reinickendorf,9883.0,7.2545,5.6797,0.9247,0.8028,0.9833,0.9976,0.9384,close,integrated,concordant,Hausotterplatz
-12100103,Reinickendorf,7650.0,8.2281,4.8784,0.8632,0.749,0.9583,0.9272,0.8759,close,integrated,concordant,Breitkopfbecken
-12100204,Reinickendorf,9529.0,9.3772,3.0164,0.7953,0.7498,0.8687,0.9185,0.6043,middle,integrated,middle,Schäfersee
-12100205,Reinickendorf,14329.0,8.3169,4.611,0.7684,0.6363,0.6644,0.7387,0.4827,close,segregated,"close to transit, segregated",Teichstraße
-12100206,Reinickendorf,4763.0,6.2365,3.1173,0.8178,0.6527,0.8906,0.8977,0.4668,close,middle,middle,Humboldtstraße
-12200307,Reinickendorf,2829.0,8.1024,4.6336,0.8173,0.687,0.0,0.0,0.2263,close,middle,middle,Reinickes Hof
-12200308,Reinickendorf,5905.0,10.242,4.8523,0.837,0.6929,0.7226,0.7043,0.5721,middle,middle,middle,Meller Bogen
-12200309,Reinickendorf,11290.0,12.7579,2.4645,0.9254,0.7782,0.9385,1.0004,0.4651,middle,integrated,middle,Scharnweberstraße
-12200310,Reinickendorf,8399.0,14.1252,2.3114,0.8764,0.8008,0.8793,0.8508,0.8107,middle,integrated,middle,Klixstraße
-12200411,Reinickendorf,304.0,7.8355,4.1488,0.6899,0.5666,0.63,0.8293,0.2862,close,segregated,"close to transit, segregated",Schumacher-Quartier
-12200412,Reinickendorf,6503.0,30.5868,5.6351,0.7414,0.6418,0.6973,0.755,0.4094,far,segregated,concordant,Waldidyll/Flughafensee
-12200413,Reinickendorf,7969.0,26.0915,3.5866,0.6849,0.593,0.8196,0.9002,0.7669,far,segregated,concordant,Tegel Süd
-12200414,Reinickendorf,2599.0,29.5482,7.9784,0.6479,0.5007,0.3013,0.774,0.312,far,segregated,concordant,TXL
-12200515,Reinickendorf,11434.0,12.183,5.2868,0.8189,0.5587,0.8344,0.8111,0.5055,middle,segregated,middle,Alt-Tegel
-12400616,Reinickendorf,6109.0,56.3989,5.2952,1.0427,0.8047,0.9598,0.9724,0.2697,far,integrated,"far from transit, integrated",Konradshöhe/Tegelort
-12400617,Reinickendorf,6591.0,20.0717,7.2392,0.876,0.7221,0.6511,0.6932,0.2142,far,integrated,"far from transit, integrated",Alt-Heiligensee
-12400618,Reinickendorf,3788.0,14.9066,4.9927,0.7808,0.607,0.7931,0.8513,0.3061,middle,segregated,middle,Heiligensee Nord
-12400619,Reinickendorf,7721.0,13.7449,6.8932,1.0003,0.7734,0.876,0.9353,0.3068,middle,integrated,middle,Heiligensee
-12400720,Reinickendorf,8415.0,15.9641,8.0191,0.7927,0.5985,0.8718,0.9152,0.3598,far,segregated,concordant,Frohnau West
-12400721,Reinickendorf,7894.0,15.4173,11.7393,0.7563,0.5997,0.8387,0.8958,0.3548,middle,segregated,middle,Frohnau Ost
-12400722,Reinickendorf,8352.0,13.9524,5.8878,0.8647,0.6087,0.9248,0.9731,0.4147,middle,segregated,middle,Hermsdorf West
-12400723,Reinickendorf,8078.0,14.832,10.5423,0.919,0.7165,0.9443,0.9445,0.4357,middle,middle,middle,Hermsdorf Ost/Waldsee
-12500824,Reinickendorf,9735.0,17.6136,3.7425,0.9279,0.632,0.9614,0.9318,0.5178,far,segregated,concordant,Ziekowstraße/Freie Scholle
-12500825,Reinickendorf,7070.0,15.5963,3.8486,1.0808,0.6709,0.883,0.9619,0.4718,middle,middle,middle,Borsigwalde
-12500926,Reinickendorf,5193.0,7.9883,4.6688,0.8481,0.6723,0.8482,0.9042,0.4841,close,middle,middle,Wittenau Mitte
-12500927,Reinickendorf,7126.0,11.0535,5.0699,0.6698,0.6012,0.7605,0.7439,0.5691,middle,segregated,middle,Wittenau Nord
-12500928,Reinickendorf,5227.0,11.3159,4.2437,0.9234,0.7093,0.9575,1.0007,0.5136,middle,middle,middle,Waidmannslust
-12500929,Reinickendorf,5058.0,33.7445,7.2865,0.801,0.604,0.6561,0.7401,0.2963,far,segregated,concordant,Lübars
-12500930,Reinickendorf,9830.0,8.923,4.4827,0.7289,0.6159,0.8065,0.8399,0.2934,middle,segregated,middle,Wittenau Süd
-12601031,Reinickendorf,3369.0,13.0763,5.7163,0.7616,0.6639,0.1609,0.2397,0.3762,middle,middle,middle,Lübarser Straße
-12601032,Reinickendorf,6434.0,15.6061,2.9937,0.7355,0.6342,0.2745,0.4811,0.5805,far,segregated,concordant,Rollbergesiedlung
-12601133,Reinickendorf,11470.0,32.8027,2.4811,0.5716,0.5648,0.4814,0.4698,2.3936,far,segregated,concordant,Treuenbrietzener Straße
-12601134,Reinickendorf,15947.0,20.4243,3.4338,0.6225,0.5704,0.5034,0.5376,1.1422,far,segregated,concordant,Märkisches Zentrum
-12601235,Reinickendorf,10566.0,24.6444,2.5245,0.6941,0.6291,0.656,0.5881,2.2707,far,segregated,concordant,Dannenwalder Weg
-12601236,Reinickendorf,3216.0,10.7956,4.0979,0.8524,0.7596,0.7335,1.087,0.4749,middle,integrated,middle,Schorfheidestraße
+09401431,Treptow-Köpenick,6101.0,28.0802,3.6046,0.6809,0.5725,0.729,0.6179,0.7214,far,segregated,concordant,Allende I
+09401432,Treptow-Köpenick,1577.0,29.5563,4.3187,0.7473,0.6383,0.8024,0.7728,0.4177,far,segregated,concordant,Siedlung Kämmereiheide
+09401433,Treptow-Köpenick,4207.0,38.9251,3.6769,0.7357,0.58,0.8948,0.8897,0.5566,far,segregated,concordant,Allende II
+09401534,Treptow-Köpenick,7411.0,20.7075,2.9572,0.7316,0.5755,0.8901,0.8187,0.6593,far,segregated,concordant,Altstadt Köpenick
+09401635,Treptow-Köpenick,7015.0,91.4176,12.2561,0.9078,0.7153,0.7976,0.839,0.2347,far,middle,middle,Müggelheim
+09501736,Treptow-Köpenick,4661.0,11.7958,8.3113,0.7267,0.6314,0.6946,0.7508,0.6755,middle,segregated,middle,Hirschgarten
+09501737,Treptow-Köpenick,14353.0,17.4478,6.4811,0.8358,0.7383,0.8576,0.9009,0.5485,far,integrated,"far from transit, integrated",Alt-Friedrichshagen
+09501838,Treptow-Köpenick,11227.0,22.684,14.0246,0.8546,0.7164,0.8141,0.8861,0.3142,far,integrated,"far from transit, integrated",Rahnsdorf
+09501939,Treptow-Köpenick,6828.0,11.6647,3.5575,0.7505,0.5691,0.8756,0.9126,0.5056,middle,segregated,middle,Bahnhofstraße
+09501940,Treptow-Köpenick,2773.0,6.4145,2.8325,0.8243,0.5765,0.7412,0.7411,0.2809,close,segregated,"close to transit, segregated",Güterbahnhof Köpenick
+09501941,Treptow-Köpenick,2888.0,16.6872,4.8428,0.6753,0.5017,0.7317,0.7572,0.5004,far,segregated,concordant,Friedrichshagener Straße
+09502042,Treptow-Köpenick,4484.0,12.3246,4.528,0.8746,0.6588,0.9596,0.9838,0.395,middle,middle,middle,Mittelheide
+09502043,Treptow-Köpenick,9144.0,16.6808,4.2887,0.8994,0.6788,0.9321,0.9414,0.5002,far,middle,middle,Dammheide
+10100101,Marzahn-Hellersdorf,5826.0,11.5595,5.7667,0.7604,0.5636,0.8261,0.8312,0.4954,middle,segregated,middle,Marzahn West
+10100102,Marzahn-Hellersdorf,3725.0,8.0181,2.9172,0.8467,0.6539,0.8822,0.8244,1.0528,close,middle,middle,Rosenbecker Straße
+10100103,Marzahn-Hellersdorf,8113.0,10.6927,4.7545,0.7748,0.6101,0.8353,0.7975,0.604,middle,segregated,middle,Wittenberger Straße
+10100104,Marzahn-Hellersdorf,7669.0,16.1828,3.5268,0.7382,0.6205,0.7987,0.7513,0.6109,far,segregated,concordant,Golliner Straße
+10100205,Marzahn-Hellersdorf,1247.0,10.8897,8.9345,0.6964,0.5242,0.0,0.0,0.1922,middle,segregated,middle,Gewerbegebiet Bitterfelder Straße
+10100206,Marzahn-Hellersdorf,11801.0,12.3212,3.0663,0.6528,0.5264,0.8433,0.8341,0.6916,middle,segregated,middle,Wuhletalstraße
+10100207,Marzahn-Hellersdorf,8362.0,26.9448,4.1192,0.77,0.6123,0.9098,0.8577,0.6299,far,segregated,concordant,Ahrensfelder Berge
+10100208,Marzahn-Hellersdorf,10398.0,9.1081,4.1056,0.6375,0.5022,0.7385,0.7484,0.6746,middle,segregated,middle,Bürgerpark
+10100209,Marzahn-Hellersdorf,9691.0,17.5807,3.3649,0.722,0.58,1.0168,1.063,0.8411,far,segregated,concordant,Lea-Grundig-Straße
+10100210,Marzahn-Hellersdorf,10853.0,10.4936,4.7546,0.6301,0.5105,0.8279,0.8618,1.0831,middle,segregated,middle,Marzahner Promenade
+10100311,Marzahn-Hellersdorf,2970.0,14.9884,6.9004,0.8043,0.5989,0.6609,0.8173,0.2593,middle,segregated,middle,Marzahner Chaussee
+10100312,Marzahn-Hellersdorf,16407.0,10.259,4.9254,0.6538,0.522,0.826,0.7985,0.5349,middle,segregated,middle,Springpfuhl
+10100313,Marzahn-Hellersdorf,5021.0,11.4338,6.4614,0.7243,0.5515,0.9342,0.891,0.7217,middle,segregated,middle,Alt-Marzahn
+10100314,Marzahn-Hellersdorf,6418.0,20.3941,4.2893,0.7013,0.5222,0.8775,0.8267,0.8508,far,segregated,concordant,Auersbergstraße
+10100315,Marzahn-Hellersdorf,8408.0,26.0111,4.0074,0.6435,0.57,0.82,0.9156,0.6245,far,segregated,concordant,Bärenstein
+10100316,Marzahn-Hellersdorf,3675.0,28.9606,8.9246,0.9661,0.6517,0.9985,0.924,0.9871,far,middle,middle,Landsberger Tor
+10200417,Marzahn-Hellersdorf,8039.0,21.4385,3.4326,0.5855,0.6086,0.626,0.7157,1.042,far,segregated,concordant,Zossener Straße
+10200418,Marzahn-Hellersdorf,7506.0,18.1831,3.7493,0.6235,0.5962,0.6806,0.7388,1.1955,far,segregated,concordant,Kyritzer Straße
+10200419,Marzahn-Hellersdorf,4336.0,12.7823,4.0193,0.6321,0.609,0.6078,0.5355,1.5527,middle,segregated,middle,Havelländer Ring
+10200420,Marzahn-Hellersdorf,9150.0,8.9542,4.1927,0.7009,0.6006,0.758,0.7839,1.162,middle,segregated,middle,Gut Hellersdorf
+10200421,Marzahn-Hellersdorf,1745.0,6.5278,1.4767,0.8083,0.7312,0.8774,0.8212,1.1851,close,integrated,concordant,Helle Mitte
+10200422,Marzahn-Hellersdorf,7358.0,9.5156,3.8152,0.6446,0.5967,0.7623,0.7502,1.2749,middle,segregated,middle,Hellersdorfer Promenade
+10200423,Marzahn-Hellersdorf,6284.0,5.801,3.951,0.6313,0.5558,0.5575,0.4801,0.8436,close,segregated,"close to transit, segregated",Böhlener Straße
+10200524,Marzahn-Hellersdorf,12037.0,9.3001,3.4723,0.6981,0.6323,0.7654,0.7476,0.7961,middle,segregated,middle,Adele-Sandrock-Straße
+10200525,Marzahn-Hellersdorf,5407.0,15.642,5.6915,0.82,0.679,0.9261,0.9268,0.5163,far,middle,middle,Schleipfuhl
+10200526,Marzahn-Hellersdorf,6311.0,7.1824,6.1672,0.7022,0.5849,1.0199,0.9208,0.9786,close,segregated,"close to transit, segregated",Boulevard Kastanienallee
+10200627,Marzahn-Hellersdorf,3733.0,8.5479,4.9676,0.619,0.5409,0.656,0.6959,0.4509,middle,segregated,middle,Am Kienberg
+10200628,Marzahn-Hellersdorf,6490.0,6.3094,5.5243,0.7635,0.6018,0.9665,0.9411,0.7868,close,segregated,"close to transit, segregated",Neue Grottkauer Straße
+10200629,Marzahn-Hellersdorf,9534.0,7.9502,5.003,0.5957,0.4739,0.7467,0.8032,0.9274,close,segregated,"close to transit, segregated",Teterower Ring
+10200630,Marzahn-Hellersdorf,7003.0,8.262,5.7694,0.6451,0.5606,0.8537,0.8456,1.1452,close,segregated,"close to transit, segregated",Cecilienplatz
+10300731,Marzahn-Hellersdorf,7681.0,16.4036,7.8573,1.0032,0.6968,0.8792,0.9202,0.3156,far,middle,middle,Oberfeldstraße
+10300732,Marzahn-Hellersdorf,7256.0,21.0683,5.3532,0.8117,0.5534,0.9199,0.9155,0.5801,far,segregated,concordant,Buckower Ring
+10300733,Marzahn-Hellersdorf,5260.0,8.6071,7.4922,0.7214,0.5964,0.8053,0.7866,0.6736,middle,segregated,middle,Alt-Biesdorf
+10300734,Marzahn-Hellersdorf,10694.0,14.9792,6.9035,0.9721,0.687,0.855,0.8703,0.3203,middle,middle,middle,Biesdorf Süd
+10400835,Marzahn-Hellersdorf,7895.0,14.5708,8.282,0.9963,0.6981,0.8756,0.9195,0.3782,middle,middle,middle,Kaulsdorf Nord
+10400836,Marzahn-Hellersdorf,3977.0,11.9114,6.0305,0.8963,0.5667,0.9002,0.8838,0.3422,middle,segregated,middle,Alt-Kaulsdorf
+10400837,Marzahn-Hellersdorf,7955.0,30.0634,7.2479,1.0091,0.7898,0.8968,0.9383,0.3063,far,integrated,"far from transit, integrated",Kaulsdorf Süd
+10400938,Marzahn-Hellersdorf,10318.0,21.5575,9.9974,1.1195,0.8237,0.8807,0.9668,0.2694,far,integrated,"far from transit, integrated",Mahlsdorf Nord
+10400939,Marzahn-Hellersdorf,4465.0,12.659,6.4091,0.9303,0.744,0.8896,0.9508,0.3098,middle,integrated,middle,Alt-Mahlsdorf
+10400940,Marzahn-Hellersdorf,5816.0,40.3389,8.0504,1.2003,0.9581,0.9162,0.9906,0.3132,far,integrated,"far from transit, integrated",Elsensee
+10400941,Marzahn-Hellersdorf,9853.0,35.5328,9.2977,1.3093,1.0845,0.9213,1.0037,0.2787,far,integrated,"far from transit, integrated",Pilgramer Straße
+11100101,Lichtenberg,3393.0,25.3687,6.3237,0.9261,0.7033,0.6269,0.8406,0.1602,far,middle,middle,Dörfer Malchow-Wartenberg
+11100102,Lichtenberg,3276.0,17.154,4.5792,0.7922,0.6294,0.794,0.8498,0.421,far,segregated,concordant,Dorf Falkenberg
+11100203,Lichtenberg,9448.0,16.6034,4.2677,0.6224,0.5492,0.1065,0.0812,0.3369,far,segregated,concordant,Falkenberg Ost
+11100204,Lichtenberg,7428.0,11.2607,4.0958,0.7572,0.5844,0.8395,0.9094,0.5841,middle,segregated,middle,Falkenberg West
+11100205,Lichtenberg,6736.0,8.6512,5.1745,0.6544,0.5415,0.7589,0.7411,0.7766,middle,segregated,middle,Wartenberg Süd
+11100206,Lichtenberg,7885.0,7.5668,7.2369,0.6174,0.512,0.7069,0.7499,0.5421,close,segregated,"close to transit, segregated",Wartenberg Nord
+11100307,Lichtenberg,11708.0,8.3477,4.045,0.6888,0.5831,0.822,0.8464,0.5606,close,segregated,"close to transit, segregated",Zingster Straße Ost
+11100308,Lichtenberg,9869.0,12.8991,4.3666,0.7245,0.5734,0.8213,0.7967,0.6973,middle,segregated,middle,Zingster Straße West
+11100309,Lichtenberg,6572.0,9.6567,3.805,0.7027,0.5378,0.7408,0.7658,0.633,middle,segregated,middle,Mühlengrund
+11200410,Lichtenberg,10476.0,16.6643,4.1132,0.8424,0.6647,0.9017,0.8883,0.566,far,middle,middle,Malchower Weg
+11200411,Lichtenberg,6682.0,30.8805,3.9561,0.7396,0.6402,0.6292,0.7395,0.3708,far,segregated,concordant,Hauptstraße
+11200512,Lichtenberg,4087.0,37.1015,8.0988,0.8762,0.696,0.8835,0.9347,0.5567,far,middle,middle,Orankesee
+11200513,Lichtenberg,10410.0,36.9271,3.3243,1.0425,0.8226,1.0269,1.0484,0.7725,far,integrated,"far from transit, integrated",Große-Leege-Straße
+11200514,Lichtenberg,16873.0,37.9382,3.5647,0.6981,0.6532,0.7215,0.6997,0.6757,far,middle,middle,Landsberger Allee
+11200515,Lichtenberg,5317.0,37.9553,5.9094,0.935,0.7075,0.8949,0.8534,0.8011,far,middle,middle,Weiße Taube
+11300616,Lichtenberg,6072.0,16.0989,4.4338,0.7033,0.7107,0.6973,0.7575,1.0093,far,middle,middle,Hohenschönhauser Straße
+11300617,Lichtenberg,4400.0,13.9269,4.3388,0.6385,0.6239,0.7566,0.7389,1.187,middle,segregated,middle,Fennpfuhlpark
+11300618,Lichtenberg,3867.0,7.5195,4.2364,0.7897,0.6325,0.8912,0.8274,1.1828,close,segregated,"close to transit, segregated",Storkower Bogen
+11300619,Lichtenberg,8924.0,11.3733,3.4435,0.7259,0.6607,0.8691,0.9206,0.601,middle,middle,middle,Rudolf-Seiffert-Park
+11300620,Lichtenberg,11376.0,21.73,3.7034,0.7881,0.6774,0.9592,0.9057,0.6885,far,middle,middle,Fennpfuhl Ost
+11300721,Lichtenberg,7188.0,27.3854,4.8413,0.7455,0.6183,0.4781,0.7003,0.3848,far,segregated,concordant,Herzbergstraße
+11300722,Lichtenberg,10330.0,10.6274,4.2922,0.863,0.787,0.8685,0.8786,0.8903,middle,integrated,middle,Rathaus Lichtenberg
+11300723,Lichtenberg,2549.0,16.8738,6.1106,0.7292,0.715,0.0,0.0,0.4632,far,middle,middle,Bornitzstraße
+11300724,Lichtenberg,4347.0,6.4765,3.5662,0.9661,0.8904,0.9539,1.0063,0.7436,close,integrated,concordant,Roedeliusplatz
+11300725,Lichtenberg,10333.0,10.0827,2.7115,1.058,0.8754,0.902,0.9262,0.7108,middle,integrated,middle,Nibelungenviertel
+11300826,Lichtenberg,10506.0,7.6422,7.6422,0.7837,0.6432,0.8776,0.8359,0.99,close,segregated,"close to transit, segregated",Frankfurter Allee Süd
+11400927,Lichtenberg,4137.0,7.8386,4.8564,0.7511,0.6672,0.9217,0.9872,0.4598,close,middle,middle,Victoriastadt
+11400928,Lichtenberg,3112.0,8.9544,3.0423,0.8328,0.7845,0.9158,1.0041,0.6531,middle,integrated,middle,Nöldnerplatz
+11400929,Lichtenberg,16969.0,8.3759,3.5436,1.1674,0.8527,1.0107,1.0358,0.6652,middle,integrated,middle,Weitlingkiez
+11400930,Lichtenberg,4708.0,8.0391,4.4848,0.9387,0.7431,0.9562,1.0279,0.8453,close,integrated,concordant,Zachertstraße
+11400931,Lichtenberg,7178.0,5.9796,3.8141,0.7369,0.639,0.838,0.8176,1.0029,close,segregated,"close to transit, segregated",Massower Straße
+11401032,Lichtenberg,6297.0,9.7812,4.1435,0.7115,0.5987,0.761,0.7123,0.7871,middle,segregated,middle,Rosenfelder Ring
+11401033,Lichtenberg,6845.0,11.1764,3.9666,0.5498,0.4866,0.7629,0.7802,0.3917,middle,segregated,middle,Gensinger Straße
+11401034,Lichtenberg,3412.0,11.3569,3.368,0.5996,0.5269,0.8212,0.7913,0.6589,middle,segregated,middle,Tierpark
+11401135,Lichtenberg,11215.0,11.1272,4.1846,0.8872,0.7007,0.9473,0.8951,1.2655,middle,middle,middle,Dolgenseestraße
+11401136,Lichtenberg,8363.0,11.4775,3.676,0.8093,0.6818,0.7946,0.7979,1.14,middle,middle,middle,Volkradstraße
+11401137,Lichtenberg,9143.0,7.1039,3.178,0.7136,0.6381,0.8537,0.8323,1.0482,close,segregated,"close to transit, segregated",Erieseering
+11501238,Lichtenberg,4973.0,8.1519,7.7006,0.9345,0.6423,0.7923,0.836,0.7183,close,segregated,"close to transit, segregated",Rummelsburg
+11501339,Lichtenberg,10528.0,15.2998,6.8003,0.9358,0.6607,0.9287,0.9825,0.6473,middle,middle,middle,Karlshorst West
+11501340,Lichtenberg,11145.0,15.5716,3.602,0.9434,0.6964,0.9358,0.9611,0.5454,middle,middle,middle,Karlshorst Nord
+11501341,Lichtenberg,10184.0,16.0973,10.6705,0.7996,0.5654,0.8684,0.9028,0.4398,far,segregated,concordant,Karlshorst Süd
+12100101,Reinickendorf,11180.0,8.927,3.4254,0.9232,0.7797,0.9557,0.9482,0.589,middle,integrated,middle,Letteplatz
+12100102,Reinickendorf,9883.0,7.2545,5.6797,0.9267,0.8007,0.9826,1.0075,0.9487,close,integrated,concordant,Hausotterplatz
+12100103,Reinickendorf,7650.0,8.2281,4.8784,0.8724,0.7401,0.9584,0.9397,0.8775,close,integrated,concordant,Breitkopfbecken
+12100204,Reinickendorf,9529.0,9.3772,3.0164,0.7903,0.7206,0.8579,0.9355,0.6087,middle,integrated,middle,Schäfersee
+12100205,Reinickendorf,14329.0,8.3169,4.611,0.7648,0.646,0.6664,0.7284,0.4908,close,middle,middle,Teichstraße
+12100206,Reinickendorf,4763.0,6.2365,3.1173,0.7721,0.6498,0.892,0.8975,0.4642,close,middle,middle,Humboldtstraße
+12200307,Reinickendorf,2829.0,8.1024,4.6336,0.817,0.6953,0.0,0.0,0.222,close,middle,middle,Reinickes Hof
+12200308,Reinickendorf,5905.0,10.242,4.8523,0.8112,0.6916,0.7226,0.7024,0.6191,middle,middle,middle,Meller Bogen
+12200309,Reinickendorf,11290.0,12.7579,2.4645,0.9406,0.7876,0.9425,0.9899,0.465,middle,integrated,middle,Scharnweberstraße
+12200310,Reinickendorf,8399.0,14.1252,2.3114,0.8761,0.812,0.8853,0.8495,0.8236,middle,integrated,middle,Klixstraße
+12200411,Reinickendorf,304.0,7.8355,4.1488,0.7221,0.5735,0.6272,0.8293,0.2862,close,segregated,"close to transit, segregated",Schumacher-Quartier
+12200412,Reinickendorf,6503.0,30.5868,5.6351,0.7842,0.6509,0.7026,0.7542,0.4151,far,middle,middle,Waldidyll/Flughafensee
+12200413,Reinickendorf,7969.0,26.0915,3.5866,0.6958,0.607,0.8291,0.8727,0.7695,far,segregated,concordant,Tegel Süd
+12200414,Reinickendorf,2599.0,29.5482,7.9784,0.6412,0.4921,0.3013,0.7734,0.3105,far,segregated,concordant,TXL
+12200515,Reinickendorf,11434.0,12.183,5.2868,0.8177,0.5594,0.8335,0.81,0.5088,middle,segregated,middle,Alt-Tegel
+12400616,Reinickendorf,6109.0,56.3989,5.2952,1.0344,0.7874,0.9658,0.9707,0.2693,far,integrated,"far from transit, integrated",Konradshöhe/Tegelort
+12400617,Reinickendorf,6591.0,20.0717,7.2392,0.876,0.7217,0.6428,0.6933,0.2142,far,integrated,"far from transit, integrated",Alt-Heiligensee
+12400618,Reinickendorf,3788.0,14.9066,4.9927,0.7754,0.607,0.7908,0.8464,0.3061,middle,segregated,middle,Heiligensee Nord
+12400619,Reinickendorf,7721.0,13.7449,6.8932,1.0003,0.7683,0.8759,0.919,0.305,middle,integrated,middle,Heiligensee
+12400720,Reinickendorf,8415.0,15.9641,8.0191,0.8037,0.6047,0.8684,0.9092,0.3584,far,segregated,concordant,Frohnau West
+12400721,Reinickendorf,7894.0,15.4173,11.7393,0.7563,0.5999,0.8387,0.8966,0.3548,middle,segregated,middle,Frohnau Ost
+12400722,Reinickendorf,8352.0,13.9524,5.8878,0.8671,0.6142,0.9245,0.9737,0.4143,middle,segregated,middle,Hermsdorf West
+12400723,Reinickendorf,8078.0,14.832,10.5423,0.9066,0.7142,0.9354,0.9417,0.4335,middle,middle,middle,Hermsdorf Ost/Waldsee
+12500824,Reinickendorf,9735.0,17.6136,3.7425,0.9278,0.6336,0.9614,0.9317,0.5178,far,segregated,concordant,Ziekowstraße/Freie Scholle
+12500825,Reinickendorf,7070.0,15.5963,3.8486,1.0808,0.686,0.8905,0.9624,0.4648,middle,middle,middle,Borsigwalde
+12500926,Reinickendorf,5193.0,7.9883,4.6688,0.8403,0.683,0.8283,0.8898,0.4821,close,middle,middle,Wittenau Mitte
+12500927,Reinickendorf,7126.0,11.0535,5.0699,0.665,0.5968,0.7479,0.75,0.5756,middle,segregated,middle,Wittenau Nord
+12500928,Reinickendorf,5227.0,11.3159,4.2437,0.9234,0.7061,0.9577,0.9987,0.5136,middle,middle,middle,Waidmannslust
+12500929,Reinickendorf,5058.0,33.7445,7.2865,0.801,0.604,0.6629,0.7405,0.2963,far,segregated,concordant,Lübars
+12500930,Reinickendorf,9830.0,8.923,4.4827,0.7147,0.5903,0.8031,0.8326,0.2934,middle,segregated,middle,Wittenau Süd
+12601031,Reinickendorf,3369.0,13.0763,5.7163,0.7465,0.6593,0.1626,0.2448,0.3755,middle,middle,middle,Lübarser Straße
+12601032,Reinickendorf,6434.0,15.6061,2.9937,0.7355,0.6349,0.2745,0.4839,0.5805,far,segregated,concordant,Rollbergesiedlung
+12601133,Reinickendorf,11470.0,32.8027,2.4811,0.5716,0.5655,0.4695,0.4773,2.3936,far,segregated,concordant,Treuenbrietzener Straße
+12601134,Reinickendorf,15947.0,20.4243,3.4338,0.6199,0.5697,0.5034,0.5538,1.152,far,segregated,concordant,Märkisches Zentrum
+12601235,Reinickendorf,10566.0,24.6444,2.5245,0.6577,0.5903,0.7267,0.654,2.2693,far,segregated,concordant,Dannenwalder Weg
+12601236,Reinickendorf,3216.0,10.7956,4.0979,0.8524,0.7334,0.8656,1.0505,0.4921,middle,integrated,middle,Schorfheidestraße
