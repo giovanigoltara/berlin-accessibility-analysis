@@ -35,6 +35,13 @@ buildings) is likely to be slow; try the pilot first.
      because the developer cannot be verified`. Open *System Settings ›
      Privacy & Security*, click *Allow anyway* for libpstalgo.dylib, and
      restart QGIS.
+  6. If QGIS later says the plugin is **incompatible** with your QGIS version
+     (seen after a QGIS 4 update): PST 3.3.2 declares
+     `qgisMaximumVersion=3.99`. Open *Settings › User Profiles › Open Active
+     Profile Folder*, then `python/plugins/<PST folder>/metadata.txt`, change
+     that line to `qgisMaximumVersion=4.99`, restart QGIS and tick PST under
+     *Plugins › Manage and Install Plugins › Installed*. This only edits your
+     local copy; the alternative is QGIS 3.40 LTR, which PST supports officially.
 
 ## 1b. Getting the input file onto your computer
 
@@ -84,7 +91,7 @@ the GeoPackage, select all layers).
 5. **Attractions**: choose *Weigh attractions by data* and tick the columns
    to count, e.g. `su` (S- or U-Bahn stations) and `anyf` (frequent stops of
    any mode). Each 0/1 column then counts the stations that have it.
-   *Attraction name (for output column)*: a 2-character name, e.g. `st`.
+   *Attraction name (for output column)*: `st` (2 characters).
 6. **Ready** › run.
 
 PST writes the results as new columns on the `origins` layer. Column names
@@ -106,11 +113,11 @@ turning. This variant has no Python cross-check yet.
 1. **Input Tables**: as above, including *Unlink points* → `unlinks`.
 2. **Entry Points**: defaults.
 3. **Calculation Options**: tick **Walking distance (meters)**.
-4. **Radius**: **Walking distance 2000** meters (the Python cross-check
-   stops at 2 km).
+4. **Radius**: **Walking distance 800** meters (the value used for the
+   project's results; the Python cross-check computes up to 2 km).
 5. **Destinations**: *Find minimum distance to:* **Destination element with
    specific attractions**, tick `su` (and in a second run `anyf`).
-   *Destination name (for output column)*: e.g. `su`.
+   *Destination name (for output column)*: `st`.
 6. **Destination Attributes**: optional; skip.
 7. Run.
 
@@ -127,9 +134,8 @@ turning. This variant has no Python cross-check yet.
 
 ```bash
 python scripts/compare_pst_results.py \
-    --pst output/pst/pst_results_friedrichshain-kreuzberg.gpkg --layer origins \
-    --map ARw800su=reach_su_800 --map ARw400su=reach_su_400 \
-    --map ARw800anyf=reach_anyf_800 --map ADwsu=dist_su
+    --pst output/pst/pst_results_friedrichshain-kreuzberg.gpkg \
+    --map ADww800st=dist_su --map ARw800st=reach_su_800 --radius 800
 ```
 
 (Replace the PST column names with the ones in the attribute table. For

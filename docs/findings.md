@@ -49,7 +49,7 @@ Per resident, walking at 1.3 m/s, stops inside Berlin only
   distance (within 1 m) and the same attraction reach for all 9,564
   residential buildings of the Friedrichshain-Kreuzberg pilot
   (`output/pst/pst_vs_python_friedrichshain-kreuzberg.csv`).
-- In the pilot, 1,552 of 9,564 residential buildings have no S- or U-Bahn
+- In the pilot, 1,545 of 9,564 residential buildings have no S- or U-Bahn
   station within an 800 m walk.
 
 ## 4. Metric access versus configuration (Phase 3)
@@ -81,7 +81,7 @@ of each building's nearest street (`output/phase3/correlations.csv`; negative
   reminder that results depend on the unit of analysis.
 - **Pilot, station counts.** In Friedrichshain-Kreuzberg the number of S- or
   U-Bahn stations within 800 m correlates with metric closeness (rho 0.416)
-  but not with NAIN at 2000 m (rho -0.018)
+  but not with NAIN at 2000 m (rho -0.020)
   (`output/phase3/reach_vs_centrality_friedrichshain-kreuzberg.csv`).
 - **Where the two diverge** (`output/phase3/divergence_by_planungsraum.csv`,
   map `output/maps/phase3_divergence.png`): 53 Planungsräume (380,371
