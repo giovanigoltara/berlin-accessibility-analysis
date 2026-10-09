@@ -66,3 +66,12 @@ What was decided, when, and why, in order. The current method is in
 | Run every script with `PYTHONHASHSEED=0`; rerun Phase 1 and 3 with it | network cleaning depended on the per-process hash seed, so a clean clone did not reproduce the segment map (validation §8) |
 | Rerun PST in QGIS on inputs from the seeded network (done 2026-10-09) | the PST check compares two tools on the same network; regenerating only the Python side would compare different networks |
 | Test suite runs on GitHub Actions for every push to `main` and every pull request | catches breakage without a local run; the tests need no downloaded data |
+
+## Licences (2026-10-09)
+
+| Decision | Why |
+|---|---|
+| Data files in `output/` are published under ODbL 1.0; code stays MIT | they are derived from OpenStreetMap, whose licence requires derived databases to be shared under ODbL (owner's decision) |
+| Remove `output/reisezeiten_landmarks.csv` | Google Maps Platform terms restrict storing and redistributing API results (owner's decision) |
+| Correct the LOR licence to CC BY 3.0 DE and name the Amt für Statistik on every map | the WFS states CC BY 3.0 DE with that attribution; the README had dl-de/by-2-0 |
+| Add an AI use disclosure to the README | owner's request; commits carry no co-author lines |

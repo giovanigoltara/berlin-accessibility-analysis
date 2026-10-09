@@ -26,6 +26,7 @@ from scipy.stats import spearmanr  # noqa: E402
 import _bootstrap  # noqa: F401, E402
 
 from berlin_access.config import load_config  # noqa: E402
+from berlin_access.credits import credits  # noqa: E402
 from berlin_access.pipeline import load_lor, weighted_quantiles  # noqa: E402
 
 PILOT = "Friedrichshain-Kreuzberg"
@@ -163,9 +164,9 @@ def main():
     fig.text(0.01, 0.015,
              "Thirds over all Planungsräume of the resident-weighted median walk to the nearest S- or U-Bahn station "
              f"({v} m/s) and of the median NAIN at 2000 m of residents' nearest street. 'Concordant' = close & integrated "
-             "or far & segregated. Data: OSM (ODbL), VBB GTFS, LOR 2021, Einwohnerregister 31.12.2025.",
+             "or far & segregated.\n" + credits("osm", "vbb", "afs"),
              fontsize=7, color=TEXT_2, wrap=True)
-    fig.tight_layout(rect=(0, 0.04, 1, 1))
+    fig.tight_layout(rect=(0, 0.05, 1, 1))
     fig.savefig(out / "maps" / "phase3_divergence.png", facecolor=SURFACE, bbox_inches="tight")
     plt.close(fig)
 

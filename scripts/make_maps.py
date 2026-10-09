@@ -23,6 +23,7 @@ from matplotlib.patches import Patch  # noqa: E402
 import _bootstrap  # noqa: F401, E402
 
 from berlin_access.config import load_config  # noqa: E402
+from berlin_access.credits import credits  # noqa: E402
 from berlin_access.pipeline import load_lor, mode_slug, report_modes  # noqa: E402
 
 SURFACE = "#fcfcfb"
@@ -158,13 +159,13 @@ def main(cfg) -> None:
     v = cfg["walk_speed_main_mps"]
     modes = report_modes(cfg)
     limit = "stops inside Berlin only" if cfg["stop_buffer_m"] == 0 else f"stops up to {cfg['stop_buffer_m']} m outside Berlin"
-    data = "Data: OSM (ODbL), VBB GTFS, LOR 2021, Einwohnerregister 31.12.2025."
+    data = credits("osm", "vbb", "afs")
 
     lor = load_lor(cfg.path("lor"), cfg["crs"])
     districts = lor.dissolve("district").reset_index()[["district", "geometry"]]
 
     plr, n_low, _ = plr_classes(out, lor, "walk_time_by_planungsraum.csv", "residents", v, modes)
-    source = f"Median walk per resident to the nearest stop, LOR Planungsräume, {v} m/s, {limit}. {data}"
+    source = f"Median walk per resident to the nearest stop, LOR Planungsräume, {v} m/s, {limit}.\n{data}"
     for m in modes:
         single_map(plr, districts, f"cls_{m}", f"Walk to the nearest {m} stop", n_low, source,
                    maps_dir / f"plr_median_walk_{mode_slug(m)}.png")
@@ -179,7 +180,7 @@ def main(cfg) -> None:
             plr_f, n_low_f, _ = plr_classes(out, lor, csv, "residents", v, modes)
             day = pd.Timestamp(str(fq["date"])).strftime("%a %d %b %Y")
             rule = f"departure at least every {fq['max_headway_min']} min, {fq['window'][0]}-{fq['window'][1]} on {day}"
-            src_f = f"Median walk per resident to the nearest frequent stop ({rule}), {v} m/s, {limit}. {data}"
+            src_f = f"Median walk per resident to the nearest frequent stop ({rule}), {v} m/s, {limit}.\n{data}"
             for m in modes:
                 single_map(plr_f, districts, f"cls_{m}", f"Walk to the nearest frequent {m} stop", n_low_f, src_f,
                            maps_dir / f"plr_{tag}_median_walk_{mode_slug(m)}.png")
@@ -188,7 +189,7 @@ def main(cfg) -> None:
 
     older_map(out, lor, districts, "S- or U-Bahn", n_low, maps_dir / "plr_older_residents_S-or-U-Bahn.png",
               f"Residents 65+ per Planungsraum (Einwohnerregister 31.12.2025), spread within the Planungsraum like all "
-              f"residents. Walking speed 1.0 m/s, {limit}. {data}")
+              f"residents. Walking speed 1.0 m/s, {limit}.\n{data}")
     print(f"maps written to {maps_dir}")
 
 

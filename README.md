@@ -15,6 +15,14 @@ by its residents, compared across districts and the 537 LOR Planungsräume.
 > S- oder U-Bahn zusammen; die Dichte des Straßennetzes deutlich stärker. Alle
 > Zahlen werden per Skript aus den Dateien in `output/` erzeugt.
 
+> **AI use:** built with substantial help from an AI coding assistant; research
+> questions, methodological decisions and review are the author's. See
+> [AI use disclosure](#ai-use-disclosure). *Mit Unterstützung eines
+> KI-Programmierassistenten erstellt.*
+
+**Presentation for non-specialists:** [download the slides (PDF)](docs/presentation.pdf),
+13 slides on the question, the main results and how they were checked.
+
 ## Status
 
 | Phase | Content | Status |
@@ -78,6 +86,8 @@ nearest stop elsewhere: read it as "no service", not as a long walk.
 | [docs/validation.md](docs/validation.md) | Checks of the method and their outcome |
 | [docs/decisions.md](docs/decisions.md) | Dated log of methodological decisions and why |
 | [docs/pst_howto.md](docs/pst_howto.md) | Step-by-step guide for running Place Syntax Tool in QGIS |
+| [docs/presentation.pdf](docs/presentation.pdf) | Slides for a non-technical audience |
+| [docs/data_licences.md](docs/data_licences.md) | Licence and attribution of each data source, and of this repository's data |
 
 Open questions and planned work are tracked as
 [GitHub issues](https://github.com/giovanigoltara/berlin-accessibility-analysis/issues).
@@ -118,6 +128,7 @@ output/legacy/         output of the first version (v0) and its known defects
 notebooks/             fussweg_oepnv.ipynb: original v0 analysis, kept for reference
                        explore_accessibility.ipynb: reads the outputs
                        reisezeiten_landmarks.ipynb: separate module, Google Maps API, not used
+                       (its output is not published, see docs/data_licences.md)
 docs/                  documentation (table above)
 ```
 
@@ -125,10 +136,14 @@ docs/                  documentation (table above)
 
 | Data | Source | Licence |
 |---|---|---|
-| Walk network, buildings | [OpenStreetMap](https://www.openstreetmap.org/copyright) via the [BBBike Berlin extract](https://download.bbbike.org/osm/bbbike/Berlin/) | ODbL 1.0, © OpenStreetMap contributors |
-| Stops, routes, timetable | [VBB GTFS](https://www.vbb.de/vbb-services/api-open-data/datensaetze/) | VBB open data terms |
-| Planungsräume, Bezirksregionen, districts | [LOR 2021](https://gdi.berlin.de/services/wfs/lor_2021), Geoportal Berlin | dl-de/by-2-0 |
-| Residents per Planungsraum | Einwohnerregisterstatistik 31.12.2025, [Amt für Statistik Berlin-Brandenburg](https://www.statistik-berlin-brandenburg.de/a-i-16-hj/) | see publisher's terms |
+| Walk network, buildings, street names | [OpenStreetMap](https://www.openstreetmap.org/copyright) via the [BBBike Berlin extract](https://download.bbbike.org/osm/bbbike/Berlin/) | ODbL 1.0, © OpenStreetMap contributors |
+| Stops, routes, timetable | [VBB GTFS](https://unternehmen.vbb.de/digitale-services/datensaetze/), VBB Verkehrsverbund Berlin-Brandenburg GmbH | CC BY 4.0 |
+| Planungsräume, Bezirksregionen, districts | [LOR 2021](https://gdi.berlin.de/services/wfs/lor_2021), Amt für Statistik Berlin-Brandenburg | CC BY 3.0 DE |
+| Residents per Planungsraum | Einwohnerregisterstatistik 31.12.2025, [Amt für Statistik Berlin-Brandenburg](https://www.statistik-berlin-brandenburg.de/a-i-16-hj/) (Statistischer Bericht A I 16) | CC BY 3.0 DE |
+
+All data were processed (filtered, reprojected, aggregated); details, the
+licence evidence for each source and the required attribution are in
+[docs/data_licences.md](docs/data_licences.md).
 
 Software: [cityseer](https://cityseer.benchmarkurbanism.com/) for the segment
 analysis; [Place Syntax Tool](https://github.com/SMoG-Chalmers/PST) (SMoG,
@@ -144,15 +159,32 @@ The first version of this analysis had defects that affected all its numbers;
 they are listed in [output/legacy/README.md](output/legacy/README.md) and
 [docs/decisions.md](docs/decisions.md).
 
-## How this was built
+## AI use disclosure
 
-Research questions, methodological decisions, the Place Syntax Tool runs in
-QGIS and the final review are mine. Code, documentation drafts and the checks
-were written with the help of an AI coding assistant (Claude Code), under the
-rules in this repository: no number is written by hand, and every table is
-generated from the output files.
+This project was built with substantial help from an AI coding assistant
+(Claude Code, by Anthropic).
+
+- **Mine:** the research questions, every methodological decision (recorded
+  with dates in [docs/decisions.md](docs/decisions.md)), the Place Syntax Tool
+  runs in QGIS, and the review and acceptance of all results.
+- **AI-assisted:** most of the code, the drafts of the documentation, the
+  validation checks and the maps, written at my direction and reviewed by me.
+- **Safeguards:** no number in the README or the documentation is typed by
+  hand; all tables are generated by script from the output files, and the
+  findings cite the file each number comes from. The pipeline is tested
+  (GitHub Actions) and was reproduced from a clean clone
+  ([validation §8](docs/validation.md#8-reproducibility-from-a-clean-clone)).
+  Key steps were cross-checked against independent tools: the Place Syntax
+  Tool results match a separate Python implementation exactly.
+
+Errors in the analysis are my responsibility.
 
 ## Licence and author
 
-Code: MIT, see [LICENSE](LICENSE). Data licences as listed above.
+- Code: MIT, see [LICENSE](LICENSE).
+- Data files in `output/` (tables, GeoPackages, maps): [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/),
+  as they are derived from OpenStreetMap. Attribution: © OpenStreetMap
+  contributors; VBB Verkehrsverbund Berlin-Brandenburg GmbH; Amt für Statistik
+  Berlin-Brandenburg ([details](docs/data_licences.md)).
+
 Giovani Goltara.

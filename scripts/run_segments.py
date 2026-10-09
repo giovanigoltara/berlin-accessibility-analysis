@@ -37,6 +37,7 @@ import _bootstrap  # noqa: F401, E402
 
 from berlin_access import segments as sg  # noqa: E402
 from berlin_access.config import load_config  # noqa: E402
+from berlin_access.credits import credits  # noqa: E402
 from berlin_access.reference_streets import ADDED_AFTER_RESULTS, REFERENCE_STREETS, SEEN  # noqa: E402
 from berlin_access.pipeline import load_lor  # noqa: E402
 
@@ -85,9 +86,9 @@ def nach_map(seg, ctx, outline, r, district, path, figsize=(12, 8.5), width_scal
     ax.legend(handles=handles, loc="center left", bbox_to_anchor=(1.0, 0.5), frameon=False, fontsize=9,
               labelcolor=TEXT_2, title="Segments by NACH quintile", title_fontsize=9, alignment="left")
     fig.text(0.01, 0.01, "Angular segment analysis with cityseer on the cleaned OSM street network (2 km buffer). "
-             "Coloured: residential streets (homes within 50 m). Data: OpenStreetMap (ODbL), "
-             "Einwohnerregister 31.12.2025.", fontsize=7, color=TEXT_2)
-    fig.tight_layout(rect=(0, 0.02, 1, 1))
+             "Coloured: residential streets (homes within 50 m).\n" + credits("osm", "afs"),
+             fontsize=7, color=TEXT_2)
+    fig.tight_layout(rect=(0, 0.035, 1, 1))
     fig.savefig(path, facecolor=SURFACE)
     plt.close(fig)
 
