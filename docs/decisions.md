@@ -64,5 +64,5 @@ What was decided, when, and why, in order. The current method is in
 | Decision | Why |
 |---|---|
 | Run every script with `PYTHONHASHSEED=0`; rerun Phase 1 and 3 with it | network cleaning depended on the per-process hash seed, so a clean clone did not reproduce the segment map (validation §8) |
-| Keep the Phase 2 PST files as one consistent snapshot until PST is rerun | the PST check compares two tools on the same network; regenerating only the Python side would compare different networks |
+| Rerun PST in QGIS on inputs from the seeded network (done 2026-10-09) | the PST check compares two tools on the same network; regenerating only the Python side would compare different networks |
 | Test suite runs on GitHub Actions for every push to `main` and every pull request | catches breakage without a local run; the tests need no downloaded data |

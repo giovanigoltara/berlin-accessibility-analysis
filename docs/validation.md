@@ -88,27 +88,27 @@ fixed in advance.
   the Mühlendamm/Gertraudenstraße carriageways is not ruled out.
 
 ## 7. Place Syntax Tool against Python
-PST 3.3.2 run by the project owner in QGIS 4.2.3 (macOS) on
+PST 3.3.2 run by the project owner in QGIS 4 (macOS) on
 `output/pst/pst_inputs_friedrichshain-kreuzberg.gpkg`, results in
 `output/pst/pst_results_friedrichshain-kreuzberg.gpkg`, compared with
 `scripts/compare_pst_results.py` → `output/pst/pst_vs_python_friedrichshain-kreuzberg.csv`.
+The current files come from the second run (2026-10-09) on the segment map of
+the seeded citywide run (§8); the first run (2026-10-08, QGIS 4.2.3) on the
+earlier, unseeded network agreed equally well and is in the git history.
 - **Attraction Distance** (walking, 800 m, S- or U-Bahn stations, `ADww800st`):
-  same "within 800 m or not" status for all 9,564 residential buildings (1,552
-  with none). For the 8,012 in reach, all distances within 1 m (median
-  absolute difference 0.025 m, maximum 0.12 m, Spearman 1.0).
+  same "within 800 m or not" status for all 9,564 residential buildings (1,545
+  with none). For the 8,019 in reach, all distances within 1 m (median
+  absolute difference 0.025 m, maximum 0.08 m, Spearman 1.0).
 - **Attraction Reach** (walking, 800 m, S- or U-Bahn stations, `ARw800st`):
-  identical count for all 9,564 buildings; 1,552 / 4,226 / 3,072 / 638 / 76
+  identical count for all 9,564 buildings; 1,545 / 4,231 / 3,080 / 634 / 74
   buildings with 0 / 1 / 2 / 3 / 4 stations within 800 m.
 - The segment map and the Phase 0 walking network agree on the median walk to
-  the nearest S- or U-Bahn station (553.1 vs 551.1 m,
+  the nearest S- or U-Bahn station (551.7 vs 551.1 m,
   `output/pst/python_reach_friedrichshain-kreuzberg_summary.json`; Spearman
-  0.899, lower because Phase 0 measures to the nearest platform along
+  0.894, lower because Phase 0 measures to the nearest platform along
   sidewalks).
-- These files are a snapshot made on the segment map of the citywide run
-  before the hash seed was fixed (§8). Regenerating the inputs now gives a
-  slightly different network, so PST must be rerun on the new inputs before
-  the comparison is repeated; until then the files in `output/pst/` are kept
-  together as one consistent set.
+- QGIS 4 marks PST 3.3.2 as incompatible after an update, because the plugin
+  declares `qgisMaximumVersion=3.99`; see `docs/pst_howto.md` §1.
 
 ## 8. Reproducibility from a clean clone
 Fresh clone of `main`, new virtual environment from `requirements.txt`,

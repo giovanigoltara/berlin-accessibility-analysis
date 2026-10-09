@@ -1,3 +1,3 @@
 pst_column,python_column,rows_matched,pst_none_within_radius,python_none_within_radius,share_same_within_radius_status,both_within_radius,share_within_1m,median_abs_diff_m,max_abs_diff_m,spearman,share_equal,median_abs_diff
-ADww800st,dist_su,9564,1552.0,1552.0,1.0,8012.0,1.0,0.025,0.12,1.0,,
+ADww800st,dist_su,9564,1545.0,1545.0,1.0,8019.0,1.0,0.025,0.08,1.0,,
 ARw800st,reach_su_800,9564,,,,,,,,1.0,1.0,0.0

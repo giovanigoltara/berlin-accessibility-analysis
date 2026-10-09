@@ -6,7 +6,7 @@
     800
   ],
   "distance_limit_m": 2000,
-  "segments_before_split": 21279,
+  "segments_before_split": 21271,
   "stations_by_column": {
     "sb": 28,
     "ub": 63,
@@ -16,18 +16,18 @@
     "su": 82,
     "anyf": 337
   },
-  "segments": 83749,
+  "segments": 83787,
   "origins": 9564,
   "destinations": 479,
   "unlink_points": 86,
   "origin_connection_m_median": 21.2,
-  "destination_connection_m_median": 1.5,
+  "destination_connection_m_median": 1.8,
   "check_vs_phase0_su": {
     "buildings_compared": 9564,
-    "spearman": 0.899,
-    "median_segment_map_m": 553.1,
+    "spearman": 0.894,
+    "median_segment_map_m": 551.7,
     "median_phase0_m": 551.1
   },
-  "resident_weighted_share_without_su_within_800m": 0.185,
-  "resident_weighted_share_without_frequent_stop_within_400m": 0.299
+  "resident_weighted_share_without_su_within_800m": 0.184,
+  "resident_weighted_share_without_frequent_stop_within_400m": 0.3
 }
