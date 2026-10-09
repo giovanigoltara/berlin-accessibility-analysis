@@ -20,6 +20,9 @@ by its residents, compared across districts and the 537 LOR Planungsräume.
 > [AI use disclosure](#ai-use-disclosure). *Mit Unterstützung eines
 > KI-Programmierassistenten erstellt.*
 
+**Presentation for non-specialists:** [download the slides (PDF)](docs/presentation.pdf),
+13 slides on the question, the main results and how they were checked.
+
 ## Status
 
 | Phase | Content | Status |
@@ -83,6 +86,7 @@ nearest stop elsewhere: read it as "no service", not as a long walk.
 | [docs/validation.md](docs/validation.md) | Checks of the method and their outcome |
 | [docs/decisions.md](docs/decisions.md) | Dated log of methodological decisions and why |
 | [docs/pst_howto.md](docs/pst_howto.md) | Step-by-step guide for running Place Syntax Tool in QGIS |
+| [docs/presentation.pdf](docs/presentation.pdf) | Slides for a non-technical audience |
 | [docs/data_licences.md](docs/data_licences.md) | Licence and attribution of each data source, and of this repository's data |
 
 Open questions and planned work are tracked as
