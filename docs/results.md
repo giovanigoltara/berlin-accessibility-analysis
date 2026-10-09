@@ -268,22 +268,22 @@ Median, over each district's reference streets, of the street's median percentil
 
 ## Phase 1 check: pilot run (friedrichshain-kreuzberg + 2 km) against the citywide run
 
-Same segments matched by midpoint and length (95.3% of the pilot's segments matched). Values near 1 and 0% mean the 2 km buffer removes edge effects.
+Same segments matched by midpoint and length (95.0% of the pilot's segments matched). Values near 1 and 0% mean the 2 km buffer removes edge effects.
 
 | Radius m | Measure | Matched segments | Spearman | Median relative difference |
 |---|---|---|---|---|
-| 800 | cc_harmonic_800_ang | 4584 | 0.997 | 1.3% |
-| 800 | cc_betweenness_800_ang | 4584 | 0.997 | 0.8% |
-| 800 | nain_800 | 4584 | 0.995 | 0.6% |
-| 800 | nach_800 | 4584 | 0.996 | 0.2% |
-| 800 | cc_harmonic_800 | 4584 | 0.999 | 0.6% |
-| 800 | cc_betweenness_800 | 4584 | 0.996 | 0.6% |
-| 2000 | cc_harmonic_2000_ang | 4584 | 0.996 | 1.2% |
-| 2000 | cc_betweenness_2000_ang | 4584 | 0.996 | 3.2% |
-| 2000 | nain_2000 | 4584 | 0.991 | 0.9% |
-| 2000 | nach_2000 | 4584 | 0.995 | 0.4% |
-| 2000 | cc_harmonic_2000 | 4584 | 1.000 | 0.5% |
-| 2000 | cc_betweenness_2000 | 4584 | 0.996 | 0.9% |
+| 800 | cc_harmonic_800_ang | 4568 | 0.997 | 0.9% |
+| 800 | cc_betweenness_800_ang | 4568 | 0.997 | 0.7% |
+| 800 | nain_800 | 4568 | 0.995 | 0.5% |
+| 800 | nach_800 | 4568 | 0.996 | 0.2% |
+| 800 | cc_harmonic_800 | 4568 | 1.000 | 0.4% |
+| 800 | cc_betweenness_800 | 4568 | 0.998 | 0.4% |
+| 2000 | cc_harmonic_2000_ang | 4568 | 0.997 | 1.0% |
+| 2000 | cc_betweenness_2000_ang | 4568 | 0.996 | 2.4% |
+| 2000 | nain_2000 | 4568 | 0.991 | 1.1% |
+| 2000 | nach_2000 | 4568 | 0.995 | 0.4% |
+| 2000 | cc_harmonic_2000 | 4568 | 1.000 | 0.4% |
+| 2000 | cc_betweenness_2000 | 4568 | 0.998 | 0.7% |
 
 ## Phase 2: attraction reach, Python cross-check (Friedrichshain-Kreuzberg)
 
@@ -291,12 +291,12 @@ Walking distance on the Phase 1 segment map, points joined to their closest line
 
 | Item | Value |
 |---|---|
-| Segments / residential buildings (origins) / stations (destinations) | 83,749 / 9,564 / 479 |
+| Segments / residential buildings (origins) / stations (destinations) | 83,787 / 9,564 / 479 |
 | Stations: S-Bahn, U-Bahn, tram, bus, regional rail | 28, 63, 105, 422, 5 |
 | Stations with a departure every 10 min or better (any mode) | 337 |
-| Residents without an S- or U-Bahn station within 800 m walk | 18.5% |
-| Residents without a frequent stop of any mode within 400 m walk | 29.9% |
-| Check: median walk to S/U station, segment map vs Phase 0 network (m) | 553.1 vs 551.1 (Spearman 0.899) |
+| Residents without an S- or U-Bahn station within 800 m walk | 18.4% |
+| Residents without a frequent stop of any mode within 400 m walk | 30.0% |
+| Check: median walk to S/U station, segment map vs Phase 0 network (m) | 551.7 vs 551.1 (Spearman 0.894) |
 
 ## Phase 2: Place Syntax Tool against the Python cross-check
 
@@ -304,7 +304,7 @@ PST 3.3.2 run in QGIS 4.2.3 on the exported inputs; `scripts/compare_pst_results
 
 | PST column | Python column | Homes | Same 'none within radius' status | Homes with a station in reach | Within 1 m | Median / max difference (m) | Spearman |
 |---|---|---|---|---|---|---|---|
-| ADww800st | dist_su | 9,564 | 100.0% | 8,012 | 100.0% | 0.025 / 0.12 | 1.0 |
+| ADww800st | dist_su | 9,564 | 100.0% | 8,019 | 100.0% | 0.025 / 0.08 | 1.0 |
 | ARw800st | reach_su_800 | 9,564 |  |  | identical count: 100.0% | median difference 0.0 | 1.0 |
 
 ## Phase 3: Spearman correlation, Berlin, unit = buildings
